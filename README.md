@@ -366,4 +366,4 @@ _Generated for the production deployment of engineering.kingston.ac.in on Cloudf
 
 ---
 
-Developed By  Muhammed Hammad S Owner Of [https://aetherionlabs.qzz.io/](#Aetherion-labs)
+Developed By  Muhammed Hammad S Owner Of [Aetherion-labs](https://aetherionlabs.qzz.io/)
