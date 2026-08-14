@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Kingston Engineering College</title>
+    <meta name="description" content="News and announcements at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated institution.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/news-detail.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="News - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/news-detail.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="News and announcements at Kingston Engineering College, Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News - Kingston Engineering College">
+    <meta name="twitter:description" content="News and announcements at Kingston Engineering College, Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+
+    <style>
+        main { min-height: 60vh; }
+        .news-detail-body { background: #fff; }
+        @media (max-width: 768px) {
+            .news-detail-hero h1 { font-size: 1.6rem !important; }
+            .news-detail-hero { padding: 40px 0 !important; }
+            .news-detail-content { font-size: 1rem !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <main>
+        <!-- Populated dynamically by assets/js/news-detail.js -->
+    </main>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news-detail.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+
+    <script>
+        // AOS Init
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ once: true, duration: 700 });
+        }
+    </script>
+
+</body>
+
+</html>

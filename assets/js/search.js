@@ -86,6 +86,11 @@
 
     /* ── Build DOM ──────────────────────────────────────────── */
     function buildUI() {
+        /* Idempotency guard: if the overlay already exists (e.g. this script
+           was loaded more than once), never inject a second copy — duplicate
+           IDs break getElementById and event binding. */
+        if (document.getElementById('ks-search-overlay')) return;
+
         /* Overlay */
         const overlay = document.createElement('div');
         overlay.id = 'ks-search-overlay';

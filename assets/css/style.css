@@ -2609,7 +2609,7 @@ body.menu-open {
 /* 1. Tablet View (max-width: 1024px) */
 @media (max-width: 1024px) {
     html {
-        font-size: 14.5px; /* Proportional downscaling of all rem units */
+        font-size: 16px; /* Audit fix: keep 16px baseline (was 14.5px) */
     }
     
     .main-logo {
@@ -2651,7 +2651,7 @@ body.menu-open {
 /* 2. Mobile View (max-width: 768px) */
 @media (max-width: 768px) {
     html {
-        font-size: 13px; /* Stronger downscaling for small screens */
+        font-size: 16px; /* Audit fix: keep 16px baseline (was 13px) */
     }
 
     .main-header {

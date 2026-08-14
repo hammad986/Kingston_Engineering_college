@@ -2,9 +2,19 @@
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
+/* Global horizontal-overflow guard — prevents the document from ever gaining a
+   horizontal scroll width. Catches AOS pre-animation transforms (fade-left
+   translateX) and any stray fixed-width child that escapes its container.
+   overflow-x: clip (not hidden) so sticky/fixed elements keep working and no
+   scroll container is created. */
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 /* Tablet & Mobile Layouts */
 @media (max-width: 1024px) {
-    html { font-size: 15px; } /* Proportional shrink */
+    html { font-size: 16px; } /* Audit fix: keep 16px baseline — mobile readability (was 15px) */
     .hidden-mobile { display: none !important; }
     
     /* Header adjustments */
@@ -64,7 +74,7 @@
 }
 
 @media (max-width: 768px) {
-    html { font-size: 13px; } /* Aggressively downsize everything */
+    html { font-size: 16px; } /* Audit fix: keep 16px baseline — mobile readability (was 13px) */
 
     /* Mobile Header Optimization */
     .top-bar { display: none !important; }
@@ -868,7 +878,7 @@
    VERY SMALL SCREENS (320px-360px) — Compact everything
    ========================================================================== */
 @media (max-width: 360px) {
-    html { font-size: 12.5px; }
+    html { font-size: 16px; } /* Audit fix: keep 16px baseline — mobile readability (was 12.5px) */
     .main-logo { height: 24px !important; }
     .accred-logos img { height: 28px !important; }
     .hero-section { min-height: 320px; padding: 32px 0 44px; }
