@@ -363,3 +363,7 @@ Development/validation scripts live in `scripts/`. They are **not** part of the 
 ---
 
 _Generated for the production deployment of engineering.kingston.ac.in on Cloudflare Pages + R2._
+
+---
+
+Developed By  Muhammed Hammad S Owner Of [https://aetherionlabs.qzz.io/](#Aetherion-labs)
