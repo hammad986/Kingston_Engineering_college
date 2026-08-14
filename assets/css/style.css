@@ -2885,7 +2885,7 @@ body.menu-open {
     transition: all 0.4s ease;
 }
 
-.salient-card h4 {
+.salient-card h3 {
     font-size: 1.15rem;
     font-weight: 800;
     color: #333;
