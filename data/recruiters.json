@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Tata Consultancy Services",
+    "short": "TCS",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/tcs.png",
+    "package_range": "3.5 – 7 LPA",
+    "roles": ["Software Engineer", "Systems Engineer"],
+    "years_recruiting": 5
+  },
+  {
+    "id": 2,
+    "name": "Infosys",
+    "short": "INFY",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/Infosys_logo.svg.png",
+    "package_range": "3.6 – 6.5 LPA",
+    "roles": ["Systems Engineer", "Technology Analyst"],
+    "years_recruiting": 5
+  },
+  {
+    "id": 3,
+    "name": "Wipro",
+    "short": "WIPRO",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/wipro.png",
+    "package_range": "3.5 – 6.0 LPA",
+    "roles": ["Project Engineer", "Software Engineer"],
+    "years_recruiting": 4
+  },
+  {
+    "id": 4,
+    "name": "HCL Technologies",
+    "short": "HCL",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/hcl-technologies.jpg",
+    "package_range": "3.8 – 6.5 LPA",
+    "roles": ["Graduate Engineer Trainee", "Software Developer"],
+    "years_recruiting": 4
+  },
+  {
+    "id": 5,
+    "name": "Tech Mahindra",
+    "short": "TechM",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/tech-mahindra.jpg",
+    "package_range": "3.5 – 5.5 LPA",
+    "roles": ["Associate Software Engineer", "Engineer"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 6,
+    "name": "Cognizant",
+    "short": "CTS",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/cognizant.png",
+    "package_range": "4.0 – 8.0 LPA",
+    "roles": ["Programmer Analyst", "Software Engineer"],
+    "years_recruiting": 4
+  },
+  {
+    "id": 7,
+    "name": "Accenture",
+    "short": "ACN",
+    "category": "Consulting",
+    "logo_url": "assets/images/recruiters/accenture.jpg",
+    "package_range": "4.5 – 9.0 LPA",
+    "roles": ["Associate Software Engineer", "IT Analyst"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 8,
+    "name": "Deloitte",
+    "short": "DLT",
+    "category": "Consulting",
+    "logo_url": "assets/images/recruiters/deloitte.jpg",
+    "package_range": "5.0 – 12.5 LPA",
+    "roles": ["Analyst", "Technology Consultant"],
+    "years_recruiting": 2
+  },
+  {
+    "id": 9,
+    "name": "Capgemini",
+    "short": "CAP",
+    "category": "Consulting",
+    "logo_url": "assets/images/recruiters/capgemini.png",
+    "package_range": "3.8 – 7.5 LPA",
+    "roles": ["Analyst", "Application Developer"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 10,
+    "name": "KPMG",
+    "short": "KPMG",
+    "category": "Consulting",
+    "logo_url": "assets/images/recruiters/kpmg.png",
+    "package_range": "5.5 – 11.0 LPA",
+    "roles": ["Associate Consultant", "IT Advisory Analyst"],
+    "years_recruiting": 2
+  },
+  {
+    "id": 11,
+    "name": "IBM India",
+    "short": "IBM",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/IBM india.jpg",
+    "package_range": "4.5 – 10.0 LPA",
+    "roles": ["Associate Developer", "System Analyst"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 12,
+    "name": "ICICI Bank",
+    "short": "ICICI",
+    "category": "Finance",
+    "logo_url": "assets/images/recruiters/icici-bank.jpg",
+    "package_range": "3.8 – 6.0 LPA",
+    "roles": ["Probationary Officer", "IT Officer"],
+    "years_recruiting": 4
+  },
+  {
+    "id": 13,
+    "name": "HDFC Bank",
+    "short": "HDFC",
+    "category": "Finance",
+    "logo_url": "assets/images/recruiters/HDFC BANK.jpg",
+    "package_range": "3.5 – 5.5 LPA",
+    "roles": ["Sales Executive", "Credit Analyst"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 14,
+    "name": "L&T Technology Services",
+    "short": "L&T",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/L&T tech SERVIces.png",
+    "package_range": "3.8 – 7.0 LPA",
+    "roles": ["Graduate Engineer Trainee", "Design Engineer"],
+    "years_recruiting": 4
+  },
+  {
+    "id": 15,
+    "name": "Hexaware Technologies",
+    "short": "HEXA",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/hexaware-technologies.jpg",
+    "package_range": "3.6 – 6.0 LPA",
+    "roles": ["Software Trainee", "Test Engineer"],
+    "years_recruiting": 3
+  },
+  {
+    "id": 16,
+    "name": "Zoho Corporation",
+    "short": "ZOHO",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/Zoho-logo-web.jpg",
+    "package_range": "4.5 – 12.0 LPA",
+    "roles": ["Member Technical Staff", "Software Developer"],
+    "years_recruiting": 2
+  },
+  {
+    "id": 17,
+    "name": "AXIS Bank",
+    "short": "AXIS",
+    "category": "Finance",
+    "logo_url": "assets/images/recruiters/axis-bank.png",
+    "package_range": "3.5 – 5.0 LPA",
+    "roles": ["Assistant Manager", "Relationship Manager"],
+    "years_recruiting": 2
+  },
+  {
+    "id": 18,
+    "name": "Mphasis",
+    "short": "MPHS",
+    "category": "Tech",
+    "logo_url": "assets/images/recruiters/mphasis.png",
+    "package_range": "4.0 – 6.5 LPA",
+    "roles": ["Trainee Software Engineer", "Associate Software Engineer"],
+    "years_recruiting": 2
+  }
+]

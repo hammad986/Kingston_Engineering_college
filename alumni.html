@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Association - Kingston Engineering College</title>
+    <meta name="description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/alumni.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Alumni Association - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/alumni.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alumni Association - Kingston Engineering College">
+    <meta name="twitter:description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            --accent-blue: #003366;
+            --accent-red: #a4101e;
+        }
+
+        /* Hero Section Styling */
+        .alumni-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(164, 16, 30, 0.8)), url('assets/images/campus/college_wide.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .alumni-hero-content {
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--brand-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Floating Background Circles (Glassmorphism Effect) */
+        .glass-bg-circles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: #003366;
+            top: -100px;
+            left: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: #a4101e;
+            bottom: -50px;
+            right: -50px;
+        }
+
+        /* Dashboard Tabs Styling */
+        .alumni-tabs-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .alumni-nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-blue);
+            color: #fff;
+            border-color: var(--accent-blue);
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
+        }
+
+        .tab-content-container {
+            position: relative;
+            min-height: 600px;
+        }
+
+        .tab-pane {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        /* Content Card Styling */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .section-heading-main {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading-main::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        /* Tables Styling */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .styled-table thead tr {
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            text-align: left;
+            font-weight: Bold;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 15px 20px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        /* List Items */
+        .award-list,
+        .objective-list,
+        .event-list {
+            list-style: none;
+        }
+
+        .award-list li,
+        .objective-list li,
+        .event-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 1rem;
+            color: #444;
+            transition: transform 0.2s;
+        }
+
+        .award-list li:hover,
+        .objective-list li:hover,
+        .event-list li:hover {
+            transform: translateX(10px);
+            color: var(--accent-blue);
+        }
+
+        .list-icon {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        /* Links Section */
+        .btn-link-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-modern {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-blue {
+            background: var(--accent-blue);
+            color: #fff;
+        }
+
+        .btn-red {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* PDF Viewer Container */
+        .pdf-viewer-wrap {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .tab-btn {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+
+            .styled-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+        <!-- Hero Section -->
+    <section class="alumni-hero">
+        <div class="glass-bg-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+        <div class="container alumni-hero-content">
+            <h5 data-aos="fade-down">Since 2008</h5>
+            <h1 class="hero-title" data-aos="zoom-in">Alumni Association</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Reconnecting & Growing Together</p>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Section -->
+    <section class="alumni-tabs-section">
+        <div class="container">
+            <!-- Tabs Navigation -->
+            <div class="alumni-nav-tabs" data-aos="fade-up">
+                <button class="tab-btn active" onclick="showTab('about')">About HEI</button>
+                <button class="tab-btn" onclick="showTab('members')">Member Chambers</button>
+                <button class="tab-btn" onclick="showTab('registration')">Registration Certificate</button>
+                <button class="tab-btn" onclick="showTab('events')">Alumni Events</button>
+                <button class="tab-btn" onclick="showTab('links')">Alumni Links</button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="tab-content-container">
+                <!-- Tab 1: About -->
+                <div id="about" class="tab-pane active glass-card">
+                    <h2 class="section-heading-main">About</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 30px;">
+                        To bring all the Alumnis of Kingston Engineering College under one vibrant forum for the
+                        exchange of experience and knowledge and develop a strong network among themselves for bonding
+                        and fellowship and their career advancement.
+                    </p>
+
+                    <h3 style="color: var(--accent-red); font-weight: 800; margin-bottom: 15px;">Distinguish Alumni Award</h3>
+                    <p style="margin-bottom: 15px; font-weight: 600;">A distinguished Alumni award is given to the Alumni in the following categories for their excellence:</p>
+                    <ul class="award-list">
+                        <li><i class="fas fa-microscope list-icon"></i> Eminent Scientist</li>
+                        <li><i class="fas fa-user-tie list-icon"></i> Prominent Industrialist/Entrepreneur/Administrator</li>
+                        <li><i class="fas fa-hand-holding-heart list-icon"></i> Philanthropists/Personnel who have rendered noteworthy social service</li>
+                        <li><i class="fas fa-medal list-icon"></i> Young Alumnus Award in the field of Research/Entrepreneur/Sports/Arts/</li>
+                        <li><i class="fas fa-gavel list-icon"></i> Administrator</li>
+                        <li><i class="fas fa-music list-icon"></i> Eminent personnel in Sports/Arts/Music</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-blue); font-weight: 800; margin-top: 40px; margin-bottom: 15px;">Objectives of the Society</h3>
+                    <ul class="objective-list">
+                        <li><i class="fas fa-check-circle list-icon"></i> To conduct/sponsor Career Guidance Programme for students to succeed in interviews through training in core competence employability skills and soft skills training</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To create new avenues for interaction of students, faculty with industry to encourage the development of employability skills through industrial visits and to identify industry-specific projects and prototype development</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To assist disabled students with necessary gadgets, aids, counselling and special sessions</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To conduct seminars, conference, meeting of professionals from all disciplines for the purpose of exchange and promotion of knowledge, among students, faculty and members of the Association</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To provide a forum for the alumni for exchange ideas of academic, cultural and social issues of the day by organizing and coordinating reunion activities of the Alumni</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This is always abide by Rules and Regulations</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This Society is to renew for every year with product of the statement</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This is non-consideration</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This Society is free of Political Occurrence and also non profitable</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 2: Members -->
+                <div id="members" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Cell Faculty Members</h2>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name of the Members</th>
+                                <th>Designation</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1.</td><td>Dr. U. V. Arivazhagu</td><td>Principal</td><td>Chief Patron</td></tr>
+                            <tr><td>2.</td><td>Mr. S. Mahendiran</td><td>HOD/ MECH</td><td>Co-ordinator</td></tr>
+                            <tr><td>3.</td><td>Mrs. M. Menaka</td><td>HOD/ IT</td><td>Member</td></tr>
+                            <tr><td>4.</td><td>Mrs. M. Rathika</td><td>HOD/ ECE</td><td>Member</td></tr>
+                            <tr><td>5.</td><td>Mrs. M. Gayathri</td><td>HOD/ MBA</td><td>Member</td></tr>
+                            <tr><td>6.</td><td>Dr. E. Kumaresan</td><td>HOD/ S&H</td><td>Member</td></tr>
+                            <tr><td>7.</td><td>Mr. N. Keerthivarman</td><td>AP/ MECH</td><td>Member</td></tr>
+                            <tr><td>8.</td><td>Mrs. S. Sarah</td><td>AP/ IT</td><td>Member</td></tr>
+                            <tr><td>9.</td><td>Ms. M. Anitha</td><td>AP/ CSE</td><td>Member</td></tr>
+                            <tr><td>10.</td><td>Mr. J. Paul Richardson Gnanraj</td><td>AP/ ECE</td><td>Member</td></tr>
+                            <tr><td>11.</td><td>Mrs. B. Thulasi Brinda</td><td>AP/ EEE</td><td>Member</td></tr>
+                            <tr><td>12.</td><td>Ms. M. Devika</td><td>AP/ MBA</td><td>Member</td></tr>
+                            <tr><td>13.</td><td>Mrs. Aswathy C Nair</td><td>AP/ CIVIL</td><td>Member</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="section-heading-main" style="margin-top: 50px;">Executive Members</h2>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Sl.No</th>
+                                <th>Name of the Student</th>
+                                <th>Department</th>
+                                <th>Batch</th>
+                                <th>Designation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1.</td><td>Raja Prakash V P</td><td>MECH</td><td>2012-2016</td><td>President</td></tr>
+                            <tr><td>2.</td><td>Muthusaravanan S</td><td>CSE</td><td>2013-2017</td><td>Vice President</td></tr>
+                            <tr><td>3.</td><td>Aravind V</td><td>ECE</td><td>2018-2022</td><td>Secretary</td></tr>
+                            <tr><td>4.</td><td>Parkavi S</td><td>CSE</td><td>2012-2016</td><td>Treasurer</td></tr>
+                            <tr><td>5.</td><td>Anand S</td><td>IT</td><td>2009-2013</td><td>Executive member</td></tr>
+                            <tr><td>6.</td><td>Pavithra M</td><td>IT</td><td>2010-2014</td><td>Executive member</td></tr>
+                            <tr><td>7.</td><td>Arunkumar P</td><td>MBA</td><td>2018-2020</td><td>Executive member</td></tr>
+                            <tr><td>8.</td><td>Agilan K</td><td>EEE</td><td>2014-2018</td><td>Executive member</td></tr>
+                            <tr><td>9.</td><td>Kishore PG</td><td>ECE</td><td>2017-2021</td><td>Executive member</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tab 3: Registration -->
+                <div id="registration" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Association Registration</h2>
+                    <p style="margin-bottom: 20px;">Verification and Certificate of Registration of the Alumni Society.</p>
+                    <div class="pdf-viewer-wrap">
+                        <iframe src="assets/pdfs/alumni/படவம_எண_2.pdf" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Events -->
+                <div id="events" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Events</h2>
+                    <ul class="event-list">
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Lecture Series on 'IIC - National Technology Day Celebration 2023, Kalpana Chawla's Memorial lectures' by Mrs Mukundha Shree, Lead Business Analyst, MSC Technology Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> Two Days workshp on 'Game development using Unity engine' by Mr G Aswin Raj, Technical Lead, Rythmos India Pvt. Ltd., Coimbatore</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> Webinar on 'Placement, Career Planning and Career Advancement' by Ms.Lingapoorani, Supply Chain Analyst and Consultant, Tata Consultancy Services</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Handson training on 'Industry 4.0 - Additive Manufacturing' by Mr.G.Agiesh Ashok, Managing Director, Inzaneone Technology Pvt. Ltd. Vellore</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Workshop on 'Hands on training on Embedded systems' Mr.K.Agilan, RTL Design Engineer, FLDEC systems, Chennai.</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Roadmap from Academic to Corporate Skills' Ms A K Yuvashree, Senior Analyst, Accenture, Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Career Guidance for Industry Requirements' Mr.K.Agilan, RTL Design Engineer, FLDEC systems, Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Multiple views of Career Development', Ms.Hemashri, Programmer Analyst, Cognizant Technology Solution, Chennai</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 5: Links -->
+                <div id="links" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Links</h2>
+                    <p>Stay connected and provide your valuable feedback through the official forms below.</p>
+                    <div class="btn-link-group">
+                        <a href="https://forms.gle/2x5eeKPgngivoLUr9" target="_blank" class="btn-modern btn-blue"><i class="fas fa-comment-dots"></i> Alumni Feedback Link</a>
+                        <a href="https://forms.gle/TWF1jBYhyKJPDtAW9" target="_blank" class="btn-modern btn-red"><i class="fas fa-user-plus"></i> Alumni Registration Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Tab switching with smooth CSS transitions (no GSAP dependency)
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick').includes(tabId)) btn.classList.add('active');
+            });
+            var activePane = document.querySelector('.tab-pane.active');
+            var targetPane = document.getElementById(tabId);
+            if (activePane === targetPane || !targetPane) return;
+            // Fade out current
+            activePane.style.opacity = '0';
+            activePane.style.transform = 'translateY(20px)';
+            setTimeout(function() {
+                activePane.classList.remove('active');
+                targetPane.classList.add('active');
+                targetPane.style.opacity = '0';
+                targetPane.style.transform = 'translateY(30px)';
+                // Force reflow then animate in
+                void targetPane.offsetWidth;
+                targetPane.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                targetPane.style.opacity = '1';
+                targetPane.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+        // Parallax scroll effect for background circles
+        window.addEventListener('scroll', function() {
+            var circles = document.querySelectorAll('.circle');
+            var scrollY = window.scrollY;
+            for (var i = 0; i < circles.length; i++) {
+                circles[i].style.transform = 'translateY(' + (scrollY * ((i + 1) * 0.1)) + 'px)';
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>

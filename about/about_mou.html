@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- ══════════════════════════════════════════
+         MOU — Premium Hero Banner
+         ══════════════════════════════════════════ -->
+    <style>
+        .mou-hero-band {
+            background: linear-gradient(135deg, #0d2137 0%, #003366 45%, #001a3a 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mou-hero-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 38px);
+            animation: mouStripe 20s linear infinite;
+        }
+
+        @keyframes mouStripe {
+            to { background-position: 220px 220px; }
+        }
+
+        .mou-hero-band::after {
+            content: '';
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 60px solid rgba(245, 197, 24, 0.07);
+            bottom: -130px;
+            right: -60px;
+            animation: mouSpin 28s linear infinite;
+        }
+
+        @keyframes mouSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .mou-hero-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .mou-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 10px;
+            animation: mouAnimUp .7s .2s both;
+        }
+
+        .mou-hero-eyebrow::before,
+        .mou-hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: #f5c518;
+        }
+
+        .mou-hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+            animation: mouAnimUp .7s .35s both;
+        }
+
+        .mou-hero-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .72);
+            max-width: 560px;
+            margin: 0 auto 22px;
+            animation: mouAnimUp .7s .5s both;
+        }
+
+        .mou-hero-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: mouAnimUp .7s .65s both;
+        }
+
+        .mou-hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, .14);
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 50px;
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 600;
+            transition: background .3s, transform .3s;
+        }
+
+        .mou-hero-pill:hover {
+            background: rgba(255, 255, 255, .25);
+            transform: translateY(-2px);
+        }
+
+        @keyframes mouAnimUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .mou-hero-wave {
+            line-height: 0;
+            background: #003366;
+        }
+
+        .mou-hero-wave svg {
+            display: block;
+        }
+    </style>
+
+    <div class="mou-hero-band">
+        <div class="mou-hero-inner">
+            <div class="mou-hero-eyebrow"><span>Industry Collaborations &amp; Partnerships</span></div>
+            <h1 class="mou-hero-title">Memorandum of Understanding</h1>
+            <p class="mou-hero-sub">Forging strategic alliances with leading industries and training organizations to bridge academia and the corporate world</p>
+            <div class="mou-hero-pills">
+                <span class="mou-hero-pill"><i class="fa-solid fa-handshake"></i> MoU Partners</span>
+                <span class="mou-hero-pill"><i class="fa-solid fa-building-columns"></i> Academic Collaborations</span>
+                <span class="mou-hero-pill"><i class="fa-solid fa-briefcase"></i> Industry Readiness</span>
+            </div>
+        </div>
+    </div>
+    <div class="mou-hero-wave">
+        <svg viewBox="0 0 1440 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:52px;">
+            <path d="M0,0 C260,52 560,0 800,38 C1040,76 1270,10 1440,34 L1440,0 Z" fill="#f7f3f0" />
+        </svg>
+    </div>
+
+    <section class="page-section" style="padding: 70px 0;">
+        <div class="container" data-aos="fade-up">
+            <p
+                style="font-size:0.97rem; line-height:1.85; color:#333; margin-bottom:40px; max-width:1000px;">
+                The MoUs have been signed between Kingston Engineering College with leading industries and Training
+                organizations with the sole aim of offering training in emerging technologies for developing
+                employability skills, value added courses, career guidance programs, project works and internships
+                thereby making the students industry ready and providing placements to the students.
+            </p>
+
+            <h3
+                style="font-size:1.4rem; font-weight:700; color:#111; margin-bottom:20px; font-family:'Poppins',sans-serif;">
+                MOUs AND COLLABORATIONS</h3>
+
+            <ul
+                style="column-count: 2; column-gap: 40px; list-style: disc; padding-left: 20px; color: #555; font-size:0.92rem; margin-bottom:60px;">
+                <li style="margin-bottom:8px;">GODOID SYSTEMS, TIDEL PARK, CHENNAI</li>
+                <li style="margin-bottom:8px;">RELEVANTZ TECHNOLOGY SERVICES, CHENNAI</li>
+                <li style="margin-bottom:8px;">AIR MEDIA BROADCAST SOLUTIONS PVT. LTD, COIMBATORE</li>
+                <li style="margin-bottom:8px;">TOP FRESHERS TECHNOLOGIES PVT. LTD, CHENNAI</li>
+                <li style="margin-bottom:8px;">PRIMETEC AUTOMOTIVE PARTS PVT LTD, CHENNAI</li>
+                <li style="margin-bottom:8px;">MILKYWAY CELL TECH, CHENNAI</li>
+                <li style="margin-bottom:8px;">CAPARO ENGINEERING INDIA LIMITED, CHENNAI</li>
+                <li style="margin-bottom:8px;">CRUD OPERATION PRIVATE LIMITED, CHENNAI</li>
+                <li style="margin-bottom:8px;">METRO COMPOSITES, CHENNAI</li>
+                <li style="margin-bottom:8px;">AVEON INFOTECH PRIVATE LIMITED, COIMBATORE</li>
+                <li style="margin-bottom:8px;">TECHFULLY PVT. LTD, BANGALORE</li>
+                <li style="margin-bottom:8px;">EVR ELECTRICALS PRIVATE LTD, CHENNAI</li>
+                <li style="margin-bottom:8px;">INFOGRO TECHNOLOGY, CHENNAI</li>
+                <li style="margin-bottom:8px;">SHREE ABIRAMI ENGINEERING PRIVATE LIMITED, CHENNAI</li>
+                <li style="margin-bottom:8px;">SELVI SOFTWARE TECHNOLOGIES PVT LTD, VELLORE</li>
+                <li style="margin-bottom:8px;">KAASHV INFOTECH, CHENNAI</li>
+                <li style="margin-bottom:8px;">SHIAASH INFO SOLUTION PRIVATE LIMITED, CHENNAI</li>
+                <li style="margin-bottom:8px;">ICESTERLI INDIA PVT LTD, RANIPET</li>
+                <li style="margin-bottom:8px;">IMS LEARNING RESOURCE PRIVATE LTD, VELLORE</li>
+                <li style="margin-bottom:8px;">DIGIDOC SOLUTIONS, VELLORE</li>
+                <li style="margin-bottom:8px;">FOCUS LOGIC IT SERVICES, RANIPET</li>
+                <li style="margin-bottom:8px;">FACT ENTRY DATA SOLUTIONS, VELLORE</li>
+                <li style="margin-bottom:8px;">VIS EDUCATION AND TRAINING COMPANY, VELLORE</li>
+                <li style="margin-bottom:8px;">NIT TTI, CHENNAI</li>
+                <li style="margin-bottom:8px;">TECHBYHEART, KOCHI</li>
+                <li style="margin-bottom:8px;">V3TS TECHNOLOGIES, CHENNAI</li>
+                <!-- New Academy Partnerships -->
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">ICT ACADEMY</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">LOGOS LOGIC IT SERVICES, RAIPUR</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">RED HAT INDIA PVT. LTD.</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">PENTAS GURA TECH</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">ORACLE ACADEMY</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">AWS ACADEMY</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">CISCO ACADEMY</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">PALO ALTO NETWORKS ACADEMY</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">BLUE PRISM UNIVERSITY ACADEMY PROGRAMME
+                </li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">CEOP TRAINING AND PLACEMENT</li>
+                <li style="margin-bottom:8px; color: #8b1a2b; font-weight: 700;">CELONIS ACADEMY</li>
+            </ul>
+
+            <!-- ══════════════════════════════════════════════════════════
+                 MOU GLASSMORPHIC PARTNERS SHOWCASE  — Highly Animated
+                 ══════════════════════════════════════════════════════════ -->
+            <style>
+                /* ── Section ── */
+                .mou-glass-section {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 80px 0 90px;
+                    margin-top: 48px;
+                    border-radius: 28px;
+                    background: linear-gradient(135deg, #080d18 0%, #0b1525 45%, #0d1b30 75%, #060c16 100%);
+                }
+
+                /* ── Animated Mesh ── */
+                .mou-mesh {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    background:
+                        radial-gradient(ellipse 70% 55% at 15% 25%, rgba(139, 26, 43, 0.3) 0%, transparent 65%),
+                        radial-gradient(ellipse 55% 50% at 85% 75%, rgba(0, 51, 102, 0.28) 0%, transparent 60%),
+                        radial-gradient(ellipse 45% 40% at 55% 5%, rgba(245, 197, 24, 0.1) 0%, transparent 55%);
+                    animation: mouMeshPulse 9s ease-in-out infinite alternate;
+                }
+
+                @keyframes mouMeshPulse {
+                    0% {
+                        opacity: 0.65;
+                        transform: scale(1);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: scale(1.05);
+                    }
+                }
+
+                /* ── Orbs ── */
+                .mou-orb {
+                    position: absolute;
+                    border-radius: 50%;
+                    filter: blur(55px);
+                    opacity: 0.16;
+                    pointer-events: none;
+                    z-index: 0;
+                    animation: mouOrbFloat 14s ease-in-out infinite;
+                }
+
+                .mou-orb-1 {
+                    width: 320px;
+                    height: 320px;
+                    background: #8b1a2b;
+                    top: -90px;
+                    left: -80px;
+                    animation-delay: 0s;
+                }
+
+                .mou-orb-2 {
+                    width: 250px;
+                    height: 250px;
+                    background: #003366;
+                    bottom: -70px;
+                    right: -60px;
+                    animation-delay: 4s;
+                }
+
+                .mou-orb-3 {
+                    width: 180px;
+                    height: 180px;
+                    background: #f5c518;
+                    top: 40%;
+                    left: 48%;
+                    animation-delay: 8s;
+                }
+
+                @keyframes mouOrbFloat {
+
+                    0%,
+                    100% {
+                        transform: translateY(0) scale(1);
+                    }
+
+                    50% {
+                        transform: translateY(-28px) scale(1.08);
+                    }
+                }
+
+                /* ── Grid ── */
+                .mou-grid-lines {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 1;
+                    background-image:
+                        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+                    background-size: 56px 56px;
+                    pointer-events: none;
+                }
+
+                /* ── Header ── */
+                .mou-glass-header {
+                    position: relative;
+                    z-index: 10;
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+
+                .mou-glass-eyebrow {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    letter-spacing: 0.26em;
+                    text-transform: uppercase;
+                    color: #f5c518;
+                    margin-bottom: 14px;
+                }
+
+                .mou-glass-eyebrow::before,
+                .mou-glass-eyebrow::after {
+                    content: '';
+                    display: block;
+                    width: 36px;
+                    height: 1px;
+                    background: linear-gradient(90deg, transparent, #f5c518, transparent);
+                }
+
+                .mou-glass-title {
+                    font-size: clamp(1.8rem, 4vw, 3rem);
+                    font-weight: 900;
+                    margin: 0 0 14px;
+                    background: linear-gradient(135deg, #ffffff 0%, #c0d4f0 50%, #f5c518 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    animation: mouTitleIn 0.9s 0.3s both;
+                }
+
+                @keyframes mouTitleIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                .mou-glass-sub {
+                    font-size: 0.97rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    max-width: 520px;
+                    margin: 0 auto;
+                }
+
+                /* ── Stats Pills ── */
+                .mou-stats-row {
+                    position: relative;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    margin-bottom: 48px;
+                }
+
+                .mou-stat-pill {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 9px 20px;
+                    border-radius: 50px;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    color: #fff;
+                    font-size: 0.88rem;
+                    font-weight: 600;
+                    cursor: default;
+                    transition: all 0.3s ease;
+                    animation: mouTitleIn 0.8s both;
+                }
+
+                .mou-stat-pill:nth-child(1) {
+                    animation-delay: 0.7s;
+                }
+
+                .mou-stat-pill:nth-child(2) {
+                    animation-delay: 0.85s;
+                }
+
+                .mou-stat-pill:nth-child(3) {
+                    animation-delay: 1s;
+                }
+
+                .mou-stat-pill:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(245, 197, 24, 0.4);
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(245, 197, 24, 0.15);
+                }
+
+                .mou-pill-icon {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.8rem;
+                }
+
+                .mou-pill-icon.red {
+                    background: rgba(139, 26, 43, 0.25);
+                    color: #f87171;
+                }
+
+                .mou-pill-icon.gold {
+                    background: rgba(245, 197, 24, 0.2);
+                    color: #f5c518;
+                }
+
+                .mou-pill-icon.blue {
+                    background: rgba(0, 100, 200, 0.2);
+                    color: #60a5fa;
+                }
+
+                /* ── Partner Cards Grid ── */
+                .mou-partners-grid {
+                    position: relative;
+                    z-index: 10;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 20px;
+                    padding: 0 20px;
+                    max-width: 1200px;
+                    margin: 0 auto 56px;
+                }
+
+                /* ── Individual Glass Card ── */
+                .mou-partner-card {
+                    position: relative;
+                    height: 148px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    background: rgba(255, 255, 255, 0.07);
+                    border: 1px solid rgba(255, 255, 255, 0.14);
+                    border-radius: 18px;
+                    backdrop-filter: blur(16px);
+                    -webkit-backdrop-filter: blur(16px);
+                    box-shadow:
+                        0 8px 28px rgba(0, 0, 0, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+                    cursor: pointer;
+                    overflow: hidden;
+                    transition:
+                        transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        box-shadow 0.38s ease,
+                        border-color 0.38s ease,
+                        background 0.38s ease;
+                    animation: mouCardIn 0.6s both;
+                }
+
+                /* Stagger entrance */
+                .mou-partner-card:nth-child(1) {
+                    animation-delay: 0.05s;
+                }
+
+                .mou-partner-card:nth-child(2) {
+                    animation-delay: 0.1s;
+                }
+
+                .mou-partner-card:nth-child(3) {
+                    animation-delay: 0.15s;
+                }
+
+                .mou-partner-card:nth-child(4) {
+                    animation-delay: 0.2s;
+                }
+
+                .mou-partner-card:nth-child(5) {
+                    animation-delay: 0.25s;
+                }
+
+                .mou-partner-card:nth-child(6) {
+                    animation-delay: 0.3s;
+                }
+
+                .mou-partner-card:nth-child(7) {
+                    animation-delay: 0.35s;
+                }
+
+                .mou-partner-card:nth-child(8) {
+                    animation-delay: 0.4s;
+                }
+
+                .mou-partner-card:nth-child(9) {
+                    animation-delay: 0.45s;
+                }
+
+                .mou-partner-card:nth-child(10) {
+                    animation-delay: 0.5s;
+                }
+
+                .mou-partner-card:nth-child(11) {
+                    animation-delay: 0.55s;
+                }
+
+                .mou-partner-card:nth-child(12) {
+                    animation-delay: 0.6s;
+                }
+
+                .mou-partner-card:nth-child(13) {
+                    animation-delay: 0.65s;
+                }
+
+                @keyframes mouCardIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px) scale(0.95);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+
+                /* Shine sweep */
+                .mou-partner-card::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+                    transform: translateX(-120%) skewX(-20deg);
+                    transition: transform 0.55s ease;
+                    z-index: 1;
+                }
+
+                .mou-partner-card:hover::before {
+                    transform: translateX(140%) skewX(-20deg);
+                }
+
+                .mou-partner-card:hover {
+                    transform: translateY(-12px) scale(1.04);
+                    background: rgba(255, 255, 255, 0.13);
+                    border-color: rgba(245, 197, 24, 0.5);
+                    box-shadow:
+                        0 22px 55px rgba(0, 0, 0, 0.45),
+                        0 0 36px rgba(245, 197, 24, 0.18),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+                }
+
+                .mou-partner-card img {
+                    position: relative;
+                    z-index: 2;
+                    max-width: 140px;
+                    max-height: 72px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    transition: transform 0.35s ease, filter 0.35s ease;
+                }
+
+                .mou-partner-card:hover img {
+                    transform: scale(1.08);
+                    filter: brightness(1.1) saturate(1.2) drop-shadow(0 4px 10px rgba(255, 255, 255, 0.18));
+                }
+
+                .mou-card-name {
+                    position: relative;
+                    z-index: 2;
+                    font-size: 0.6rem;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.45);
+                    text-align: center;
+                    padding: 0 8px;
+                    transition: color 0.3s ease;
+                }
+
+                .mou-partner-card:hover .mou-card-name {
+                    color: #f5c518;
+                }
+
+                /* ── Marquee Row ── */
+                .mou-glass-marquee-outer {
+                    position: relative;
+                    z-index: 10;
+                    overflow: hidden;
+                    padding: 16px 0;
+                    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+                    mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+                }
+
+                .mou-glass-marquee-track {
+                    display: flex;
+                    gap: 24px;
+                    width: max-content;
+                    animation: mouMarqueeScroll 28s linear infinite;
+                }
+
+                .mou-glass-marquee-track:hover {
+                    animation-play-state: paused;
+                }
+
+                @keyframes mouMarqueeScroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .mou-marquee-card {
+                    flex-shrink: 0;
+                    width: 165px;
+                    height: 95px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 14px;
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+
+                .mou-marquee-card:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(245, 197, 24, 0.4);
+                    transform: scale(1.06);
+                    box-shadow: 0 0 24px rgba(245, 197, 24, 0.15);
+                }
+
+                .mou-marquee-card img {
+                    max-width: 120px;
+                    max-height: 55px;
+                    object-fit: contain;
+                    transition: filter 0.3s;
+                }
+
+                .mou-marquee-card:hover img {
+                    filter: brightness(1.15) saturate(1.2);
+                }
+
+                /* ── Bottom Divider ── */
+                .mou-glass-bottom {
+                    position: relative;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 14px;
+                    margin-top: 48px;
+                }
+
+                .mou-divider-line {
+                    flex: 1;
+                    max-width: 180px;
+                    height: 1px;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+                }
+
+                .mou-divider-dot {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background: #8b1a2b;
+                    box-shadow: 0 0 12px #8b1a2b;
+                    animation: mouDotGlow 2.2s ease-in-out infinite;
+                }
+
+                @keyframes mouDotGlow {
+
+                    0%,
+                    100% {
+                        box-shadow: 0 0 10px #8b1a2b;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        box-shadow: 0 0 22px #8b1a2b, 0 0 44px rgba(139, 26, 43, 0.3);
+                        transform: scale(1.3);
+                    }
+                }
+
+                .mou-divider-text {
+                    font-size: 0.74rem;
+                    font-weight: 600;
+                    letter-spacing: 0.14em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.35);
+                }
+            </style>
+
+            <div class="mou-glass-section" id="mouGlassSection">
+                <!-- Background -->
+                <div class="mou-mesh"></div>
+                <div class="mou-orb mou-orb-1"></div>
+                <div class="mou-orb mou-orb-2"></div>
+                <div class="mou-orb mou-orb-3"></div>
+                <div class="mou-grid-lines"></div>
+
+                <!-- Header -->
+                <div class="mou-glass-header">
+                    <div class="mou-glass-eyebrow"><span>Industry Collaborations</span></div>
+                    <h2 class="mou-glass-title">Our MoU Partners</h2>
+                    <p class="mou-glass-sub">Bridging academia and industry through strategic Memoranda of Understanding
+                    </p>
+                </div>
+
+                <!-- Stats Pills -->
+                <div class="mou-stats-row">
+                    <div class="mou-stat-pill">
+                        <span class="mou-pill-icon red"><i class="fa-solid fa-handshake"></i></span>
+                        <span>13+ Active MoUs</span>
+                    </div>
+                    <div class="mou-stat-pill">
+                        <span class="mou-pill-icon gold"><i class="fa-solid fa-industry"></i></span>
+                        <span>Pan India Partners</span>
+                    </div>
+                    <div class="mou-stat-pill">
+                        <span class="mou-pill-icon blue"><i class="fa-solid fa-briefcase"></i></span>
+                        <span>Placement Driven</span>
+                    </div>
+                </div>
+
+
+                <!-- Infinite Marquee Row (all 13 × 2 for loop) -->
+                <div class="mou-glass-marquee-outer">
+                    <div class="mou-glass-marquee-track">
+                        <!-- Set A -->
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/air-media.png" alt="Air Media">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/aveon.png" alt="Aveon"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/caparo.png" alt="Caparo"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/codoid.png" alt="Codoid"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/evr.png" alt="EVR"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/igt.png" alt="IGT"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/metro.png" alt="Metro"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/primetec.png" alt="Primetec"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/releventz.png" alt="Releventz">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/saept.png" alt="SAEPT"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/selvi.png" alt="Selvi"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/techfully.png" alt="Techfully">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/tf.png" alt="TF"></div>
+                        <!-- Set B (duplicate for seamless loop) -->
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/air-media.png" alt="Air Media">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/aveon.png" alt="Aveon"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/caparo.png" alt="Caparo"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/codoid.png" alt="Codoid"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/evr.png" alt="EVR"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/igt.png" alt="IGT"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/metro.png" alt="Metro"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/primetec.png" alt="Primetec"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/releventz.png" alt="Releventz">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/saept.png" alt="SAEPT"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/selvi.png" alt="Selvi"></div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/techfully.png" alt="Techfully">
+                        </div>
+                        <div class="mou-marquee-card"><img src="../assets/images/mou/tf.png" alt="TF"></div>
+                    </div>
+                </div>
+
+                <!-- Bottom accent -->
+                <div class="mou-glass-bottom">
+                    <div class="mou-divider-line"></div>
+                    <div class="mou-divider-dot"></div>
+                    <span class="mou-divider-text">Connecting Talent with Industry</span>
+                    <div class="mou-divider-dot"></div>
+                    <div class="mou-divider-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/news.js" defer></script>
+    <script src="../assets/js/events.js" defer></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+</body>
+
+</html>

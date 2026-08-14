@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governing Council - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- ══════════════════════════════════════════
+         GOVERNING COUNCIL — Premium Hero Banner
+         ══════════════════════════════════════════ -->
+    <style>
+        .gov-hero-band {
+            background: linear-gradient(135deg, #0d2137 0%, #003366 45%, #001a3a 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gov-hero-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 38px);
+            animation: govStripe 20s linear infinite;
+        }
+
+        @keyframes govStripe {
+            to { background-position: 220px 220px; }
+        }
+
+        .gov-hero-band::after {
+            content: '';
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 60px solid rgba(245, 197, 24, 0.07);
+            bottom: -130px;
+            right: -60px;
+            animation: govSpin 28s linear infinite;
+        }
+
+        @keyframes govSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .gov-hero-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .gov-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 10px;
+            animation: govAnimUp .7s .2s both;
+        }
+
+        .gov-hero-eyebrow::before,
+        .gov-hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: #f5c518;
+        }
+
+        .gov-hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+            animation: govAnimUp .7s .35s both;
+        }
+
+        .gov-hero-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .72);
+            max-width: 560px;
+            margin: 0 auto 22px;
+            animation: govAnimUp .7s .5s both;
+        }
+
+        .gov-hero-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: govAnimUp .7s .65s both;
+        }
+
+        .gov-hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, .14);
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 50px;
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 600;
+            transition: background .3s, transform .3s;
+        }
+
+        .gov-hero-pill:hover {
+            background: rgba(255, 255, 255, .25);
+            transform: translateY(-2px);
+        }
+
+        @keyframes govAnimUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .gov-hero-wave {
+            line-height: 0;
+            background: #003366;
+        }
+
+        .gov-hero-wave svg {
+            display: block;
+        }
+
+        .governance-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .gov-hero-shape-1 {
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            border: 3px solid rgba(255,255,255,.08);
+            top: 20px;
+            right: -70px;
+            animation: govShSpin 19s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .gov-hero-shape-2 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            border: 3px solid rgba(245,197,24,.15);
+            border-radius: 50%;
+            bottom: 60px;
+            left: -45px;
+            animation: govShSpin2 14s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes govShSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes govShSpin2 {
+            to { transform: rotate(-360deg); }
+        }
+
+        .council-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .council-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .council-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #8b1a2b, #f5c518);
+        }
+
+        .council-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(139, 26, 43, 0.15);
+            border-color: #8b1a2b;
+        }
+
+        .member-icon {
+            width: 90px;
+            height: 90px;
+            background: #fdf2f4;
+            color: #8b1a2b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 25px;
+            transition: all 0.4s;
+        }
+
+        .council-card:hover .member-icon {
+            background: #8b1a2b;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .member-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .member-role {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #8b1a2b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .member-affiliation {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .official-link-box {
+            background: #fdf2f4;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            border: 1px dashed #8b1a2b;
+        }
+
+        .btn-official-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #8b1a2b;
+            color: #fff;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(139, 26, 43, 0.3);
+        }
+
+        .btn-official-pdf:hover {
+            background: #a01f32;
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .council-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <div class="gov-hero-band">
+        <div class="gov-hero-shape-1"></div>
+        <div class="gov-hero-shape-2"></div>
+        <div class="gov-hero-inner">
+            <div class="gov-hero-eyebrow"><span>Institutional Leadership &amp; Governance</span></div>
+            <h1 class="gov-hero-title">Governing Council</h1>
+            <p class="gov-hero-sub">The supreme authority guiding Kingston Engineering College's strategic direction, academic excellence, and institutional integrity</p>
+            <div class="gov-hero-pills">
+                <span class="gov-hero-pill"><i class="fa-solid fa-user-tie"></i> Chairman</span>
+                <span class="gov-hero-pill"><i class="fa-solid fa-users"></i> Trust Nominees</span>
+                <span class="gov-hero-pill"><i class="fa-solid fa-landmark"></i> Government Nominees</span>
+            </div>
+        </div>
+    </div>
+    <div class="gov-hero-wave">
+        <svg viewBox="0 0 1440 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:52px;">
+            <path d="M0,0 C260,52 560,0 800,38 C1040,76 1270,10 1440,34 L1440,0 Z" fill="#f7f3f0" />
+        </svg>
+    </div>
+
+    <section class="page-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="governance-header" data-aos="fade-up">
+                <p style="max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem; line-height: 1.7;">
+                    The Governing Council is the supreme authority responsible for the overall strategic direction,
+                    management, and regulation of Kingston Engineering College, ensuring academic excellence and
+                    institutional integrity.
+                </p>
+            </div>
+
+            <div class="council-grid">
+                <!-- Chairman -->
+                <div class="council-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="member-role">Chairman</div>
+                    <h3 class="member-name">Thiru. D. M. Kathir Anand</h3>
+                    <p class="member-affiliation">Member of Parliament (MP), Vellore Constituency</p>
+                </div>
+
+                <!-- Members (Trust Nominees) -->
+                <div class="council-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Tmt. Sangeetha Kathir Anand</h3>
+                    <p class="member-affiliation">Trust Nominee (Educationist)</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Thiru. D. M. Shravan</h3>
+                    <p class="member-affiliation">Trust Nominee</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Thiru. D. M. Vikram</h3>
+                    <p class="member-affiliation">Trust Nominee</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="member-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Thiru. D. M. Pradeep</h3>
+                    <p class="member-affiliation">Trust Nominee</p>
+                </div>
+
+                <!-- Nominees -->
+                <div class="council-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-icon"><i class="fa-solid fa-industry"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Industrial Expert</h3>
+                    <p class="member-affiliation">Nominated by the University</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-icon"><i class="fa-solid fa-industry"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">Industrial Expert</h3>
+                    <p class="member-affiliation">Nominated by the College</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-icon"><i class="fa-solid fa-university"></i></div>
+                    <div class="member-role">Member</div>
+                    <h3 class="member-name">NIT/IIT/Pondicherry</h3>
+                    <p class="member-affiliation">Academic Representative (Nominated by University)</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <div class="member-role">UGC Nominee</div>
+                    <h3 class="member-name">UGC Nominee</h3>
+                    <p class="member-affiliation">Nominated by University Grants Commission</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="member-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="member-role">Govt. Nominee</div>
+                    <h3 class="member-name">State Govt. Nominee</h3>
+                    <p class="member-affiliation">Nominated by the State Government</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="member-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="member-role">Univ. Nominee</div>
+                    <h3 class="member-name">University Nominee</h3>
+                    <p class="member-affiliation">Nominated by Affiliating University</p>
+                </div>
+
+                <!-- Educators -->
+                <div class="council-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="member-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="member-role">Faculty Member</div>
+                    <h3 class="member-name">Senior Faculty I</h3>
+                    <p class="member-affiliation">Nominated by the Principal</p>
+                </div>
+
+                <div class="council-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="member-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="member-role">Faculty Member</div>
+                    <h3 class="member-name">Senior Faculty II</h3>
+                    <p class="member-affiliation">Nominated by the Principal</p>
+                </div>
+
+                <!-- Principal -->
+                <div class="council-card" data-aos="fade-up" data-aos-delay="900"
+                    style="background: #fdf2f4; border-color: #8b1a2b;">
+                    <div class="member-icon" style="background: #8b1a2b; color: #fff;"><i
+                            class="fa-solid fa-user-gear"></i></div>
+                    <div class="member-role">Member Secretary</div>
+                    <h3 class="member-name">The Principal</h3>
+                    <p class="member-affiliation">Ex-Officio Member Secretary</p>
+                </div>
+            </div>
+
+            <div class="official-link-box" data-aos="zoom-in">
+                <i class="fa-solid fa-file-pdf"
+                    style="font-size: 3rem; color: #8b1a2b; margin-bottom: 20px; display: block;"></i>
+                <h3 style="font-weight: 800; margin-bottom: 15px;">Check Official Documentation</h3>
+                <p style="color: #666; margin-bottom: 30px;">For the complete and signed list of the Governing Council
+                    members including meeting minutes, please click below.</p>
+                <a href="../assets/pdfs/governing-council/governing_council.pdf" class="btn-official-pdf"
+                    target="_blank">
+                    <i class="fa-solid fa-download"></i> View Governing Council PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/news.js" defer></script>
+    <script src="../assets/js/events.js" defer></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+</body>
+
+</html>

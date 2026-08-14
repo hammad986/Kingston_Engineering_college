@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Kingston Engineering College</title>
+    <meta name="description" content="Academics at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/academics.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Academics - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/academics.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Academics at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Academics - Kingston Engineering College">
+    <meta name="twitter:description" content="Academics at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        /* ============================
+           ACADEMICS PAGE INLINE STYLES
+           ============================ */
+
+        /* --- Rules & Regulations Grid (2x2) --- */
+        .rules-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .rules-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .rule-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+        }
+
+        .rule-card ul {
+            flex: 1;
+        }
+
+        .rule-card p:last-of-type {
+            flex: 1;
+        }
+
+        .rule-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 14px;
+        }
+
+        .rule-card ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .rule-card ul li {
+            font-size: 0.82rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+
+        .rule-card ul li a {
+            color: var(--brand-blue);
+            text-decoration: underline;
+        }
+
+        .rule-card h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--brand-red);
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- Salient Features --- */
+        .salient-section {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .salient-bg-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .salient-bg-slider .swiper,
+        .salient-bg-slider .swiper-wrapper,
+        .salient-bg-slider .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .salient-bg-slider .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .salient-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.88);
+            z-index: 1;
+        }
+
+        .salient-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .salient-content h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #111;
+            margin-bottom: 8px;
+            font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+        }
+
+        .salient-content .salient-underline {
+            width: 200px;
+            height: 2px;
+            background: #bbb;
+            margin-bottom: 40px;
+        }
+
+        .salient-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 40px;
+        }
+
+        .salient-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .salient-icon {
+            color: var(--brand-red);
+            font-size: 1rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .salient-item p {
+            font-size: 0.85rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .salient-item a {
+            color: #0077bb;
+            text-decoration: underline;
+        }
+
+        /* --- Research Section --- */
+        .research-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .research-section h2 {
+            color: var(--brand-red);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .research-intro {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: #444;
+            max-width: 80%;
+            margin: 0 auto 40px;
+            letter-spacing: 0.005em;
+            word-spacing: 0.02em;
+        }
+
+        .research-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        .research-tab {
+            padding: 12px 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #666;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .research-tab.active {
+            color: var(--brand-red);
+            border-bottom-color: var(--brand-red);
+        }
+
+        .research-tab:hover {
+            color: var(--brand-red);
+        }
+
+        .research-table-wrapper {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .research-table-wrapper.active {
+            display: block;
+        }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .research-table thead {
+            position: sticky;
+            top: 0;
+            background: #1a3250;
+            color: #fff;
+            z-index: 5;
+        }
+
+        .research-table thead th {
+            padding: 12px 15px;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+
+        .research-table tbody tr:nth-child(even) {
+            background: #f3f6fb;
+        }
+
+        .research-table tbody td {
+            padding: 10px 15px;
+            font-size: 0.8rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+
+        .research-table tbody td a {
+            color: var(--brand-blue);
+            text-decoration: underline;
+        }
+
+
+        /* --- Patents & Publications --- */
+        .patents-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .patents-section h2 {
+            color: var(--brand-red);
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* --- Research Hub Premium Styles --- */
+        .research-hub-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow: hidden;
+        }
+
+        .research-hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .research-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--brand-red);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .research-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .research-card i {
+            font-size: 2.5rem;
+            color: var(--brand-red);
+            margin-bottom: 25px;
+        }
+
+        .research-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a3250;
+            margin-bottom: 15px;
+        }
+
+        .research-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .research-card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--brand-red);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: gap 0.3s;
+        }
+
+        .research-card-btn:hover {
+            gap: 15px;
+        }
+
+        /* Publication Cards */
+        .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .pub-card {
+            background: #fff;
+            border-left: 5px solid var(--brand-red);
+            padding: 25px;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .pub-card:hover {
+            transform: translateX(10px);
+        }
+
+        .pub-tag {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #888;
+            letter-spacing: 1px;
+        }
+
+        .pub-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a3250;
+            line-height: 1.4;
+        }
+
+        .pub-author {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .pub-links {
+            margin-top: auto;
+            display: flex;
+            gap: 15px;
+        }
+
+        .pub-link {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        .pub-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Research Stats */
+        .research-stats {
+            background: #8b1a2b;
+            padding: 60px 0;
+            color: white;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .research-stats-inner {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+        }
+
+        /* Generic Research Hub spacing */
+        .research-hub-row {
+            margin-bottom: 80px;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Video (same as About / Infrastructure pages) -->
+    <section style="position:relative;width:100%;height:440px;overflow:hidden;background:#000;">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
+            <source src="assets/videos/main.mp4" type="video/mp4">
+        </video>
+        <div
+            style="position:absolute;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:flex-end;padding:40px 60px;">
+            <h1
+                style="color:#fff;font-size:2.6rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;border-left:6px solid #f5c518;padding-left:20px;">
+                Academics</h1>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 1: RULES AND REGULATIONS (4-card auto-scroll)
+         =========================================================
+    -->
+    <section class="rules-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Rules and regulations</h2>
+
+            <div class="rules-grid" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Card 1: Leave Regulations -->
+                <div class="rule-card">
+                    <img src="assets/images/rules&reguls/leave regules.png" alt="Leave Regulations">
+                    <h3>Leave Regulations</h3>
+                    <p>For medical leave, the Medical Certificate should be enclosed along with the leave
+                        letter signed by the parent.</p>
+                    <ul>
+                        <li>Leave letter should be submitted on the previous day itself with the parent's signature.</li>
+                        <li>Leave letter should be submitted on the first day of leave through anyone of his/her friends.</li>
+                        <li>Parents may make a phone call to the office and inform the respective attendance in charge, regarding their ward's leave.</li>
+                        <li>For medical leave, the Medical Certificate should be enclosed along with the leave letter, signed by the parent.</li>
+                    </ul>
+                    <p>All requisition letters for leave, medical certificate, permission, hostel matters
+                        including permission and leave should be addressed to the Principal. Students should
+                        take prior permission before absenting himself from the class, failure of which will
+                        be viewed seriously and the parents will be informed of the same.</p>
+                </div>
+
+                <!-- Card 2: Identity Card -->
+                <div class="rule-card">
+                    <img src="assets/images/rules&reguls/id card.png" alt="Identity Card">
+                    <h3>Identity Card</h3>
+                    <p>Each student will be provided with an Identity Card with his/her name and photo with
+                        their proper details. They should wear the Identity Card inside the campus and while
+                        traveling in the college bus.</p>
+                    <p><strong>NOTE:</strong></p>
+                    <ul>
+                        <li>Smoking or other forms of consumption of tobacco will not be permitted inside the campus.</li>
+                        <li>Students should not carry the cell phones; if found with cell phones, severe action will be taken.</li>
+                        <li>Boys and girls should not wear any costly gold ornaments in the college campus.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Dress Code -->
+                <div class="rule-card">
+                    <img src="assets/images/rules&reguls/dess code.png" alt="Dress Code">
+                    <h3>Dress Code</h3>
+                    <p>All the students inside the campus should be neatly dressed. All the boys are expected
+                        to wear self coloured pants with their shirts neatly tucked in. They should wear shoes
+                        only (Sports shoes and Slippers are not permitted). Girls should wear Salwar Kameez
+                        with V shaped dhupata pinned on either sides of the shoulder.</p>
+                </div>
+
+                <!-- Card 4: College Timings -->
+                <div class="rule-card">
+                    <img src="assets/images/rules&reguls/clg timing.png" alt="College Timings">
+                    <h3>College Timings</h3>
+                    <p>College timings are from 9.00 A.M to 04.30 P.M. Students are not permitted to enter
+                        into the campus after 9.00 A.M. and are also not allowed to leave the college before
+                        04.30 P.M. During the college hours, visitors are strictly not entertained to meet
+                        the students.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .governance-section {
+            padding: 100px 0;
+            background: #fdfdfd;
+        }
+
+        .gov-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .gov-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gov-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(139, 26, 43, 0.12);
+            border-color: #8b1a2b;
+        }
+
+        .gov-icon-box {
+            width: 90px;
+            height: 90px;
+            background: #fdf2f4;
+            color: #8b1a2b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 30px;
+            transition: all 0.4s;
+        }
+
+        .gov-card:hover .gov-icon-box {
+            background: #8b1a2b;
+            color: #fff;
+            transform: rotateY(360deg);
+        }            .gov-card h3 {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: #111;
+                margin-bottom: 15px;
+                font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+            }
+
+            .gov-card p {
+                color: #666;
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 30px;
+                font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            }
+
+        .gov-btn {
+            background: #8b1a2b;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .gov-btn:hover {
+            background: #1a3250;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+
+    <section class="governance-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2
+                    style="color: #8b1a2b; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">
+                    Official Academic Governance</h2>
+                <h1
+                    style="font-family:'Poppins',sans-serif; font-size:3rem; font-weight:900; color:#111; margin-bottom:20px;">
+                    Regulations & Academic Calendar
+                </h1>
+                <p style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1rem; line-height: 1.8; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; letter-spacing: 0.008em;">
+                    Discover the structured academic framework of Kingston Engineering College. Our autonomous
+                    regulations and planned calendars ensure academic excellence and timely career progression for all
+                    students.
+                </p>
+                <div style="width:100px; height:5px; background:#f5c518; margin: 30px auto; border-radius: 10px;"></div>
+            </div>
+
+            <div class="gov-grid">
+                <!-- Regulation 2023 -->
+                <div class="gov-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gov-icon-box"><i class="fas fa-gavel"></i></div>
+                    <h3>Academic calendar 2024</h3>
+                    <p>Comprehensive academic rules and guidelines applicable for the 2024 odd sem batch onwards.</p>
+                    <a href="assets\Academic Calendar\1. Academic calendar - 2024_Odd semester_Higher SEM.pdf.jpg" target="_blank" class="gov-btn">
+                        View Regulation <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+
+                <!-- Regulation 2026 -->
+                <div class="gov-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gov-icon-box"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Academic calendar 2024</h3>
+                    <p>Updated regulations with modern curriculum and assessment frameworks for the 2024 Odd semester batch.</p>
+                    <a href="assets\Academic Calendar\2. Academic calendar - 2024_Odd semester - I UGPG.jpg" target="_blank" class="gov-btn">
+                        View Regulation <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+
+                <!-- Academic Calendar -->
+                <div class="gov-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gov-icon-box"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Academic Calendar 2024</h3>
+                    <p>Updated regulations with modern curriculum and assessment frameworks for the 2024 even semester batch.</p>
+                    <a href="assets\Academic Calendar\3. Academic calendar - 2024_Even semester.jpg" target="_blank"
+                        class="gov-btn">
+                        View Calendar <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 2: SALIENT FEATURES (bg image slider + feature grid)
+         ========================================================= -->
+    <section class="salient-section">
+
+        <!-- Background Swiper (5 images - auto loop) -->
+        <div class="salient-bg-slider">
+            <div class="swiper salientBgSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80" alt="bg1">
+                    </div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1920&q=80" alt="bg2">
+                    </div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80" alt="bg3">
+                    </div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80" alt="bg4">
+                    </div>
+                    <div class="swiper-slide"><img
+                            src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=1920&q=80" alt="bg5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="salient-overlay"></div>
+
+        <div class="container salient-content">
+            <h2 data-aos="fade-up">Salient features</h2>
+            <div class="salient-underline" data-aos="fade-up" data-aos-delay="100"></div>
+
+            <div class="salient-grid">
+                <!-- Left Column -->
+                <div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="0">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Approved by AICTE and Affiliated to Anna University, Chennai &amp; Accredited by NBA, New
+                            Delhi till June 2022. Anna University permanent affiliation for the CSE, IT, ECE, EEE, MECH.
+                        </p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="50">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Excellent Infrastructure &amp; digitized wifi enabled classrooms.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="100">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Library is part of NPTEL Local Chapter and has 18,924 volumes.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="150">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Highly Qualified &amp; Research Oriented Faculty.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="200">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Research Centres recognised by Anna University.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="250">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Industry collaboration through various MOUs with Zoho, Airtel, CADD Training Services,
+                            Irrigation Management Training Institute, CISCO, Object Frontier Software Private Ltd, HCL
+                            Career Development Centre, Ihorse Technologies, Aveon InfoTech Ltd along with support for
+                            curriculum and beyond curriculum.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="300">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>100% Placement every year.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="350">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Add-on course support for CISCO Networking Academy.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="400">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>E-Yantra Robotics Lab established in association with IIT-Bombay.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="450">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Artificial Intelligence &amp; Machine Learning Lab with high end GPU servers and softwares
+                            TensorFlow, PyTorch, SciKit, R Programming etc.,</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-right" data-aos-delay="500">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Events, Seminars, Workshops, Symposiums, Conferences are organized in association with IQAC,
+                            IIC, WEC, IIPC, YRC, NSS, Rotract Club, Green Energy Club, NDLI, Science Club, Maths Club,
+                            Fine Arts Club etc.,</p>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="0">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Vehicles (Cars / Truck / Engines) have been sponsored to students to carryout research
+                            activities from Hyundai, Tata Motors, Ford, Renault Nissan.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="50">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Computerized VAR Multi Fuel Research Engine Test Rig (Mechanical) and MATLAB Enabled Advanced
+                            Wireless Communication Lab (ECE) has been installed under AICTE Modernization and Removal of
+                            Obsolescence (MODROB) scheme.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="100">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Students have been placed in various MNCs like CTS, TCS, INFOSYS, Zoho, Intellect Design
+                            Arena, Tech Mahindra, Mind Tree and WIPRO for deserving and esteemed packages of more than 5
+                            lakhs to 10 lakhs per annum etc.,</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="150">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Industrial Visits are organized to companies like BSNL, HCL, CDC, ISRO, CloudLogic,
+                            Ennovasys, Sun Network Services, BHEL, News7 Channel, Codoid, IITM-Research Park etc.,</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="200">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>MBA is associated with the MMA - Madras Management Association student chapter thereby
+                            conducting various Industry related workshops and seminars.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="250">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Funds around 10 lakhs approx. have been received for AICTE FDP Scheme.</p>
+                    </div>
+                    <div class="salient-item" data-aos="fade-left" data-aos-delay="300">
+                        <i class="fa-solid fa-award salient-icon"></i>
+                        <p>Institution has various memberships like Delnet, Indian Society for Technical
+                            Education(ISTE), International Association of Engineers(IAENG), Computer Society of
+                            India(CSI), Institution Innovation Council(IIC) etc.,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 3: RESEARCH (3 Tabs with Scrollable Tables)
+         ========================================================= -->
+    <section class="research-section">
+        <div class="container">
+            <h2 data-aos="fade-up">ANNA UNIVERSITY RECOGNIZED RESEARCH CENTER</h2>
+
+            <p class="research-intro" data-aos="fade-up" data-aos-delay="100">
+                This Institute has an R&D unit whose objective is to support and stimulate research and development
+                activities that serve society as a whole, particularly academic improvement. A committee of members,
+                including the head of the institution, the coordinator, and doctoral and senior faculty members from
+                each department, comprise the R&D cell. The research cell's objectives include improving theoretical
+                understanding and creating innovative technologies to address current problems. The cell encourages
+                student and faculty development. The Department of Mechanical and Electrical Engineering has received
+                research recognition from Anna University and has promoted research activities since 2013. Faculty
+                members who received supervisor recognition from Anna University in the respective departments are
+                working as recognized guides in the research centre. Faculty members from several, institutions,
+                including Kingston Engineering College, have been pursuing research in the R&D departments. The
+                candidate admitted to research programmes in the department of the institution recognised by Anna
+                University will be observed and assessed by the Research and Development Cell. TNSSST has sanctioned
+                project funding to two student's projects. The R&D cell's focus is to raise student awareness of
+                research and development opportunities and to encourage faculty members and students to publish research
+                papers in reputable national and international conferences and journals. The management sponsors the
+                most promising projects for prototyping. Guest lectures by renowned researchers, professors, and
+                industrialists are scheduled to promote student and teacher awareness and interest in research.
+                Information about various funding agencies, methods of applying for projects, etc. has been provided
+                through these programmes.
+            </p>
+
+            <!-- Tabs -->
+            <div class="research-tabs" data-aos="fade-up">
+                <button class="research-tab active" data-tab="tab1">List Of Doctorates (21)</button>
+                <button class="research-tab" data-tab="tab2">Ph.D Guides (2)</button>
+                <button class="research-tab" data-tab="tab3">Ph.D Scholars (17)</button>
+            </div>
+
+            <!-- Tab 1: 21 rows -->
+            <div class="research-table-wrapper active" id="tab1" data-aos="fade-up" data-aos-delay="100">
+                <table class="research-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>NAME OF THE FACULTY</th>
+                            <th>DEPARTMENT</th>
+                            <th>DESIGNATION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="doctorates-tbody">
+                        <!-- Populated by JS below -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tab 2: 2 rows -->
+            <div class="research-table-wrapper" id="tab2">
+                <table class="research-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>NAME OF THE FACULTY</th>
+                            <th>DEPARTMENT</th>
+                            <th>DESIGNATION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guides-tbody"></tbody>
+                </table>
+            </div>
+
+            <!-- Tab 3: 17 rows -->
+            <div class="research-table-wrapper" id="tab3">
+                <table class="research-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>NAME OF THE SCHOLAR</th>
+                            <th>DEPARTMENT</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scholars-tbody"></tbody>
+                </table>
+            </div>
+
+            <!-- View All Faculty CTA -->
+            <div class="text-center" data-aos="fade-up" style="margin-top: 45px;">
+                <a href="faculty-profile.html" class="gov-btn">
+                    <i class="fa-solid fa-users"></i> View All Faculty List
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 4: PATENTS & PUBLICATIONS
+         ========================================================= -->
+
+    <!-- =========================================================
+         SECTION 4: RESEARCH & INNOVATION HUB (SYNCED)
+         ========================================================= -->
+    <section class="research-hub-section">
+        <div class="container">
+            <!-- Stats Bar -->
+            <div class="research-stats" data-aos="zoom-in">
+                <div class="research-stats-inner">
+                    <div class="stat-item">
+                        <h3>05+</h3>
+                        <p>Published Patents</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Books & Chapters</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Journal Publications</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Academic Integrity</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Official Patents -->
+            <div class="research-hub-row">
+                <div class="section-title text-center" data-aos="fade-up" style="margin-bottom:50px;">
+                    <span
+                        style="color:#8b1a2b; font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:0.9rem;">Intellectual
+                        Property Portfolio</span>
+                    <h2
+                        style="font-family:'Poppins',sans-serif; font-size:2.5rem; font-weight:900; color:#111; margin-top:10px;">
+                        Institutional Patents</h2>
+                    <div style="width:80px; height:3px; background:#8b1a2b; margin:15px auto;"></div>
+                </div>
+
+                <div class="research-hub-grid">
+                    <!-- Patent 1 -->
+                    <div class="research-card" data-aos="fade-up">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 1</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_012018_dated_05012018.pdf" target="_blank"
+                            class="research-card-btn">View Official Record <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Patent 2 -->
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 2</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_062022_dated_11022022.pdf"
+                            target="_blank" class="research-card-btn">View Official Record <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Patent 3 -->
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 3</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_082020_dated_21022020.pdf"
+                            target="_blank" class="research-card-btn">View Official Record <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Patent 4 -->
+                    <div class="research-card" data-aos="fade-up">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 4</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_242019_dated_14062019.pdf" target="_blank"
+                            class="research-card-btn">View Official Record <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Patent 5 -->
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 5</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_382019_dated_20092019.pdf"
+                            target="_blank" class="research-card-btn">View Official Record <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Patent 6 -->
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Patent Journal - Entry 6</h3>
+                        <p>Official publication in the Indian Patent Office journal documenting institutional
+                            innovation.</p>
+                        <a href="assets/pdfs/research/the_patent_office_journal_no_422019_dated_18_10201.pdf"
+                            target="_blank" class="research-card-btn">View Official Record <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty Publications -->
+            <div class="research-hub-row">
+                <div class="section-title text-center" data-aos="fade-up" style="margin-bottom:50px;">
+                    <span
+                        style="color:#8b1a2b; font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:0.9rem;">Faculty
+                        Excellence</span>
+                    <h2
+                        style="font-family:'Poppins',sans-serif; font-size:2.5rem; font-weight:900; color:#111; margin-top:10px;">
+                        Books & Chapters Published</h2>
+                    <div style="width:80px; height:3px; background:#8b1a2b; margin:15px auto;"></div>
+                </div>
+
+                <div class="pub-grid">
+                    <div class="pub-card" data-aos="fade-right">
+                        <span class="pub-tag">Edition 2023</span>
+                        <h4 class="pub-title">Academic Publication 2023</h4>
+                        <p class="pub-author">Faculty Authored Work</p>
+                        <div class="pub-links">
+                            <a href="assets\pdfs\UGC Mandatory Disclosure\5. Research\1. R&D Link Files\Book chapters.pdf" download class="pub-link"><i
+                                    class="fa-solid fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
+                        <span class="pub-tag">Research Paper</span>
+                        <h4 class="pub-title">Impact Analysis - Research Chapter</h4>
+                        <p class="pub-author">Faculty Authored Work</p>
+                        <div class="pub-links">
+                            <a href="assets\pdfs\UGC Mandatory Disclosure\5. Research\1. R&D Link Files\Conference papers.pdf" target="_blank"
+                                class="pub-link"><i class="fa-solid fa-eye"></i> View Paper</a>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-aos="fade-right" data-aos-delay="200">
+                        <span class="pub-tag">Series BOOK-1</span>
+                        <h4 class="pub-title">JOURNAL PUBLICATION</h4>
+                        <p class="pub-author">Faculty Authored Work</p>
+                        <div class="pub-links">
+                            <a href="assets\pdfs\UGC Mandatory Disclosure\5. Research\1. R&D Link Files\Journal publications.pdf" download class="pub-link"><i
+                                    class="fa-solid fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-aos="fade-right" data-aos-delay="200">
+                        <span class="pub-tag">Patent</span>
+                        <h4 class="pub-title">Patent Publication</h4>
+                        <p class="pub-author">Faculty Authored Work</p>
+                        <div class="pub-links">
+                            <a href="assets\pdfs\UGC Mandatory Disclosure\5. Research\1. R&D Link Files\Patent.pdf" download class="pub-link"><i
+                                    class="fa-solid fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Section -->
+            <div class="text-center" data-aos="fade-up" style="margin-top: 40px;">
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Explore the full research archive
+                    including Journals and Conference papers in our official Research Center.</p>
+                <a href="ugc/ugc_ps_rnd.html" class="btn-side bg-brand-red"
+                    style="display: inline-block; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; transform: none; position: static; color: rgb(39, 3, 3);">View
+                    Full Research Hub <i class="fa-solid fa-arrow-right"
+                        style="margin-left: 10px; color: rgb(96, 12, 12)(39, 3, 3);"></i></a>
+            </div>
+        </div>
+    </section>    <div id="include-footer"></div>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // ===== 1. Salient BG Swiper (auto-loop, no controls) =====
+        const salientBg = new Swiper('.salientBgSwiper', {
+            loop: true,
+            speed: 1500,
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            effect: 'fade',
+            fadeEffect: { crossFade: true }
+        });
+
+        // ===== 2. Research Tabs =====
+        document.querySelectorAll('.research-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.research-tab').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.research-table-wrapper').forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // ===== 3. Research Table Data (synced with engineering.kingston.ac.in/research) =====
+        const dtbody = document.getElementById('doctorates-tbody');
+        const doctorates = [
+            { name: 'Dr. Priya S', dept: 'Artificial Intelligence and Data Science', des: 'Assistant Professor' },
+            { name: 'Dr. Kannammal N', dept: 'Artificial Intelligence and Data Science', des: 'Professor' },
+            { name: 'Dr. Dhivya E', dept: 'Computer Science and Business Systems', des: 'Assistant Professor' },
+            { name: 'Dr. Arivazhagu U V', dept: 'Computer Science and Engineering', des: 'Professor / Principal' },
+            { name: 'Dr. Priya T', dept: 'Computer Science and Engineering', des: 'Assistant Professor' },
+            { name: 'Dr. Balaji S', dept: 'Computer Science and Engineering', des: 'Assistant Professor' },
+            { name: 'Dr. Venkatesan A', dept: 'Electronics and Communication Engineering', des: 'Assistant Professor' },
+            { name: 'Dr. Surem Samuel S R', dept: 'Electronics and Communication Engineering', des: 'Associate Professor' },
+            { name: 'Dr. Deepa S', dept: 'Electrical and Electronics Engineering', des: 'Professor' },
+            { name: 'Dr. Vasumathy M', dept: 'Information Technology', des: 'Associate Professor' },
+            { name: 'Dr. Aswinipriya S', dept: 'Master of Business Administration', des: 'Assistant Professor' },
+            { name: 'Dr. Mahendiran S', dept: 'Mechanical Engineering', des: 'Assistant Professor' },
+            { name: 'Dr. Shankar Ganesh N', dept: 'Mechanical Engineering', des: 'Professor' },
+            { name: 'Dr. Archana S', dept: 'Science and Humanities', des: 'Associate Professor' },
+            { name: 'Dr. Elakkiya V', dept: 'Science and Humanities', des: 'Assistant Professor' },
+            { name: 'Dr. Naveenkumar G', dept: 'Science and Humanities', des: 'Assistant Professor' },
+            { name: 'Dr. Sheeba W T', dept: 'Science and Humanities', des: 'Assistant Professor' },
+            { name: 'Dr. Touseef Ahmed A', dept: 'Science and Humanities', des: 'Assistant Professor' },
+            { name: 'Dr. Latha R', dept: 'Science and Humanities', des: 'Associate Professor' },
+            { name: 'Dr. Kumaresan E', dept: 'Science and Humanities', des: 'Associate Professor' },
+            { name: 'Dr. Sivakumar D', dept: 'Science and Humanities', des: 'Associate Professor' }
+        ];
+        doctorates.forEach((d, i) => {
+            dtbody.innerHTML += `<tr><td>${i + 1}</td><td>${d.name}</td><td>${d.dept}</td><td>${d.des}</td></tr>`;
+        });
+
+        const gtbody = document.getElementById('guides-tbody');
+        const guides = [
+            { name: 'Dr. S. Deepa', dept: 'Electrical and Electronics Engineering', des: 'Professor' },
+            { name: 'Dr. N. Shankarganesh', dept: 'Mechanical Engineering', des: 'Professor' }
+        ];
+        guides.forEach((g, i) => {
+            gtbody.innerHTML += `<tr><td>${i + 1}</td><td>${g.name}</td><td>${g.dept}</td><td>${g.des}</td></tr>`;
+        });
+
+        const stbody = document.getElementById('scholars-tbody');
+        const scholars = [
+            { name: 'Mrs. Geetha N', dept: 'Artificial Intelligence and Data Science' },
+            { name: 'Ms. Anitha M', dept: 'Computer Science and Business Systems' },
+            { name: 'Mrs. Thulasi Bruntha B', dept: 'Electronics and Communication Engineering' },
+            { name: 'Mrs. Radhika M', dept: 'Electronics and Communication Engineering' },
+            { name: 'Mrs. Vanitha N', dept: 'Electronics and Communication Engineering' },
+            { name: 'Mrs. Sowmya N G', dept: 'Electrical and Electronics Engineering' },
+            { name: 'Mrs. Menaka M', dept: 'Information Technology' },
+            { name: 'Mrs. Sarah S', dept: 'Information Technology' },
+            { name: 'Mr. Gajendiran K S', dept: 'Information Technology' },
+            { name: 'Ms. Nathiya S', dept: 'Information Technology' },
+            { name: 'Mr. Keerthi Varman N', dept: 'Mechanical Engineering' },
+            { name: 'Mr. Charunnath S V', dept: 'Mechanical Engineering' },
+            { name: 'Mr. Vigneshwaran R', dept: 'Mechanical Engineering' },
+            { name: 'Mr. Rudramoorthy S', dept: 'Mechanical Engineering' },
+            { name: 'Mr. Dineshkumar H', dept: 'Mechanical Engineering' },
+            { name: 'Mr. Selvakumar K', dept: 'Science and Humanities' },
+            { name: 'Mrs. Punithavathi L', dept: 'Science and Humanities' }
+        ];
+        scholars.forEach((s, i) => {
+            stbody.innerHTML += `<tr><td>${i + 1}</td><td>${s.name}</td><td>${s.dept}</td><td>Full Time</td></tr>`;
+        });
+    </script>
+
+    <script src="assets/js/ai-assistant.js" defer></script>
+</body>
+
+</html>

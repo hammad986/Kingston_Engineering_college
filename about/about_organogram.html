@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- ════════════════════════════════════════════════════════════
+         ORGANOGRAM — Premium Animated Interactive Showcase
+         ════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Page Wrapper ── */
+        .org-page {
+            background: #f8f4f0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ── Hero Banner ── */
+        .org-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, #8b1a2b 0%, #a01f34 30%, #c0392b 60%, #6d1220 100%);
+            padding: 72px 0 80px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Animated diagonal stripes */
+        .org-hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg,
+                    rgba(255, 255, 255, 0.04) 0px,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px,
+                    transparent 40px);
+            animation: stripeMove 20s linear infinite;
+        }
+
+        @keyframes stripeMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 200px 200px;
+            }
+        }
+
+        /* Floating circles */
+        .org-hero-banner::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 80px solid rgba(255, 255, 255, 0.05);
+            top: -180px;
+            right: -120px;
+            animation: rotateSlow 25s linear infinite;
+        }
+
+        @keyframes rotateSlow {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .org-banner-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .org-banner-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #ffd080;
+            margin-bottom: 16px;
+            animation: orgFadeUp 0.7s 0.2s both;
+        }
+
+        .org-banner-eyebrow::before,
+        .org-banner-eyebrow::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #ffd080;
+        }
+
+        .org-banner-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: orgFadeUp 0.7s 0.35s both;
+        }
+
+        .org-banner-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 540px;
+            margin: 0 auto 28px;
+            animation: orgFadeUp 0.7s 0.5s both;
+        }
+
+        .org-banner-pills {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            animation: orgFadeUp 0.7s 0.65s both;
+        }
+
+        .org-banner-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            cursor: default;
+        }
+
+        .org-banner-pill:hover {
+            background: rgba(255, 255, 255, 0.26);
+            transform: translateY(-2px);
+        }
+
+        @keyframes orgFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Wavy Divider ── */
+        .org-wave-divider {
+            line-height: 0;
+            background: #8b1a2b;
+        }
+
+        .org-wave-divider svg {
+            display: block;
+        }
+
+        /* ── Image Section ── */
+        .org-img-section {
+            background: #f8f4f0;
+            padding: 70px 0 80px;
+            position: relative;
+        }
+
+        /* Floating geometric shapes (no glass) */
+        .org-geo {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .org-geo-1 {
+            width: 180px;
+            height: 180px;
+            border: 3px solid rgba(139, 26, 43, 0.12);
+            border-radius: 0;
+            top: 40px;
+            left: -60px;
+            transform: rotate(30deg);
+            animation: geoSpin1 18s linear infinite;
+        }
+
+        .org-geo-2 {
+            width: 120px;
+            height: 120px;
+            border: 3px solid rgba(245, 197, 24, 0.2);
+            border-radius: 50%;
+            bottom: 60px;
+            right: -40px;
+            animation: geoSpin2 14s linear infinite;
+        }
+
+        .org-geo-3 {
+            width: 80px;
+            height: 80px;
+            background: rgba(139, 26, 43, 0.06);
+            border-radius: 8px;
+            top: 30%;
+            right: 60px;
+            transform: rotate(20deg);
+            animation: geoFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes geoSpin1 {
+            to {
+                transform: rotate(390deg);
+            }
+        }
+
+        @keyframes geoSpin2 {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes geoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(20deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(30deg);
+            }
+        }
+
+        /* ── Image Frame Wrapper ── */
+        .org-img-frame-wrap {
+            position: relative;
+            z-index: 5;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Corner accent decorations */
+        .org-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: #8b1a2b;
+            border-style: solid;
+            z-index: 10;
+        }
+
+        .org-corner-tl {
+            top: -8px;
+            left: -8px;
+            border-width: 3px 0 0 3px;
+        }
+
+        .org-corner-tr {
+            top: -8px;
+            right: -8px;
+            border-width: 3px 3px 0 0;
+        }
+
+        .org-corner-bl {
+            bottom: -8px;
+            left: -8px;
+            border-width: 0 0 3px 3px;
+        }
+
+        .org-corner-br {
+            bottom: -8px;
+            right: -8px;
+            border-width: 0 3px 3px 0;
+        }
+
+        /* Pulsing glow border */
+        .org-img-border-glow {
+            position: absolute;
+            inset: -3px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #8b1a2b, #f5c518, #8b1a2b, #003366, #8b1a2b);
+            background-size: 400% 400%;
+            animation: borderGradient 6s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes borderGradient {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* ── Image Container with Zoom/Pan ── */
+        .org-img-container {
+            position: relative;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.18), 0 4px 20px rgba(139, 26, 43, 0.1);
+            cursor: grab;
+            user-select: none;
+            line-height: 0;
+        }
+
+        .org-img-container:active {
+            cursor: grabbing;
+        }
+
+        .org-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform-origin: center center;
+            transition: transform 0.12s ease;
+            pointer-events: none;
+        }
+
+        /* ── Toolbar ── */
+        .org-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 22px auto 0;
+            padding: 0 4px;
+            z-index: 5;
+            position: relative;
+        }
+
+        .org-toolbar-left {
+            display: flex;
+            gap: 10px;
+        }
+
+        .org-tool-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.83rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .org-tool-btn.primary {
+            background: linear-gradient(135deg, #8b1a2b, #c0392b);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(139, 26, 43, 0.3);
+        }
+
+        .org-tool-btn.primary:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(139, 26, 43, 0.45);
+        }
+
+        .org-tool-btn.secondary {
+            background: #fff;
+            color: #8b1a2b;
+            border: 2px solid #8b1a2b;
+        }
+
+        .org-tool-btn.secondary:hover {
+            background: #8b1a2b;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .org-tool-btn.gold {
+            background: linear-gradient(135deg, #f5c518, #e5a800);
+            color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(245, 197, 24, 0.35);
+        }
+
+        .org-tool-btn.gold:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(245, 197, 24, 0.5);
+        }
+
+        .org-zoom-display {
+            background: #fff;
+            border: 2px solid rgba(139, 26, 43, 0.25);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #8b1a2b;
+            min-width: 64px;
+            text-align: center;
+        }
+
+        /* ── Instruction hint ── */
+        .org-hint {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.78rem;
+            color: #999;
+            animation: orgFadeUp 0.8s 1.2s both;
+        }
+
+        .org-hint i {
+            color: #8b1a2b;
+            margin-right: 4px;
+        }
+
+        /* ── Stats Row ── */
+        .org-stats-row {
+            max-width: 1100px;
+            margin: 56px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 20px;
+            padding: 0 4px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .org-stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            border-left: 4px solid transparent;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .org-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--card-accent, #8b1a2b);
+        }
+
+        .org-stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+        }
+
+        .org-stat-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 14px;
+        }
+
+        .org-stat-count {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #111;
+            line-height: 1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .org-stat-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 6px;
+        }
+
+        /* ── Canvas particles ── */
+        #orgCanvas {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* ── Entrance animations ── */
+        [data-org-animate] {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        [data-org-animate].is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Hero Banner -->
+    <div class="org-hero-banner">
+        <div class="org-banner-inner">
+            <div class="org-banner-eyebrow"><span>Institutional Structure</span></div>
+            <h1 class="org-banner-title">Organogram</h1>
+            <p class="org-banner-sub">A clear view of Kingston Engineering College's organizational hierarchy and
+                reporting structure</p>
+            <div class="org-banner-pills">
+                <span class="org-banner-pill"><i class="fa-solid fa-sitemap"></i> Hierarchical Chart</span>
+                <span class="org-banner-pill"><i class="fa-solid fa-users"></i> Administrative Structure</span>
+                <span class="org-banner-pill"><i class="fa-solid fa-university"></i> NAAC 'A' Grade</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wavy SVG divider -->
+    <div class="org-wave-divider">
+        <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:54px;">
+            <path d="M0,0 C240,54 480,0 720,42 C960,84 1200,14 1440,40 L1440,0 Z" fill="#f8f4f0" />
+        </svg>
+    </div>
+
+    <!-- Image Section -->
+    <div class="org-img-section" id="orgImgSection">
+        <canvas id="orgCanvas"></canvas>
+
+        <!-- Floating geometric shapes -->
+        <div class="org-geo org-geo-1"></div>
+        <div class="org-geo org-geo-2"></div>
+        <div class="org-geo org-geo-3"></div>
+
+        <div class="container" style="position:relative; z-index:5;">
+
+            <!-- Image Frame -->
+            <div class="org-img-frame-wrap" data-org-animate>
+                <div class="org-img-border-glow"></div>
+                <div class="org-corner org-corner-tl"></div>
+                <div class="org-corner org-corner-tr"></div>
+                <div class="org-corner org-corner-bl"></div>
+                <div class="org-corner org-corner-br"></div>
+
+                <div class="org-img-container" id="orgImgContainer">
+                    <img src="../assets/images/organogram/Organogram.jpeg"
+                        onerror="this.src='https://via.placeholder.com/1200x800?text=Organogram+Image+Missing'"
+                        alt="Kingston Engineering College Organogram" id="orgImg">
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="org-toolbar" data-org-animate style="transition-delay:0.15s;">
+                <div class="org-toolbar-left">
+                    <button class="org-tool-btn primary" onclick="orgZoom(1.25)" id="btnZoomIn">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In
+                    </button>
+                    <button class="org-tool-btn secondary" onclick="orgZoom(0.8)" id="btnZoomOut">
+                        <i class="fa-solid fa-magnifying-glass-minus"></i> Zoom Out
+                    </button>
+                    <button class="org-tool-btn secondary" onclick="orgReset()" id="btnReset">
+                        <i class="fa-solid fa-arrows-rotate"></i> Reset
+                    </button>
+                    <div class="org-zoom-display" id="orgZoomDisplay">100%</div>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="org-tool-btn gold" onclick="orgFullscreen()" id="btnFullscreen">
+                        <i class="fa-solid fa-expand"></i> Fullscreen
+                    </button>
+                    <a class="org-tool-btn primary" href="../assets/images/organogram/Organogram.jpeg"
+                        download="KEC_Organogram.jpeg">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hint -->
+            <p class="org-hint">
+                <i class="fa-solid fa-circle-info"></i>
+                <strong>Tip:</strong> Drag the image to pan &nbsp;·&nbsp; Use zoom buttons or scroll to zoom
+                &nbsp;·&nbsp; Click Fullscreen for best view
+            </p>
+
+            <!-- Stats Row -->
+            <div class="org-stats-row">
+                <div class="org-stat-card" style="--card-accent:#8b1a2b;" data-org-animate
+                    style="transition-delay:0.1s;">
+                    <div class="org-stat-icon" style="background:#fdf0f2;">
+                        <i class="fa-solid fa-graduation-cap" style="color:#8b1a2b;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="3000">0</div>
+                    <div class="org-stat-label">Students enrolled</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#2563eb;" data-org-animate
+                    style="transition-delay:0.2s;">
+                    <div class="org-stat-icon" style="background:#eff6ff;">
+                        <i class="fa-solid fa-chalkboard-user" style="color:#2563eb;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="200">0</div>
+                    <div class="org-stat-label">Faculty members</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#059669;" data-org-animate
+                    style="transition-delay:0.3s;">
+                    <div class="org-stat-icon" style="background:#ecfdf5;">
+                        <i class="fa-solid fa-building-columns" style="color:#059669;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="10">0</div>
+                    <div class="org-stat-label">Departments</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#f5c518;" data-org-animate
+                    style="transition-delay:0.4s;">
+                    <div class="org-stat-icon" style="background:#fffde7;">
+                        <i class="fa-solid fa-award" style="color:#e5a800;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="25">0</div>
+                    <div class="org-stat-label">Years of excellence</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Interactive JS -->
+    <script>
+        (function () {
+            /* ── Zoom / Pan ── */
+            let scale = 1, isDragging = false, startX, startY, tx = 0, ty = 0;
+            const img = document.getElementById('orgImg');
+            const wrap = document.getElementById('orgImgContainer');
+            const display = document.getElementById('orgZoomDisplay');
+
+            function applyTransform() {
+                img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+                display.textContent = Math.round(scale * 100) + '%';
+            }
+
+            window.orgZoom = function (factor) {
+                scale = Math.min(Math.max(scale * factor, 0.5), 4);
+                applyTransform();
+            };
+            window.orgReset = function () {
+                scale = 1; tx = 0; ty = 0;
+                img.style.transition = 'transform 0.4s cubic-bezier(0.34,1.56,0.64,1)';
+                applyTransform();
+                setTimeout(() => img.style.transition = 'transform 0.12s ease', 450);
+            };
+            window.orgFullscreen = function () {
+                const el = wrap;
+                if (el.requestFullscreen) el.requestFullscreen();
+                else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+            };
+
+            /* Drag to pan */
+            wrap.addEventListener('mousedown', e => {
+                isDragging = true;
+                startX = e.clientX - tx;
+                startY = e.clientY - ty;
+            });
+            document.addEventListener('mousemove', e => {
+                if (!isDragging) return;
+                tx = e.clientX - startX;
+                ty = e.clientY - startY;
+                img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+            });
+            document.addEventListener('mouseup', () => { isDragging = false; });
+
+            /* Scroll to zoom */
+            wrap.addEventListener('wheel', e => {
+                e.preventDefault();
+                const factor = e.deltaY < 0 ? 1.1 : 0.9;
+                scale = Math.min(Math.max(scale * factor, 0.5), 4);
+                applyTransform();
+            }, { passive: false });
+
+            /* Touch pinch-zoom (mobile) */
+            let lastDist = 0;
+            wrap.addEventListener('touchstart', e => {
+                if (e.touches.length === 2) {
+                    lastDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                }
+            });
+            wrap.addEventListener('touchmove', e => {
+                if (e.touches.length === 2) {
+                    const dist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    scale = Math.min(Math.max(scale * (dist / lastDist), 0.5), 4);
+                    lastDist = dist;
+                    applyTransform();
+                }
+            });
+
+            /* ── Scroll-triggered entrance ── */
+            const orgAnimEls = document.querySelectorAll('[data-org-animate]');
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+            }, { threshold: 0.15 });
+            orgAnimEls.forEach(el => io.observe(el));
+
+            /* ── Counter animation ── */
+            function animateCount(el, target) {
+                let current = 0;
+                const step = Math.ceil(target / 60);
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, target);
+                    el.textContent = current.toLocaleString() + (target >= 1000 ? '+' : '+');
+                    if (current >= target) clearInterval(timer);
+                }, 25);
+            }
+            const countEls = document.querySelectorAll('.org-stat-count[data-count]');
+            const countIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        animateCount(e.target, parseInt(e.target.dataset.count));
+                        countIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            countEls.forEach(el => countIO.observe(el));
+
+            /* ── Canvas particles ── */
+            const canvas = document.getElementById('orgCanvas');
+            const ctx = canvas.getContext('2d');
+            let W, H, pts = [], animId2;
+            function resizeC() {
+                const sec = document.getElementById('orgImgSection');
+                W = canvas.width = sec.offsetWidth;
+                H = canvas.height = sec.offsetHeight;
+            }
+            function mkPt() {
+                return {
+                    x: Math.random() * W, y: H + 5,
+                    r: Math.random() * 2 + 0.5,
+                    dx: (Math.random() - 0.5) * 0.4,
+                    dy: -(Math.random() * 0.7 + 0.3),
+                    alpha: Math.random() * 0.45 + 0.1,
+                    color: Math.random() > 0.5 ? '#8b1a2b' : Math.random() > 0.5 ? '#f5c518' : '#003366'
+                };
+            }
+            function initC() {
+                resizeC();
+                pts = Array.from({ length: 55 }, mkPt);
+                window.addEventListener('resize', resizeC);
+            }
+            function drawC() {
+                ctx.clearRect(0, 0, W, H);
+                pts.forEach((p, i) => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.alpha;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                    p.x += p.dx; p.y += p.dy;
+                    if (p.y < -10 || p.x < -10 || p.x > W + 10) pts[i] = mkPt();
+                });
+                animId2 = requestAnimationFrame(drawC);
+            }
+            const sectionIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { initC(); drawC(); }
+                    else { cancelAnimationFrame(animId2); }
+                });
+            }, { threshold: 0.1 });
+            sectionIO.observe(document.getElementById('orgImgSection'));
+        })();
+    </script>
+
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/news.js" defer></script>
+    <script src="../assets/js/events.js" defer></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+</body>
+
+</html>

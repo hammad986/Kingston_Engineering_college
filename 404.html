@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Kingston Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0b223c 0%, #1a5490 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+            margin-bottom: -20px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f5c518;
+            color: #0b223c;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 197, 24, 0.3);
+        }
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .contact-info p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        .contact-info a {
+            color: #f5c518;
+            text-decoration: none;
+        }
+        .contact-info a:hover { text-decoration: underline; }
+        .icon-404 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: rgba(245, 197, 24, 0.3);
+        }
+        @media (max-width: 768px) {
+            .error-code { font-size: 5rem; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <!-- Responsive/media rules — required so the shared header/footer partials
+         render correctly on mobile. Desktop is unaffected. -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <div id="include-header"></div>
+
+    <div class="container">
+        <div class="icon-404"><i class="fa-solid fa-map-signs"></i></div>
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p>The page you're looking for doesn't exist or has been moved.<br>Let us help you find your way back.</p>
+        <a href="index.html" class="btn-home">
+            <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i> +91-9788029999</p>
+            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@kingston.ac.in">info@kingston.ac.in</a></p>
+            <p style="margin-top:12px;font-size:0.8rem;">Kingston Engineering College — Vellore, Tamil Nadu</p>
+        </div>
+    </div>    <div id="include-footer"></div>
+
+    <script src="assets/js/include-components.js"></script>
+</body>
+</html>

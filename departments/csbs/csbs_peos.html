@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSBS - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/ai-assistant.css">
+
+
+    <style>
+        :root {
+            --csbs-violet: #4b0082;
+            --csbs-neon: #00ffff;
+            --csbs-dark: #0f0c29;
+            --csbs-glass: rgba(255, 255, 255, 0.07);
+        }
+
+        .dept-main-content section {
+            background: #fff;
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(75, 0, 130, 0.05);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dept-main-content section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(75, 0, 130, 0.12);
+            border-color: var(--csbs-violet);
+        }
+
+        .dept-title-red {
+            background: linear-gradient(135deg, var(--csbs-violet), #302b63, #000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* Glassmorphic Cards */
+        .glass-card-csbs {
+            background: var(--csbs-glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            border-left: 8px solid var(--csbs-neon);
+        }
+
+        /* Faculty & Achievement Grids */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .achieve-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #efefff;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achieve-box:hover {
+            box-shadow: 0 12px 35px rgba(75, 0, 130, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .achieve-box h4 {
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: inherit;
+        }
+
+        /* Interactive PDF Buttons */
+        .premium-pdf-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--csbs-violet), #000);
+            color: #fff;
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(75, 0, 130, 0.3);
+            transition: 0.4s;
+            border: 2px solid transparent;
+        }
+
+        .premium-pdf-btn:hover {
+            transform: scale(1.05);
+            background: var(--csbs-neon);
+            color: #000;
+            box-shadow: 0 15px 35px rgba(0, 255, 255, 0.4);
+        }
+
+        .anna-univ-btn {
+            background: #fff;
+            color: var(--csbs-violet);
+            border: 2px solid var(--csbs-violet);
+        }
+
+        .anna-univ-btn:hover {
+            border-color: var(--csbs-violet);
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-down {
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+<div class="dept-details-wrapper">
+
+    <aside class="dept-sidebar">
+            <ul class="dept-sidebar-menu">
+                <li><a href="csbs_dept.html" ><i class="fa-solid fa-house"></i> About the Department</a></li>
+                <li><a href="csbs_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+                <li><a href="csbs_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+                <li><a href="csbs_practical_laboratory.html"><i class="fa-solid fa-flask"></i> Practical Laboratory</a></li>
+                <li><a href="csbs_toppers.html"><i class="fa-solid fa-award"></i> Toppers List</a></li>
+                
+                
+                <li><a href="csbs_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+                <li><a href="csbs_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a></li>
+                <li><a href="csbs_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+                <li><a href="csbs_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department Academic Calendar</a></li>
+                <li><a href="csbs_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+                <li><a href="csbs_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+                <li><a href="csbs_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a></li>
+                <li><a href="csbs_industry.html"><i class="fa-solid fa-industry"></i> Industry</a></li>
+                <li><a href="csbs_industry_visits.html"><i class="fa-solid fa-building"></i> Industry Visits</a></li>
+                <li><a href="csbs_student_participations.html"><i class="fa-solid fa-users-viewfinder"></i> Student Participations</a></li>
+                
+                <li><a href="csbs_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty Upskilling</a></li>
+                <li><a href="csbs_distinguished_alumni.html"><i class="fa-solid fa-user-graduate"></i> Distinguished Alumni</a></li>
+                <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+                <li><a href="csbs_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+                <li><a href="csbs_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student Publications</a></li>
+                <li><a href="csbs_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+                <li><a href="csbs_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a></li>
+                <li><a href="csbs_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+            </ul>
+    </aside>
+
+    <main class="dept-main-content">
+
+        <h1 class="dept-title-red" data-aos="fade-up">PEOs, POs &amp; PSOs</h1>
+
+        <div class="dept-subpage-content" data-aos="fade-up">
+
+            <!-- PEOs Section -->
+            <section class="dept-section" data-aos="fade-up">
+                <h3>PROGRAMME EDUCATIONAL OBJECTIVES (PEOs)</h3>
+                <p>Graduates of the B.Tech. Computer Science and Business Systems program will:</p>
+                <div class="peo-grid">
+                    <div class="peo-card">
+                        <div class="peo-icon-box">PEO1</div>
+                        <h4>Professional Excellence</h4>
+                        <p>Apply technical and business knowledge to solve complex problems in computer science and business systems.</p>
+                    </div>
+                    <div class="peo-card">
+                        <div class="peo-icon-box" style="background:#f5c518; color:#003366;">PEO2</div>
+                        <h4>Ethical Responsibility</h4>
+                        <p>Become ethically responsible professionals contributing to organizational goals and societal well-being.</p>
+                    </div>
+                    <div class="peo-card">
+                        <div class="peo-icon-box" style="background:#003366;">PEO3</div>
+                        <h4>Continuous Learning</h4>
+                        <p>Engage in lifelong learning to adapt to evolving technologies and business environments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POs Section -->
+            <section class="dept-section" data-aos="fade-up" data-aos-delay="50">
+                <h3>PROGRAMME OUTCOMES (POs)</h3>
+                <p>Engineering graduates will be able to:</p>
+                <div class="po-list">
+                    <div class="po-item"><span class="po-code">PO1</span><span class="po-text"><strong>Engineering knowledge:</strong> Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</span></div>
+                    <div class="po-item"><span class="po-code">PO2</span><span class="po-text"><strong>Problem analysis:</strong> Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</span></div>
+                    <div class="po-item"><span class="po-code">PO3</span><span class="po-text"><strong>Design/development of solutions:</strong> Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.</span></div>
+                    <div class="po-item"><span class="po-code">PO4</span><span class="po-text"><strong>Conduct investigations of complex problems:</strong> Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</span></div>
+                    <div class="po-item"><span class="po-code">PO5</span><span class="po-text"><strong>Modern tool usage:</strong> Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.</span></div>
+                    <div class="po-item"><span class="po-code">PO6</span><span class="po-text"><strong>The engineer and society:</strong> Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</span></div>
+                    <div class="po-item"><span class="po-code">PO7</span><span class="po-text"><strong>Environment and sustainability:</strong> Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</span></div>
+                    <div class="po-item"><span class="po-code">PO8</span><span class="po-text"><strong>Ethics:</strong> Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</span></div>
+                    <div class="po-item"><span class="po-code">PO9</span><span class="po-text"><strong>Individual and team work:</strong> Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</span></div>
+                    <div class="po-item"><span class="po-code">PO10</span><span class="po-text"><strong>Communication:</strong> Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</span></div>
+                    <div class="po-item"><span class="po-code">PO11</span><span class="po-text"><strong>Project management and finance:</strong> Demonstrate knowledge and understanding of the engineering and management principles and apply these to one&rsquo;s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.</span></div>
+                    <div class="po-item"><span class="po-code">PO12</span><span class="po-text"><strong>Life-long learning:</strong> Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</span></div>
+                </div>
+            </section>
+
+            <!-- PSOs Section -->
+            <section class="dept-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>PROGRAMME SPECIFIC OUTCOMES (PSOs)</h3>
+                <div class="po-list">
+                    <div class="po-item"><span class="po-code">PSO1</span><span class="po-text"><strong>Analytics:</strong> Apply mathematical and business principles to solve complex problems in software projects and data analytics.</span></div>
+                    <div class="po-item"><span class="po-code">PSO2</span><span class="po-text"><strong>Business Technology:</strong> Integrate computer science foundations with business intelligence tools for effective enterprise solution delivery.</span></div>
+                </div>
+            </section>
+
+        </div>
+
+        <style>
+            .peo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+                margin-top: 20px;
+            }
+            .peo-card {
+                background: #fff;
+                padding: 30px;
+                border-radius: 15px;
+                border: 1px solid #eee;
+                transition: 0.4s;
+                text-align: center;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            }
+            .peo-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 40px rgba(163, 31, 36, 0.12);
+                border-color: #a31f24;
+            }
+            .peo-icon-box {
+                width: 70px;
+                height: 70px;
+                background: #a31f24;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 18px;
+                font-size: 1.1rem;
+                font-weight: 900;
+                color: #fff;
+            }
+            .peo-card h4 {
+                font-size: 1.1rem;
+                font-weight: 800;
+                color: #003366;
+                margin-bottom: 12px;
+            }
+            .peo-card p {
+                font-size: 0.95rem;
+                color: #555;
+                line-height: 1.7;
+            }
+            .po-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            .po-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+                background: #fff;
+                padding: 18px 22px;
+                border-radius: 12px;
+                border: 1px solid #eee;
+                transition: 0.3s;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            }
+            .po-item:hover {
+                border-color: #a31f24;
+                box-shadow: 0 5px 20px rgba(163,31,36,0.08);
+            }
+            .po-code {
+                flex-shrink: 0;
+                background: #003366;
+                color: #fff;
+                padding: 6px 14px;
+                border-radius: 8px;
+                font-size: 0.85rem;
+                font-weight: 800;
+                letter-spacing: 0.5px;
+            }
+            .po-text {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #444;
+            }
+        </style>
+
+    </main>
+</div>
+
+<div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../../assets/js/news.js" defer></script>
+    <script src="../../assets/js/events.js" defer></script>
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/ai-assistant.js" defer></script>
+    <script>
+        // Hero Main Swiper
+        new Swiper('#hero-main-swiper', {
+            loop: true,
+            speed: 900,
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            pagination: { el: '.hero-swiper-pagination', clickable: true },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+        });
+    </script>
+</body>
+
+</html>

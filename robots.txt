@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://engineering.kingston.ac.in/sitemap.xml
+
+# Disallow admin or private paths
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /docs/
+Disallow: /college-detail/

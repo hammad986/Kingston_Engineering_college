@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Connect - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+
+    <style>
+        .pat-hero-band {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .pat-hero-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
+            animation: patStripe 18s linear infinite;
+        }
+        @keyframes patStripe { 0% { transform: translateX(0); } 100% { transform: translateX(80px); } }
+        .pat-hero-orbs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .pat-orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.25; }
+        .pat-orb-1 { width: 320px; height: 320px; background: #f5c518; top: -80px; left: -60px; animation: patFloat 8s ease-in-out infinite alternate; }
+        .pat-orb-2 { width: 240px; height: 240px; background: #4fc3f7; bottom: -60px; right: -40px; animation: patFloat 10s ease-in-out infinite alternate-reverse; }
+        .pat-orb-3 { width: 180px; height: 180px; background: #fff; top: 50%; left: 60%; animation: patFloat 12s ease-in-out infinite alternate; }
+        @keyframes patFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-30px) scale(1.15); } }
+        .pat-ring { position: absolute; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 50%; animation: patSpin 30s linear infinite; }
+        .pat-ring-1 { width: 480px; height: 480px; top: -140px; right: -100px; }
+        .pat-ring-2 { width: 360px; height: 360px; bottom: -100px; left: -80px; animation-direction: reverse; animation-duration: 22s; }
+        @keyframes patSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .pat-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .pat-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: Poppins, sans-serif; font-size: 0.85rem; font-weight: 600; color: #f5c518; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+        .pat-eyebrow::before, .pat-eyebrow::after { content: ''; display: block; width: 40px; height: 2px; background: #f5c518; border-radius: 1px; }
+        .pat-hero-title { font-family: Poppins, sans-serif; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+        .pat-hero-title em { font-style: normal; color: #f5c518; }
+        .pat-hero-sub { font-family: Inter, sans-serif; font-size: clamp(0.95rem,1.5vw,1.1rem); color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 640px; margin: 0 auto 24px; }
+        .pat-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .pat-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.18); padding: 8px 18px; border-radius: 50px; font-family: Inter, sans-serif; font-size: 0.82rem; color: #fff; transition: all 0.25s; }
+        .pat-pill i { color: #f5c518; font-size: 0.8rem; }
+        .pat-pill:hover { background: #f5c518; color: #003366; transform: translateY(-2px); }
+        .pat-pill:hover i { color: #003366; }
+        .pat-wave { position: relative; z-index: 2; margin-top: -1px; line-height: 0; }
+        .pat-wave svg { display: block; width: 100%; height: auto; }
+        .pat-section { padding: 76px 0; }
+        .pat-section.bg-light { background: #f8f9fa; }
+        .pat-section-heading { font-family: Poppins, sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+        .pat-section-line { width: 72px; height: 4px; background: #c0393b; border-radius: 2px; margin-bottom: 38px; }
+    </style>
+
+    <style>
+        .ind-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .ind-gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            aspect-ratio: 4 / 3;
+        }
+        .ind-gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .ind-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .ind-content-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+        }
+        .ind-content-card h3 {
+            font-family: Poppins, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 12px;
+        }
+        .ind-content-card p {
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-size: 0.94rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 14px;
+        }
+        .ind-content-card p:last-child { margin-bottom: 0; }
+        .ind-sponsor-list {
+            list-style: none; padding: 0; margin: 0;
+            display: flex; flex-direction: column; gap: 14px;
+        }
+        .ind-sponsor-list li {
+            display: flex; align-items: flex-start; gap: 14px;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-size: 0.94rem; line-height: 1.7; color: #444;
+        }
+        .ind-sponsor-list li i {
+            color: #f5c518; font-size: 1rem; margin-top: 4px; flex-shrink: 0;
+        }
+        .ind-sponsor-list li strong { color: #1a1a1a; }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+<section class="pat-hero-band">
+    <div class="pat-hero-orbs"><div class="pat-orb pat-orb-1"></div><div class="pat-orb pat-orb-2"></div><div class="pat-orb pat-orb-3"></div></div>
+    <div class="pat-ring pat-ring-1"></div><div class="pat-ring pat-ring-2"></div>
+    <div class="pat-hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="pat-eyebrow">Placement &amp; Training</div>
+        <h1 class="pat-hero-title">Industry <em>Connect</em></h1>
+        <p class="pat-hero-sub">Bridging the gap between academic learning and industry expectations through strong partnerships, MoUs, internships, and collaborative training initiatives.</p>
+        <div class="pat-pills">
+            <span class="pat-pill"><i class="fa-solid fa-handshake"></i> 50+ MoUs</span>
+            <span class="pat-pill"><i class="fa-solid fa-building"></i> Industry Partners</span>
+            <span class="pat-pill"><i class="fa-solid fa-laptop-code"></i> Internships</span>
+            <span class="pat-pill"><i class="fa-solid fa-chalkboard-user"></i> Faculty Training</span>
+        </div>
+    </div>
+</section>
+
+<div class="pat-wave"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C320,52 720,0 1440,28 L1440,52 L0,52 Z" fill="#f8f9fa"/></svg></div>
+
+
+    
+    
+    <section class="pat-section">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 class="pat-section-heading">About Industry Connect</h2>
+                <div class="pat-section-line"></div>
+            </div>
+            <div class="ind-content-card" data-aos="fade-up">
+                <p>We are closely connected with various industries and understand their real-time challenges in technology, business models, and employee engagement. Our faculties discuss these tasks with the students, assisting them in achieving positive real-time outcomes.</p>
+                <p>We organize regular industry visits for faculties so that the experience is transformed to the students before taking them to the industries for visits.</p>
+                <p>Our students undergo internship training programmes only from the industries in our tie-up. We have signed MoUs with more than <strong>50 industries</strong> across various domains.</p>
+                <p>Our faculties provide training sessions to industries and NGOs based on their requirements — technology updation, in-service training, personality development, time management, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pat-section bg-light">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 class="pat-section-heading">Industry Sponsored Initiatives</h2>
+                <div class="pat-section-line"></div>
+            </div>
+            <div class="ind-content-card" data-aos="fade-up">
+                <p>Major automotive and technology industries have sponsored their products for real-time knowledge transfer training and research activities at Kingston Engineering College:</p>
+                <ul class="ind-sponsor-list">
+                    <li><i class="fa-solid fa-car-side"></i> <div><strong>Hyundai</strong> — Sponsored a CRETA car worth &#8377;10 Lakhs for student training and research.</div></li>
+                    <li><i class="fa-solid fa-truck"></i> <div><strong>Renault Nissan</strong> — Sponsored a Datsun car with one spare engine; our students are converting the petrol vehicle into an electric vehicle as a research project.</div></li>
+                    <li><i class="fa-solid fa-car"></i> <div><strong>Ford</strong> — Sponsored an EcoSport car for training &amp; development.</div></li>
+                    <li><i class="fa-solid fa-truck-pickup"></i> <div><strong>TATA Motors</strong> — Sponsored a Yodha utility vehicle, additional BS VI engine, and complete wiring harness set for laboratory showcase. They also conducted virtual training on vehicle architecture.</div></li>
+                    <li><i class="fa-solid fa-water-pump"></i> <div><strong>TEXMO Group (Aquasub Engineering)</strong> — Sponsored a submersible pump motor for training &amp; development, and provides industry visits and career opportunities for students.</div></li>
+                    <li><i class="fa-solid fa-desktop"></i> <div><strong>MSC Technology India Pvt Ltd</strong> — Sponsored 25 latest computer system CPUs to set up a collaboration skill development centre at Kingston, leading to a Centre of Excellence. They provide guest lectures and industry visits every semester for software engineering departments, enabling many students to secure opportunities at MSC Technology.</div></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pat-section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="pat-section-heading" style="text-align:center;">Industry Gallery</h2>
+            <div class="pat-section-line" style="margin-left:auto;margin-right:auto;"></div>
+        </div>
+        <div class="container">
+            <div class="ind-gallery-grid" data-aos="fade-up">
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%202.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%203.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%204.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%205.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%206.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%207.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%208.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%209.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2010.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2011.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2012.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2013.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2014.png" alt="Industry Connect" loading="lazy"></div>
+                <div class="ind-gallery-item"><img src="../assets/images/industry_connected/image%20copy%2015.png" alt="Industry Connect" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') { AOS.init({ duration: 680, once: true, offset: 60 }); }
+});
+</script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

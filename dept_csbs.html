@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science and Business Systems - Kingston Engineering College</title>
+    <meta name="description" content="Computer Science and Business Systems at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        /* ---- HERO SWIPER CAROUSEL ---- */
+        .hero-slides-wrap {
+            position: absolute;
+            top: 50%;
+            right: 56px;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 660px;
+            max-width: 48vw;
+            pointer-events: all;
+        }
+
+        .hero-main-swiper {
+            width: 100%;
+        }
+
+        .hero-slide-card {
+            background: rgba(0, 0, 0, 0.62);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 18px;
+            padding: 36px 42px 28px;
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s;
+        }
+
+        .hero-slide-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-card-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 28px;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-card-flex {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .hero-card-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-card-logo-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 18px 14px 10px;
+            margin-bottom: 14px;
+            min-height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .hero-card-logo-box img {
+            width: 70px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hero-card-logo-box p {
+            font-size: 0.6rem;
+            color: #333;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .hero-card-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.25);
+            min-height: 140px;
+            align-self: center;
+            flex-shrink: 0;
+        }
+
+        .hero-card-label {
+            color: #f5c518;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hero-card-value {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .hero-swiper-pagination {
+            margin-top: 18px;
+            position: static !important;
+            text-align: center;
+        }
+
+        .hero-swiper-pagination .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .hero-swiper-pagination .swiper-pagination-bullet-active {
+            background: #f5c518;
+            opacity: 1;
+            width: 22px;
+            border-radius: 4px;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <div class="dept-details-wrapper">
+
+        <aside class="dept-sidebar">
+            <ul class="dept-sidebar-menu">
+                <li><a href="departments/csbs/csbs_dept.html"><i class="fa-solid fa-house"></i> About the Department</a></li>
+                <li><a href="departments/csbs/csbs_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+                <li><a href="departments/csbs/csbs_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+                <li><a href="departments/csbs/csbs_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+                <li><a href="departments/csbs/csbs_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a>
+                </li>
+                <li><a href="departments/csbs/csbs_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+                <li><a href="departments/csbs/csbs_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department
+                        Academic Calendar</a></li>
+                <li><a href="departments/csbs/csbs_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+                <li><a href="departments/csbs/csbs_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+                <li><a href="departments/csbs/csbs_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a>
+                </li>
+                <li><a href="departments/csbs/csbs_industry_visits.html"><i class="fa-solid fa-building"></i> Industry Visits</a></li>
+                <li><a href="departments/csbs/csbs_student_participations.html"><i class="fa-solid fa-users-viewfinder"></i> Student
+                        Participations</a></li>
+                <li><a href="departments/csbs/csbs_toppers.html"><i class="fa-solid fa-medal"></i> Toppers List</a></li>
+                <li><a href="departments/csbs/csbs_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty
+                        Upskilling</a></li>
+                <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+                <li><a href="departments/csbs/csbs_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+                <li><a href="departments/csbs/csbs_distinguished_alumni.html"><i class="fa-solid fa-star"></i> Distinguished Alumni</a>
+                </li>
+                <li><a href="departments/csbs/csbs_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student
+                        Publications</a></li>
+                <li><a href="departments/csbs/csbs_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+                <li><a href="departments/csbs/csbs_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a>
+                </li>
+                <li><a href="departments/csbs/csbs_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <main class="dept-main-content">
+
+            <div class="dept-main-slider swiper csbs-hero-swiper" data-aos="fade-up"
+                style="position:relative; width:100%; overflow:hidden; border-radius:12px;">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide" style="position:relative;">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1000&q=80"
+                            alt="Hackathon Event" style="width:100%; height:auto; object-fit:cover;">
+                        <div class="dept-slider-caption">Smart India Hackathon (SIH) 2024 Nominations & Innovative
+                            Solutions Showcase</div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide" style="position:relative;">
+                        <img src="https://images.unsplash.com/photo-1542382121-729918731f25?w=1000&q=80"
+                            alt="Sci Code Debug Event" style="width:100%; height:auto; object-fit:cover;">
+                        <div class="dept-slider-caption">Sci-Code Debug at SPEKECTRA 2K25 - National Level Error-Hunt
+                            Debugging Event</div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide" style="position:relative;">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&q=80"
+                            alt="Industry Visit" style="width:100%; height:auto; object-fit:cover;">
+                        <div class="dept-slider-caption">Industrial Visit to Excerpt Technologies Pvt. Ltd., Bangalore &
+                            HTGE Technologies</div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide" style="position:relative;">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=80"
+                            alt="Faculty Visit to Industry" style="width:100%; height:auto; object-fit:cover;">
+                        <div class="dept-slider-caption">Faculty Visit to Systech Solutions, Bahwan CyberTek, Infosys
+                            and CSIR</div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next" style="color:#f5c518;"></div>
+                <div class="swiper-button-prev" style="color:#f5c518;"></div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    new Swiper('.csbs-hero-swiper', {
+                        loop: true,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                });
+            </script>
+
+            <h1 class="dept-title-red" data-aos="fade-up">DEPARTMENT OF<br>COMPUTER SCIENCE AND BUSINESS SYSTEMS</h1>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>ABOUT THE DEPARTMENT</h3>
+                <p>The Department of Computer Science and Business Systems (CSBS) was established in the year <strong>2021</strong> with a curriculum designed by eminent IT industry experts and academic professionals to meet the growing demand for engineering talent with combined technology and business expertise. The program focuses on cutting-edge technologies, business skills, and hands-on experience to ensure students are industry-ready.</p>
+                <p>The CSBS program integrates core computer science foundations with business management principles, data analytics capabilities, and entrepreneurial skills. Students gain hands-on experience through value-added courses such as Cloud Computing Technologies (Microsoft Azure, AWS), project-based learning, and industry collaborations.</p>
+                <p>The department has highly qualified and experienced faculty with specialization in Management studies, IoT, Cloud Computing, Artificial Intelligence, Data Science, Machine Learning, Deep Learning and Business Systems.</p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>FACULTY</h3>
+                <p>The Department is enriched with a dedicated and experienced faculty team led by <strong>Ms. M. Anitha</strong>, Head of the Department. The faculty includes professionals specialized in Management studies, IoT, Cloud Computing, Artificial Intelligence, Data Science, Machine Learning, Deep Learning and Business Systems. Faculty members are active members of professional bodies and participate in various FDPs conducted by premier institutions and online courses offered by NPTEL, NITTTR, etc. to enhance their teaching and research skills.</p>
+                <p>Notable faculty includes Dr. Dhivya E (Assistant Professor), who has contributed to the department's research and academic initiatives.</p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>RESEARCH</h3>
+                <p>The department promotes research among faculty and students. Faculty members are actively publishing their research papers in international journals, book chapters, and presenting at conferences. The department encourages student participation in Smart India Hackathon, technical symposiums, and project-based learning initiatives. Value-added courses and industry training programs further enhance the research and innovation ecosystem.</p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>CURRICULUM ENRICHMENT</h3>
+                <p>The CSBS curriculum has been designed by eminent IT industry experts and academic professionals to integrate core computer science foundations with business management principles. The curriculum covers cutting-edge technologies, business analytics, data tools, and entrepreneurial skills, ensuring students are industry-ready upon graduation.</p>
+                <p>Curriculum delivery is implemented using project-based learning approaches. The department organizes value-added courses, industry lectures, and workshops to supplement the regular curriculum with practical, hands-on experience in emerging technologies.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/include-components.js"></script>
+</body>
+
+</html>

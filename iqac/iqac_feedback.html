@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <style>
+        /* ---- PREMIUM HERO (IQAC Pages) ---- */
+        .page-hero-premium {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 60px 0 80px;
+        }
+        .hero-premium-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-gradient-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.12) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        .hero-particles span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 15%; animation-delay: 2s; }
+        .hero-particles span:nth-child(4) { top: 40%; left: 80%; animation-delay: 0.5s; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 70%; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .hero-particles span:nth-child(6) { top: 80%; left: 40%; animation-delay: 2.5s; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 90%; animation-delay: 3s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(8) { top: 85%; left: 85%; animation-delay: 0.8s; }
+        .hero-particles span:nth-child(9) { top: 50%; left: 5%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-particles span:nth-child(10) { top: 10%; left: 60%; animation-delay: 2.2s; }
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+        .hero-accent-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,197,24,0.08);
+            top: -150px;
+            right: -100px;
+        }
+        .hero-accent-circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -50px;
+            top: auto;
+            right: auto;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .hero-premium-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,197,24,0.15);
+            border: 1px solid rgba(245,197,24,0.3);
+            color: #f5c518;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(6px);
+        }
+        .hero-premium-badge i { font-size: 0.9rem; }
+        .hero-premium-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-premium-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-premium-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-premium-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .hero-premium-breadcrumb a:hover { color: #f5c518; }
+        .hero-premium-breadcrumb i { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+        .hero-premium-breadcrumb span { color: #f5c518; font-weight: 600; }
+        .hero-wave-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            pointer-events: none;
+        }
+        .hero-wave-divider svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .page-hero-premium { min-height: 260px; padding: 40px 0 60px; }
+            .hero-premium-title { font-size: 2rem; }
+            .hero-premium-subtitle { font-size: 1rem; }
+            .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero-premium">
+        <div class="hero-premium-bg">
+            <div class="hero-gradient-layer"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-accent-circle"></div>
+            <div class="hero-accent-circle hero-accent-circle-2"></div>
+        </div>
+        <div class="container hero-premium-content" data-aos="fade-up">
+            <div class="hero-premium-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-comments"></i> IQAC
+            </div>
+            <h1 class="hero-premium-title" data-aos="fade-up" data-aos-delay="300">Feedback</h1>
+            <p class="hero-premium-subtitle" data-aos="fade-up" data-aos-delay="400">Feedback mechanisms and analysis reports for continuous improvement</p>
+            <nav class="hero-premium-breadcrumb" data-aos="fade-up" data-aos-delay="500">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="iqac_about.html">IQAC</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Feedback</span>
+            </nav>
+        </div>
+        <div class="hero-wave-divider">
+            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30C240 60 480 0 720 30C960 60 1200 0 1440 30V60H0V30Z" fill="var(--bg-light, #f8f9fa)"/>
+            </svg>
+        </div>
+    </section>
+
+    
+    <style>
+        .feedback-pill {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+        }
+
+        .feedback-pill i {
+            font-size: 1.3rem;
+            margin-right: 15px;
+            color: #fff;
+            background: linear-gradient(135deg, #8b1a2b, #e74c3c);
+            padding: 12px;
+            border-radius: 50%;
+            transition: all 0.4s;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+
+        .feedback-pill:hover {
+            background: linear-gradient(135deg, #8b1a2b, #4a0d16);
+            color: #fff;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(139, 26, 43, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feedback-pill:hover i {
+            background: #fff;
+            color: #8b1a2b;
+            box-shadow: none;
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .report-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #8b1a2b;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .report-list-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background: #fcf4f5;
+            z-index: 0;
+            transition: width 0.4s ease;
+        }
+
+        .report-list-item:hover {
+            transform: translateX(15px);
+            box-shadow: 0 12px 30px rgba(139, 26, 43, 0.1);
+            border-left-width: 10px;
+        }
+
+        .report-list-item:hover::after {
+            width: 100%;
+        }
+
+        .report-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-link {
+            display: inline-flex;
+            align-items: center;
+            background: #111;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-link i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .report-list-item:hover .report-link {
+            background: #8b1a2b;
+            padding-right: 25px;
+        }
+
+        .report-list-item:hover .report-link i {
+            transform: translateX(5px);
+        }
+    </style>
+    <section class="page-section" style="padding: 100px 0; background:#f5f7fa;">
+        <div class="container">
+
+            <div class="row" style="margin-bottom:80px;">
+                <div class="col-12" data-aos="fade-down">
+                    <h2
+                        style="font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:800; color:#111; margin-bottom:15px; text-transform:uppercase; border-bottom:4px solid #8b1a2b; display:inline-block; padding-bottom:10px;">
+                        Submit Feedback</h2>
+                </div>
+
+                <div class="col-12" style="margin-top:40px;">
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px;">
+                        <a href="https://forms.gle/FcmyuydGaXiBWY66A" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-user-graduate"></i> Alumni Feedback Form
+                        </a>
+                        <a href="https://forms.gle/UCRiYj5Vz1u8ShHd8" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="150">
+                            <i class="fas fa-user-friends"></i> Parents Feedback on Curriculum
+                        </a>
+                        <a href="https://forms.gle/vucmjBFSxzdcoUo97" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-briefcase"></i> Employer Feedback Form
+                        </a>
+                        <a href="https://forms.gle/L46n4DZRD1wE3A5w8" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="250">
+                            <i class="fas fa-book-open"></i> Students Feedback on Curriculum
+                        </a>
+                        <a href="https://forms.gle/qMrnrvL1by2iqudp7" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-building"></i> Students Feedback on Facilities
+                        </a>
+                        <a href="https://forms.gle/aumrEvLxtuv9hqkr9" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="350">
+                            <i class="fas fa-chalkboard-teacher"></i> Faculty Feedback Form
+                        </a>
+                        <a href="https://forms.gle/oGxcJ9aWL6HjmiTX6" target="_blank" class="feedback-pill"
+                            data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fas fa-bed"></i> Hostellers feedback on Facilities
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom:50px;">
+                    <h2 style="font-family:'Poppins',sans-serif; font-size:1.8rem; font-weight:800; color:#111; margin-bottom:30px; text-transform:uppercase; border-bottom:4px solid #8b1a2b; display:inline-block; padding-bottom:10px;"
+                        data-aos="fade-right">Feedback Analysis Report</h2>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="report-list-item">
+                            <span class="report-name">Analysis 2022 - 2023</span>
+                            <div style="display:flex; gap:8px;">
+                                <a href="https://drive.google.com/file/d/14e7vKxDs1nKswyeOheSt6_mA0Sg7uKoh/view?usp=drive_link"
+                                    target="_blank" class="report-link">View Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-22-23.pdf"
+                                    target="_blank" class="report-link">Cloud Copy <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="report-list-item">
+                            <span class="report-name">Analysis 2021 - 2022</span>
+                            <div style="display:flex; gap:8px;">
+                                <a href="https://drive.google.com/file/d/1DZyoZPvxDEc9fir2EsL2dWPynZQbEkYH/view?usp=drive_link"
+                                    target="_blank" class="report-link">View Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-21-22.pdf"
+                                    target="_blank" class="report-link">Cloud Copy <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="report-list-item">
+                            <span class="report-name">Analysis 2020 - 2021</span>
+                            <div style="display:flex; gap:8px;">
+                                <a href="https://drive.google.com/file/d/1rFM1HOkaaEiTnsu6smXEVjdn5y2F23xH/view?usp=drive_link"
+                                    target="_blank" class="report-link">View Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-20-21.pdf"
+                                    target="_blank" class="report-link">Cloud Copy <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="report-list-item">
+                            <span class="report-name">Analysis 2019 - 2020</span>
+                            <div style="display:flex; gap:8px;">
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-19-20.pdf"
+                                    target="_blank" class="report-link">View Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-19-20.pdf"
+                                    target="_blank" class="report-link">Cloud Copy <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="report-list-item">
+                            <span class="report-name">Analysis 2018 - 2019</span>
+                            <div style="display:flex; gap:8px;">
+                                <a href="https://drive.google.com/file/d/1JrbQExLL1tUqCpV4hj7cGZhZDKKSzod_/view?usp=drive_link"
+                                    target="_blank" class="report-link">View Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://kingston.ac.in/engineering-resources/iqac/feedback-analysis-report/FB-18-19.pdf"
+                                    target="_blank" class="report-link">Cloud Copy <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h2 style="font-family:'Poppins',sans-serif; font-size:1.8rem; font-weight:800; color:#111; margin-bottom:30px; text-transform:uppercase; border-bottom:4px solid #222; display:inline-block; padding-bottom:10px;"
+                        data-aos="fade-left">Action Taken Report</h2>
+
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="report-list-item" style="border-left-color:#222;">
+                            <span class="report-name">Report 2022 - 2023</span>
+                            <a href="../assets/pdfs/iqac/action_taken_report_on_feedback_analysis_4.pdf" target="_blank"
+                                class="report-link" style="background:#8b1a2b;">View Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="report-list-item" style="border-left-color:#222;">
+                            <span class="report-name">Report 2021 - 2022</span>
+                            <a href="../assets/pdfs/iqac/action_taken_report_on_feedback_analysis_3.pdf" target="_blank"
+                                class="report-link" style="background:#8b1a2b;">View Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="report-list-item" style="border-left-color:#222;">
+                            <span class="report-name">Report 2020 - 2021</span>
+                            <a href="../assets/pdfs/iqac/action_taken_report_on_feedback_analysis_2.pdf" target="_blank"
+                                class="report-link" style="background:#8b1a2b;">View Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="report-list-item" style="border-left-color:#222;">
+                            <span class="report-name">Report 2019 - 2020</span>
+                            <a href="../assets/pdfs/iqac/action_taken_report_on_feedback_analysis_1.pdf" target="_blank"
+                                class="report-link" style="background:#8b1a2b;">View Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="report-list-item" style="border-left-color:#222;">
+                            <span class="report-name">Report 2018 - 2019</span>
+                            <a href="../assets/pdfs/iqac/action_taken_report_on_feedback_analysis.pdf" target="_blank"
+                                class="report-link" style="background:#8b1a2b;">View Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 50
+                });
+            }
+        });
+    </script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

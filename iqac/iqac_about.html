@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQAC - Internal Quality Assurance Cell - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    
+    <style>
+        /* ---- PREMIUM HERO (IQAC Pages) ---- */
+        .page-hero-premium {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 60px 0 80px;
+        }
+        .hero-premium-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-gradient-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.12) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        .hero-particles span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 15%; animation-delay: 2s; }
+        .hero-particles span:nth-child(4) { top: 40%; left: 80%; animation-delay: 0.5s; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 70%; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .hero-particles span:nth-child(6) { top: 80%; left: 40%; animation-delay: 2.5s; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 90%; animation-delay: 3s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(8) { top: 85%; left: 85%; animation-delay: 0.8s; }
+        .hero-particles span:nth-child(9) { top: 50%; left: 5%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-particles span:nth-child(10) { top: 10%; left: 60%; animation-delay: 2.2s; }
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+        .hero-accent-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,197,24,0.08);
+            top: -150px;
+            right: -100px;
+        }
+        .hero-accent-circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -50px;
+            top: auto;
+            right: auto;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .hero-premium-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,197,24,0.15);
+            border: 1px solid rgba(245,197,24,0.3);
+            color: #f5c518;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(6px);
+        }
+        .hero-premium-badge i { font-size: 0.9rem; }
+        .hero-premium-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-premium-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-premium-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-premium-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .hero-premium-breadcrumb a:hover { color: #f5c518; }
+        .hero-premium-breadcrumb i { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+        .hero-premium-breadcrumb span { color: #f5c518; font-weight: 600; }
+        .hero-wave-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            pointer-events: none;
+        }
+        .hero-wave-divider svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .page-hero-premium { min-height: 260px; padding: 40px 0 60px; }
+            .hero-premium-title { font-size: 2rem; }
+            .hero-premium-subtitle { font-size: 1rem; }
+            .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero-premium">
+        <div class="hero-premium-bg">
+            <div class="hero-gradient-layer"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-accent-circle"></div>
+            <div class="hero-accent-circle hero-accent-circle-2"></div>
+        </div>
+        <div class="container hero-premium-content" data-aos="fade-up">
+            <div class="hero-premium-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-gem"></i> IQAC
+            </div>
+            <h1 class="hero-premium-title" data-aos="fade-up" data-aos-delay="300">IQAC - Internal Quality Assurance Cell</h1>
+            <p class="hero-premium-subtitle" data-aos="fade-up" data-aos-delay="400">Committed to Quality Enhancement and Sustenance in Higher Education</p>
+            <nav class="hero-premium-breadcrumb" data-aos="fade-up" data-aos-delay="500">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="iqac_about.html">IQAC</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>IQAC About</span>
+            </nav>
+        </div>
+        <div class="hero-wave-divider">
+            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30C240 60 480 0 720 30C960 60 1200 0 1440 30V60H0V30Z" fill="var(--bg-light, #f8f9fa)"/>
+            </svg>
+        </div>
+    </section>
+
+    
+    <style>
+        .iqac-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 6px solid #8b1a2b;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .iqac-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(139, 26, 43, 0.15);
+        }
+
+        .iqac-icon {
+            font-size: 3.5rem;
+            color: #8b1a2b;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .card-bg-icon {
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+            font-size: 12rem;
+            color: #f4f4f4;
+            z-index: -1;
+            transition: all 0.6s ease;
+            opacity: 0.6;
+        }
+
+        .iqac-card:hover .card-bg-icon {
+            transform: scale(1.2) rotate(-15deg);
+            color: #eee;
+        }
+
+        .iqac-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #111;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .iqac-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #555;
+            
+            margin-bottom: 0;
+        }
+
+        .list-group {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            
+        }
+
+        .list-group li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #8b1a2b;
+            font-size: 1.3rem;
+        }
+
+        /* IQAC Composition Table */
+        .iqac-table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+        }
+
+        .iqac-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #fff;
+            min-width: 600px;
+        }
+
+        .iqac-table thead tr {
+            background: #003366;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .iqac-table th {
+            padding: 16px 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .iqac-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .iqac-table tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        .iqac-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .iqac-table tbody tr:hover {
+            background: #e8f0fe;
+        }
+
+        .iqac-table tbody tr:last-of-type td {
+            border-bottom: 2px solid #003366;
+        }
+
+        @media (max-width: 768px) {
+            .iqac-table {
+                font-size: 0.85rem;
+                min-width: 500px;
+            }
+            .iqac-table th,
+            .iqac-table td {
+                padding: 10px 14px;
+            }
+            .iqac-composition-section {
+                margin-top: 40px !important;
+            }
+            .iqac-composition-section h3 {
+                font-size: 1.5rem !important;
+            }
+        }
+    </style>
+    <section class="page-section" style="padding: 100px 0; background:linear-gradient(to bottom, #ffffff, #f9f9f9);">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-down" style="margin-bottom:70px;">
+                <h1
+                    style="font-family:'Poppins',sans-serif; font-size:2.8rem; font-weight:800; color:#111; margin-bottom:15px; text-transform:uppercase;">
+                    Internal Quality Assurance Cell <span style="color:#8b1a2b;">(IQAC)</span></h1>
+                <div style="width:120px; height:4px; background:#8b1a2b; margin:0 auto; border-radius:2px;"></div>
+            </div>
+
+            <div style="background:#fff; padding:50px; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.06); margin-bottom:60px;"
+                data-aos="zoom-in" data-aos-duration="1000">
+                <h3
+                    style="font-size:1.8rem; font-weight:700; color:#111; margin-bottom:20px; font-family:'Poppins',sans-serif; border-left:5px solid #8b1a2b; padding-left:15px;">
+                    About IQAC</h3>
+                <p
+                    style="font-size:1.1rem; line-height:1.9; color:#444;  margin-bottom:0;">
+                    In pursuance of the IQAC action plan for the performance evaluation, assessment & accreditation, and
+                    quality up-gradation of institutions' higher education, NAAC proposes every accredited institution
+                    should establish an Internal Quality Assurance Cell (IQAC) as a post-accreditation quality
+                    sustenance measure. Since quality enhancement is a continuous process, the IQAC will become a part
+                    of the institution’s system & work towards the realisation of the goals of quality enhancement &
+                    sustenance. The prime task of the IQAC is to develop a system for conscious, consistent and
+                    catalytic improvement in the overall performance of the institution. For this, during the
+                    post-accreditation period, it channelizes all efforts and measures of the institution towards
+                    promoting its holistic academic excellence.
+                </p>
+            </div>
+
+            <div
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(400px, 1fr)); gap:40px; margin-bottom:60px;">
+                <div class="iqac-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-gem card-bg-icon"></i>
+                    <div class="iqac-icon"><i class="fas fa-star"></i></div>
+                    <h3 class="iqac-title">Quality Policy</h3>
+                    <p class="iqac-text">To establish and implement a robust quality system at Kingston Engineering
+                        College, encircling teaching, learning, research, and self-reliance, focusing on core and
+                        support functions to ensure accountability to stakeholders through continuous improvement and
+                        sustenance towards promoting holistic academic excellence.</p>
+                </div>
+
+                <div class="iqac-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-bullseye card-bg-icon"></i>
+                    <div class="iqac-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3 class="iqac-title">Objectives</h3>
+                    <ul class="list-group">
+                        <li>To facilitate the creation of a learner-centric environment conducive to quality education
+                            imparted in an institution.</li>
+                        <li>To provide a sound basis for decision making imbibing all the dimensions of service quality
+                            to improve institutional functioning and towards quality enhancement through the best
+                            practices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(450px, 1fr)); gap:40px;">
+                <div class="iqac-card" style="border-top-color:#1e3c72;" data-aos="fade-right">
+                    <i class="fas fa-cogs card-bg-icon"></i>
+                    <div class="iqac-icon" style="color:#1e3c72;"><i class="fas fa-chess-knight"></i></div>
+                    <h3 class="iqac-title" style="color:#1e3c72;">Strategies</h3>
+                    <ul class="list-group">
+                        <li style="color:#555;">Ensuring timely, efficient and progressive performance of academic,
+                            administrative and financial tasks.</li>
+                        <li style="color:#555;">Equitable access to and affordability of academic programmes for various
+                            sections of society.</li>
+                        <li style="color:#555;">Optimization and integration of modern methods of teaching and learning.
+                        </li>
+                        <li style="color:#555;">Ensuring the adequacy, maintenance and functioning of the support
+                            structure and services.</li>
+                        <li style="color:#555;">Sharing of Research and networking with other institutions in India and
+                            abroad.</li>
+                    </ul>
+                </div>
+
+                <div class="iqac-card" style="border-top-color:#e67e22;" data-aos="fade-left">
+                    <i class="fas fa-project-diagram card-bg-icon"></i>
+                    <div class="iqac-icon" style="color:#e67e22;"><i class="fas fa-sitemap"></i></div>
+                    <h3 class="iqac-title" style="color:#e67e22;">Functions</h3>
+                    <ul class="list-group">
+                        <li style="color:#555;">Development and application of quality benchmarks/parameters.</li>
+                        <li style="color:#555;">Analysis for feedback response from stakeholders on quality-related
+                            processes.</li>
+                        <li style="color:#555;">Organization of inter and intra-institutional workshops, seminars on
+                            quality.</li>
+                        <li style="color:#555;">Documentation of the various programmes/activities.</li>
+                        <li style="color:#555;">Acting as a nodal agency of the Institution for coordinating activities.
+                        </li>
+                        <li style="color:#555;">Preparation of the Annual Quality Assurance Report (AQAR) as per
+                            guidelines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ===== IQAC COMPOSITION (2023-2024) ===== -->
+            <div class="iqac-composition-section" data-aos="fade-up" data-aos-delay="100" style="margin-top:80px;">
+                <div style="text-align:center; margin-bottom:50px;">
+                    <h3 style="font-family:'Poppins',sans-serif; font-size:2rem; font-weight:800; color:#111; margin-bottom:10px; text-transform:uppercase;">
+                        IQAC Composition <span style="color:#8b1a2b;">(2023-2024)</span>
+                    </h3>
+                    <div style="width:80px; height:4px; background:#8b1a2b; margin:0 auto; border-radius:2px;"></div>
+                    <p style="font-size:1rem; color:#666; margin-top:18px; max-width:600px; margin-left:auto; margin-right:auto;">
+                        Composition of the Internal Quality Assurance Cell as per NAAC Guidelines
+                    </p>
+                </div>
+                <div style="background:#fff; padding:40px; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.06);"
+                     data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="iqac-table-wrapper">
+                        <table class="iqac-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:60px;">S.No</th>
+                                    <th>Name</th>
+                                    <th>Designation</th>
+                                    <th>Role in IQAC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Mrs. Sangeetha Kathir Anand</td><td>Chairwoman, Kingston Group of Institutions</td><td>Member from Management</td></tr>
+                                <tr><td>2</td><td>Dr. U.V. Arivazhagu</td><td>Principal</td><td>Chairperson – Head of the Institution</td></tr>
+                                <tr><td>3</td><td>Mr. S. Mahendiran</td><td>HOD / MECH</td><td>Senior Administrative Officer</td></tr>
+                                <tr><td>4</td><td>Mrs. M. Menaka</td><td>HOD / IT</td><td>Senior Administrative Officer</td></tr>
+                                <tr><td>5</td><td>Mrs. M. Rathika</td><td>HOD / ECE</td><td>Senior Administrative Officer</td></tr>
+                                <tr><td>6</td><td>Dr. N. Shankar Ganesh</td><td>Professor / MECH</td><td>Senior Administrative Officer</td></tr>
+                                <tr><td>7</td><td>Dr. S. Deepa</td><td>Professor / EEE</td><td>Senior Administrative Officer</td></tr>
+                                <tr><td>8</td><td>Mrs. S. Sarah</td><td>AP / IT</td><td>Teacher</td></tr>
+                                <tr><td>9</td><td>Mrs. B. Thulasi Brindha</td><td>AP / EEE</td><td>Teacher</td></tr>
+                                <tr><td>10</td><td>Mrs. N. Vanitha</td><td>AP / ECE</td><td>Teacher</td></tr>
+                                <tr><td>11</td><td>Dr. S. Balaji</td><td>HOD / CSBS</td><td>Teacher</td></tr>
+                                <tr><td>12</td><td>Dr. S. Priya</td><td>HOD / AI &amp; DS</td><td>Teacher</td></tr>
+                                <tr><td>13</td><td>Dr. N. Kannammal</td><td>Professor / AI &amp; DS</td><td>Teacher</td></tr>
+                                <tr><td>14</td><td>Mrs. I. Anitha</td><td>President, Mettukulam Village</td><td>Nominee from Local Society</td></tr>
+                                <tr><td>15</td><td>Mr. Naveen Moses D</td><td>III Year / ECE</td><td>Nominee from Student</td></tr>
+                                <tr><td>16</td><td>Mr. V.P. Rajaprakash</td><td>Design Engineer, Caterpillar Pvt Ltd, Chennai (2012-2016 Batch)</td><td>Nominee from Alumni</td></tr>
+                                <tr><td>17</td><td>Mr. M. Padmashanker</td><td>Senior HR Executive, Intellect Design Arena Limited</td><td>Nominee from Employer</td></tr>
+                                <tr><td>18</td><td>Mr. Stephen Sudhakar</td><td>Senior Vice President, Hyundai Motors</td><td>Nominee from Industrialists</td></tr>
+                                <tr><td>19</td><td>Mr. R. Dhanasekaran (Parent)</td><td>Bank Manager, Vellore Central Co-operative Bank, Vellore</td><td>Nominee from Stakeholders</td></tr>
+                                <tr><td>20</td><td>Dr. E. Kumaresan</td><td>HOD / S&amp;H</td><td>Coordinator of IQAC</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 50
+                });
+            }
+        });
+    </script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

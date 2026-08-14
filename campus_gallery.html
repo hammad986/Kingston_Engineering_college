@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Gallery - Kingston Engineering College</title>
+    <meta name="description" content="Campus Gallery at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/campus_gallery.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Campus Gallery - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/campus_gallery.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Campus Gallery at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Campus Gallery - Kingston Engineering College">
+    <meta name="twitter:description" content="Campus Gallery at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        /* ============================================================
+           PREMIUM HERO — from shared design system
+           ============================================================ */
+        .premium-hero {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg,
+                rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px,
+                transparent 1px, transparent 38px);
+            animation: phStripe 20s linear infinite;
+        }
+
+        @keyframes phStripe {
+            to { background-position: 220px 220px; }
+        }
+
+        .premium-hero::after {
+            content: '';
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 60px solid rgba(245,197,24,0.07);
+            bottom: -130px;
+            right: -60px;
+            animation: phSpin 28s linear infinite;
+        }
+
+        @keyframes phSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .ph-orb {
+            position: absolute; border-radius: 50%; pointer-events: none;
+            filter: blur(60px); opacity: 0.18;
+            animation: phOrbFloat 10s ease-in-out infinite;
+        }
+        .ph-orb-1 { width:420px; height:420px; background:#f5c518; top:-180px; left:-120px; animation-delay:0s; }
+        .ph-orb-2 { width:280px; height:280px; background:#059669; bottom:-80px; right:-60px; animation-delay:-4s; }
+        .ph-orb-3 { width:160px; height:160px; background:#8b1a2b; top:25%; left:55%; animation-delay:-7s; }
+
+        @keyframes phOrbFloat {
+            0%,100% { transform: translate(0,0) scale(1); }
+            50% { transform: translate(20px,-30px) scale(1.1); }
+        }
+
+        .ph-ring {
+            position: absolute; border-radius: 50%; border: 2px solid;
+            pointer-events: none; animation: phRingRotate 25s linear infinite;
+        }
+        .ph-ring-1 { width:560px; height:560px; border-color:rgba(245,197,24,0.07); top:-240px; right:-160px; }
+        .ph-ring-2 { width:320px; height:320px; border-color:rgba(255,255,255,0.05); bottom:-100px; left:-120px; animation-direction:reverse; animation-duration:18s; }
+
+        @keyframes phRingRotate { to { transform: rotate(360deg); } }
+
+        .ph-content {
+            position: relative;
+            z-index: 5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ph-breadcrumb {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+        .ph-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .ph-breadcrumb a:hover { color: #f5c518; }
+        .ph-breadcrumb span {
+            color: rgba(255,255,255,0.4);
+            margin: 0 4px;
+        }
+
+        .ph-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            margin: 0 0 10px;
+            animation: phUp .7s .35s both;
+        }
+        .ph-content h1 em {
+            font-style: normal;
+            color: #f5c518;
+        }
+
+        .ph-content > p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.72);
+            max-width: 600px;
+            margin: 0 auto 22px;
+            animation: phUp .7s .5s both;
+        }
+
+        .ph-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            animation: phUp .7s .65s both;
+        }
+        .ph-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .ph-badge-pill:hover {
+            background: rgba(245,197,24,0.18);
+            border-color: rgba(245,197,24,0.45);
+            transform: translateY(-2px);
+            color: #f5c518;
+        }
+
+        @keyframes phUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ph-wave {
+            line-height: 0;
+            background: #003366;
+        }
+        .ph-wave svg { display: block; }
+
+        :root {
+            --cg-primary: #003366;
+            --cg-accent: #f5c518;
+            --cg-bg: #f8fafc;
+            --cg-text: #1e293b;
+        }
+
+        .cg-section {
+            padding: 100px 0;
+            background: var(--cg-bg);
+        }
+
+        .cg-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .cg-header h1 {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: var(--cg-primary);
+            margin-bottom: 20px;
+        }
+
+        .cg-header h1 em {
+            font-style: normal;
+            color: var(--cg-accent);
+        }
+
+        .cg-header p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Filter Bar */
+        .cg-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+        }
+
+        .cg-filter-btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 2px solid #e2e8f0;
+            background: #fff;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cg-filter-btn:hover {
+            border-color: var(--cg-primary);
+            color: var(--cg-primary);
+        }
+
+        .cg-filter-btn.active {
+            background: var(--cg-primary);
+            color: #fff;
+            border-color: var(--cg-primary);
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+        }
+
+        /* Masonry Grid */
+        .cg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            grid-auto-flow: dense;
+        }
+
+        .cg-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .cg-card.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .cg-card.tall {
+            grid-row: span 2;
+            aspect-ratio: 3/4;
+        }
+
+        .cg-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .cg-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .cg-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .cg-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(2, 14, 34, 0.92) 0%, transparent 55%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .cg-card:hover .cg-card-overlay {
+            opacity: 1;
+        }
+
+        .cg-card-tag {
+            display: inline-block;
+            background: var(--cg-accent);
+            color: var(--cg-primary);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            width: fit-content;
+        }
+
+        .cg-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .cg-card-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Lightbox */
+        .cg-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(2, 14, 34, 0.97);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .cg-lightbox.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .cg-lightbox img {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 16px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+        }
+
+        .cg-lightbox.open img {
+            transform: scale(1);
+        }
+
+        .cg-lb-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .cg-lb-close:hover {
+            color: var(--cg-accent);
+        }
+
+        .cg-lb-cap {
+            position: absolute;
+            bottom: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            left: 0;
+            right: 0;
+            font-weight: 500;
+        }
+
+        .cg-missing-notice {
+            background: rgba(245, 197, 24, 0.08);
+            border: 1px dashed var(--cg-accent);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            color: #64748b;
+            margin: 40px 0;
+        }
+
+        .cg-missing-notice h3 {
+            color: var(--cg-primary);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .cg-missing-notice i {
+            font-size: 2.5rem;
+            color: var(--cg-accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .cg-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cg-card.wide {
+                grid-column: span 1;
+            }
+            .cg-card.tall {
+                grid-row: span 1;
+            }
+            .cg-filter-btn {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cg-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- INCLUDE:components/header.html --><div id="include-header"></div>
+
+    <!-- Hero -->
+    <section class="premium-hero">
+        <div class="ph-orb ph-orb-1"></div>
+        <div class="ph-orb ph-orb-2"></div>
+        <div class="ph-orb ph-orb-3"></div>
+        <div class="ph-ring ph-ring-1"></div>
+        <div class="ph-ring ph-ring-2"></div>
+        <div class="ph-content" data-aos="fade-up">
+            <div class="ph-breadcrumb"><a href="index.html">Home</a> <span>&rsaquo;</span> <a href="facilities.html">Facilities</a> <span>&rsaquo;</span> <span>Campus Gallery</span></div>
+            <h1>Campus <em>Gallery</em></h1>
+            <p>Explore Kingston Engineering College through a visual tour of our campus, infrastructure, and student life.</p>
+            <div class="ph-pills">
+                <span class="ph-badge-pill"><i class="fa-solid fa-award"></i> NAAC 'A' Grade</span><span class="ph-badge-pill"><i class="fa-solid fa-star"></i> 3.07 CGPA</span><span class="ph-badge-pill"><i class="fa-solid fa-shield-halved"></i> Accredited</span>
+            </div>
+        </div>
+    </section>
+    <div class="ph-wave">
+        <svg viewBox="0 0 1440 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:52px;">
+            <path d="M0,0 C260,52 560,0 800,38 C1040,76 1270,10 1440,34 L1440,0 Z" fill="#f8fafc" />
+        </svg>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="cg-section">
+        <div class="container">
+            <div class="cg-header" data-aos="fade-up">
+                <h1>Our <em>Campus</em></h1>
+                <p>Browse through photographs of Kingston's infrastructure, facilities, and campus life.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="cg-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="cg-filter-btn active" data-filter="all">All</button>
+                <button class="cg-filter-btn" data-filter="campus">Our Campus</button>
+                <button class="cg-filter-btn" data-filter="students">Our Students</button>
+                <button class="cg-filter-btn" data-filter="classrooms">Our Classrooms</button>
+                <button class="cg-filter-btn" data-filter="laboratories">Our Laboratories</button>
+                <button class="cg-filter-btn" data-filter="library">Our Library</button>
+                <button class="cg-filter-btn" data-filter="auditorium">Our Auditorium</button>
+                <button class="cg-filter-btn" data-filter="hostel">Our Hostel</button>
+                <button class="cg-filter-btn" data-filter="sports">Our Sports</button>
+                <button class="cg-filter-btn" data-filter="canteen">Our Canteen</button>
+                <button class="cg-filter-btn" data-filter="transport">Our Transport</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="cg-grid" id="cg-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Our Campus (13 building images) -->
+                <div class="cg-card wide" data-category="campus" data-aos="fade-up">
+                    <img src="assets/images/building/DJI_0003.JPG" alt="Campus Aerial View 1" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Aerial Campus View</div>
+                        <div class="cg-card-desc">Panoramic aerial view of the Kingston Engineering College campus.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/building/DJI_0004.JPG" alt="Campus Aerial View 2" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Academic Block Aerial</div>
+                        <div class="cg-card-desc">Bird's eye view of the academic buildings and surrounding greenery.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/building/DJI_0005.JPG" alt="Campus Aerial View 3" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Panorama</div>
+                        <div class="cg-card-desc">Expansive view of the Kingston campus infrastructure.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card tall" data-category="campus" data-aos="fade-up" data-aos-delay="50">
+                    <img src="assets/images/building/DSC_1475.JPG" alt="Campus Building Front" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Main Academic Block</div>
+                        <div class="cg-card-desc">The main entrance and academic building complex.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="150">
+                    <img src="assets/images/building/DSC_1476.JPG" alt="Campus Building Side" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Building Facade</div>
+                        <div class="cg-card-desc">Architectural view of the college building exterior.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="250">
+                    <img src="assets/images/building/DSC_1478.JPG" alt="Campus Walkway" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Walkway</div>
+                        <div class="cg-card-desc">Tree-lined pathways connecting various campus facilities.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/building/IMG_1413.JPG" alt="Campus View" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Landscape</div>
+                        <div class="cg-card-desc">Scenic view of the well-maintained campus grounds.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/building/IMG_1420.JPG" alt="Campus View 2" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Academic Wing</div>
+                        <div class="cg-card-desc">Side view of the academic wing with landscaped gardens.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/building/IMG_1422.JPG" alt="Campus View 3" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Driveway</div>
+                        <div class="cg-card-desc">The grand entrance driveway leading into the campus.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/building/IMG_1423.JPG" alt="Campus View 4" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">College Exterior</div>
+                        <div class="cg-card-desc">Exterior view showcasing the architectural design.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/building/IMG_1425.JPG" alt="Campus View 5" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Grounds</div>
+                        <div class="cg-card-desc">Open green spaces designed for student recreation.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/building/IMG_1426.JPG" alt="Campus View 6" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Building Complex</div>
+                        <div class="cg-card-desc">The complete building complex housing multiple departments.</div>
+                    </div>
+                </div>
+
+                <div class="cg-card" data-category="campus" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/building/IMG_1427.JPG" alt="Campus View 7" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Campus</span>
+                        <div class="cg-card-title">Campus Entrance</div>
+                        <div class="cg-card-desc">The welcoming entrance to Kingston Engineering College.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Students (3 images) ===== -->
+                <div class="cg-card wide" data-category="students" data-aos="fade-up">
+                    <img src="assets/images/students/DSC_1888.JPG" alt="Students on Campus" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Students</span>
+                        <div class="cg-card-title">Student Life</div>
+                        <div class="cg-card-desc">Kingston students engaged in campus activities and events.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="students" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/students/DSC_1889.JPG" alt="Students Gathering" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Students</span>
+                        <div class="cg-card-title">Student Gathering</div>
+                        <div class="cg-card-desc">Students participating in college events and celebrations.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="students" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/students/DSC_1891.JPG" alt="Students in Discussion" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Students</span>
+                        <div class="cg-card-title">Student Community</div>
+                        <div class="cg-card-desc">Vibrant student community fostering collaboration and growth.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Classrooms (5 images) ===== -->
+                <div class="cg-card wide" data-category="classrooms" data-aos="fade-up">
+                    <img src="assets/images/classroom/01.jpeg" alt="Smart Classroom" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Classrooms</span>
+                        <div class="cg-card-title">Smart Classroom</div>
+                        <div class="cg-card-desc">Modern technology-enabled classrooms for enhanced learning.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="classrooms" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/classroom/02.jpeg" alt="Classroom Interior" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Classrooms</span>
+                        <div class="cg-card-title">Digital Classroom</div>
+                        <div class="cg-card-desc">Digitally equipped classrooms fostering interactive education.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="classrooms" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/classroom/03.jpeg" alt="Lecture Hall" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Classrooms</span>
+                        <div class="cg-card-title">Lecture Hall</div>
+                        <div class="cg-card-desc">Spacious lecture halls with optimal seating and acoustics.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="classrooms" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/classroom/04.jpeg" alt="Classroom Setup" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Classrooms</span>
+                        <div class="cg-card-title">Classroom Setup</div>
+                        <div class="cg-card-desc">Well-arranged seating designed for focused learning.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="classrooms" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/classroom/05.jpeg" alt="Learning Space" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Classrooms</span>
+                        <div class="cg-card-title">Collaborative Learning</div>
+                        <div class="cg-card-desc">Interactive learning spaces promoting group discussions.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Laboratories (5 images) ===== -->
+                <div class="cg-card wide" data-category="laboratories" data-aos="fade-up">
+                    <img src="assets/images/labs/Computer_science_lab/IMG_5041.JPG" alt="Computer Science Lab" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Laboratories</span>
+                        <div class="cg-card-title">Computer Science Lab</div>
+                        <div class="cg-card-desc">State-of-the-art computing lab with high-performance workstations.</div>
+                    </div>
+                </div>
+                <div class="cg-card tall" data-category="laboratories" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/labs/chemistry_lab/IMG_5014.JPG" alt="Chemistry Lab" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Laboratories</span>
+                        <div class="cg-card-title">Chemistry Lab</div>
+                        <div class="cg-card-desc">Well-equipped chemistry laboratory for practical experiments.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="laboratories" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/labs/ECE_lab/IMG_5202.JPG" alt="ECE Lab" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Laboratories</span>
+                        <div class="cg-card-title">Electronics Lab</div>
+                        <div class="cg-card-desc">Advanced electronics lab with modern testing equipment.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="laboratories" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/labs/mechanical_lab/IMG_5007.JPG" alt="Mechanical Lab" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Laboratories</span>
+                        <div class="cg-card-title">Mechanical Lab</div>
+                        <div class="cg-card-desc">Heavy machinery and testing rigs for mechanical engineering.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="laboratories" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/labs/Engineering_Graphhics_lab/RRR_1983.JPG" alt="Engineering Graphics Lab" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Laboratories</span>
+                        <div class="cg-card-title">Engineering Graphics Lab</div>
+                        <div class="cg-card-desc">Dedicated lab for design and drafting practice.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Library (5 images) ===== -->
+                <div class="cg-card wide" data-category="library" data-aos="fade-up">
+                    <img src="assets/images/library/01.jpeg" alt="Library Reading Hall" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Library</span>
+                        <div class="cg-card-title">Central Library</div>
+                        <div class="cg-card-desc">The main library with extensive collections and digital resources.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="library" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/library/02.jpeg" alt="Library Interior" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Library</span>
+                        <div class="cg-card-title">Reading Area</div>
+                        <div class="cg-card-desc">Well-lit reading space for individual and group study.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="library" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/library/03.jpeg" alt="Book Stacks" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Library</span>
+                        <div class="cg-card-title">Reference Section</div>
+                        <div class="cg-card-desc">Comprehensive collection of textbooks and reference materials.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="library" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/library/04.jpeg" alt="Circulation Desk" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Library</span>
+                        <div class="cg-card-title">Circulation Desk</div>
+                        <div class="cg-card-desc">Automated RFID-based book issuance and return system.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="library" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/library/05.jpeg" alt="Study Zone" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Library</span>
+                        <div class="cg-card-title">Quiet Study Zone</div>
+                        <div class="cg-card-desc">Dedicated silent zone for focused study and research.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Auditorium (3 images) ===== -->
+                <div class="cg-card wide" data-category="auditorium" data-aos="fade-up">
+                    <img src="assets/images/auditorium/kalainger-arangum.png" alt="Main Auditorium" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Auditorium</span>
+                        <div class="cg-card-title">Main Auditorium</div>
+                        <div class="cg-card-desc">State-of-the-art auditorium with world-class acoustics and lighting.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="auditorium" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/auditorium/pg-seminar.png" alt="Seminar Hall" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Auditorium</span>
+                        <div class="cg-card-title">Seminar Hall</div>
+                        <div class="cg-card-desc">Fully equipped seminar hall for academic conferences.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="auditorium" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/auditorium/anna-hall.png" alt="Anna Hall" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Auditorium</span>
+                        <div class="cg-card-title">Anna Hall</div>
+                        <div class="cg-card-desc">Multi-purpose hall for cultural events and ceremonies.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Hostel (5 images) ===== -->
+                <div class="cg-card wide" data-category="hostel" data-aos="fade-up">
+                    <img src="assets/images/hostel/boys/entry.png" alt="Boys Hostel Entrance" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Hostel</span>
+                        <div class="cg-card-title">Boys Hostel Entrance</div>
+                        <div class="cg-card-desc">Welcome entrance to the boys' residential block.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="hostel" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/hostel/boys/interior.png" alt="Boys Hostel Interior" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Hostel</span>
+                        <div class="cg-card-title">Boys Hostel Interior</div>
+                        <div class="cg-card-desc">Spacious and well-maintained hostel accommodation.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="hostel" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/hostel/girls/entry.png" alt="Girls Hostel Entrance" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Hostel</span>
+                        <div class="cg-card-title">Girls Hostel Entrance</div>
+                        <div class="cg-card-desc">Secure and welcoming girls' hostel facility.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="hostel" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/hostel/girls/interior.png" alt="Girls Hostel Interior" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Hostel</span>
+                        <div class="cg-card-title">Girls Hostel Interior</div>
+                        <div class="cg-card-desc">Comfortable living spaces for female students.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="hostel" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/hostel/boys/IMG_5319.JPG" alt="Hostel Building" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Hostel</span>
+                        <div class="cg-card-title">Hostel Building</div>
+                        <div class="cg-card-desc">Modern residential building with 24/7 amenities.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Sports (4 images) ===== -->
+                <div class="cg-card wide" data-category="sports" data-aos="fade-up">
+                    <img src="assets/images/sports/01.jpeg" alt="Sports Ground" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Sports</span>
+                        <div class="cg-card-title">Sports Ground</div>
+                        <div class="cg-card-desc">Expansive playground for outdoor sports and athletics.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="sports" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/sports/02.jpeg" alt="Sports Field" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Sports</span>
+                        <div class="cg-card-title">Play Field</div>
+                        <div class="cg-card-desc">Well-maintained field for cricket, football, and athletics.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="sports" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/sports/03.jpeg" alt="Basketball Court" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Sports</span>
+                        <div class="cg-card-title">Basketball Court</div>
+                        <div class="cg-card-desc">Standard basketball court for practice and tournaments.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="sports" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/sports/04.jpeg" alt="Sports Area" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Sports</span>
+                        <div class="cg-card-title">Sports Complex</div>
+                        <div class="cg-card-desc">Multi-sport complex with modern facilities.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Canteen (3 images) ===== -->
+                <div class="cg-card wide" data-category="canteen" data-aos="fade-up">
+                    <img src="assets/images/canteen/01.jpeg" alt="College Canteen" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Canteen</span>
+                        <div class="cg-card-title">Student Canteen</div>
+                        <div class="cg-card-desc">Hygienic and spacious canteen serving nutritious meals.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="canteen" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/canteen/02.jpeg" alt="Canteen Seating" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Canteen</span>
+                        <div class="cg-card-title">Dining Area</div>
+                        <div class="cg-card-desc">Clean and comfortable dining space for students.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="canteen" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/canteen/03.jpeg" alt="Canteen Counter" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Canteen</span>
+                        <div class="cg-card-title">Food Counter</div>
+                        <div class="cg-card-desc">Well-organized kitchen and serving area with varied menu.</div>
+                    </div>
+                </div>
+
+                <!-- ===== Our Transport (3 images) ===== -->
+                <div class="cg-card wide" data-category="transport" data-aos="fade-up">
+                    <img src="assets/images/Transport/IMG_8948.JPG" alt="College Bus" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Transport</span>
+                        <div class="cg-card-title">College Bus Fleet</div>
+                        <div class="cg-card-desc">Reliable transport fleet serving multiple routes across the region.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="transport" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/Transport/IMG_8950.JPG" alt="College Bus" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Transport</span>
+                        <div class="cg-card-title">Bus on Campus</div>
+                        <div class="cg-card-desc">Well-maintained buses parked within the campus premises.</div>
+                    </div>
+                </div>
+                <div class="cg-card" data-category="transport" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/Transport/IMG_8951.JPG" alt="Transport Facility" loading="lazy">
+                    <div class="cg-card-overlay">
+                        <span class="cg-card-tag">Our Transport</span>
+                        <div class="cg-card-title">Student Transport</div>
+                        <div class="cg-card-desc">Safe and punctual transport for daily student commute.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missing Categories Notice -->
+            <div class="cg-missing-notice" data-aos="fade-up">
+                <i class="fa-solid fa-camera"></i>
+                <h3>Additional Photos Needed</h3>
+                <p>We are currently sourcing photographs for the following sections. If you have images to contribute, please contact the college administration.</p>
+                <p style="margin-top: 12px; font-size: 0.9rem;">
+                    <strong>Needs photography:</strong> Our Mess
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="cg-lightbox" id="cg-lightbox">
+        <button class="cg-lb-close" id="cg-lb-close">&times;</button>
+        <img src="" alt="Campus Photo" id="cg-lb-img" loading="lazy" decoding="async">
+        <div class="cg-lb-cap" id="cg-lb-cap"></div>
+    </div>
+
+<!-- INCLUDE:components/footer.html --><div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/include-components.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script>
+        // AOS Init
+        if (window.AOS) { AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 }); }
+
+        // Gallery empty state message
+        var emptyMsg = document.createElement('div');
+        emptyMsg.id = 'cg-empty';
+        emptyMsg.style.cssText = 'display:none;text-align:center;padding:60px 20px;color:#64748b;grid-column:1/-1;';
+        emptyMsg.innerHTML = '<i class="fa-regular fa-image" style="font-size:3rem;color:#f5c518;display:block;margin-bottom:20px;"></i><h3 style="color:#003366;font-weight:800;margin-bottom:12px;">No Images Yet</h3><p>This category is being populated. Please check back later.</p>';
+        document.getElementById('cg-grid').appendChild(emptyMsg);
+
+        // Filter Functionality
+        document.querySelectorAll('.cg-filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.cg-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var filter = btn.getAttribute('data-filter');
+                var visibleCount = 0;
+
+                document.querySelectorAll('.cg-card').forEach(function(card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                var empty = document.getElementById('cg-empty');
+                if (visibleCount === 0 && filter !== 'all') {
+                    empty.style.display = 'block';
+                } else {
+                    empty.style.display = 'none';
+                }
+            });
+        });
+
+        // Lightbox
+        var lightbox = document.getElementById('cg-lightbox');
+        var lbImg = document.getElementById('cg-lb-img');
+        var lbCap = document.getElementById('cg-lb-cap');
+
+        if (lightbox) {
+            document.querySelectorAll('.cg-card').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    var img = card.querySelector('img');
+                    var tag = card.querySelector('.cg-card-tag');
+                    var title = card.querySelector('.cg-card-title');
+                    lbImg.src = img.src;
+                    lbCap.textContent = (tag ? tag.textContent + ' — ' : '') + (title ? title.textContent : '');
+                    lightbox.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            document.getElementById('cg-lb-close').addEventListener('click', function() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                    lightbox.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    </script>
+
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const bttBtn = document.getElementById('backToTopBtn');
+        if (bttBtn) {
+            window.addEventListener('scroll', function() {
+                bttBtn.classList.toggle('show', window.scrollY > 400);
+            }, { passive: true });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance, Leadership & Management – NAAC | Kingston Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        /* ─── HERO ────────────────────────────────────────── */
+        .gov-hero {
+            position: relative;
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0b1f3a 0%, #003d2e 100%);
+        }
+
+        #hero-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gov-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11,31,58,0.82) 0%, rgba(0,61,46,0.82) 100%);
+        }
+
+        .gov-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .gov-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(100, 180, 255, 0.18);
+            border: 1px solid rgba(255,255,255,0.22);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 10px 24px;
+            border-radius: 40px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .gov-hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 8px 32px rgba(0,0,0,0.7);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .gov-hero-title span {
+            color: #f5c518;
+        }
+
+        .gov-hero-bar {
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, #f5c518, transparent);
+            border-radius: 3px;
+            margin: 0 auto 28px;
+        }
+
+        .gov-hero-stats {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gov-stat-pill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(6px);
+            padding: 14px 28px;
+            border-radius: 16px;
+            min-width: 110px;
+        }
+
+        .gov-stat-pill strong {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #f5c518;
+            line-height: 1;
+        }
+
+        .gov-stat-pill span {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 600;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ─── MAIN SECTION ──────────────────────────────── */
+        .gov-section {
+            background: linear-gradient(180deg, #f0f4f8 0%, #fff 100%);
+            padding: 80px 0;
+        }
+
+        .gov-section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .gov-section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        .gov-section-header p {
+            color: #666;
+            font-size: 0.97rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .underline {
+            width: 70px;
+            height: 4px;
+            background: #f5c518;
+            border-radius: 2px;
+            margin: 16px auto 0;
+        }
+
+        /* ─── KI ACCORDION ──────────────────────────────── */
+        .ki-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .ki-card {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            background: #fff;
+            border: 1px solid #e0e8f0;
+            transition: box-shadow 0.3s;
+        }
+
+        .ki-card:hover {
+            box-shadow: 0 10px 36px rgba(11,31,58,0.14);
+        }
+
+        .ki-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            cursor: pointer;
+            background: #fff;
+            transition: background 0.25s;
+            user-select: none;
+        }
+
+        .ki-header:hover {
+            background: #f5f8fd;
+        }
+
+        .ki-header.open {
+            background: linear-gradient(135deg, #0b1f3a 0%, #1a3a6e 100%);
+        }
+
+        .ki-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #0b1f3a, #1a3a6e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+            color: #f5c518;
+            transition: transform 0.3s;
+        }
+
+        .ki-header.open .ki-icon-box {
+            background: rgba(245,197,24,0.2);
+        }
+
+        .ki-header:hover .ki-icon-box {
+            transform: scale(1.08);
+        }
+
+        .ki-header-text {
+            flex: 1;
+        }
+
+        .ki-code {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 3px;
+        }
+
+        .ki-header:not(.open) .ki-code {
+            color: #888;
+        }
+
+        .ki-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0b1f3a;
+            line-height: 1.3;
+        }
+
+        .ki-header.open .ki-title {
+            color: #fff;
+        }
+
+        .ki-count-badge {
+            background: #e8f0fe;
+            color: #1a3a6e;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .ki-header.open .ki-count-badge {
+            background: rgba(245,197,24,0.2);
+            color: #f5c518;
+        }
+
+        .ki-chevron {
+            font-size: 0.85rem;
+            color: #aaa;
+            transition: transform 0.35s, color 0.25s;
+        }
+
+        .ki-header.open .ki-chevron {
+            transform: rotate(180deg);
+            color: #f5c518;
+        }
+
+        /* Accordion body */
+        .ki-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .ki-body.open {
+            max-height: 600px;
+        }
+
+        .ki-body-inner {
+            padding: 0 24px 24px;
+            border-top: 1px solid #e8f0fe;
+        }
+
+        .ki-desc {
+            margin: 18px 0 14px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.65;
+            padding-left: 14px;
+            border-left: 3px solid #f5c518;
+        }
+
+        /* Evidence links */
+        .metric-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .evidence-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: #f5f8fd;
+            border: 1px solid #d0ddf0;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #0b1f3a !important;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .evidence-link i {
+            color: #c0392b;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+            transition: transform 0.28s;
+        }
+
+        .evidence-link:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateX(4px);
+            border-color: #0b1f3a;
+        }
+
+        .evidence-link:hover i {
+            color: #f5c518;
+            transform: scale(1.15);
+        }
+
+        /* ─── MOBILE ─────────────────────────────────── */
+        @media (max-width: 768px) {
+            .gov-hero-title { font-size: 2rem; }
+            .gov-hero-stats { gap: 12px; }
+            .gov-stat-pill { padding: 12px 20px; }
+            .ki-header { padding: 16px 16px; gap: 12px; }
+            .ki-icon-box { width: 44px; height: 44px; font-size: 1.1rem; }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <!-- ╔═ HERO ═══════════════════════════════════════════╗ -->
+    <section class="gov-hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="gov-hero-overlay"></div>
+        <div class="gov-hero-content container">
+            <div class="gov-badge" data-aos="fade-down"><i class="fas fa-shield-halved"></i> NAAC Criterion VI</div>
+            <h1 class="gov-hero-title" data-aos="zoom-in" data-aos-delay="100">
+                Governance, Leadership<br><span>&amp; Management</span>
+            </h1>
+            <div class="gov-hero-bar" data-aos="fade-up" data-aos-delay="200"></div>
+            <div class="gov-hero-stats" data-aos="fade-up" data-aos-delay="350">
+                <div class="gov-stat-pill"><strong>5</strong><span>Key Indicators</span></div>
+                <div class="gov-stat-pill"><strong>30+</strong><span>Evidence Documents</span></div>
+                <div class="gov-stat-pill"><strong>NAAC</strong><span>'A' Grade</span></div>
+            </div>
+        </div>
+    </section>
+    <!-- ╚══════════════════════════════════════════════════╝ -->
+
+    <!-- ╔═ KI ACCORDION SECTION ══════════════════╗ -->
+    <section class="gov-section">
+        <div class="container">
+            <div class="gov-section-header" data-aos="fade-up">
+                <h2>Key Indicator Evidence Documents</h2>
+                <p>Click on any Key Indicator to expand and access all supporting evidence files.</p>
+                <div class="underline"></div>
+            </div>
+
+            <div class="ki-accordion">
+
+                <!-- KI 6.1 -->
+                <div class="ki-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="ki-header" onclick="toggleKI(this)">
+                        <div class="ki-icon-box"><i class="fas fa-landmark"></i></div>
+                        <div class="ki-header-text">
+                            <div class="ki-code">KI 6.1</div>
+                            <div class="ki-title">Institutional Vision &amp; Leadership</div>
+                        </div>
+                        <span class="ki-count-badge">1 file</span>
+                        <i class="fas fa-chevron-down ki-chevron"></i>
+                    </div>
+                    <div class="ki-body">
+                        <div class="ki-body-inner">
+                            <p class="ki-desc">Institutional Governance &amp; Functioning — Governance structure, vision
+                                alignment and decentralisation of leadership.</p>
+                            <div class="metric-links-list">
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.1.1/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- KI 6.2 -->
+                <div class="ki-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="ki-header" onclick="toggleKI(this)">
+                        <div class="ki-icon-box"><i class="fas fa-chart-gantt"></i></div>
+                        <div class="ki-header-text">
+                            <div class="ki-code">KI 6.2</div>
+                            <div class="ki-title">Strategy Development &amp; Deployment</div>
+                        </div>
+                        <span class="ki-count-badge">2 files</span>
+                        <i class="fas fa-chevron-down ki-chevron"></i>
+                    </div>
+                    <div class="ki-body">
+                        <div class="ki-body-inner">
+                            <p class="ki-desc">Perspective Plan &amp; e-Governance — Strategic planning processes,
+                                implementation of e-governance systems.</p>
+                            <div class="metric-links-list">
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.2.1/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.2.1)</a>
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.2.2/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.2.2)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KI 6.3 -->
+                <div class="ki-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="ki-header" onclick="toggleKI(this)">
+                        <div class="ki-icon-box"><i class="fas fa-users-gear"></i></div>
+                        <div class="ki-header-text">
+                            <div class="ki-code">KI 6.3</div>
+                            <div class="ki-title">Faculty Empowerment Strategies</div>
+                        </div>
+                        <span class="ki-count-badge">3 files</span>
+                        <i class="fas fa-chevron-down ki-chevron"></i>
+                    </div>
+                    <div class="ki-body">
+                        <div class="ki-body-inner">
+                            <p class="ki-desc">Appraisal, Training &amp; Welfare Measures — Faculty welfare programs,
+                                appraisal systems, professional development.</p>
+                            <div class="metric-links-list">
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.3.1/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.3.1)</a>
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.3.2/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.3.2)</a>
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.3.3/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.3.3)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KI 6.4 -->
+                <div class="ki-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="ki-header" onclick="toggleKI(this)">
+                        <div class="ki-icon-box"><i class="fas fa-coins"></i></div>
+                        <div class="ki-header-text">
+                            <div class="ki-code">KI 6.4</div>
+                            <div class="ki-title">Financial Management &amp; Resource Mobilization</div>
+                        </div>
+                        <span class="ki-count-badge">1 file</span>
+                        <i class="fas fa-chevron-down ki-chevron"></i>
+                    </div>
+                    <div class="ki-body">
+                        <div class="ki-body-inner">
+                            <p class="ki-desc">Audited Statements 2018–2022 — Financial planning, resource mobilization
+                                and audited financial statements.</p>
+                            <div class="metric-links-list">
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.4.1/front-sheet.pdf" target="_blank"
+                                class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Page (6.4.1)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KI 6.5 -->
+                <div class="ki-card" data-aos="fade-up" data-aos-delay="320">
+                    <div class="ki-header" onclick="toggleKI(this)">
+                        <div class="ki-icon-box"><i class="fas fa-microscope"></i></div>
+                        <div class="ki-header-text">
+                            <div class="ki-code">KI 6.5</div>
+                            <div class="ki-title">Internal Quality Assurance System</div>
+                        </div>
+                        <span class="ki-count-badge">2 files</span>
+                        <i class="fas fa-chevron-down ki-chevron"></i>
+                    </div>
+                    <div class="ki-body">
+                        <div class="ki-body-inner">
+                            <p class="ki-desc">IQAC, NIRF, AAA &amp; Annual Reports — Internal quality mechanisms, IQAC
+                                activities and accreditation annual reports.</p>
+                            <div class="metric-links-list">
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.5.1/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.5.1)</a>
+                                <a href="https://kingston.ac.in/engineering-resources/naac/governance-leadership-management/6.5.2/front-sheet.pdf" target="_blank"
+                                    class="evidence-link"><i class="fa-solid fa-file-pdf"></i> Front Sheet (6.5.2)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /ki-accordion -->
+            </div><!-- /container -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        AOS.init({ duration: 750, once: true, offset: 80 });
+
+        /* Accordion */
+        function toggleKI(header) {
+            const body = header.nextElementSibling;
+            const isOpen = header.classList.contains('open');
+            document.querySelectorAll('.ki-header.open').forEach(h => {
+                h.classList.remove('open');
+                h.nextElementSibling.classList.remove('open');
+            });
+            if (!isOpen) {
+                header.classList.add('open');
+                body.classList.add('open');
+            }
+        }
+
+        /* Animated Particle Canvas */
+        (function () {
+            const canvas = document.getElementById('hero-canvas');
+            const ctx = canvas.getContext('2d');
+            let W, H, particles = [];
+            function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+            function Particle() {
+                this.x = Math.random() * W;
+                this.y = Math.random() * H;
+                this.r = Math.random() * 1.5 + 0.5;
+                this.dx = (Math.random() - 0.5) * 0.4;
+                this.dy = (Math.random() - 0.5) * 0.4;
+                this.alpha = Math.random() * 0.6 + 0.1;
+            }
+            function init() { particles = Array.from({ length: 120 }, () => new Particle()); }
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(245,197,24,${p.alpha})`;
+                    ctx.fill();
+                    p.x += p.dx; p.y += p.dy;
+                    if (p.x < 0 || p.x > W) p.dx *= -1;
+                    if (p.y < 0 || p.y > H) p.dy *= -1;
+                });
+                requestAnimationFrame(draw);
+            }
+            window.addEventListener('resize', () => { resize(); });
+            resize(); init(); draw();
+        })();
+    </script>
+</body>
+
+</html>

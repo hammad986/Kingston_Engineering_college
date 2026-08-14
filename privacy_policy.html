@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Kingston Engineering College</title>
+    <meta name="description"
+        content="Privacy Policy for the Kingston Engineering College website — what we collect, how forms, the AI assistant, and browser storage work, and how to contact us.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <style>
+        .legal-content {
+            padding: 80px 0 100px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .legal-content h1 {
+            color: var(--brand-blue);
+            margin-bottom: 8px;
+        }
+
+        .legal-updated {
+            color: #888;
+            font-size: 0.92rem;
+            margin-bottom: 36px;
+            margin-top: 0;
+        }
+
+        .legal-content h2 {
+            color: var(--brand-blue);
+            font-size: 1.4rem;
+            margin: 40px 0 12px;
+            padding-top: 8px;
+            border-top: 1px solid #eee;
+        }
+
+        .legal-content h2:first-of-type { border-top: 0; }
+
+        .legal-content p,
+        .legal-content li {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .legal-content ul { margin: 12px 0 20px; padding-left: 22px; }
+        .legal-content li { margin-bottom: 8px; }
+        .legal-content a { color: var(--brand-blue); }
+        .legal-content code {
+            background:#f4f4f4; padding:1px 6px; border-radius:4px;
+            font-size:0.9em; color:#c0392b;
+        }
+
+        .legal-highlight {
+            background: #f0f7ff;
+            border-left: 4px solid var(--brand-blue);
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            color: #33475b;
+            font-size: 0.97rem;
+        }
+
+        .legal-highlight strong { color: var(--brand-blue); }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Absolute Top Bar for College Info & TNEA inside Hero -->
+        <div class="hero-top-panel container" data-aos="fade-down">
+            <div class="hero-college-brand"></div>
+            <div class="hero-admission-title-wrap">
+                <h1 class="hero-admission-year" data-aos="fade-up" data-aos-delay="300"
+                    style="color:#fff; font-size:2.5rem; text-shadow:0 2px 10px rgba(0,0,0,0.5);">Privacy Policy</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container legal-content">
+
+        <p class="legal-updated">Last updated: August 2026 &bull; Kingston Engineering College</p>
+
+        <p>Kingston Engineering College (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;the College&rdquo;) respects your
+            privacy. This policy explains, in plain language, exactly what information this website handles, how the
+            forms and the AI assistant work, what is stored in your browser, and how to reach us. It is written to match
+            how this site actually functions &mdash; not a generic template.</p>
+
+        <div class="legal-highlight">
+            <strong>The short version:</strong> This website uses <strong>no advertising cookies and no third-party
+                analytics trackers</strong>. Contact and admission forms store your entry <em>only in your own
+                browser</em> (localStorage) &mdash; on this site they are <em>not</em> emailed or sent to a server
+            automatically. The AI assistant lets you ask questions; your conversation stays in your browser, and only
+            your question text is sent onward (via our secure server) when you ask the AI for an answer.
+        </div>
+
+        <h2>1. Information you give us directly (website forms)</h2>
+        <p>The site has enquiry, contact, and admission application forms. Depending on the form, you may enter:</p>
+        <ul>
+            <li><strong>Identity &amp; contact:</strong> full name, email address, phone number.</li>
+            <li><strong>Admission details:</strong> date of birth, gender, school name, marks, community, category, and
+                the course you are interested in.</li>
+            <li><strong>Your message:</strong> the subject and free-text message you write to us.</li>
+        </ul>
+        <p><strong>What happens to it:</strong> On this website, submitting a form saves your entry to your own
+            browser's local storage (under keys beginning with <code>kec_submission_</code>) and shows a
+            confirmation. This website does not email it or send it to a database by itself. To share your details
+            with the College, please use the official contact channels on our <a href="contact.html">Contact page</a>.
+            Because the data lives only in your browser, you can delete it at any time by clearing your browser's site
+            data.</p>
+
+        <h2>2. The AI Assistant</h2>
+        <p>Our AI assistant answers questions about the College. Here is exactly how it handles your input:</p>
+        <ul>
+            <li><strong>Search runs locally.</strong> Your question is matched against the College's knowledge base in
+                your own browser (a local vector search). No question needs to leave your device for this step.</li>
+            <li><strong>AI-written answers (optional).</strong> When you ask for a fuller answer, only the text of your
+                question (and the matching knowledge-base extracts used to answer it) is sent, through our secure
+                server-side proxy, to our AI provider (OpenRouter) to generate a reply. We do not send your name, email,
+                phone, or any account details to the AI provider.</li>
+            <li><strong>Kept in your browser.</strong> Your conversation history is stored in your browser's local
+                storage (<code>kec_chat_fullpage</code>, <code>kec_chat_widget</code>,
+                <code>kec_openrouter_cache</code>, <code>kec_openrouter_metrics</code>) so the chat persists and is
+                faster. It is not stored on our servers.</li>
+        </ul>
+        <p>Please avoid typing sensitive personal information (passwords, financial details, ID numbers) into the
+            assistant. To clear the chat and cached answers, use the assistant's clear option or clear your browser's
+            site data.</p>
+
+        <h2>3. Browser storage and cookies</h2>
+        <p>This website uses your browser's <strong>local storage</strong> for the features above (saved form entries
+            and the AI chat). We do <strong>not</strong> set tracking or advertising cookies, and we do
+            <strong>not</strong> run third-party analytics such as Google Analytics. The following storage keys may be
+            created on your device:</p>
+        <ul>
+            <li><code>kec_submission_*</code> &mdash; your enquiry / contact / application form entries.</li>
+            <li><code>kec_chat_fullpage</code>, <code>kec_chat_widget</code> &mdash; AI assistant conversation history.
+            </li>
+            <li><code>kec_openrouter_cache</code>, <code>kec_openrouter_metrics</code> &mdash; cached AI answers and
+                usage counters.</li>
+            <li><code>kec_rag_analytics</code> &mdash; anonymous, on-device search-quality counters for the assistant.
+            </li>
+        </ul>
+
+        <h2>4. Third-party services we load</h2>
+        <p>To display this site, your browser loads resources (fonts, icons, libraries, and the AI model files) from a
+            few content-delivery networks. When it does, those services receive the standard, unavoidable technical
+            details every web request carries (your IP address and browser type) simply to deliver the files:</p>
+        <ul>
+            <li>Google Fonts, cdnjs (Cloudflare), jsDelivr, and unpkg &mdash; fonts, icons, and UI libraries.</li>
+            <li>OpenRouter &mdash; only when you ask the AI assistant for an answer (your question text), via our secure
+                server.</li>
+            <li>An external link to our YouTube channel is provided as a convenience; visiting it is subject to
+                Google's / YouTube's own privacy policy.</li>
+        </ul>
+
+        <h2>5. How long we keep information</h2>
+        <p>Because form entries and chat history live in <em>your</em> browser on <em>your</em> device, you control how
+            long they remain. Anything you send to us through official contact channels (for example, an email you write
+            to us) is kept only as long as needed to respond to you and meet the College's record-keeping and legal
+            obligations.</p>
+
+        <h2>6. Your choices and rights</h2>
+        <ul>
+            <li><strong>Delete your data:</strong> clear this site's data in your browser settings to remove saved
+                forms and chat history.</li>
+            <li><strong>Ask us:</strong> contact the College to ask what information we hold about you, to correct it,
+                or to request its deletion.</li>
+            <li><strong>Use without AI:</strong> you can browse the entire site and use every form without ever using
+                the AI assistant.</li>
+        </ul>
+
+        <h2>7. Children's privacy</h2>
+        <p>This website is intended for prospective students, parents, and the general public. It is not directed at
+            children under 13. Admission details for minors should be provided by a parent or guardian.</p>
+
+        <h2>8. Security</h2>
+        <p>The AI assistant communicates with our server over HTTPS, and the AI API key is held only on our servers
+            &mdash; never in the page, so it cannot be copied from the page source. As with any website, no method of
+            transmission over the internet is 100% secure, but we take reasonable care to protect the information you
+            share with us.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>We may update this policy from time to time. The &ldquo;Last updated&rdquo; date at the top shows the current
+            version.</p>
+
+        <h2>10. Contact us</h2>
+        <p>Questions about this policy or about your data may be sent to
+            <a href="mailto:info@kingston.ac.in">info@kingston.ac.in</a>, or via our
+            <a href="contact.html">Contact page</a>.</p>
+
+        <a href="index.html" class="btn-view-more" style="display:inline-block; margin-top:20px;">Back to Home</a>
+    </div>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="include-footer"></div>
+
+    <script src="assets/js/include-components.js"></script>
+</body>
+
+</html>

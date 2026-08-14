@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <style>
+        /* ---- PREMIUM HERO (PSD Pages) ---- */
+        .page-hero-premium {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 60px 0 80px;
+        }
+        .hero-premium-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-gradient-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.12) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        .hero-particles span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 15%; animation-delay: 2s; }
+        .hero-particles span:nth-child(4) { top: 40%; left: 80%; animation-delay: 0.5s; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 70%; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .hero-particles span:nth-child(6) { top: 80%; left: 40%; animation-delay: 2.5s; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 90%; animation-delay: 3s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(8) { top: 85%; left: 85%; animation-delay: 0.8s; }
+        .hero-particles span:nth-child(9) { top: 50%; left: 5%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-particles span:nth-child(10) { top: 10%; left: 60%; animation-delay: 2.2s; }
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+        .hero-accent-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,197,24,0.08);
+            top: -150px;
+            right: -100px;
+        }
+        .hero-accent-circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -50px;
+            top: auto;
+            right: auto;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .hero-premium-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,197,24,0.15);
+            border: 1px solid rgba(245,197,24,0.3);
+            color: #f5c518;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(6px);
+        }
+        .hero-premium-badge i { font-size: 0.9rem; }
+        .hero-premium-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-premium-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-premium-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-premium-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .hero-premium-breadcrumb a:hover { color: #f5c518; }
+        .hero-premium-breadcrumb i { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+        .hero-premium-breadcrumb span { color: #f5c518; font-weight: 600; }
+        .hero-wave-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            pointer-events: none;
+        }
+        .hero-wave-divider svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .page-hero-premium { min-height: 260px; padding: 40px 0 60px; }
+            .hero-premium-title { font-size: 2rem; }
+            .hero-premium-subtitle { font-size: 1rem; }
+            .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    
+    <!-- Content Section -->
+    <section class="page-section" style="padding: 80px 0; background: #f8fafc;">
+        <div class="container" style="max-width: 1400px;">
+            <div style="display: grid; grid-template-columns: 350px 1fr; gap: 40px;">
+
+                <!-- Left Sidebar Details -->
+                <div style="position: sticky; top: 120px; align-self: start;">
+                    <div
+                        style="background: #fff; border-radius: 24px; padding: 35px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05);">
+                        <div style="margin-bottom: 30px; text-align: center;">
+                            <div
+                                style="width: 80px; height: 80px; background: #8b1a2b10; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                <i class="fas fa-bullseye" style="font-size: 2rem; color: #8b1a2b;"></i>
+                            </div>
+                            <h3
+                                style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 700; color: #1e293b;">
+                                Institutional Goals</h3>
+                            <p style="color: #64748b; font-size: 0.9rem;">Visionary Roadmap</p>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div
+                                style="padding: 20px; background: #f8fafc; border-radius: 15px; border: 1px solid rgba(0,0,0,0.02);">
+                                <label
+                                    style="display: block; font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Foundational
+                                    Goal</label>
+                                <span
+                                    style="font-family: 'Inter', sans-serif; font-weight: 700; color: #1e293b; font-size: 1rem;">Academic
+                                    Excellence</span>
+                            </div>
+                            <div
+                                style="padding: 20px; background: #f8fafc; border-radius: 15px; border: 1px solid rgba(0,0,0,0.02);">
+                                <label
+                                    style="display: block; font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Core
+                                    Value</label>
+                                <span
+                                    style="font-family: 'Inter', sans-serif; font-weight: 700; color: #1e293b; font-size: 1rem;">Social
+                                    Integrity</span>
+                            </div>
+                            <div
+                                style="padding: 20px; background: #fff; border-radius: 15px; border: 2px dashed #8b1a2b30;">
+                                <label
+                                    style="display: block; font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Disclosure
+                                    Type</label>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span
+                                        style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+                                    <span style="font-weight: 700; color: #059669; font-size: 0.95rem;">Strategic
+                                        Vision</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="../assets/pdfs/UGC Mandatory Disclosure/1. About HEI/1. About Us.pdf" target="_blank"
+                            style="margin-top: 35px; display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 18px; background: #8b1a2b; color: #fff; border-radius: 15px; text-decoration: none; font-weight: 700; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 20px rgba(139, 26, 43, 0.2);">
+                            Download Document <i class="fas fa-file-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main PDF Viewer Panel -->
+                <div data-aos="fade-left">
+                    <div
+                        style="background: #fff; border-radius: 30px; padding: 25px; box-shadow: 0 40px 100px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.06); height: 950px; position: relative; overflow: hidden;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; padding: 0 15px;">
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div
+                                    style="width: 45px; height: 45px; background: #fdf2f2; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-file-pdf" style="color: #e53e3e; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h4
+                                        style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1e293b; margin: 0;">
+                                        Institutional Mission & Vision</h4>
+                                    <span style="font-size: 0.8rem; color: #94a3b8;">1. About Us.pdf</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <button onclick="location.reload()"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; cursor: pointer; transition: all 0.2s;"><i
+                                        class="fas fa-sync-alt"></i></button>
+                                <a href="../assets/pdfs/UGC Mandatory Disclosure/1. About HEI/1. About Us.pdf" target="_blank"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; text-decoration: none;"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <iframe src="../assets/pdfs/UGC Mandatory Disclosure/1. About HEI/1. About Us.pdf" width="100%"
+                            height="830px"
+                            style="border: none; border-radius: 20px; background: #f1f5f9; box-shadow: inset 0 0 20px rgba(0,0,0,0.02);"></iframe>
+
+                        <!-- Premium Footer Note -->
+                        <div
+                            style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+                            <div
+                                style="display: flex; align-items: center; gap: 8px; color: #64748b; font-size: 0.85rem;">
+                                <i class="fas fa-shield-alt"></i> Verified Document
+                            </div>
+                            <div style="font-size: 0.85rem; color: #94a3b8;">
+                                Ref: KEC/STRAT/VISION/2026
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section-->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    
+    
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 50
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

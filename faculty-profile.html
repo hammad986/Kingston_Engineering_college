@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile — Kingston Engineering College</title>
+    <meta name="description" content="Faculty profile at Kingston Engineering College">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Kingston Engineering College">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+
+    <style>
+        .faculty-page-hero {
+            background: linear-gradient(135deg, #1a3250 0%, #003366 60%, #1a5276 100%);
+            padding: 56px 0 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faculty-page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .faculty-page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .faculty-page-hero h1 {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 0 8px;
+        }
+
+        .faculty-breadcrumb {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+
+        .faculty-breadcrumb a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+        }
+
+        .faculty-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .faculty-page-hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ── Directory Styles ── */
+        .faculty-directory-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+            min-height: 500px;
+        }
+
+        .faculty-search-bar {
+            position: relative;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .faculty-search-bar input {
+            width: 100%;
+            padding: 16px 20px 16px 52px;
+            border: 2px solid #e1e8ef;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .faculty-search-bar input:focus {
+            border-color: #003366;
+            box-shadow: 0 4px 20px rgba(0,51,102,0.12);
+        }
+
+        .faculty-search-bar i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 1.1rem;
+        }
+
+        .faculty-filter-chips {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .faculty-filter-chip {
+            background: #fff;
+            border: 2px solid #e1e8ef;
+            color: #003366;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+        }
+
+        .faculty-filter-chip.active {
+            background: #003366;
+            color: #fff;
+            border-color: #003366;
+            box-shadow: 0 6px 16px rgba(0,51,102,0.2);
+            transform: translateY(-1px);
+        }
+
+        .faculty-filter-chip:hover:not(.active) {
+            background: #f0f4ff;
+            border-color: #003366;
+        }
+
+        .faculty-results-count {
+            text-align: center;
+            color: #889;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .faculty-dir-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .faculty-dir-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #003366;
+        }
+
+        .faculty-dir-card-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #eef2fb, #d5e0f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #003366;
+            margin-bottom: 16px;
+            flex-shrink: 0;
+        }
+
+        .faculty-dir-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #003366;
+            margin: 0 0 4px;
+        }
+
+        .faculty-dir-card .dir-designation {
+            font-size: 0.85rem;
+            color: #667;
+            margin: 0 0 10px;
+        }
+
+        .faculty-dir-card .dir-department {
+            font-size: 0.8rem;
+            color: #889;
+            margin: 0 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .faculty-dir-card .dir-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .dir-tag {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+
+        .faculty-empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            grid-column: 1 / -1;
+        }
+
+        .faculty-empty-state i {
+            font-size: 3rem;
+            color: #ccc;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .faculty-empty-state h3 {
+            color: #666;
+            margin: 0 0 8px;
+        }
+
+        .faculty-empty-state p {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+            .faculty-filter-chips {
+                gap: 6px;
+            }
+            .faculty-filter-chip {
+                padding: 6px 14px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- INCLUDE:components/header.html --><div id="include-header"></div>
+
+
+
+    <!-- Hero Section (shown while loading, replaced by JS) -->
+    <section class="faculty-page-hero">
+        <div class="container">
+            <p class="faculty-breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="academics.html">Academics</a> &rsaquo; <span>Faculty Profile</span></p>
+            <h1 data-aos="fade-up">Faculty Profile</h1>
+            <p data-aos="fade-up" data-aos-delay="100" style="color:rgba(255,255,255,0.7);">Loading faculty information...</p>
+        </div>
+    </section>
+
+    <!-- Dynamic Content (populated by faculty-profile.js) -->
+    <main></main>
+
+<!-- INCLUDE:components/footer.html --><div id="include-footer"></div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/faculty-profile.js"></script>
+    <script src="assets/js/include-components.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 });
+
+        const bttBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('show', window.scrollY > 400);
+        }, { passive: true });
+    </script></body>
+
+</html>

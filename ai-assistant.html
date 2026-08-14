@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Kingston Engineering College</title>
+    <meta name="description" content="AI Assistant at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        .ai-assistant-container {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            min-height: 100vh;
+        }
+
+        .ai-page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ai-page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+
+        .ai-page-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .ai-page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .ai-chat-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 650px;
+        }
+
+        .ai-chat-header {
+            background: linear-gradient(135deg, #003366, #1a5490);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ai-header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ai-header-logo {
+            height: 40px;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .ai-header-text h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .ai-header-text p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 0.8rem;
+        }
+
+        .ai-chat-messages {
+            flex: 1;
+            min-height: 0;
+            /* critical for flex children to scroll */
+        }
+
+        .ai-input-section {
+            padding: 20px;
+            background: #fcfcfc;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ai-quick-actions {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .ai-quick-btn {
+            white-space: nowrap;
+            background: #f0f3f7;
+            border: 1px solid #dde2e9;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #003366;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ai-quick-btn:hover {
+            background: #003366;
+            color: white;
+        }
+
+        .ai-input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .ai-input-field {
+            flex: 1;
+            border: 2px solid #eef0f2;
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .ai-input-field:focus {
+            outline: none;
+            border-color: #003366;
+            box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.05);
+        }
+
+        .ai-send-button {
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+
+        .ai-send-button:hover {
+            transform: scale(1.05);
+            background: #1a5490;
+        }
+
+        .ai-info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        .ai-info-section h4 {
+            color: #003366;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-info-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .ai-info-card {
+            padding: 15px;
+            background: #f8f9fb;
+            border-radius: 12px;
+            border-left: 4px solid #003366;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .ai-info-card:hover {
+            background: #f0f2f5;
+            transform: translateX(5px);
+        }
+
+        .ai-info-card h5 {
+            margin: 0 0 5px 0;
+            color: #003366;
+            font-weight: 700;
+        }
+
+        .ai-info-card p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        @media (max-width: 992px) {
+            .ai-page-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- AI Assistant Content -->
+    <div class="ai-assistant-container">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="ai-page-header" data-aos="fade-down">
+                <h1><i class="fa-solid fa-robot"></i> AI Campus Guide</h1>
+                <p>Get instant information about Kingston Engineering College</p>
+            </div>
+
+            <!-- Chat & Info Layout -->
+            <div class="ai-page-content">
+                <!-- Chat Panel -->
+                <div class="ai-chat-panel" data-aos="zoom-in">
+                    <div class="ai-chat-header">
+                        <div class="ai-header-brand">
+                            <img src="assets/images/icons/001-web_logo_banner_2026.png" alt="KEC Logo"
+                                class="ai-header-logo">
+                            <div class="ai-header-text">
+                                <h2>Kingston Assistant</h2>
+                                <p>AI-Powered Campus Guide</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <div class="ai-status-badge">
+                                <div class="ai-status-dot"></div>
+                                <span>Online</span>
+                            </div>
+                            <button id="ai-clear-chat" title="Clear chat history"
+                                style="background:none;border:1px solid rgba(255,255,255,0.35);color:#fff;border-radius:8px;padding:4px 10px;font-size:0.75rem;cursor:pointer;white-space:nowrap;transition:background 0.2s;"
+                                onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                                onmouseout="this.style.background='none'">🗑 Clear</button>
+                        </div>
+                    </div>
+
+                    <div class="ai-chat-messages" id="fullpage-messages">
+                        <!-- Messages populated by JS -->
+                    </div>
+
+                    <div class="ai-input-section">
+                        <div class="ai-quick-actions">
+                            <button class="ai-quick-btn" data-query="Tell me about admissions">📋
+                                Admissions</button>
+                            <button class="ai-quick-btn" data-query="What is the fee structure?">💰
+                                Fees</button>
+                            <button class="ai-quick-btn" data-query="Tell me about placements">📊
+                                Placements</button>
+                            <button class="ai-quick-btn" data-query="What departments are available?">🏛️
+                                Departments</button>
+                            <button class="ai-quick-btn" data-query="Tell me about hostel facilities">🏠
+                                Hostel</button>
+                            <button class="ai-quick-btn" data-query="Tell me about scholarships">🏆
+                                Scholarships</button>
+                        </div>
+                        <div class="ai-input-wrapper">
+                            <input type="text" id="fullpage-input" class="ai-input-field"
+                                placeholder="Ask me anything about Kingston Engineering College…">
+                            <button id="fullpage-send" class="ai-send-button"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="ai-info-panel" data-aos="fade-left" data-aos-delay="200">
+                    <div class="ai-info-section">
+                        <h4><i class="fa-solid fa-circle-question"></i> Popular Topics</h4>
+                        <div class="ai-info-grid">
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('Tell me about admissions'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>📋 Admissions</h5>
+                                <p>Eligibility, TNEA, documents and process</p>
+                            </div>
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('What is the fee structure?'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>💰 Fees & Scholarships</h5>
+                                <p>Program fees, hostel and financial aid</p>
+                            </div>
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('Tell me about placements'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>📊 Placements</h5>
+                                <p>Recruiters, packages and career support</p>
+                            </div>
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('What departments are available?'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>🏛️ Departments</h5>
+                                <p>Engineering, Architecture and MBA</p>
+                            </div>
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('Tell me about hostel facilities'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>🏠 Hostel & Campus Life</h5>
+                                <p>Accommodation, mess and activities</p>
+                            </div>
+                            <div class="ai-info-card"
+                                onclick="window.KingstonAI.setInput('Tell me about research at Kingston'); window.KingstonAI.handleSendMessage('fullpage');">
+                                <h5>🔬 Research & Innovation</h5>
+                                <p>Projects, patents and IIC support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-info-section" style="margin-top: 30px;">
+                        <h4><i class="fa-solid fa-circle-info"></i> How it works</h4>
+                        <p style="font-size: 0.85rem; color: #666; line-height: 1.6;">
+                            Ask anything — admissions, fees, hostel, placements, scholarships, departments, and
+                            more.
+                            <br><br>
+                            Supports <strong>English, Hindi and Hinglish</strong> queries. When I can't find an
+                            exact
+                            answer, I'll point you to the right page on the website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="include-footer"></div>
+
+    <style>
+        /* ── RAG grounded answer block (loaded by ai-assistant.js) ── */
+        .ai-rag-block {
+            background: linear-gradient(180deg, #f4f8fd 0%, #eef3f9 100%);
+            border-left: 4px solid #003366;
+            padding: 14px 16px;
+            border-radius: 10px;
+            margin: 6px 0;
+        }
+        .ai-rag-title { font-size: 0.88rem; color: #003366; margin-bottom: 8px; }
+        .ai-rag-block ul { padding-left: 0; }
+        .ai-rag-block li { font-size: 0.84rem; line-height: 1.55; color: #233; margin-bottom: 6px; list-style: disc; margin-left: 18px; }
+        .ai-rag-sources { margin-top: 10px; padding-top: 8px; border-top: 1px dashed #c9d2e0; font-size: 0.75rem; color: #556; }
+        .ai-rag-src { color: #0066cc; text-decoration: underline; word-break: break-all; }
+        .ai-rag-src + .ai-rag-src { margin-left: 8px; }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/script.js"></script>
+
+    <!--
+      ──────────────────────────────────────────────────────────────────
+      R2 CONFIGURATION POINT — Cloudflare RAG data base URL (PART 11+12)
+      ──────────────────────────────────────────────────────────────────
+      Default: the production assistant loads RAG data from same-origin
+      `/data/vectors.bin` and `/data/chunks.json`.
+
+      AFTER uploading vectors.bin, chunks.json, vectors-meta.json to R2:
+        1. Uncomment the line below (remove the leading `// `).
+        2. Replace the placeholder with your R2 public URL.
+      Do NOT change anything else — `ai-assistant.js` reads this global
+      and routes both `/data/vectors.bin` and `/data/chunks.json` to R2.
+
+      Example R2 public URL formats:
+        https://kb-cdn.your-account.r2.dev/data         (r2.dev subdomain)
+        https://kb.yourdomain.com/data                  (custom domain)
+    -->
+    <script>
+        // window.KEC_RAG_DATA_BASE = 'https://your-r2-public-url/data';
+
+        /* ── SERVER-SIDE LLM (OpenRouter via /api/chat Cloudflare Function) ──
+           Enables the optional readable-summary enhancement that runs AFTER the
+           grounded RAG answer is rendered. The browser only calls the same-origin
+           /api/chat endpoint — the OpenRouter key lives exclusively in a Cloudflare
+           Pages secret and is NEVER shipped to the client.
+
+           The enhancement is fully graceful: if /api/chat is unreachable, returns
+           an error, or returns no text, the assistant still shows the grounded
+           RAG answer (retrieved from the local vector DB) — nothing breaks. */
+        window.KEC_ENABLE_LLM = true;
+    </script>
+
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script src="assets/js/include-components.js"></script>
+
+    <script>
+        /* Live RAG status indicator — reflects the real _ragReady state so the
+           header badge is honest (Online only when the local embedding model +
+           vector worker both initialised). */
+        (function () {
+            var badgeText = document.querySelector('.ai-status-badge span');
+            var dot = document.querySelector('.ai-status-dot');
+            var checks = 0;
+            var timer = setInterval(function () {
+                checks++;
+                var ai = window.KingstonAI;
+                if (!ai) { if (checks > 60) clearInterval(timer); return; }
+                var ready = !!ai._ragReady;
+                if (badgeText) badgeText.textContent = ready ? 'Online · RAG' : 'Online';
+                if (dot) dot.style.background = ready ? '#2ecc71' : '#f1c40f';
+                if (ready || checks > 60) clearInterval(timer);
+            }, 500);
+        })();
+    </script>
+
+</body>
+
+</html>

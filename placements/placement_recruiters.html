@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Recruiters - Kingston Engineering College</title>
+    <meta name="description" content="Corporate Recruiters at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+
+    <style>
+        .pat-hero-band {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .pat-hero-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
+            animation: patStripe 18s linear infinite;
+        }
+        @keyframes patStripe { 0% { transform: translateX(0); } 100% { transform: translateX(80px); } }
+        .pat-hero-orbs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .pat-orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.25; }
+        .pat-orb-1 { width: 320px; height: 320px; background: #f5c518; top: -80px; left: -60px; animation: patFloat 8s ease-in-out infinite alternate; }
+        .pat-orb-2 { width: 240px; height: 240px; background: #4fc3f7; bottom: -60px; right: -40px; animation: patFloat 10s ease-in-out infinite alternate-reverse; }
+        .pat-orb-3 { width: 180px; height: 180px; background: #fff; top: 50%; left: 60%; animation: patFloat 12s ease-in-out infinite alternate; }
+        @keyframes patFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-30px) scale(1.15); } }
+        .pat-ring { position: absolute; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 50%; animation: patSpin 30s linear infinite; }
+        .pat-ring-1 { width: 480px; height: 480px; top: -140px; right: -100px; }
+        .pat-ring-2 { width: 360px; height: 360px; bottom: -100px; left: -80px; animation-direction: reverse; animation-duration: 22s; }
+        @keyframes patSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .pat-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .pat-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: Poppins, sans-serif; font-size: 0.85rem; font-weight: 600; color: #f5c518; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+        .pat-eyebrow::before, .pat-eyebrow::after { content: ''; display: block; width: 40px; height: 2px; background: #f5c518; border-radius: 1px; }
+        .pat-hero-title { font-family: Poppins, sans-serif; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+        .pat-hero-title em { font-style: normal; color: #f5c518; }
+        .pat-hero-sub { font-family: Inter, sans-serif; font-size: clamp(0.95rem,1.5vw,1.1rem); color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 640px; margin: 0 auto 24px; }
+        .pat-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .pat-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.18); padding: 8px 18px; border-radius: 50px; font-family: Inter, sans-serif; font-size: 0.82rem; color: #fff; transition: all 0.25s; }
+        .pat-pill i { color: #f5c518; font-size: 0.8rem; }
+        .pat-pill:hover { background: #f5c518; color: #003366; transform: translateY(-2px); }
+        .pat-pill:hover i { color: #003366; }
+        .pat-wave { position: relative; z-index: 2; margin-top: -1px; line-height: 0; }
+        .pat-wave svg { display: block; width: 100%; height: auto; }
+        .pat-section { padding: 76px 0; }
+        .pat-section.bg-light { background: #f8f9fa; }
+        .pat-section-heading { font-family: Poppins, sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+        .pat-section-line { width: 72px; height: 4px; background: #c0393b; border-radius: 2px; margin-bottom: 38px; }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+<section class="pat-hero-band">
+    <div class="pat-hero-orbs"><div class="pat-orb pat-orb-1"></div><div class="pat-orb pat-orb-2"></div><div class="pat-orb pat-orb-3"></div></div>
+    <div class="pat-ring pat-ring-1"></div><div class="pat-ring pat-ring-2"></div>
+    <div class="pat-hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="pat-eyebrow">Placement &amp; Training</div>
+        <h1 class="pat-hero-title">Corporate <em>Recruiters</em></h1>
+        <p class="pat-hero-sub">Leading companies that have consistently recruited Kingston graduates across technology, finance, consulting, and core engineering domains.</p>
+        <div class="pat-pills">
+            <span class="pat-pill"><i class="fa-solid fa-building"></i> 200+ Recruiters</span>
+            <span class="pat-pill"><i class="fa-solid fa-laptop-code"></i> Technology</span>
+            <span class="pat-pill"><i class="fa-solid fa-chart-line"></i> Finance &amp; Consulting</span>
+            <span class="pat-pill"><i class="fa-solid fa-industry"></i> Core Engineering</span>
+        </div>
+    </div>
+</section>
+
+<div class="pat-wave"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C320,52 720,0 1440,28 L1440,52 L0,52 Z" fill="#f8f9fa"/></svg></div>
+
+
+    <style>
+        /* ---- RECRUITERS SECTION ---- */
+        #recruiters-section {
+            padding: 70px 0;
+            background: #fff;
+        }
+
+        .pr-section-head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pr-section-head h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #8b1a2b;
+            margin-bottom: 10px;
+        }
+
+        .pr-section-head p {
+            color: #555;
+            font-size: 1rem;
+            
+        }
+
+        .pr-divider {
+            width: 80px;
+            height: 4px;
+            background: #003366;
+            margin: 14px auto 0;
+            border-radius: 2px;
+        }
+
+        .pr-filters {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .pr-filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            color: #444;
+            font-weight: 600;
+            font-size: 0.88rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .pr-filter-btn:hover {
+            border-color: #003366;
+            color: #003366;
+        }
+
+        .pr-filter-btn.active {
+            background: #003366;
+            border-color: #003366;
+            color: #fff;
+        }
+
+        #recruiters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 22px;
+        }
+
+        .pr-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 22px 18px 18px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.25s;
+        }
+
+        .pr-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+            border-color: #003366;
+        }
+
+        .pr-logo-wrap {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .pr-logo {
+            max-width: 130px;
+            max-height: 56px;
+            object-fit: contain;
+        }
+
+        .pr-initials {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #003366;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pr-logo-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .pr-logo-circle {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .pr-card-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .pr-card-initials {
+            font-weight: 800;
+            color: #8b1a2b;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .pr-company-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #111;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .pr-card-category-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .pr-badge-tech {
+            background: linear-gradient(135deg, #e8f0fe 0%, #d2e3fc 100%);
+            color: #1a56db;
+            border: 1px solid rgba(26, 86, 219, 0.1);
+        }
+
+        .pr-badge-consulting {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            color: #e65100;
+            border: 1px solid rgba(230, 81, 0, 0.1);
+        }
+
+        .pr-badge-finance {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #2e7d32;
+            border: 1px solid rgba(46, 125, 50, 0.1);
+        }
+
+        .pr-roles {
+            font-size: 0.8rem;
+            color: #666;
+            
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .pr-pkg {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #8b1a2b;
+            
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pr-pkg i {
+            color: #f5c518;
+            font-size: 0.9rem;
+        }
+
+        #recruiters-empty {
+            display: none;
+            text-align: center;
+            color: #999;
+            padding: 60px 0;
+            
+        }
+
+        /* ---- LOGO MARQUEE ---- */
+        .recruiter-marquee-wrap {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 50px 0;
+            background: linear-gradient(to right, transparent, #fff 15%, #fff 85%, transparent);
+            margin-bottom: 20px;
+        }
+
+        .recruiter-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 60s linear infinite;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .recruiter-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .m-logo-item {
+            flex-shrink: 0;
+            width: 160px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .m-logo-item:hover {
+            transform: translateY(-8px) scale(1.1);
+            background: #fff;
+            box-shadow: 0 15px 35px rgba(139, 26, 43, 0.15);
+            border-color: #8b1a2b;
+        }
+
+        .m-logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: all 0.4s;
+        }
+
+        .m-logo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @keyframes marquee-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .pr-legacy-wrap {
+            margin-top: 60px;
+        }
+
+        .pr-legacy-wrap h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 16px;
+        }
+
+        .pr-legacy-list {
+            column-count: 2;
+            column-gap: 30px;
+            list-style: disc;
+            padding-left: 20px;
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            
+        }
+
+        @media(max-width:600px) {
+            .pr-legacy-list {
+                column-count: 1;
+            }
+
+            #recruiters-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <section id="recruiters-section">
+        <div class="container">
+            <div class="pr-section-head" data-aos="fade-up">
+                <h2>Corporate Recruiters</h2>
+                <p>Leading companies that have recruited Kingston graduates</p>
+                <div class="pr-divider"></div>
+            </div>
+            <div class="pr-filters" data-aos="fade-up">
+                <button class="pr-filter-btn active" data-cat="All">All</button>
+                <button class="pr-filter-btn" data-cat="Tech">Technology</button>
+                <button class="pr-filter-btn" data-cat="Finance">Finance</button>
+                <button class="pr-filter-btn" data-cat="Consulting">Consulting</button>
+            </div>
+
+            <!-- Highly Animated Marquee Showcase (Now under filters for "interactive experience") -->
+            <div class="recruiter-marquee-wrap" data-aos="zoom-in" style="padding: 20px 0 40px;">
+                <div class="recruiter-marquee" id="marquee-logos-top">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+
+            <div id="recruiters-grid" data-aos="fade-up">
+                <p style="text-align:center;color:#999;padding:40px 0;">Loading
+                    recruiters...</p>
+            </div>
+            <div id="recruiters-empty"><i class="fa-solid fa-building"
+                    style="font-size:2rem;display:block;margin-bottom:10px;"></i>No recruiters found for this category.
+            </div>
+            <div class="pr-legacy-wrap" data-aos="fade-up">
+                <h3>Also Recruited From</h3>
+                <ul class="pr-legacy-list">
+                    <li>Codoid Systems, Tidel Park, Chennai</li>
+                    <li>Relevantz Technology Services, Chennai</li>
+                    <li>Air Media Broadcast Solutions, Coimbatore</li>
+                    <li>Top Freshers Technologies Pvt. Ltd., Chennai</li>
+                    <li>Primetec Automotive Parts Pvt. Ltd., Chennai</li>
+                    <li>Milkyway Cell Tech, Chennai</li>
+                    <li>Caparo Engineering India Limited, Chennai</li>
+                    <li>Metro Composites, Chennai</li>
+                    <li>Aveon Infotech Private Limited, Coimbatore</li>
+                    <li>Techfully Pvt. Ltd., Bangalore</li>
+                    <li>EVR Electricals Private Ltd., Chennai</li>
+                    <li>Infogro Technology, Chennai</li>
+                    <li>Shree Abirami Engineering Pvt. Ltd., Chennai</li>
+                    <li>Selvi Software Technologies Pvt. Ltd., Vellore</li>
+                    <li>Kaashiv Infotech, Chennai</li>
+                    <li>IMS Learning Resources Pvt. Ltd., Vellore</li>
+                    <li>Digidoc Solutions, Vellore</li>
+                    <li>Focus Logic IT Services, Ranipet</li>
+                    <li>Fact Entry Data Solutions, Vellore</li>
+                    <li>VIS Education and Training Company, Vellore</li>
+                    <li>NITTR, Chennai</li>
+                    <li>TechByHeart, Kochi</li>
+                    <li>VEI Technologies, Chennai</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refined Recruitment Showcase Section -->
+    <section class="recruiter-showcase-section" style="background:#fff; padding:60px 0; border-top:1px solid #eee;">
+        <div class="container">
+            <div class="section-title text-center" style="margin-bottom:40px;">
+                <h3 style="font-family:'Poppins',sans-serif; font-weight:700; color:#111;">Our Global Recruitment Partners</h3>
+                <p style="color:#666;">Consistent recruitment from top-tier organizations year after year</p>
+                <div style="width:60px; height:3px; background:#8b1a2b; margin:15px auto;"></div>
+            </div>
+            <div class="recruiter-marquee-wrap">
+                <div class="recruiter-marquee" id="marquee-logos">
+                    <!-- Logos will be populated and duplicated via JS for an absolute infinite loop -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/placement-recruiters.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') { AOS.init({ duration: 680, once: true, offset: 60 }); }
+});
+</script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

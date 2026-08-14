@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Department - AI & DS | Kingston Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/ai-assistant.css">
+    <style>
+        .salient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .salient-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: 0.4s;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+        .salient-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(163, 31, 36, 0.12);
+            border-color: #a31f24;
+        }
+        .salient-icon-box {
+            width: 70px;
+            height: 70px;
+            background: #a31f24;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        .glass-card-ai {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 204, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card-ai:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0, 51, 102, 0.2);
+            border-color: rgba(0, 153, 204, 0.5);
+        }
+        .glass-card-ai::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.7s ease;
+        }
+        .glass-card-ai:hover::before {
+            left: 200%;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- INCLUDE:components/header.html --><div id="include-header"></div>
+
+<div class="dept-details-wrapper">
+
+    <aside class="dept-sidebar">
+        <ul class="dept-sidebar-menu">
+            <li><a href="aids_dept.html" ><i class="fa-solid fa-house"></i> About the Department</a></li>
+            <li><a href="aids_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+            <li><a href="aids_peos_pos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs & PSOs</a></li>
+            <li><a href="aids_practical_laboratory.html"><i class="fa-solid fa-flask"></i> Practical Laboratory</a></li>
+                <li><a href="aids_toppers.html"><i class="fa-solid fa-award"></i> Toppers List</a></li>
+                
+                
+            <li><a href="aids_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+            <li><a href="aids_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a></li>
+            <li><a href="aids_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+            <li><a href="aids_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Academic Calendar</a></li>
+            <li><a href="aids_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+            <li><a href="aids_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+            <li><a href="aids_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Certifications</a></li>
+            <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events & FDPs</a></li>
+            <li><a href="aids_student_workshops.html"><i class="fa-solid fa-laptop-code"></i> Student Workshops</a></li>
+            <li><a href="aids_internships.html"><i class="fa-solid fa-briefcase"></i> Internships</a></li>
+            <li><a href="aids_sports.html"><i class="fa-solid fa-person-running"></i> Sports Achievements</a></li>
+            
+            <li><a href="aids_placement.html"><i class="fa-solid fa-building"></i> Placement</a></li>
+            <li><a href="aids_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletters & Magazines</a></li>
+            <li><a href="aids_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <main class="dept-main-content">
+        <h1 class="dept-title-red" data-aos="fade-up">ABOUT THE DEPARTMENT</h1>
+        <div class="dept-subpage-content" data-aos="fade-up">
+            <section class="dept-section" data-aos="fade-up">
+                <h3>DEPARTMENT INTRODUCTION</h3>
+                <div class="glass-card-ai">
+                    <p>The Department of Artificial Intelligence and Data Science was established in the year 2021 with an intake of 60 students. It is a popular outgrowth of computer science used to solve today's technologically complicated problems.</p>
+                    <p>The department offers a UG programme leading to B.Tech. in Artificial Intelligence & Data Science, sensitizing students to execute intelligent data analysis and imparting knowledge of advanced technologies.</p>
+                    <p>The department has cutting-edge laboratory infrastructure required to integrate the theoretical and practical facets of engineering, supported by well-trained and experienced faculty members in AI and data science.</p>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>KEY HIGHLIGHTS</h3>
+                <div class="salient-grid">
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-brain"></i></div>
+                        <h4>AI & ML Focus</h4>
+                        <p>Specialized curriculum focused on Artificial Intelligence, Machine Learning, and Data Science.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                        <h4>Cutting-Edge Labs</h4>
+                        <p>State-of-the-art laboratory infrastructure integrating theoretical and practical facets of engineering.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4>Expert Faculty</h4>
+                        <p>Well-trained and experienced faculty members dedicated to excellence in AI and data science education.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>FOCUS AREAS & EXPERTISE</h3>
+                <div class="grid-2">
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #a31f24; margin-bottom:0;">
+                        <h4 style="color:#003366; border-bottom:1px solid #eee; padding-bottom:10px;"><i class="fa-solid fa-brain" style="color:#a31f24;"></i> Generative AI & Machine Learning</h4>
+                        <p style="font-size:0.9rem; color:#555;">Exploration of advanced algorithms, neural networks, predictive modeling, and the booming landscape of Generative Analytics.</p>
+                    </div>
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #f5c518; margin-bottom:0;">
+                        <h4 style="color:#003366; border-bottom:1px solid #eee; padding-bottom:10px;"><i class="fa-solid fa-chart-line" style="color:#f5c518;"></i> Data Science & Business Analytics</h4>
+                        <p style="font-size:0.9rem; color:#555;">Harnessing complex datasets to arrive at actionable foresight, insight, and hindsight for transformative decision-making.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<!-- INCLUDE:components/footer.html --><div id="include-footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+<script src="../../assets/js/include-components.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src="../../assets/js/ai-assistant.js" defer></script>
+<script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 });
+</script>
+
+    <style>
+    </style>
+
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const bttBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('show', window.scrollY > 400);
+        }, { passive: true });
+    </script></body>
+</html>

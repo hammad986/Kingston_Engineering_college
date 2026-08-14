@@ -1,0 +1,47 @@
+
+node_modules/
+chrome-devtools-mcp/
+
+# Wrangler local dev state & build cache (Cloudflare Pages dev) — never deploy.
+# (SEC-001: contains telemetry + miniflare sqlite traces; not runtime code.)
+.wrangler/
+
+# Environment files (never commit secrets)
+.env
+.env.*
+*.env
+
+# Local backup archive (kept out of deployment root)
+_archive/
+
+# Windows reserved-name artifact (created by errant shell redirection)
+nul
+
+# Local server logs
+serve.log
+server.log
+
+# R2-deploy-only RAG binaries — uploaded once to Cloudflare R2, then excluded
+# from the Pages artifact. Until R2 is configured, these MUST stay in the repo
+# so same-origin /data/... keeps working. Uncomment after R2 is live.
+data/vectors.bin
+data/chunks.json
+data/vector-index.json
+data/vectors-meta.json
+
+# Python cache
+__pycache__/
+*.pyc
+# Automated-browsing / AI-agent artifacts (transient, never deploy)
+.playwright-mcp/
+
+# Process / audit notes and tooling output (not site content)
+reports/
+CLEANUP_CONFIRMATION.md
+R2_SETUP.md
+
+# Local backup of the pre-rebase search index
+data/search-index.json.pre-rebase-backup
+
+# Orphaned PDFs moved out of the deploy root (kept for reference)
+backups/

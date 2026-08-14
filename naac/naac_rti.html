@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTI - NAAC | Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+        <style>
+        /* ---- PREMIUM HERO (NAAC Pages) ---- */
+        .page-hero-premium {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 60px 0 80px;
+        }
+        .hero-premium-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-gradient-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.12) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        .hero-particles span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 15%; animation-delay: 2s; }
+        .hero-particles span:nth-child(4) { top: 40%; left: 80%; animation-delay: 0.5s; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 70%; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .hero-particles span:nth-child(6) { top: 80%; left: 40%; animation-delay: 2.5s; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 90%; animation-delay: 3s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(8) { top: 85%; left: 85%; animation-delay: 0.8s; }
+        .hero-particles span:nth-child(9) { top: 50%; left: 5%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-particles span:nth-child(10) { top: 10%; left: 60%; animation-delay: 2.2s; }
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+        .hero-accent-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,197,24,0.08);
+            top: -150px;
+            right: -100px;
+        }
+        .hero-accent-circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -50px;
+            top: auto;
+            right: auto;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .hero-premium-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,197,24,0.15);
+            border: 1px solid rgba(245,197,24,0.3);
+            color: #f5c518;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(6px);
+        }
+        .hero-premium-badge i { font-size: 0.9rem; }
+        .hero-premium-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-premium-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-premium-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-premium-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .hero-premium-breadcrumb a:hover { color: #f5c518; }
+        .hero-premium-breadcrumb i { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+        .hero-premium-breadcrumb span { color: #f5c518; font-weight: 600; }
+        .hero-wave-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            pointer-events: none;
+        }
+        .hero-wave-divider svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .page-hero-premium { min-height: 260px; padding: 40px 0 60px; }
+            .hero-premium-title { font-size: 2rem; }
+            .hero-premium-subtitle { font-size: 1rem; }
+            .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero-premium">
+        <div class="hero-premium-bg">
+            <div class="hero-gradient-layer"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-accent-circle"></div>
+            <div class="hero-accent-circle hero-accent-circle-2"></div>
+        </div>
+        <div class="container hero-premium-content" data-aos="fade-up">
+            <div class="hero-premium-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-info-circle"></i> NAAC
+            </div>
+            <h1 class="hero-premium-title" data-aos="fade-up" data-aos-delay="300">RTI</h1>
+            <p class="hero-premium-subtitle" data-aos="fade-up" data-aos-delay="400">Right to Information Act compliance and disclosures</p>
+            <nav class="hero-premium-breadcrumb" data-aos="fade-up" data-aos-delay="500">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../naac/naac_ssr.html">NAAC</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>RTI</span>
+            </nav>
+        </div>
+        <div class="hero-wave-divider">
+            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30C240 60 480 0 720 30C960 60 1200 0 1440 30V60H0V30Z" fill="var(--bg-light, #f8f9fa)"/>
+            </svg>
+        </div>
+    </section>
+
+
+
+    <!-- About Hero Section (Video + Overlap Card) -->
+    
+
+    <section class="page-section" style="padding: 60px 0; background:#f4f7f6;">
+        <div class="container" data-aos="fade-up">
+            <div
+                style="width:100%; height:900px; border-radius:15px; overflow:hidden; box-shadow:0 15px 50px rgba(0,0,0,0.1); border:1px solid #ddd; position:relative; z-index:5;">
+                <iframe src="https://kingston.ac.in/engineering-resources/naac/rti.pdf"
+                    width="100%" height="100%" style="border:none;"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 50
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement & Training Cell - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <style>
+        .pat-hero-band {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .pat-hero-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
+            animation: patStripe 18s linear infinite;
+        }
+        @keyframes patStripe {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(80px); }
+        }
+        .pat-hero-orbs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .pat-orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.25; }
+        .pat-orb-1 { width: 320px; height: 320px; background: #f5c518; top: -80px; left: -60px; animation: patFloat 8s ease-in-out infinite alternate; }
+        .pat-orb-2 { width: 240px; height: 240px; background: #4fc3f7; bottom: -60px; right: -40px; animation: patFloat 10s ease-in-out infinite alternate-reverse; }
+        .pat-orb-3 { width: 180px; height: 180px; background: #fff; top: 50%; left: 60%; animation: patFloat 12s ease-in-out infinite alternate; }
+        @keyframes patFloat {
+            0% { transform: translate(0,0) scale(1); }
+            100% { transform: translate(30px,-30px) scale(1.15); }
+        }
+        .pat-ring { position: absolute; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 50%; animation: patSpin 30s linear infinite; }
+        .pat-ring-1 { width: 480px; height: 480px; top: -140px; right: -100px; }
+        .pat-ring-2 { width: 360px; height: 360px; bottom: -100px; left: -80px; animation-direction: reverse; animation-duration: 22s; }
+        @keyframes patSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .pat-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .pat-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: Poppins, sans-serif; font-size: 0.85rem; font-weight: 600; color: #f5c518; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+        .pat-eyebrow::before, .pat-eyebrow::after { content: ''; display: block; width: 40px; height: 2px; background: #f5c518; border-radius: 1px; }
+        .pat-hero-title { font-family: Poppins, sans-serif; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+        .pat-hero-title em { font-style: normal; color: #f5c518; }
+        .pat-hero-sub { font-family: Inter, sans-serif; font-size: clamp(0.95rem,1.5vw,1.1rem); color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 640px; margin: 0 auto 24px; }
+        .pat-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .pat-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.18); padding: 8px 18px; border-radius: 50px; font-family: Inter, sans-serif; font-size: 0.82rem; color: #fff; transition: all 0.25s; }
+        .pat-pill i { color: #f5c518; font-size: 0.8rem; }
+        .pat-pill:hover { background: #f5c518; color: #003366; transform: translateY(-2px); }
+        .pat-pill:hover i { color: #003366; }
+        .pat-wave { position: relative; z-index: 2; margin-top: -1px; line-height: 0; }
+        .pat-wave svg { display: block; width: 100%; height: auto; }
+        .pat-section { padding: 76px 0; }
+        .pat-section.bg-light { background: #f8f9fa; }
+        .pat-section-heading { font-family: Poppins, sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+        .pat-section-line { width: 72px; height: 4px; background: #c0393b; border-radius: 2px; margin-bottom: 38px; }
+        .pat-goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; }
+        .pat-goal-card { background: #fff; border-radius: 16px; padding: 32px 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid #eee; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+        .pat-goal-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #003366; }
+        .pat-goal-card:nth-child(2)::before { background: #f5c518; }
+        .pat-goal-card:nth-child(3)::before { background: #c0393b; }
+        .pat-goal-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        .pat-goal-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; margin-bottom: 18px; }
+        .pat-goal-card:nth-child(1) .pat-goal-icon { background: #003366; }
+        .pat-goal-card:nth-child(2) .pat-goal-icon { background: #f5c518; }
+        .pat-goal-card:nth-child(3) .pat-goal-icon { background: #c0393b; }
+        .pat-goal-card h3 { font-family: Poppins, sans-serif; font-size: 1.15rem; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
+        .pat-goal-card p { font-family: Plus Jakarta Sans, sans-serif; font-size: 0.92rem; line-height: 1.75; color: #555; }
+        .pat-director-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: 28px; }
+        .pat-dir-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #eee; }
+        .pat-dir-card h3 { font-family: Poppins, sans-serif; font-size: 1.2rem; font-weight: 700; color: #003366; margin-bottom: 4px; }
+        .pat-dir-role { font-family: Inter, sans-serif; font-size: 0.85rem; font-weight: 600; color: #c0393b; margin-bottom: 16px; }
+        .pat-dir-card p { font-family: Plus Jakarta Sans, sans-serif; font-size: 0.93rem; line-height: 1.8; color: #444; margin-bottom: 12px; }
+        .pat-dir-card p:last-child { margin-bottom: 0; }
+        .pat-content-card { background: #fff; border-radius: 16px; padding: 36px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #eee; }
+        .pat-content-card h3 { font-family: Poppins, sans-serif; font-size: 1.2rem; font-weight: 700; color: #003366; margin-bottom: 12px; }
+        .pat-content-card p { font-family: Plus Jakarta Sans, sans-serif; font-size: 0.94rem; line-height: 1.8; color: #444; margin-bottom: 14px; }
+        .pat-content-card p:last-child { margin-bottom: 0; }
+        .pat-sponsor-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+        .pat-sponsor-list li { display: flex; align-items: flex-start; gap: 14px; font-family: Plus Jakarta Sans, sans-serif; font-size: 0.94rem; line-height: 1.7; color: #444; }
+        .pat-sponsor-list li i { color: #f5c518; font-size: 1rem; margin-top: 4px; flex-shrink: 0; }
+        .pat-sponsor-list li strong { color: #1a1a1a; }
+        .pat-stats-strip { background: #003366; padding: 40px 0; text-align: center; }
+        .pat-stats-strip .pat-stat-number { font-family: Poppins, sans-serif; font-size: 2.4rem; font-weight: 900; color: #f5c518; }
+        .pat-stats-strip .pat-stat-label { font-family: Inter, sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.8); margin-top: 4px; }
+        .pat-marquee-wrap { overflow: hidden; width: 100%; position: relative; }
+        .pat-marquee-track { display: flex; gap: 20px; width: max-content; animation: patMarquee 60s linear infinite; }
+        .pat-marquee-wrap:hover .pat-marquee-track { animation-play-state: paused; }
+        @keyframes patMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .pat-marquee-item { flex: 0 0 280px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .pat-marquee-item:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+        .pat-marquee-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    </style>
+</head>
+<body>
+
+<div id="include-header"></div>
+
+<section class="pat-hero-band">
+    <div class="pat-hero-orbs"><div class="pat-orb pat-orb-1"></div><div class="pat-orb pat-orb-2"></div><div class="pat-orb pat-orb-3"></div></div>
+    <div class="pat-ring pat-ring-1"></div><div class="pat-ring pat-ring-2"></div>
+    <div class="pat-hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="pat-eyebrow">Placement &amp; Training</div>
+        <h1 class="pat-hero-title">Placement &amp; Training <em>Cell</em></h1>
+        <p class="pat-hero-sub">Empowering students with industry-ready skills, bridging the gap between academic excellence and corporate expectations through dedicated training, mentorship, and placement opportunities.</p>
+        <div class="pat-pills">
+            <span class="pat-pill"><i class="fa-solid fa-briefcase"></i> 300+ Guest Lectures</span>
+            <span class="pat-pill"><i class="fa-solid fa-handshake"></i> 50+ MoUs</span>
+            <span class="pat-pill"><i class="fa-solid fa-users"></i> 5000+ Placed</span>
+            <span class="pat-pill"><i class="fa-solid fa-industry"></i> Industry Sponsored</span>
+        </div>
+    </div>
+</section>
+
+<div class="pat-wave"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C320,52 720,0 1440,28 L1440,52 L0,52 Z" fill="#f8f9fa"/></svg></div>
+
+<section class="pat-section" style="padding-top:20px;">
+    <div class="container">
+        <div class="pat-goal-grid">
+            <div class="pat-goal-card" data-aos="fade-up">
+                <div class="pat-goal-icon"><i class="fa-solid fa-eye"></i></div>
+                <h3>Our Vision</h3>
+                <p>To enhance the employability skills among the students to meet out the corporate expectations. All the students should get placed in the prospective IT and Core companies.</p>
+            </div>
+            <div class="pat-goal-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="pat-goal-icon"><i class="fa-solid fa-flag"></i></div>
+                <h3>Our Mission</h3>
+                <p>To create opportunities for the placements, opportunity for each &amp; all students in the job market, and create a strong rapport with the industry leaders.</p>
+            </div>
+            <div class="pat-goal-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="pat-goal-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <h3>AIM of PAT Cell</h3>
+                <p>Provide career guidance, assist students in improving skill sets per industry needs, connect with industry teams, and organize pre-placement seminars and technical lectures.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pat-stats-strip" data-aos="fade-up">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
+            <div><div class="pat-stat-number">300+</div><div class="pat-stat-label">Industry Expert Guest Lectures</div></div>
+            <div><div class="pat-stat-number">50+</div><div class="pat-stat-label">Industry MoUs Signed</div></div>
+            <div><div class="pat-stat-number">5000+</div><div class="pat-stat-label">Students Placed</div></div>
+            <div><div class="pat-stat-number">13+</div><div class="pat-stat-label">Years of Placement Excellence</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="pat-section">
+    <div class="container">
+        <div data-aos="fade-up">
+            <h2 class="pat-section-heading">Placement Leadership</h2>
+            <div class="pat-section-line"></div>
+        </div>
+        <div class="pat-director-grid" data-aos="fade-up">
+            <div class="pat-dir-card">
+                <h3>S. Thingal Selvan</h3>
+                <div class="pat-dir-role">Director &mdash; Placement &amp; Training</div>
+                <p>More than 3 decades of experience in industry and institution, headed a sales team in software &amp; training companies, Post graduated in Management studies, capable of identifying the industry expectations from fresher engineers.</p>
+                <p>He has a good relationship network with various top level management of core engineering &amp; software companies. In the last 13 years of experience as placement head in various institutes he placed nearly 5000+ fresh engineers &amp; MBA&rsquo;s in various corporate companies.</p>
+                <p>He organized various industry visits for faculties and students, and organized 100+ guest lecturers from industry eminent technical, HR &amp; Top level management people, for bridging the gap between industry expectations. He received various awards for tremendous service, gave 100+ guest lectures and training for various college students and industry employees.</p>
+            </div>
+            <div class="pat-dir-card">
+                <h3>K. Karthick</h3>
+                <div class="pat-dir-role">Assistant Placement Director</div>
+                <p>Mechatronics Engineer and expertise in Human Resources Management with 17 years of excellence in Academics, Placements, Mentoring, people handling, and project management.</p>
+                <p>As a collaborative team player, he works on establishing the vital link between students and prospective employers to facilitate training and placement of students as they begin their career after graduation.</p>
+                <p>He motivates the students to develop technical knowledge &amp; soft skills in terms of goal setting and also aspire for higher studies. He prepares the students to meet the industries recruitment process and invites the reputed companies to the college for organizing campus placement sessions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pat-section bg-light">
+    <div class="container">
+        <div data-aos="fade-up">
+            <h2 class="pat-section-heading">Training &amp; Development</h2>
+            <div class="pat-section-line"></div>
+        </div>
+        <div class="pat-content-card" data-aos="fade-up">
+            <p>Kingston Engineering College takes various initiatives for the students with the best career opportunities. The college has appointed in-house well qualified, experienced technical &amp; soft skill trainers to transform the skills as per industry expectations, and organizes various campus recruitment drives where students get placed in national and multinational companies with high salary packages.</p>
+            <p><strong>Year 1 &mdash; Communication:</strong> Training starts from the first year with verbal communication skills, strengthening the student&rsquo;s confidence to communicate through English. We have a dedicated lab for virtual verbal listening and speaking skills.</p>
+            <p><strong>Year 2 &mdash; Aptitude:</strong> In the second year, we concentrate on aptitude and problem-solving skills to build a strong analytical foundation.</p>
+            <p><strong>Year 3 &mdash; Technical Skills:</strong> Full technical skill transformation training based on the student&rsquo;s interested domain. Students have full freedom to choose their domain and we support them to achieve good heights with confidence and without stress.</p>
+        </div>
+    </div>
+</section>
+
+<section class="pat-section">
+    <div class="container">
+        <div data-aos="fade-up">
+            <h2 class="pat-section-heading">Industry Connect</h2>
+            <div class="pat-section-line"></div>
+        </div>
+        <div class="pat-content-card" data-aos="fade-up">
+            <p>We are closely connected with various industries and understand their real-time challenges in technology, business models, and employee engagement. Our faculties discuss these tasks with the students, assisting them in achieving positive real-time outcomes.</p>
+            <p>We organize regular industry visits for faculties so that the experience is transformed to the students before taking them to the industries for visits.</p>
+            <p>Our students undergo internship training programmes only from the industries in our tie-up. We have signed MoUs with more than <strong>50 industries</strong> across various domains.</p>
+            <p>Our faculties provide training sessions to industries and NGOs based on their requirements &mdash; technology updation, in-service training, personality development, time management, and more.</p>
+        </div>
+    </div>
+</section>
+
+<section class="pat-section bg-light">
+    <div class="container">
+        <div data-aos="fade-up">
+            <h2 class="pat-section-heading">Industry Sponsored Initiatives</h2>
+            <div class="pat-section-line"></div>
+        </div>
+        <div class="pat-content-card" data-aos="fade-up">
+            <p>Major automotive and technology industries have sponsored their products for real-time knowledge transfer training and research activities at Kingston Engineering College:</p>
+            <ul class="pat-sponsor-list">
+                <li><i class="fa-solid fa-car-side"></i> <div><strong>Hyundai</strong> &mdash; Sponsored a CRETA car worth &#8377;10 Lakhs for student training and research.</div></li>
+                <li><i class="fa-solid fa-truck"></i> <div><strong>Renault Nissan</strong> &mdash; Sponsored a Datsun car with one spare engine; our students are converting the petrol vehicle into an electric vehicle as a research project.</div></li>
+                <li><i class="fa-solid fa-car"></i> <div><strong>Ford</strong> &mdash; Sponsored an EcoSport car for training &amp; development.</div></li>
+                <li><i class="fa-solid fa-truck-pickup"></i> <div><strong>TATA Motors</strong> &mdash; Sponsored a Yodha utility vehicle, additional BS VI engine, and complete wiring harness set for laboratory showcase. They also conducted virtual training on vehicle architecture.</div></li>
+                <li><i class="fa-solid fa-water-pump"></i> <div><strong>TEXMO Group (Aquasub Engineering)</strong> &mdash; Sponsored a submersible pump motor for training &amp; development, and provides industry visits and career opportunities for students.</div></li>
+                <li><i class="fa-solid fa-desktop"></i> <div><strong>MSC Technology India Pvt Ltd</strong> &mdash; Sponsored 25 latest computer system CPUs to set up a collaboration skill development centre at Kingston, leading to a Centre of Excellence. They provide guest lectures and industry visits every semester for software engineering departments, enabling many students to secure opportunities at MSC Technology.</div></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="pat-section" style="padding-bottom:40px;">
+    <div class="container" data-aos="fade-up">
+        <h2 class="pat-section-heading" style="text-align:center;">Placement Gallery</h2>
+        <div class="pat-section-line" style="margin-left:auto;margin-right:auto;"></div>
+    </div>
+    <div class="pat-marquee-wrap" data-aos="fade-up">
+        <div class="pat-marquee-track" id="pat-marquee-track"></div>
+    </div>
+</section>
+
+<div id="include-footer"></div>
+
+<script src="../assets/js/include-components.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/ai-assistant.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') { AOS.init({ duration: 680, once: true, offset: 60 }); }
+    var images = ["IMG_8933.JPG","IMG_8935.JPG","IMG_8937.JPG","IMG_8938.JPG","IMG_8940.JPG","IMG_8943.JPG","IMG_8944.JPG","IMG_8949.JPG","IMG_8951.JPG","IMG_8953.JPG","IMG_8956.JPG","IMG_8957.JPG"];
+    var track = document.getElementById("pat-marquee-track");
+    if (track) {
+        var base = "../assets/images/placement_images/";
+        var html = "";
+        var doubled = images.concat(images);
+        for (var i = 0; i < doubled.length; i++) {
+            html += '<div class="pat-marquee-item"><img src="' + base + doubled[i] + '" alt="Placement Activity" loading="lazy"></div>';
+        }
+        track.innerHTML = html;
+    }
+});
+</script>
+
+<div id="ai-widget-container">
+    <div class="ai-widget-box">
+        <div class="ai-widget-header">
+            <div class="ai-header-left"><div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div><div class="ai-header-info"><span class="ai-header-name">Kingston AI Assistant</span><span class="ai-header-status"><span class="ai-status-dot"></span> Online &bull; Ask me anything</span></div></div>
+            <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+        </div>
+        <div class="ai-widget-content">
+            <div id="ai-messages" class="ai-messages"></div>
+            <div class="ai-chips-bar">
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓 Admissions</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰 Fees</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊 Placements</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚 Courses</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠 Hostel</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆 Scholarships</button>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                <button id="ai-send-btn" class="ai-send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

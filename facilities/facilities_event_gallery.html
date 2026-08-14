@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Gallery - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <style>
+        /* ============================================================
+           PREMIUM HERO BAND — Inspired by Chairman / Principal pages
+           ============================================================ */
+        .ev-hero-band {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ev-hero-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg,
+                rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px,
+                transparent 1px, transparent 38px);
+            animation: evStripe 20s linear infinite;
+        }
+
+        @keyframes evStripe {
+            to { background-position: 220px 220px; }
+        }
+
+        .ev-hero-band::after {
+            content: '';
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 60px solid rgba(245,197,24,0.07);
+            bottom: -130px;
+            right: -60px;
+            animation: evSpin 28s linear infinite;
+        }
+
+        @keyframes evSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        .ev-band-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .ev-band-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 10px;
+            animation: evUp .7s .2s both;
+        }
+
+        .ev-band-eyebrow::before,
+        .ev-band-eyebrow::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: #f5c518;
+        }
+
+        .ev-band-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0,0,0,.3);
+            animation: evUp .7s .35s both;
+        }
+
+        .ev-band-sub {
+            font-size: 1rem;
+            color: rgba(255,255,255,.72);
+            max-width: 560px;
+            margin: 0 auto 22px;
+            animation: evUp .7s .5s both;
+        }
+
+        .ev-band-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: evUp .7s .65s both;
+        }
+
+        .ev-band-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.28);
+            border-radius: 50px;
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 600;
+            transition: background .3s, transform .3s;
+        }
+
+        .ev-band-pill:hover {
+            background: rgba(255,255,255,.25);
+            transform: translateY(-2px);
+        }
+
+        @keyframes evUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .ev-wave {
+            line-height: 0;
+            background: #003366;
+        }
+        .ev-wave svg { display: block; }
+
+        /* ---- Section wrappers ---- */
+        .ev-section {
+            padding: 70px 0;
+        }
+
+        .ev-section.bg-white {
+            background: #fff;
+        }
+
+        .ev-section.bg-light {
+            background: #f8f9fa;
+        }
+
+        /* Section heading */
+        .ev-heading {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .ev-heading-line {
+            width: 70px;
+            height: 3px;
+            background: #c0393b;
+            border-radius: 2px;
+            margin-bottom: 32px;
+        }
+
+        /* ---- Event Gallery Grid ---- */
+        .ev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ev-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+            cursor: pointer;
+            transition: transform 0.4s, box-shadow 0.4s;
+            height: 260px;
+            background: #e8e8e8;
+        }
+
+        .ev-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .ev-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+        }
+
+        .ev-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .ev-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 55%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 18px 20px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+
+        .ev-card:hover .ev-overlay {
+            opacity: 1;
+        }
+
+        .ev-overlay h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .ev-overlay span {
+            font-size: 0.72rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* ---- Achievement grid (smaller cards) ---- */
+        .ev-achiev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .ev-achiev-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.35s, box-shadow 0.35s;
+            height: 200px;
+            background: #e8e8e8;
+        }
+
+        .ev-achiev-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s;
+        }
+
+        .ev-achiev-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+        }
+
+        .ev-achiev-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .ev-achiev-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 14px 16px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .ev-achiev-card:hover .ev-achiev-overlay {
+            opacity: 1;
+        }
+
+        .ev-achiev-overlay span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* ---- Filter buttons ---- */
+        .ev-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .ev-filter-btn {
+            padding: 9px 24px;
+            border-radius: 50px;
+            border: 2px solid #ccc;
+            background: #fff;
+            color: #666;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.28s;
+        }
+
+        .ev-filter-btn:hover {
+            border-color: #c0393b;
+            color: #c0393b;
+        }
+
+        .ev-filter-btn.active {
+            background: #c0393b;
+            border-color: #c0393b;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(192, 57, 59, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .ev-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+            .ev-achiev-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+            .ev-card {
+                height: 220px;
+            }
+            .ev-achiev-card {
+                height: 170px;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <main>
+
+        <!-- ============================================================
+             PREMIUM HERO BAND — Inspired by Chairman / Principal pages
+             ============================================================ -->
+        <div class="ev-hero-band">
+            <div class="ev-band-inner">
+                <div class="ev-band-eyebrow"><span>Campus Moments &amp; Memories</span></div>
+                <h2 class="ev-band-title">Event Gallery</h2>
+                <p class="ev-band-sub">Explore campus events, placement drives, industry interactions, and achievement highlights from Kingston Engineering College</p>
+                <div class="ev-band-pills">
+                    <span class="ev-band-pill"><i class="fa-solid fa-calendar-check"></i> Campus Events</span>
+                    <span class="ev-band-pill"><i class="fa-solid fa-briefcase"></i> Placements</span>
+                    <span class="ev-band-pill"><i class="fa-solid fa-handshake"></i> Industry Connect</span>
+                    <span class="ev-band-pill"><i class="fa-solid fa-trophy"></i> Achievements</span>
+                </div>
+            </div>
+        </div>
+        <div class="ev-wave">
+            <svg viewBox="0 0 1440 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                style="width:100%;height:52px;">
+                <path d="M0,0 C260,52 560,0 800,38 C1040,76 1270,10 1440,34 L1440,0 Z" fill="#f8f9fa" />
+            </svg>
+        </div>
+
+        <!-- ============================================================
+             CAMPUS EVENTS & PLACEMENT GALLERY — 12 real project images
+             ============================================================ -->
+        <section class="ev-section bg-light">
+            <div class="container">
+
+                <h2 class="ev-heading" data-aos="fade-up">Campus Events &amp; Placement Gallery</h2>
+                <div class="ev-heading-line"></div>
+
+                <div class="ev-filters" data-aos="fade-up" data-aos-delay="80">
+                    <button class="ev-filter-btn active" onclick="evFilter(this,'all')">All</button>
+                    <button class="ev-filter-btn" onclick="evFilter(this,'placement')">Placement</button>
+                    <button class="ev-filter-btn" onclick="evFilter(this,'campus')">Campus Events</button>
+                </div>
+
+                <div class="ev-grid" id="evGrid" data-aos="fade-up" data-aos-delay="120">
+                    <!-- 12 placement_images — injected by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ACHIEVEMENT HIGHLIGHTS — 13 verified achievement images
+             from assets/images/achievment (Phase 17 OCR-verified)
+             ============================================================ -->
+        <section class="ev-section bg-white">
+            <div class="container">
+
+                <h2 class="ev-heading" data-aos="fade-up">Achievement Highlights</h2>
+                <div class="ev-heading-line"></div>
+
+                <div class="ev-achiev-grid" id="evAchievGrid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- 13 achievement images — injected by JS -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+    <script>
+        // ===== Event Gallery — 12 real placement images =====
+        const evImgs = [
+            'IMG_8933.JPG', 'IMG_8935.JPG', 'IMG_8937.JPG', 'IMG_8938.JPG',
+            'IMG_8940.JPG', 'IMG_8943.JPG', 'IMG_8944.JPG', 'IMG_8949.JPG',
+            'IMG_8951.JPG', 'IMG_8953.JPG', 'IMG_8956.JPG', 'IMG_8957.JPG',
+        ];
+
+        // Generic category labels from folder context — images are placement/event photos
+        const evTypes = [
+            'placement', 'placement', 'placement', 'campus',
+            'campus', 'placement', 'placement', 'campus',
+            'campus', 'campus', 'campus', 'campus',
+        ];
+
+        const evLabels = evTypes.map(t =>
+            t === 'placement' ? 'Placement Activity' : 'Campus Event'
+        );
+
+        const evGrid = document.getElementById('evGrid');
+        const BASE = '../assets/images/placement_images/';
+
+        evImgs.forEach((f, i) => {
+            const article = document.createElement('div');
+            article.className = 'ev-card';
+            article.dataset.type = evTypes[i];
+            article.innerHTML = `
+                <img src="${BASE}${f}" alt="${evLabels[i]}" loading="lazy">
+                <div class="ev-overlay">
+                    <h4>${evLabels[i]}</h4>
+                    <span>Campus Event</span>
+                </div>
+            `;
+            evGrid.appendChild(article);
+        });
+
+        // ===== Achievement Highlights — 13 verified achievement images =====
+        const achImgs = [
+            'recent_achievement_2024_1.jpg',
+            'recent_achievement_2024_2.jpg',
+            'recent_achievement_2024_3.jpg',
+            'recent_achievement_2024_4.jpg',
+            'recent_achievement_2024_5.jpg',
+            'recent_achievement_2024_6.jpg',
+            'recent_achievement_2024_7.jpg',
+            'recent_achievement_2024_8.jpg',
+            'recent_achievement_2024_9.jpg',
+            'recent_achievement_2024_10.jpg',
+            'recent_achievement_2024_11.jpg',
+            'recent_achievement_2024_12.jpg',
+            'recent_achievement_2024_13.jpg',
+        ];
+
+        const achLabels = [
+            'Recent Achievement',
+            'Global Climate Clock Event',
+            'Anna University Zone Winners',
+            'Academic Excellence Ranking',
+            'Institutional Recognition',
+            'Solar Ambassador Workshop',
+            'Ms. Swetha — Letter Writing Winner',
+            'Ms. S. Srijha — Gold Medalist',
+            'Student Achievers 2024',
+            'Rockit Ball South Zone Champions',
+            'MSME Idea Hackathon — Rs. 15 Lakh Grant',
+            'Rockit Ball Championship',
+            'Naan Mudhalvan Project Selection',
+        ];
+
+        const achGrid = document.getElementById('evAchievGrid');
+        const ACH_BASE = '../assets/images/achievment/';
+
+        achImgs.forEach((f, i) => {
+            const card = document.createElement('div');
+            card.className = 'ev-achiev-card';
+            card.innerHTML = `
+                <img src="${ACH_BASE}${f}" alt="${achLabels[i]}" loading="lazy">
+                <div class="ev-achiev-overlay">
+                    <span>${achLabels[i]}</span>
+                </div>
+            `;
+            achGrid.appendChild(card);
+        });
+
+        // ===== Filter: placement / campus / all =====
+        function evFilter(btn, type) {
+            document.querySelectorAll('.ev-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('#evGrid .ev-card').forEach(card => {
+                if (type === 'all' || card.dataset.type === type) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

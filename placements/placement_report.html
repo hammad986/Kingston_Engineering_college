@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Report - Kingston Engineering College</title>
+    <meta name="description" content="Placement Report at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+
+    <style>
+        .pat-hero-band {
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 56px 20px 68px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .pat-hero-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
+            animation: patStripe 18s linear infinite;
+        }
+        @keyframes patStripe { 0% { transform: translateX(0); } 100% { transform: translateX(80px); } }
+        .pat-hero-orbs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .pat-orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.25; }
+        .pat-orb-1 { width: 320px; height: 320px; background: #f5c518; top: -80px; left: -60px; animation: patFloat 8s ease-in-out infinite alternate; }
+        .pat-orb-2 { width: 240px; height: 240px; background: #4fc3f7; bottom: -60px; right: -40px; animation: patFloat 10s ease-in-out infinite alternate-reverse; }
+        .pat-orb-3 { width: 180px; height: 180px; background: #fff; top: 50%; left: 60%; animation: patFloat 12s ease-in-out infinite alternate; }
+        @keyframes patFloat { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-30px) scale(1.15); } }
+        .pat-ring { position: absolute; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 50%; animation: patSpin 30s linear infinite; }
+        .pat-ring-1 { width: 480px; height: 480px; top: -140px; right: -100px; }
+        .pat-ring-2 { width: 360px; height: 360px; bottom: -100px; left: -80px; animation-direction: reverse; animation-duration: 22s; }
+        @keyframes patSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .pat-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .pat-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: Poppins, sans-serif; font-size: 0.85rem; font-weight: 600; color: #f5c518; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+        .pat-eyebrow::before, .pat-eyebrow::after { content: ''; display: block; width: 40px; height: 2px; background: #f5c518; border-radius: 1px; }
+        .pat-hero-title { font-family: Poppins, sans-serif; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+        .pat-hero-title em { font-style: normal; color: #f5c518; }
+        .pat-hero-sub { font-family: Inter, sans-serif; font-size: clamp(0.95rem,1.5vw,1.1rem); color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 640px; margin: 0 auto 24px; }
+        .pat-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .pat-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.18); padding: 8px 18px; border-radius: 50px; font-family: Inter, sans-serif; font-size: 0.82rem; color: #fff; transition: all 0.25s; }
+        .pat-pill i { color: #f5c518; font-size: 0.8rem; }
+        .pat-pill:hover { background: #f5c518; color: #003366; transform: translateY(-2px); }
+        .pat-pill:hover i { color: #003366; }
+        .pat-wave { position: relative; z-index: 2; margin-top: -1px; line-height: 0; }
+        .pat-wave svg { display: block; width: 100%; height: auto; }
+        .pat-section { padding: 76px 0; }
+        .pat-section.bg-light { background: #f8f9fa; }
+        .pat-section-heading { font-family: Poppins, sans-serif; font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+        .pat-section-line { width: 72px; height: 4px; background: #c0393b; border-radius: 2px; margin-bottom: 38px; }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+<section class="pat-hero-band">
+    <div class="pat-hero-orbs"><div class="pat-orb pat-orb-1"></div><div class="pat-orb pat-orb-2"></div><div class="pat-orb pat-orb-3"></div></div>
+    <div class="pat-ring pat-ring-1"></div><div class="pat-ring pat-ring-2"></div>
+    <div class="pat-hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="pat-eyebrow">Placement &amp; Training</div>
+        <h1 class="pat-hero-title">Placement <em>Report</em></h1>
+        <p class="pat-hero-sub">Comprehensive placement performance data across departments and academic years, showcasing Kingston's commitment to student career success.</p>
+        <div class="pat-pills">
+            <span class="pat-pill"><i class="fa-solid fa-chart-simple"></i> Year-wise Data</span>
+            <span class="pat-pill"><i class="fa-solid fa-trophy"></i> Highest Package</span>
+            <span class="pat-pill"><i class="fa-solid fa-sack-dollar"></i> Average Salary</span>
+            <span class="pat-pill"><i class="fa-solid fa-building-columns"></i> Top Recruiters</span>
+        </div>
+    </div>
+</section>
+
+<div class="pat-wave"><svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C320,52 720,0 1440,28 L1440,52 L0,52 Z" fill="#f8f9fa"/></svg></div>
+
+
+    <style>
+        .report-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+        }
+
+        .report-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+            border-color: #8b1a2b;
+        }
+
+        .report-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .report-btn {
+            background: #8b1a2b;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .report-btn:hover {
+            background: #6a1120;
+            color: #fff;
+        }
+
+        /* ---- PLACEMENT STATS ---- */
+        #placement-stats-section {
+            background: #f4f6fb;
+            padding: 70px 0;
+        }
+
+        .ps-section-head {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .ps-section-head h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .ps-section-head p {
+            color: #555;
+            font-size: 1rem;
+            
+        }
+
+        .ps-divider {
+            width: 80px;
+            height: 4px;
+            background: #8b1a2b;
+            margin: 14px auto 0;
+            border-radius: 2px;
+        }
+
+        .ps-year-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .ps-year-btn {
+            padding: 9px 22px;
+            border: 2px solid #003366;
+            border-radius: 25px;
+            background: transparent;
+            color: #003366;
+            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .ps-year-btn:hover,
+        .ps-year-btn.active {
+            background: #003366;
+            color: #fff;
+        }
+
+        .ps-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 22px;
+            margin-bottom: 50px;
+        }
+
+        .ps-kpi-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 18px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            border-top: 4px solid #003366;
+            transition: transform 0.25s;
+        }
+
+        .ps-kpi-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .ps-kpi-card.red-top {
+            border-top-color: #8b1a2b;
+        }
+
+        .ps-kpi-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .ps-kpi-card.red-top .ps-kpi-icon {
+            color: #8b1a2b;
+        }
+
+        .ps-kpi-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.1;
+        }
+
+        .ps-kpi-label {
+            font-size: 0.82rem;
+            color: #666;
+            margin-top: 6px;
+            
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ps-dept-wrap {
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow-x: auto;
+        }
+
+        .ps-dept-wrap h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 22px;
+        }
+
+        .ps-dept-table {
+            width: 100%;
+            border-collapse: collapse;
+            
+            font-size: 0.93rem;
+        }
+
+        .ps-dept-table th {
+            background: #003366;
+            color: #fff;
+            padding: 11px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.82rem;
+            letter-spacing: 0.5px;
+        }
+
+        .ps-dept-table th:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        .ps-dept-table th:last-child {
+            border-radius: 0 6px 0 0;
+        }
+
+        .ps-dept-table td {
+            padding: 11px 14px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333;
+        }
+
+        .ps-dept-table tr:hover td {
+            background: #f9f9ff;
+        }
+
+        .ps-dept-name {
+            font-weight: 600;
+            color: #003366;
+        }
+
+        .ps-bar-wrap {
+            display: inline-block;
+            width: 80px;
+            height: 7px;
+            background: #e8e8e8;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .ps-bar {
+            height: 100%;
+            background: #8b1a2b;
+            border-radius: 4px;
+        }
+
+        .ps-bar-label {
+            font-weight: 700;
+            color: #8b1a2b;
+        }
+
+        .rp-consolidated {
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+        .rp-consolidated h3 {
+            font-family: Poppins, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .rp-consolidated table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            font-family: Inter, sans-serif;
+        }
+        .rp-consolidated th {
+            background: #003366;
+            color: #fff;
+            padding: 9px 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.72rem;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+        .rp-consolidated td {
+            padding: 7px 8px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            color: #333;
+        }
+        .rp-consolidated tr:hover td {
+            background: #f8f9ff;
+        }
+        .rp-consolidated .company-name {
+            text-align: left;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .rp-consolidated .total-row td {
+            background: #f0f4ff;
+            font-weight: 700;
+            color: #003366;
+            border-top: 2px solid #003366;
+        }
+        .rp-consolidated .total-row:hover td {
+            background: #e8edff;
+        }
+        .rp-consolidated .pct-row td {
+            background: #fff8e1;
+            font-weight: 600;
+            color: #8b1a2b;
+            border-top: 2px solid #8b1a2b;
+        }
+        .rp-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #003366;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: Poppins, sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,51,102,0.3);
+        }
+        .rp-download-btn:hover {
+            background: #f5c518;
+            color: #003366;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245,197,24,0.3);
+        }
+        @media(max-width:768px) {
+            .rp-consolidated { padding: 16px; }
+            .rp-consolidated th, .rp-consolidated td { padding: 5px 4px; font-size: 0.7rem; }
+        }
+    </style>
+
+    <!-- ===== PLACEMENT STATISTICS SECTION ===== -->
+    <section id="placement-stats-section">
+        <div class="container">
+            <div class="ps-section-head" data-aos="fade-up">
+                <h2>Placement Statistics</h2>
+                <p>Year-wise placement performance across all departments</p>
+                <div class="ps-divider"></div>
+            </div>
+
+            <div class="ps-year-tabs" data-aos="fade-up">
+                <button class="ps-year-btn active" data-year="2024-25">2024–25</button>
+                <button class="ps-year-btn" data-year="2023-24">2023–24</button>
+                <button class="ps-year-btn" data-year="2022-23">2022–23</button>
+            </div>
+
+            <div class="ps-kpi-grid" data-aos="fade-up">
+                <div class="ps-kpi-card red-top">
+                    <div class="ps-kpi-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="ps-kpi-value">70.87%</div>
+                    <div class="ps-kpi-label">Placement Rate</div>
+                </div>
+                <div class="ps-kpi-card">
+                    <div class="ps-kpi-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                    <div class="ps-kpi-value">3.03 LPA</div>
+                    <div class="ps-kpi-label">Average Package</div>
+                </div>
+                <div class="ps-kpi-card red-top">
+                    <div class="ps-kpi-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="ps-kpi-value">7.25 LPA</div>
+                    <div class="ps-kpi-label">Highest Package</div>
+                </div>
+                <div class="ps-kpi-card">
+                    <div class="ps-kpi-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="ps-kpi-value">20</div>
+                    <div class="ps-kpi-label">Companies Visited</div>
+                </div>
+                <div class="ps-kpi-card red-top">
+                    <div class="ps-kpi-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <div class="ps-kpi-value">163</div>
+                    <div class="ps-kpi-label">Students Placed</div>
+                </div>
+            </div>
+
+            <div class="ps-dept-wrap" data-aos="fade-up">
+                <h3><i class="fa-solid fa-table" style="color:#8b1a2b;margin-right:8px;"></i> Department-wise Breakdown
+                </h3>
+                <table class="ps-dept-table">
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Eligible</th>
+                            <th>Placed</th>
+                            <th>Placement %</th>
+                            <th>Avg Package</th>
+                            <th>Highest Package</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dept-tbody">
+                        <tr><td class="ps-dept-name">CSE</td><td>76</td><td>58</td><td>76.3%</td><td>-</td><td>7.25 LPA</td></tr>
+                        <tr><td class="ps-dept-name">IT</td><td>34</td><td>28</td><td>82%</td><td>-</td><td>4.8 LPA</td></tr>
+                        <tr><td class="ps-dept-name">ECE</td><td>31</td><td>21</td><td>68%</td><td>-</td><td>4.2 LPA</td></tr>
+                        <tr><td class="ps-dept-name">EEE</td><td>9</td><td>8</td><td>88.9%</td><td>-</td><td>3.93 LPA</td></tr>
+                        <tr><td class="ps-dept-name">MECH</td><td>20</td><td>16</td><td>80%</td><td>-</td><td>2.68 LPA</td></tr>
+                        <tr><td class="ps-dept-name">MBA</td><td>57</td><td>32</td><td>56.1%</td><td>-</td><td>7.25 LPA</td></tr>
+                        <tr><td class="ps-dept-name" style="font-weight:800;">Total</td><td><strong>230</strong></td><td><strong>163</strong></td><td><strong>70.87%</strong></td><td><strong>3.03 LPA</strong></td><td><strong>7.25 LPA</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" style="padding: 70px 0;">
+        <div class="container" data-aos="fade-up">
+            <h1 class="msg-heading"
+                style="font-family:'Poppins',sans-serif; font-size:2.6rem; font-weight:800; color:#8b1a2b; margin-bottom:10px;">
+                Placement Report</h1>
+            <div class="msg-divider" style="width:200px; height:3px; background:#8b1a2b; margin-bottom:30px;"></div>
+
+            <p style="font-size:1rem; line-height:1.8; color:#444; margin-bottom:40px; ">
+                In the last five years, organized 300+ industry experts guest lecturers, from technical & HR’s heads,
+                identifying the skill gap of the students and train them so that they meet the expectation of
+                prospective employers. To guide the students in all possible ways, so they get confidence to face the
+                interviews and get placed in their dream companies that will give them opportunities for growth and
+                development.
+            </p>
+
+            <div style="max-width:800px;">
+                <div class="report-card">
+                    <div class="report-title">2022-2023 Report</div>
+                    <a href="../assets/pdfs/placement-reports/2022-2023-Report (1).pdf" class="report-btn">View Detail</a>
+                </div>
+                <div class="report-card">
+                    <div class="report-title">2021-2022 Report</div>
+                    <a href="../assets/pdfs/placement-reports/2021-2022-Report.pdf" class="report-btn">View Detail</a>
+                </div>
+                <div class="report-card">
+                    <div class="report-title">2020-2021 Report</div>
+                    <a href="../assets/pdfs/placement-reports/2020-2021-Report.pdf" class="report-btn">View Detail</a>
+                </div>
+                <div class="report-card">
+                    <div class="report-title">2019-2020 Report</div>
+                    <a href="../assets/pdfs/placement-reports/2019-2020-Report.pdf" class="report-btn">View Detail</a>
+                </div>
+                <div class="report-card">
+                    <div class="report-title">2018-2019 Report</div>
+                    <a href="../assets/pdfs/placement-reports/2018-2019-Report.pdf" class="report-btn">View Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ===== CONSOLIDATED PLACEMENT REPORT 2022-23 ===== -->
+    <section class="page-section" style="padding: 0 0 70px 0;">
+        <div class="container" data-aos="fade-up">
+            <h2 class="pat-section-heading" style="color:#003366;">Consolidated Placement Report 2022-23</h2>
+            <div class="pat-section-line"></div>
+
+            <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:0.95rem;line-height:1.7;color:#555;margin-bottom:24px;">
+                The following data has been extracted from the official Kingston Engineering College consolidated placement report for the academic year 2022-23. It includes company-wise and department-wise placement details.
+            </p>
+
+            <div class="rp-consolidated" data-aos="fade-up">
+                <h3><i class="fa-solid fa-table" style="color:#8b1a2b;margin-right:8px;"></i> Company-wise Placement Details 2022-23</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Company Name</th>
+                            <th>Drive Date</th>
+                            <th>Package (LPA)</th>
+                            <th>CIVIL</th>
+                            <th>CSE</th>
+                            <th>IT</th>
+                            <th>ECE</th>
+                            <th>EEE</th>
+                            <th>MECH</th>
+                            <th>MBA</th>
+                            <th>ME</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td class="company-name">ZOHO</td><td>07-06-2022</td><td>4.8</td><td>-</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>3</td></tr>
+                        <tr><td>2</td><td class="company-name">PLASTIC OMNIUM</td><td>28-03-2023</td><td>4.2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td></tr>
+                        <tr><td>3</td><td class="company-name">SYSTECH</td><td>29-09-2022</td><td>4.01</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>2</td></tr>
+                        <tr><td>4</td><td class="company-name">CITY UNION BANK</td><td>30-03-2023</td><td>3.93</td><td>-</td><td>3</td><td>-</td><td>3</td><td>4</td><td>1</td><td>4</td><td>-</td><td>15</td></tr>
+                        <tr><td>5</td><td class="company-name">INTELLIPAAT</td><td>25-02-2023</td><td>7.25</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>2</td></tr>
+                        <tr><td>6</td><td class="company-name">TCS</td><td>21-07-2022</td><td>3.36</td><td>-</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>4</td></tr>
+                        <tr><td>7</td><td class="company-name">DAIKIN AIR CONDITIONING</td><td>11-05-2023</td><td>2.68</td><td>-</td><td>-</td><td>-</td><td>11</td><td>3</td><td>10</td><td>-</td><td>-</td><td>24</td></tr>
+                        <tr><td>8</td><td class="company-name">SELVI SOFTWARE</td><td>10-05-2023</td><td>2.6</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td></tr>
+                        <tr><td>9</td><td class="company-name">HERBA ENCLAVE</td><td>15-05-2023</td><td>2.56</td><td>-</td><td>18</td><td>5</td><td>1</td><td>-</td><td>-</td><td>5</td><td>-</td><td>29</td></tr>
+                        <tr><td>10</td><td class="company-name">PRIMETEC</td><td>04-02-2023</td><td>2.28</td><td>-</td><td>-</td><td>-</td><td>2</td><td>-</td><td>4</td><td>-</td><td>-</td><td>6</td></tr>
+                        <tr><td>11</td><td class="company-name">SUTHERLAND</td><td>04-03-2023</td><td>2.5</td><td>-</td><td>5</td><td>6</td><td>1</td><td>-</td><td>-</td><td>7</td><td>-</td><td>19</td></tr>
+                        <tr><td>12</td><td class="company-name">DIYA LABS</td><td>16-05-2023</td><td>2.5</td><td>-</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>3</td></tr>
+                        <tr><td>13</td><td class="company-name">FACT ENTRY</td><td>10-05-2023</td><td>2.44</td><td>-</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4</td><td>-</td><td>7</td></tr>
+                        <tr><td>14</td><td class="company-name">SHRIRAM CHITS</td><td>24-04-2023</td><td>2.44</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>6</td><td>-</td><td>6</td></tr>
+                        <tr><td>15</td><td class="company-name">INDOCOOL</td><td>24-04-2023</td><td>2.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>2</td></tr>
+                        <tr><td>16</td><td class="company-name">CRUD OPERATIONS</td><td>15-02-2023</td><td>2.4</td><td>-</td><td>7</td><td>9</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>16</td></tr>
+                        <tr><td>17</td><td class="company-name">BAHWAN CYBER TEK</td><td>20-02-2023</td><td>2.4</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td></tr>
+                        <tr><td>18</td><td class="company-name">RELEVANT OFS</td><td>13-05-2023</td><td>2.0</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td></tr>
+                        <tr><td>19</td><td class="company-name">RELIANCE</td><td>15-05-2023</td><td>2.4</td><td>-</td><td>7</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>10</td></tr>
+                        <tr><td>20</td><td class="company-name">MIYA CHITS</td><td>12-05-2023</td><td>1.5</td><td>-</td><td>7</td><td>1</td><td>-</td><td>-</td><td>-</td><td>3</td><td>-</td><td>11</td></tr>
+                        <tr class="total-row"><td colspan="4"><strong>TOTAL STUDENTS PLACED</strong></td><td>0</td><td>58</td><td>28</td><td>21</td><td>8</td><td>16</td><td>32</td><td>0</td><td>163</td></tr>
+                        <tr class="total-row"><td colspan="4"><strong>TOTAL OUTGOING STUDENTS</strong></td><td>0</td><td>76</td><td>34</td><td>31</td><td>9</td><td>20</td><td>57</td><td>3</td><td>230</td></tr>
+                        <tr class="pct-row"><td colspan="4"><strong>PLACEMENT PERCENTAGE</strong></td><td>0%</td><td>76.3%</td><td>82%</td><td>68%</td><td>88.9%</td><td>80%</td><td>56.1%</td><td>0%</td><td><strong>70.87%</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align:center;margin-top:30px;" data-aos="fade-up">
+                <a href="../assets/pdfs/placement/consolidated_placement_report_2022_23_student_coun.pdf" class="rp-download-btn" target="_blank">
+                    <i class="fa-solid fa-download"></i> Download Full Placement Report PDF
+                </a>
+                <p style="font-family:Plus Jakarta Sans,sans-serif;font-size:0.85rem;color:#888;margin-top:12px;">
+                    Average Salary Package: <strong>3.03 LPA</strong> &bull; Highest Package: <strong>7.25 LPA</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/placement-stats.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') { AOS.init({ duration: 680, once: true, offset: 60 }); }
+});
+</script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

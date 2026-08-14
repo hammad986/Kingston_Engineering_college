@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSBS - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/ai-assistant.css">
+
+
+    <style>
+        /* CSBS-Specific High-Impact UI (Corporate Tech Theme) */
+
+        /* Global Colors for CSBS */
+        :root {
+            --csbs-violet: #4b0082;
+            --csbs-neon: #00ffff;
+            --csbs-dark: #0f0c29;
+            --csbs-glass: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Glassmorphic Section Styling */
+        .dept-main-content section {
+            background: white;
+            /* Glass but white for professional read */
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            transition: 0.4s;
+        }
+
+        .dept-main-content section:hover {
+            box-shadow: 0 20px 50px rgba(75, 0, 130, 0.1);
+        }
+
+        /* CSBS Title Upgrade */
+        .dept-title-red {
+            background: linear-gradient(135deg, var(--csbs-violet), #302b63, #24243e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 3rem;
+            text-shadow: none;
+            margin-bottom: 30px;
+        }
+
+        /* Achievement & Skill Cards (Priyanka's Infosys Tracker) */
+        .skill-tracker {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--csbs-violet) #eee;
+        }
+
+        .skill-card {
+            min-width: 280px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid var(--csbs-violet);
+            transition: 0.4s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(75, 0, 130, 0.15);
+        }
+
+        .skill-card h4 {
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .skill-card i {
+            color: #f5c518;
+            margin-right: 8px;
+        }
+
+        /* Value Added Course / Cloud Spotlight */
+        .cloud-promo {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            border-right: 10px solid var(--csbs-neon);
+        }
+
+        .cloud-promo::after {
+            content: '\f0c2';
+            /* cloud-icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 15rem;
+            opacity: 0.05;
+        }
+
+        .cloud-promo .badge {
+            background: var(--csbs-neon);
+            color: black;
+            padding: 5px 15px;
+            font-weight: 900;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Faculty Achievement Grid */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .achieve-box {
+            background: rgba(255, 255, 255, 1);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+
+
+        .achieve-box:hover {
+            box-shadow: 0 12px 35px rgba(75, 0, 130, 0.12);
+            transform: translateY(-3px);
+        }
+
+        /* Syllabus Matrix for CSBS */
+        .syllabus-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .syll-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: 0.3s;
+        }
+
+        .syll-card:hover {
+            border-color: var(--csbs-violet);
+            background: white;
+        }
+
+        .syll-card h4 {
+            color: var(--csbs-violet);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        [data-aos="fade-up"] {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+<div class="dept-details-wrapper">
+
+    <aside class="dept-sidebar">
+            <ul class="dept-sidebar-menu">
+                <li><a href="csbs_dept.html" ><i class="fa-solid fa-house"></i> About the Department</a></li>
+                <li><a href="csbs_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+                <li><a href="csbs_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+                <li><a href="csbs_practical_laboratory.html"><i class="fa-solid fa-flask"></i> Practical Laboratory</a></li>
+                <li><a href="csbs_toppers.html"><i class="fa-solid fa-award"></i> Toppers List</a></li>
+                
+                
+                <li><a href="csbs_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+                <li><a href="csbs_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a></li>
+                <li><a href="csbs_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+                <li><a href="csbs_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department Academic Calendar</a></li>
+                <li><a href="csbs_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+                <li><a href="csbs_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+                <li><a href="csbs_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a></li>
+                <li><a href="csbs_industry.html"><i class="fa-solid fa-industry"></i> Industry</a></li>
+                <li><a href="csbs_industry_visits.html"><i class="fa-solid fa-building"></i> Industry Visits</a></li>
+                <li><a href="csbs_student_participations.html"><i class="fa-solid fa-users-viewfinder"></i> Student Participations</a></li>
+                
+                <li><a href="csbs_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty Upskilling</a></li>
+                <li><a href="csbs_distinguished_alumni.html"><i class="fa-solid fa-user-graduate"></i> Distinguished Alumni</a></li>
+                <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+                <li><a href="csbs_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+                <li><a href="csbs_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student Publications</a></li>
+                <li><a href="csbs_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+                <li><a href="csbs_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a></li>
+                <li><a href="csbs_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+            </ul>
+    </aside>
+
+    <main class="dept-main-content">
+
+
+    
+
+
+    <section class="dept-section" data-aos="fade-up">
+        <h3>INDUSTRY COLLABORATIONS</h3>
+        <p>The CSBS department collaborates with industry partners to provide students with exposure to real-world technologies and business practices. The curriculum is designed in consultation with IT industry experts to ensure alignment with current industry requirements.</p>
+        <p>The department organizes industry visits, guest lectures, and value-added courses featuring experts from leading technology companies. Students gain practical exposure through industry-sponsored projects, hackathons, and training programs.</p>
+        <p>Notable industry interactions include visits to Excerpt Technologies Pvt. Ltd., Bangalore, HTGE Technologies, and faculty visits to Systech Solutions, Bahwan CyberTek, Infosys, and CSIR.</p>
+    </section><!-- Footer -->
+
+    <!-- Footer -->
+    
+
+    </main>
+</div>
+
+<div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../../assets/js/news.js" defer></script>
+    <script src="../../assets/js/events.js" defer></script>
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/ai-assistant.js" defer></script>
+    <script>
+        // Hero Main Swiper
+        new Swiper('#hero-main-swiper', {
+            loop: true,
+            speed: 900,
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            pagination: { el: '.hero-swiper-pagination', clickable: true },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+        });
+    </script>
+</body>
+
+</html>

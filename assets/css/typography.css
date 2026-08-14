@@ -1,0 +1,233 @@
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY SYSTEM — Plus Jakarta Sans
+   Standardized reading experience across all content pages
+   ========================================================================== */
+
+/* ── Note: Plus Jakarta Sans is loaded via <link> in <head> of each page.
+   The @import approach is avoided for performance (renders blocking). ── */
+
+/* ── Content Body Font — Plus Jakarta Sans ── */
+/* Targets professional content sections (paragraphs only, not cards/labels) */
+.dept-section p,
+.dept-subpage-content p,
+.dept-main-content p,
+.page-section p,
+.research-section p,
+.governance-section p,
+.glass-card p,
+.ch-msg-body p,
+.pr-msg-body p,
+.rule-card p,
+.about-description p,
+.why-desc,
+.v-text-body,
+.v-list-body li,
+.why-features-list li,
+.salient-content p,
+.salient-item p,
+.acc-content p,
+.ugc-content p,
+.ugc-content-wrapper p,
+.legal-content p,
+.ph-content p,
+.iv-hero-content p,
+.gov-hero-content p,
+.ki-desc,
+.overview-desc,
+.bento-desc,
+.wf-sec-desc,
+.wf-card-desc,
+.iqac-text,
+.commitment-content p,
+.contact-info-text p,
+.timeline-content p,
+.ai-page-content p,
+.rag-page-content p,
+.page-content p,
+.section-content p,
+.content-section p,
+.about-content p,
+.desc-text p,
+.info-text p,
+/* ── Facilities module ── */
+.fac-section p,
+.auditorium-text p,
+.sports-content p,
+.hostel-info-card p {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    line-height: 1.8;
+    letter-spacing: 0.008em;
+    word-spacing: 0.03em;
+    margin-bottom: 16px;
+}
+
+/* ── Content Lists ── */
+.v-list-body,
+.why-features-list,
+.dept-section ul,
+.dept-main-content ul:not(.nav-links):not(.dropdown),
+.dept-subpage-content ul:not(.nav-links):not(.dropdown),
+.page-content ul,
+.section-content ul,
+.content-section ul,
+.acc-content ul,
+.ugc-content ul {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-left: 22px;
+}
+
+.dept-section ul li,
+.rule-card ul li,
+.dept-main-content ul:not(.nav-links):not(.dropdown) li,
+.dept-subpage-content ul:not(.nav-links):not(.dropdown) li,
+.page-content ul li,
+.section-content ul li,
+.content-section ul li,
+.acc-content ul li,
+.ugc-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* ── Content Headings (font only — colors remain as per page CSS) ── */
+.dept-section h3,
+.dept-main-content h1,
+.dept-main-content h2,
+.dept-main-content h3,
+.dept-main-content h4,
+.dept-subpage-content h1,
+.dept-subpage-content h2,
+.dept-subpage-content h3,
+.dept-subpage-content h4,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.section-content h1,
+.section-content h2,
+.section-content h3,
+.section-content h4,
+.content-section h1,
+.content-section h2,
+.content-section h3,
+.content-section h4,
+.acc-content h3,
+.acc-content h4,
+.ugc-content h3,
+.ugc-content h4 {
+    font-family: 'Plus Jakarta Sans', 'Poppins', 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* ── Paragraph Spacing ── */
+.fac-section p + p,
+.dept-section p + p,
+.dept-subpage-content p + p,
+.dept-main-content p + p,
+.page-section p + p,
+.glass-card p + p,
+.page-content p + p,
+.section-content p + p,
+.content-section p + p,
+.acc-content p + p,
+.ugc-content p + p,
+.ph-content p + p,
+.legal-content p + p {
+    margin-top: 0;
+}
+
+/* ── Last paragraph in a section — no bottom margin ── */
+.fac-section p:last-child,
+.dept-section p:last-child,
+.dept-subpage-content p:last-child,
+.dept-main-content p:last-child,
+.page-section p:last-child,
+.glass-card p:last-child,
+.page-content p:last-child,
+.section-content p:last-child,
+.content-section p:last-child,
+.acc-content p:last-child,
+.ugc-content p:last-child,
+.ph-content p:last-child,
+.legal-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Reading width for about page premium paragraphs ── */
+.why-desc,
+.v-text-body {
+    max-width: 36em;
+}
+
+/* ── Responsive: Tablet ── */
+/* Note: html font-size is already scaled down in style.css (14.5px at 1024px).
+   These rules only adjust line-height — font-size inherits from html scaling. */
+@media (max-width: 1024px) {
+    .dept-section p,
+    .dept-subpage-content p,
+    .dept-main-content p,
+    .page-section p,
+    .glass-card p,
+    .why-desc,
+    .v-text-body,
+    .ph-content p,
+    .page-content p,
+    .section-content p,
+    .content-section p {
+        line-height: 1.75;
+    }
+
+    .why-desc,
+    .v-text-body {
+        max-width: none;
+    }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 768px) {
+    .dept-section p,
+    .dept-subpage-content p,
+    .dept-main-content p,
+    .page-section p,
+    .glass-card p,
+    .why-desc,
+    .v-text-body,
+    .ph-content p,
+    .page-content p,
+    .section-content p,
+    .content-section p {
+        line-height: 1.7;
+    }
+
+    .dept-section li,
+    .dept-subpage-content li,
+    .dept-main-content li,
+    .rule-card ul li,
+    .v-list-body li,
+    .why-features-list li {
+        line-height: 1.65;
+    }
+
+    .dept-section h3,
+    .dept-main-content h2,
+    .dept-main-content h3,
+    .dept-subpage-content h2,
+    .dept-subpage-content h3,
+    .page-content h2,
+    .page-content h3,
+    .section-content h2,
+    .section-content h3,
+    .content-section h2,
+    .content-section h3 {
+        font-size: 1.1rem;
+    }
+}

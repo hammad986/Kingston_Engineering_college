@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML - Kingston Engineering College</title>
+    <meta name="description" content="AI & ML at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        /* ---- HERO SWIPER CAROUSEL ---- */
+        .hero-slides-wrap {
+            position: absolute;
+            top: 50%;
+            right: 56px;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 660px;
+            max-width: 48vw;
+            pointer-events: all;
+        }
+
+        .hero-main-swiper {
+            width: 100%;
+        }
+
+        .hero-slide-card {
+            background: rgba(0, 0, 0, 0.62);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 18px;
+            padding: 36px 42px 28px;
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s;
+        }
+
+        .hero-slide-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-card-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 28px;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-card-flex {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .hero-card-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-card-logo-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 18px 14px 10px;
+            margin-bottom: 14px;
+            min-height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .hero-card-logo-box img {
+            width: 70px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hero-card-logo-box p {
+            font-size: 0.6rem;
+            color: #333;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .hero-card-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.25);
+            min-height: 140px;
+            align-self: center;
+            flex-shrink: 0;
+        }
+
+        .hero-card-label {
+            color: #f5c518;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hero-card-value {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .hero-swiper-pagination {
+            margin-top: 18px;
+            position: static !important;
+            text-align: center;
+        }
+
+        .hero-swiper-pagination .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+        }
+
+        .hero-swiper-pagination .swiper-pagination-bullet-active {
+            background: #f5c518;
+            opacity: 1;
+            width: 22px;
+            border-radius: 4px;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <div class="dept-details-wrapper">
+
+        <aside class="dept-sidebar">
+            <ul class="dept-sidebar-menu">
+                <li><a href="departments/aiml/aiml_about.html" class="active"><i class="fa-solid fa-house"></i> About the Department</a>
+                </li>
+                <li><a href="departments/aiml/aiml_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+                <li><a href="departments/aiml/aiml_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+                <li><a href="departments/aiml/aiml_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+                <li><a href="departments/aiml/aiml_non_teaching_faculty.html"><i class="fa-solid fa-users"></i> Non Teaching Faculty</a>
+                </li>
+                <li><a href="departments/aiml/aiml_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a>
+                </li>
+                <li><a href="departments/aiml/aiml_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+                <li><a href="departments/aiml/aiml_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department
+                        Academic Calendar</a></li>
+                <li><a href="departments/aiml/aiml_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+                <li><a href="departments/aiml/aiml_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+                <li><a href="departments/aiml/aiml_research.html"><i class="fa-solid fa-microscope"></i> Ph.D./M.S. (Research)</a></li>
+                <li><a href="departments/aiml/aiml_research_publications.html"><i class="fa-regular fa-bookmark"></i> Research
+                        Publications</a></li>
+                <li><a href="departments/aiml/aiml_best_practices.html"><i class="fa-regular fa-thumbs-up"></i> Best Practices</a></li>
+                <li><a href="departments/aiml/aiml_ipr.html"><i class="fa-solid fa-file-contract"></i> IPR</a></li>
+                <li><a href="departments/aiml/aiml_research_projects.html"><i class="fa-solid fa-flask"></i> Research Projects</a></li>
+                <li><a href="departments/aiml/aiml_consultancy.html"><i class="fa-solid fa-briefcase"></i> Consultancy</a></li>
+                <li><a href="departments/aiml/aiml_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a>
+                </li>
+                <li><a href="departments/aiml/aiml_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty
+                        Upskilling</a></li>
+                <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+                <li><a href="departments/aiml/aiml_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+                <li><a href="departments/aiml/aiml_higher_education.html"><i class="fa-solid fa-school"></i> Higher Education</a></li>
+                <li><a href="departments/aiml/aiml_entrepreneurship.html"><i class="fa-solid fa-lightbulb"></i> Entrepreneurship</a></li>
+                <li><a href="departments/aiml/aiml_distinguished_alumni.html"><i class="fa-solid fa-star"></i> Distinguished Alumni</a>
+                </li>
+                <li><a href="departments/aiml/aiml_professional_societies.html"><i class="fa-solid fa-people-group"></i> Professional
+                        Societies</a></li>
+                <li><a href="departments/aiml/aiml_clubs.html"><i class="fa-solid fa-puzzle-piece"></i> Club Activities (Clubs)</a></li>
+                <li><a href="departments/aiml/aiml_association.html"><i class="fa-solid fa-handshake"></i> Association Activities</a>
+                </li>
+                <li><a href="departments/aiml/aiml_guest_lectures.html"><i class="fa-solid fa-chalkboard-user"></i> Guest Lectures</a>
+                </li>
+                <li><a href="departments/aiml/aiml_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student
+                        Publications</a></li>
+                <li><a href="departments/aiml/aiml_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+                <li><a href="departments/aiml/aiml_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a>
+                </li>
+                <li><a href="departments/aiml/aiml_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <main class="dept-main-content">
+
+            <div class="dept-main-slider" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1000&q=80"
+                    alt="Students in classroom">
+                <div class="dept-slider-caption">Voice of Alumni How to get a Job in Product Based Companies - Mr.Ragav
+                    PS (Amazon Play)</div>
+            </div>
+
+            <h1 class="dept-title-red" data-aos="fade-up">DEPARTMENT OF<br>COMPUTER SCIENCE ENGINEERING WITH AI & ML
+            </h1>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>ABOUT THE DEPARTMENT</h3>
+                <p>The Department of Computer Science Engineering with AI & ML was started with the sanctioned intake of
+                    60 in the year 2008 and at present the annual intake is 240. The U.G. Program of the Department is
+                    accredited by National Board of Accreditation (NBA) in the years 2018, 2022. The Department aims at
+                    providing domain specific training and skills to the students for pursuing a career in the field of
+                    Computer Science. The Department has state-of-the art laboratory facilities to fulfil the
+                    curriculum, Industry collaborated Centres of Excellence (COEs) and also to carry out various
+                    projects, research and consultancy activities. Additionally, we aim to equip our learners with the
+                    necessary skills to tackle global challenges, nurture an entrepreneurial and innovative mindset.</p>
+                <p style="margin-top:20px;"><strong>About - </strong><a href="https://kingston.ac.in/engineering-resources/about_aiml.pdf"
+                        target="_blank" rel="noopener" style="color:#8b1a2b; font-weight:700;">Computer Science
+                        Engineering With Artificial Intelligence and Machine Learning <i class="fa-solid fa-file-pdf" style="margin-left:6px;"></i></a></p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>FACULTY</h3>
+                <p>The Department is enriched with a dedicated, well qualified and experienced faculty team of 5
+                    Professors, 12 Associate Professors and 20 Assistant Professors specialized in various domains
+                    including Image Processing, Cloud Computing, Agent Computing, Computer Vision, Machine Learning,
+                    Deep Learning, Network Security, and Cyber Security. The faculty members are active members of
+                    professional bodies such as ISTE, CSI, IEEE, IAENG. Faculty Members were trained and certified in
+                    the Futuristic Technologies by Industries like Virtusa, Oracle, TCS, Cognizant, Infosys, Wipro, BNY
+                    Mellon, in the niche areas such as Artificial Intelligence, Data Science, Full Stack Engineering,
+                    Cloud Computing and Cyber Security, Machine Learning.</p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>RESEARCH</h3>
+                <p>The Department promotes research among the faculty and 17 of them are doctorates and 17 are pursuing
+                    Ph.D. The Department has received Recognized Research Centre status by Anna University for Ph.D.
+                    programme. 5 research scholars completed their Ph.D. from this research centre and currently, 12
+                    part-time and 5 full-time research scholars are associated with this research centre. Our department
+                    faculty members are active researchers publishing their research papers in Web of Science, SCI and
+                    Scopus Indexed Journals and various International and National Conferences. International and
+                    National Conferences were conducted by the department. The H-index of the departments is 19. All our
+                    faculty members are actively participating in various FDPs conducted by premier institutions and
+                    online courses offered by NPTEL, NITTTR, etc. and thereby enhance their teaching and research
+                    skills. Proposals for research grants are submitted regularly to AICTE, DST, SERB, MEITY and TNSCST.
+                    The Department has organized STTPs, FDPs, National Seminars and International Conferences funded by
+                    various organizations.</p>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>CURRICULUM ENRICHMENT</h3>
+                <p>In order make the students to excel in the emerging areas of computer science, the department is
+                    associated with three knowledge partners who contribute to the Centre of Excellence, enabling it to
+                    remain aligned with evolving technology trends.</p>
+                <ul>
+                    <li>Cloud Computing – AtoS</li>
+                    <li>Full Stack Computing – NTT Data</li>
+                    <li>Cyber Security - LTIMindtree</li>
+                </ul>
+                <p>Our esteemed Knowledge Partner, contributes to the design of 40% of the B.E. Computer Science
+                    Engineering with AI & ML syllabus to meet the requirements of rapidly changing industry landscape.
+                </p>
+                <p><strong>Cloud Computing:</strong> In order to develop, manage and protect the cloud-based systems, a
+                    technology to which, nowadays, companies are moving, there exists a vast opportunity for the role of
+                    Cloud Engineers, Cloud Architects, Cloud Security Specialists, etc.</p>
+                <p><strong>Cyber Security:</strong> Cyber threats are one of the major issues needs to be addressed in
+                    the Cyber World. IT world is in need of Security Architect, Cybersecurity Engineer, Information
+                    Security Analyst, Penetration Tester, and Cybersecurity Consultant.</p>
+                <p><strong>Full Stack Computing:</strong> Computer Science and Information Technology field always
+                    looking for a professional who possesses a wide range of skills and expertise in both front-end and
+                    back-end web development. Their role is to handle all aspects of building and deploying web
+                    applications, from the user interface to the server-side logic and database interactions.</p>
+                <p>These Centres of Excellence (CoEs) offer specialized training and industry-mentored, real-time
+                    projects in emerging technologies, equipping students with the skills and experience needed to
+                    become industry-ready professionals.</p>
+                <p>Curriculum delivery is implemented using project-based learning, Self-Learning is inculcated among
+                    students by using RMK Nextgen, an AI powered Learning platform to impart Personalized Learning
+                    Experience. Digital Course Materials was designed and developed by our team of Faculty for the
+                    effective utilization of students in the Teaching Learning process</p>
+            </section>
+
+        </main>
+    </div>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/include-components.js"></script>
+</body>
+
+</html>

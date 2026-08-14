@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events — Kingston Engineering College</title>
+    <meta name="description"
+        content="Explore upcoming and past events at Kingston Engineering College — technical festivals, cultural fests, sports tournaments, workshops and more.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/events.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Events — Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/events.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Explore upcoming and past events at Kingston Engineering College — technical festivals, cultural fests, sports tournaments, workshops and more.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Events — Kingston Engineering College">
+    <meta name="twitter:description" content="Explore upcoming and past events at Kingston Engineering College — technical festivals, cultural fests, sports tournaments, workshops and more.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+
+    <style>
+        /* ── Events page hero ──────────────────────────────────── */
+        .events-page-hero {
+            background: linear-gradient(135deg, #003366 0%, #1a5276 60%, #1f618d 100%);
+            padding: 56px 0 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-page-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .events-page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .events-page-hero h1 {
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin: 0 0 8px;
+            letter-spacing: 1px;
+        }
+
+        .events-page-hero p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .events-breadcrumb {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+
+        .events-breadcrumb a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+        }
+
+        .events-breadcrumb a:hover {
+            color: #fff;
+        }
+
+        /* ── Tab bar ───────────────────────────────────────────── */
+        .events-tabs-bar {
+            background: #fff;
+            border-bottom: 2px solid #e8edf5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+        }
+
+        .events-tabs-inner {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .events-tabs-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .events-tab-btn {
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 16px 28px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #888;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.18s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            top: 2px;
+        }
+
+        .events-tab-btn:hover {
+            color: #003366;
+        }
+
+        .events-tab-btn.events-tab-active {
+            color: #003366;
+            border-bottom-color: #003366;
+        }
+
+        .events-tab-count {
+            background: #e8f0fb;
+            color: #003366;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 1px 7px;
+            border-radius: 12px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .events-tab-btn.events-tab-active .events-tab-count {
+            background: #003366;
+            color: #fff;
+        }
+
+        /* ── Filter bar ────────────────────────────────────────── */
+        .events-filter-wrap {
+            background: #f8faff;
+            border-bottom: 1px solid #e8edf5;
+            padding: 12px 0;
+        }
+
+        .events-filter-inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .events-filter-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        #events-filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* ── Events grid ───────────────────────────────────────── */
+        .events-list-section {
+            padding: 48px 0 72px;
+            background: #f4f7fb;
+        }
+
+        #events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        /* ── Event page card extras ────────────────────────────── */
+        .event-reg-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: #27ae60;
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 20px;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+        }
+
+        .event-reg-badge--card {
+            bottom: 12px;
+            right: 12px;
+        }
+
+        .event-reg-cta {
+            color: #27ae60 !important;
+        }
+
+        .event-reg-cta:hover {
+            color: #1e8449 !important;
+        }
+
+        /* ── Blog-style card reused for events ─────────────────── */
+        .blog-news-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0, 51, 102, 0.13);
+        }
+
+        .blog-news-card.featured {
+            border: 2px solid #003366;
+        }
+
+        .blog-news-img-wrap {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .blog-news-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .blog-news-card:hover .blog-news-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .blog-news-img-link {
+            display: block;
+        }
+
+        .news-cat-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .news-featured-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #f5c518;
+            color: #333;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .blog-news-body {
+            padding: 20px 22px 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            font-size: 0.78rem;
+            color: #888;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .blog-news-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #003366;
+            margin: 0 0 10px;
+            line-height: 1.45;
+        }
+
+        .blog-news-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .blog-news-title a:hover {
+            color: #0056b3;
+        }
+
+        .blog-news-excerpt {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.65;
+            margin: 0 0 16px;
+            flex: 1;
+        }
+
+        .blog-news-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .news-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .news-tag {
+            background: #eef2fb;
+            color: #003366;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 2px 9px;
+            border-radius: 12px;
+            border: 1px solid #d5e0f5;
+        }
+
+        .news-read-more {
+            color: #003366;
+            font-weight: 700;
+            font-size: 0.84rem;
+            text-decoration: none;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.18s;
+        }
+
+        .news-read-more:hover {
+            color: #c0392b;
+        }
+
+        /* ── Filter buttons ────────────────────────────────────── */
+        .news-filter-btn {
+            background: #f0f4fb;
+            border: 1.5px solid #dde4f0;
+            color: #555;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s;
+            white-space: nowrap;
+        }
+
+        .news-filter-btn:hover {
+            border-color: #003366;
+            color: #003366;
+            background: #e8f0fb;
+        }
+
+        .news-filter-btn.active {
+            background: #003366;
+            border-color: #003366;
+            color: #fff;
+        }
+
+        /* ── Responsive ────────────────────────────────────────── */
+        @media (max-width: 600px) {
+            #events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .events-page-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .events-tab-btn {
+                padding: 14px 18px;
+                font-size: 0.88rem;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Absolute Top Bar for College Info & TNEA inside Hero -->
+        <div class="hero-top-panel container" data-aos="fade-down">
+            <div class="hero-college-brand"></div>
+        </div>
+
+    </section>
+
+
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script>
+        // Hero Main Swiper
+        new Swiper('#hero-main-swiper', {
+            loop: true,
+            speed: 900,
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            pagination: { el: '.hero-swiper-pagination', clickable: true },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+        });
+    </script>
+</body>
+
+</html>

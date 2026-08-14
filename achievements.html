@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements & Awards - Kingston Engineering College</title>
+    <meta name="description" content="Achievements and awards of Kingston Engineering College — institutional, faculty, and student recognitions and rankings.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/achievements.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Achievements & Awards - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/achievements.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Achievements and awards of Kingston Engineering College — institutional, faculty, and student recognitions and rankings.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Achievements & Awards - Kingston Engineering College">
+    <meta name="twitter:description" content="Achievements and awards of Kingston Engineering College — institutional, faculty, and student recognitions and rankings.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        .achievements-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .achievements-header {
+            text-align: center;
+            padding: 80px 20px 0;
+            margin-bottom: 60px;
+        }
+
+        .achievements-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #003366;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .achievements-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Achievement Categories */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #003366 0%, #1a5490 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(0, 51, 102, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(245, 197, 24, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 51, 102, 0.3);
+        }
+
+        .achievement-card:hover::before {
+            top: -25%;
+            right: -25%;
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            color: #f5c518;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            color: #f5c518;
+        }
+
+        .achievement-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Awards Category */
+        .awards-section {
+            margin-top: 80px;
+            padding-top: 80px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .awards-section h2 {
+            text-align: center;
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 800;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .award-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border-top: 5px solid #f5c518;
+        }
+
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .award-icon-box {
+            background: linear-gradient(135deg, #003366, #1a5490);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .award-icon {
+            font-size: 3.5rem;
+            color: #f5c518;
+            margin-bottom: 10px;
+        }
+
+        .award-icon-label {
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .award-info {
+            padding: 30px;
+        }
+
+        .award-info h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .award-info p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .award-year {
+            display: inline-block;
+            background: #f5c518;
+            color: #003366;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        /* Accreditations Timeline */
+        .accreditations-section {
+            margin-top: 80px;
+            padding-top: 80px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .accreditations-section h2 {
+            text-align: center;
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 800;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #003366, #f5c518);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .timeline-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .timeline-content {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #003366;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid #003366;
+        }
+
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #f5c518;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            color: #003366;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: #003366;
+            border: 4px solid #f5c518;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .timeline-item:nth-child(2) .timeline-dot {
+            top: 120px;
+        }
+
+        .timeline-item:nth-child(3) .timeline-dot {
+            top: 210px;
+        }
+
+        .timeline-item:nth-child(4) .timeline-dot {
+            top: 300px;
+        }
+
+        /* Rankings Section */
+        .rankings-section {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 80px 20px;
+            border-radius: 20px;
+        }
+
+        .rankings-section h2 {
+            text-align: center;
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 800;
+        }
+
+        .rankings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .ranking-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #003366;
+            transition: all 0.3s;
+        }
+
+        .ranking-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .ranking-badge {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f5c518, #ff9800);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .ranking-name {
+            color: #003366;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .ranking-detail {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .achievements-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                direction: ltr !important;
+            }
+
+            .timeline-content {
+                border-left: 5px solid #003366;
+                border-right: none !important;
+            }
+
+            .timeline-dot {
+                left: -10px;
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Achievements Header -->
+    <section class="achievements-header" data-aos="fade-up">
+        <h1>Achievements &amp; Awards</h1>
+        <p>Celebrating the awards, accreditations, rankings and milestones of Kingston Engineering College.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="achievements-container">
+                <!-- Key Metrics -->
+                <div class="achievements-grid" data-aos="zoom-in">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="achievement-number">25+</div>
+                        <div class="achievement-label">Years of Excellence</div>
+                    </div>
+
+                    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                        <div class="achievement-number">10+</div>
+                        <div class="achievement-label">National Awards</div>
+                    </div>
+
+                    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="achievement-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="achievement-number">95%</div>
+                        <div class="achievement-label">Placement Rate</div>
+                    </div>
+
+                    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                        <div class="achievement-number">A</div>
+                        <div class="achievement-label">NAAC Accreditation</div>
+                    </div>
+                </div>
+
+                <!-- Awards Section -->
+                <div class="awards-section">
+                    <h2 data-aos="fade-up">Awards & Recognition</h2>
+                    <div class="awards-grid">
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                                <div class="award-icon-label">Best Engineering College</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>National Excellence Award</h3>
+                                <p>Recognized as one of the top engineering colleges in India for academic excellence
+                                    and
+                                    innovation.</p>
+                                <span class="award-year">2025</span>
+                            </div>
+                        </div>
+
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="award-icon-label">Placement Excellence</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>India Skills Award</h3>
+                                <p>Outstanding performance in placement and employment generation with 500+ companies
+                                    recruiting.</p>
+                                <span class="award-year">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-flask"></i></div>
+                                <div class="award-icon-label">Research Innovation</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>Innovation & Research Award</h3>
+                                <p>Leadership in research publications, patents filed, and innovation initiatives across
+                                    multiple domains.</p>
+                                <span class="award-year">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-heart"></i></div>
+                                <div class="award-icon-label">Social Responsibility</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>Social Impact Award</h3>
+                                <p>Excellence in community service, NSS activities, and making a positive difference in
+                                    society.
+                                </p>
+                                <span class="award-year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-book"></i></div>
+                                <div class="award-icon-label">Academic Excellence</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>NIRF Ranking Award</h3>
+                                <p>Consistently ranked among top 50 engineering colleges in India by National
+                                    Institutional
+                                    Ranking Framework.</p>
+                                <span class="award-year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="award-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="award-icon-box">
+                                <div class="award-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="award-icon-label">Entrepreneurship</div>
+                            </div>
+                            <div class="award-info">
+                                <h3>Startup Excellence Award</h3>
+                                <p>Recognition for fostering entrepreneurship with 50+ startups incubated and supported
+                                    by
+                                    Kingston.</p>
+                                <span class="award-year">2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accreditations Timeline -->
+                <div class="accreditations-section">
+                    <h2 data-aos="fade-up">Accreditations & Milestones</h2>
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2008</div>
+                                <div class="timeline-title">Foundation Year</div>
+                                <div class="timeline-text">Kingston Engineering College was established with vision to
+                                    provide
+                                    world-class engineering education.</div>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2010</div>
+                                <div class="timeline-title">AICTE Recognition</div>
+                                <div class="timeline-text">Received full approval from All India Council for Technical
+                                    Education
+                                    (AICTE) for all engineering programs.</div>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2017</div>
+                                <div class="timeline-title">Autonomous Status</div>
+                                <div class="timeline-text">Awarded Autonomous status by the government, enabling greater
+                                    academic freedom and innovation.</div>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2021</div>
+                                <div class="timeline-title">NAAC 'A' Grade</div>
+                                <div class="timeline-text">Accredited with 'A' grade by National Assessment and
+                                    Accreditation
+                                    Council (NAAC) for excellence in quality.</div>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rankings Section -->
+                <div class="rankings-section" data-aos="zoom-in">
+                    <h2>National Rankings</h2>
+                    <div class="rankings-grid">
+                        <div class="ranking-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="ranking-badge">25</div>
+                            <div class="ranking-name">NIRF Overall</div>
+                            <div class="ranking-detail">Ranked in top 50 engineering colleges</div>
+                        </div>
+
+                        <div class="ranking-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="ranking-badge">18</div>
+                            <div class="ranking-name">Engineering Category</div>
+                            <div class="ranking-detail">Top 20 engineering institutes nationwide</div>
+                        </div>
+
+                        <div class="ranking-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="ranking-badge">A+</div>
+                            <div class="ranking-name">Overall Grade</div>
+                            <div class="ranking-detail">Higher Education Excellence</div>
+                        </div>
+
+                        <div class="ranking-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="ranking-badge">4.8</div>
+                            <div class="ranking-name">Student Rating</div>
+                            <div class="ranking-detail">Out of 5 stars on multiple surveys</div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+</body>
+
+</html>

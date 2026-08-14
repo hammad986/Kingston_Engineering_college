@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Kingston Engineering College</title>
+    <meta name="description" content="Frequently asked questions about Kingston Engineering College — admissions, fees and scholarships, placements, departments, hostel and campus facilities.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/faq.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="FAQs - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/faq.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Frequently asked questions about Kingston Engineering College — admissions, fees and scholarships, placements, departments, hostel and campus facilities.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQs - Kingston Engineering College">
+    <meta name="twitter:description" content="Frequently asked questions about Kingston Engineering College — admissions, fees and scholarships, placements, departments, hostel and campus facilities.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .faq-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #003366;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .faq-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .faq-search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .faq-search input {
+            flex: 1 1 200px;
+            min-width: 0;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .faq-search input:focus {
+            outline: none;
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+        }
+
+        .faq-search button {
+            flex: 0 0 auto;
+            padding: 15px 30px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .faq-search button:hover {
+            background: #1a5490;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .faq-search { flex-wrap: nowrap; }
+            .faq-search input { flex: 1 1 auto; min-width: 0; }
+            .faq-search button { padding: 15px 16px; font-size: 0.9rem; white-space: nowrap; }
+        }
+
+        /* Filter Tabs */
+        .faq-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .faq-tab {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            color: #003366;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .faq-tab:hover,
+        .faq-tab.active {
+            background: #003366;
+            color: white;
+            border-color: #f5c518;
+        }
+
+        /* FAQ Items */
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-item:hover {
+            border-color: #003366;
+            box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: #003366;
+        }
+
+        .faq-item.active .faq-question {
+            background: linear-gradient(135deg, #003366 0%, #1a5490 100%);
+            color: white;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #e8ecf1 0%, #f5f7fa 100%);
+        }
+
+        .faq-item.active .faq-question:hover {
+            background: linear-gradient(135deg, #003366 0%, #1a5490 100%);
+        }
+
+        .faq-question-text {
+            font-size: 1rem;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .faq-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(245, 197, 24, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5c518;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: #f5c518;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            color: #f5c518;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: white;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-text {
+            padding: 20px;
+            color: #666;
+            line-height: 1.8;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        /* Category Sections */
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-section-title {
+            color: #003366;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .faq-section-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #003366, #1a5490);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5c518;
+            font-size: 1.5rem;
+        }
+
+        /* Contact CTA */
+        .faq-contact-cta {
+            background: linear-gradient(135deg, #003366 0%, #1a5490 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .faq-contact-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .faq-contact-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background: #f5c518;
+            color: #003366;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-white {
+            background: white;
+            color: #003366;
+        }
+
+        @media (max-width: 1024px) {
+            .faq-header h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons a {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Absolute Top Bar for College Info & TNEA inside Hero -->
+        <div class="hero-top-panel container" data-aos="fade-down">
+            <div class="hero-college-brand"></div>
+            <div class="hero-admission-title-wrap">
+                <h1 class="hero-admission-year" data-aos="fade-up" data-aos-delay="300"
+                    style="color:#fff; font-size:2.5rem; text-shadow:0 2px 10px rgba(0,0,0,0.5);">Frequently Asked
+                    Questions</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="faq-container">
+        <!-- FAQ Header -->
+        <div class="faq-header" data-aos="fade-up">
+            <h2 style="font-size:2rem;font-weight:900;color:#003366;margin-bottom:12px;">Have Questions? We've Got
+                Answers.</h2>
+            <p>Browse through the most frequently asked questions about Kingston Engineering College — admissions,
+                academics, placements, fees, and more.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="faq-search" data-aos="zoom-in">
+            <input type="text" id="faqSearch" placeholder="Search FAQs...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="faq-tabs" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-tab active" onclick="filterFAQ('all')">All</button>
+            <button class="faq-tab" onclick="filterFAQ('admissions')">Admissions</button>
+            <button class="faq-tab" onclick="filterFAQ('academics')">Academics</button>
+            <button class="faq-tab" onclick="filterFAQ('placement')">Placements</button>
+            <button class="faq-tab" onclick="filterFAQ('fees')">Fees & Scholarships</button>
+        </div>
+
+        <!-- Admissions Section -->
+        <div class="faq-section" data-aos="fade-up">
+            <div class="faq-section-title">
+                <div class="faq-section-icon"><i class="fas fa-graduation-cap"></i></div>
+                Admissions
+            </div>
+
+            <div class="accordion" data-category="admissions">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>What are the eligibility criteria for B.E. admission?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Candidates must have passed 12th with Physics, Chemistry, and Mathematics. The minimum
+                            aggregate score required is 50% (45% for SC/ST candidates). Students who cleared JEE Mains
+                            or state entrance exams can apply directly to Kingston.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>What is the application process?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            You can apply online through our portal or visit the campus. Fill the application form with
+                            required documents including 10th/12th mark sheets, ID proof, and photos. After
+                            verification, you'll receive admission confirmation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>When is the admission period?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Admissions typically open in June-July every year. The application deadline is usually July
+                            31st. Counseling rounds are conducted from August to September, with classes starting in
+                            late September.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academics Section -->
+        <div class="faq-section" data-aos="fade-up">
+            <div class="faq-section-title">
+                <div class="faq-section-icon"><i class="fas fa-book"></i></div>
+                Academics
+            </div>
+
+            <div class="accordion" data-category="academics">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>How many semesters are there in the course?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            The B.E. program is 4 years long, divided into 8 semesters. Each semester is 6 months.
+                            M.Tech programs are 2 years with 4 semesters. MBA programs are also 2 years with 4
+                            semesters.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>What is the curriculum structure?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Our curriculum combines theoretical knowledge with practical skills. It includes core
+                            subjects, electives, laboratories, mini-projects, and capstone projects. We follow Anna
+                            University guidelines with our autonomous institution flexibility to innovate.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>Are there opportunities for skill development?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Yes! Kingston offers numerous skill development programs including certifications in Python,
+                            Cloud Computing, Data Science, AI/ML, and more. These complement your academic curriculum
+                            and enhance employability.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placement Section -->
+        <div class="faq-section" data-aos="fade-up">
+            <div class="faq-section-title">
+                <div class="faq-section-icon"><i class="fas fa-briefcase"></i></div>
+                Placements
+            </div>
+
+            <div class="accordion" data-category="placement">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>What is Kingston's placement record?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Kingston has a 95% placement record with 500+ companies recruiting. Average CTC is ₹8.5 LPA,
+                            with highest CTC reaching ₹25 LPA. Our students work at top tech, finance, and consulting
+                            firms globally.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>When do placements start?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Campus placements begin in 7th semester (3rd year). Pre-placement training starts from 4th
+                            semester. Our dedicated placement cell coordinates with companies for recruitment drives,
+                            internships, and full-time offers.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>Which companies recruit from Kingston?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Companies like Google, Microsoft, Amazon, Infosys, TCS, HCL, Capgemini, Accenture, and many
+                            startups recruit from Kingston. We have partnerships with 500+ organizations across IT,
+                            finance, consulting, and manufacturing sectors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fees & Scholarships Section -->
+        <div class="faq-section" data-aos="fade-up">
+            <div class="faq-section-title">
+                <div class="faq-section-icon"><i class="fas fa-money-bill"></i></div>
+                Fees & Scholarships
+            </div>
+
+            <div class="accordion" data-category="fees">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>What is the total fee structure?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            B.E. program fee is approximately ₹1.6 lakhs per annum. This includes tuition, lab fees, and
+                            development charges. Additional charges for hostel (₹1 lakh/year), mess (₹40,000/year), and
+                            other facilities as per actual expenses. M.Tech and MBA have different fee structures.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>Are scholarships available?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Yes! Kingston offers merit-based scholarships for toppers (up to 50% fee waiver), SC/ST
+                            reservations with fee concessions, and need-based financial assistance. Government schemes
+                            like Post Matric Scholarships are also available.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-text">
+                            <div class="faq-icon"><i class="fas fa-question"></i></div>
+                            <span>Is there an EMI payment option?</span>
+                        </div>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">
+                            Kingston works with several banks and financing institutions to provide education loans.
+                            Students can pay fees in installments through these loan facilities. Education loan
+                            applicants get 0% or subsidized interest rates.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="faq-contact-cta" data-aos="zoom-in">
+            <h3>Didn't find your answer?</h3>
+            <p>Our admissions team is here to help with any questions.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="#" class="cta-button cta-button-white">Send Enquiry</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <!-- Footer Section -->
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script>
+        // AOS Init
+        AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
+
+        // Toggle FAQ accordion
+        function toggleFAQ(el) {
+            const item = el.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item.active').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        }
+
+        // Filter by category
+        function filterFAQ(category) {
+            document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.faq-section').forEach(section => {
+                const acc = section.querySelector('.accordion');
+                if (category === 'all' || !acc || acc.dataset.category === category) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Live search
+        function performSearch() {
+            const query = document.getElementById('faqSearch').value.toLowerCase().trim();
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = !query || text.includes(query) ? '' : 'none';
+            });
+        }
+
+        // Also search on Enter key
+        document.getElementById('faqSearch')?.addEventListener('keyup', function (e) {
+            if (e.key === 'Enter') performSearch();
+            else if (!this.value.trim()) performSearch();
+        });
+    </script>
+</body>
+
+</html>

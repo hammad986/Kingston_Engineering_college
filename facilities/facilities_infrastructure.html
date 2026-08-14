@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure - Kingston Engineering College</title>
+    <meta name="description" content="Infrastructure at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+
+    <style>
+        /* ============================================
+           INFRASTRUCTURE PAGE STYLES
+           ============================================ */
+
+        /* Hero Video */
+        .infra-video-hero {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .infra-video-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .infra-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.42);
+            display: flex;
+            align-items: flex-end;
+            padding: 40px 60px;
+        }
+
+        .infra-video-overlay h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-left: 6px solid var(--brand-yellow, #f5c518);
+            padding-left: 20px;
+        }
+
+        /* ---- Section Wrappers ---- */
+        .infra-section {
+            padding: 70px 0;
+        }
+
+        .infra-section.bg-light {
+            background: #f8f9fa;
+        }
+
+        .infra-section.bg-white {
+            background: #fff;
+        }
+
+        /* Section Heading */
+        .infra-subheading {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .infra-subheading-line {
+            width: 70px;
+            height: 3px;
+            background: #c0393b;
+            margin-bottom: 32px;
+        }
+
+        /* ---- Auto-scroll image strip ---- */
+        .img-marquee-outer {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-marquee-track {
+            display: flex;
+            gap: 16px;
+            width: max-content;
+            animation: marqueeScroll 28s linear infinite;
+        }
+
+        .img-marquee-outer.wide .img-marquee-track {
+            animation-duration: 22s;
+        }
+
+        .img-marquee-outer:hover .img-marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .img-marquee-track img {
+            height: 220px;
+            width: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            transition: transform 0.35s, box-shadow 0.35s;
+        }
+
+        .img-marquee-track img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+            z-index: 5;
+            position: relative;
+        }
+
+        /* Wide images for Transport */
+        .img-marquee-outer.wide .img-marquee-track img {
+            height: 260px;
+            width: 440px;
+        }
+
+        /* ---- Smart Classroom bullet list ---- */
+        .smart-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .smart-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .smart-list li:last-child {
+            border-bottom: none;
+        }
+
+        .smart-icon {
+            color: #c0393b;
+            font-size: 1.1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .smart-list li p {
+            font-size: 0.92rem;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* ---- Transport person info ---- */
+        .transport-accordion {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .transport-acc-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .transport-acc-item:last-child {
+            border-bottom: none;
+        }
+
+        .transport-acc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            cursor: pointer;
+            background: #fdf3f3;
+            transition: background 0.3s;
+        }
+
+        .transport-acc-header:hover {
+            background: #f5e0e0;
+        }
+
+        .transport-acc-header h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #c0393b;
+        }
+
+        .transport-acc-header i {
+            color: #999;
+            transition: transform 0.3s;
+        }
+
+        .transport-acc-item.open .transport-acc-header i {
+            transform: rotate(180deg);
+        }
+
+        .transport-acc-body {
+            display: none;
+            padding: 18px 24px;
+            background: #fff;
+            font-size: 0.88rem;
+            color: #444;
+            line-height: 1.9;
+        }
+
+        .transport-acc-item.open .transport-acc-body {
+            display: block;
+        }
+
+        /* ---- Table ---- */
+        .bus-table-wrapper {
+            max-height: 450px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 36px;
+        }
+
+        .bus-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bus-table thead {
+            position: sticky;
+            top: 0;
+            background: #1a3250;
+            color: #fff;
+            z-index: 5;
+        }
+
+        .bus-table thead th {
+            padding: 11px 14px;
+            font-size: 0.78rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .bus-table tbody tr:nth-child(even) {
+            background: #f3f6fb;
+        }
+
+        .bus-table tbody td {
+            padding: 9px 14px;
+            font-size: 0.78rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            white-space: nowrap;
+        }
+
+        .bus-table tbody td a {
+            color: #c0393b;
+            font-weight: 600;
+        }
+
+        /* ---- Route PDF ---- */
+        .route-pdf-wrapper {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+
+        .route-pdf-toolbar {
+            background: #1a3250;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .route-pdf-download {
+            background: #f5c518;
+            color: #000;
+            padding: 6px 18px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.3s;
+        }
+
+        .route-pdf-download:hover {
+            opacity: 0.85;
+        }
+
+        .route-pdf-embed {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: block;
+        }
+
+        .route-pdf-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            color: #888;
+        }
+
+        .route-pdf-placeholder i {
+            font-size: 3rem;
+            color: #ccc;
+        }
+
+        .route-pdf-placeholder p {
+            font-size: 0.85rem;
+        }
+
+        /* ---- Canteen / Mess layout ---- */
+        .canteen-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .canteen-text p {
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        /* Vertical stacked scroll for canteen/mess right images */
+        .canteen-img-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .canteen-img-stack img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+            transition: transform 0.4s;
+        }
+
+        .canteen-img-stack img:hover {
+            transform: scale(1.02);
+        }
+
+        /* ---- Water Conservation auto-scroll + content ---- */
+        .water-auto-swiper {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .water-auto-swiper .swiper-slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .water-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 50px;
+        }
+
+        .water-content-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .water-content-item i {
+            color: #2196F3;
+            font-size: 1.1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .water-content-item p {
+            font-size: 0.88rem;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* ---- Table heading ---- */
+        .table-section-heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            border-left: 4px solid #c0393b;
+            padding-left: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .canteen-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .water-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- ========== HERO VIDEO ========== -->
+    <section class="infra-video-hero">
+        <video autoplay muted loop playsinline>
+            <source src="../assets/videos/main.mp4" type="video/mp4">
+        </video>
+        <div class="infra-video-overlay">
+            <h1>Infrastructure</h1>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         SMART CLASSROOM heading + Auto-scroll images + content
+         ======================================================== -->
+    <section class="infra-section bg-white">
+        <div class="container">
+
+            <!-- Heading ABOVE images -->
+            <h2 class="infra-subheading" data-aos="fade-up">Smart Classroom</h2>
+            <div class="infra-subheading-line"></div>
+
+            <!-- Auto-scroll image strip (7-10 images) -->
+            <div class="img-marquee-outer" data-aos="fade-up" data-aos-delay="100" style="margin-bottom:50px;">
+                <div class="img-marquee-track" id="smart-img-track">
+                    <!-- Duplicated set for seamless loop -->
+                    <img src="../assets/images/classroom/01.jpeg"
+                        alt="Smart Classroom 1" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/02.jpeg"
+                        alt="Smart Classroom 2" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/03.jpeg"
+                        alt="Smart Classroom 3" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/04.jpeg"
+                        alt="Smart Classroom 4" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/05.jpeg"
+                        alt="Smart Classroom 5" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/06.jpeg"
+                        alt="Smart Classroom 6" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/07.jpeg"
+                        alt="Smart Classroom 7" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/08.jpeg"
+                        alt="Smart Classroom 8" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/09.jpeg"
+                        alt="Smart Classroom 9" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/10.jpeg"
+                        alt="Smart Classroom 10" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/01.jpeg"
+                        alt="Smart Classroom 1-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/02.jpeg"
+                        alt="Smart Classroom 2-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/03.jpeg"
+                        alt="Smart Classroom 3-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/04.jpeg"
+                        alt="Smart Classroom 4-dup" loading="lazy" decoding="async">
+                    <img src= "../assets/images/classroom/05.jpeg"
+                        alt="Smart Classroom 5-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/06.jpeg"
+                        alt="Smart Classroom 6-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/07.jpeg"
+                        alt="Smart Classroom 7-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/08.jpeg"
+                        alt="Smart Classroom 8-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/09.jpeg"
+                        alt="Smart Classroom 9-dup" loading="lazy" decoding="async">
+                    <img src="../assets/images/classroom/10.jpeg"
+                        alt="Smart Classroom 10-dup" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <!-- Smart Classroom bullet content (like reference img 3) -->
+            <ul class="smart-list" data-aos="fade-up">
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>The virtual classroom transcends the boundaries of location, time and space providing a flexible
+                        learning environment for all.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>Schools, Universities and corporate organizations benefit from Virtual classrooms because it
+                        provides an excellent way for experts to teach a geographically dispersed group of students
+                        without hassle.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>In a cyber practicum, however, the teachers can meet a variety of students - whoever signed up
+                        from anywhere around the world.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>Each student has his or her own account, and the teacher can develop lessons targeting each
+                        student's needs.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>The cyber practicum supervisors review the lessons and the teachers revise them to address their
+                        suggestions.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>Being a premier institute, we have lectures by several senior professors and subject experts from
+                        all Indian Institute of Technologies.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>Providing access to all archived lectures was proving to be a challenge and so we were looking
+                        for an E-learning solution that would provide benefits beyond the classroom environment.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-school smart-icon"></i>
+                    <p>The archived classroom sessions are presented to the students via the Video Portal, a Web-based
+                        component of the Digital Media System that allows students to quickly browse, search and view
+                        digital media interactively.</p>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         TRANSPORT heading + Wide auto-scroll images
+         ======================================================== -->
+    <section class="infra-section bg-light">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Transport</h2>
+            <div class="infra-subheading-line"></div>
+
+            <!-- Wide auto-scroll image strip (5 real project images) -->
+            <div class="img-marquee-outer wide" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-marquee-track">
+                    <img src="../assets/images/Transport/IMG_8948.JPG" alt="Kingston College Bus 1" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8950.JPG" alt="Kingston College Bus 2" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8951.JPG" alt="Kingston College Bus 3" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8954.JPG" alt="Kingston College Bus 4" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8955.JPG" alt="Kingston College Bus 5" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8948.JPG" alt="Kingston College Bus 1" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8950.JPG" alt="Kingston College Bus 2" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8951.JPG" alt="Kingston College Bus 3" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8954.JPG" alt="Kingston College Bus 4" loading="lazy" decoding="async">
+                    <img src="../assets/images/Transport/IMG_8955.JPG" alt="Kingston College Bus 5" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         TRANSPORT DETAILS (Accordion + Tables + Route PDF)
+         ======================================================== -->
+    <section class="infra-section bg-white" id="transport-details">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Transport Details</h2>
+            <div class="infra-subheading-line"></div>
+
+            <!-- Transport Stats Strip -->
+            <div class="trans-stats" data-aos="fade-up">
+                <div class="trans-stat"><div class="trans-stat-num">19</div><div class="trans-stat-label">College Buses</div></div>
+                <div class="trans-stat"><div class="trans-stat-num">15+</div><div class="trans-stat-label">Dedicated Routes</div></div>
+                <div class="trans-stat"><div class="trans-stat-num">10+</div><div class="trans-stat-label">Towns Covered</div></div>
+                <div class="trans-stat"><div class="trans-stat-num">Safe</div><div class="trans-stat-label">Reliable Fleet</div></div>
+            </div>
+
+            <!-- Transport Overview from official website -->
+            <div class="canteen-text" data-aos="fade-up" style="margin-bottom:36px;">
+                <p>A full-fledged Transport department functions in the college with a fleet of <strong>19 buses</strong>
+                    providing transport facility to students and staff from various places across the Vellore region.
+                    This service is offered ensuring hassle-free and safe transportation, with well-planned routes
+                    covering major towns and villages including Kanamangalam, Thorapadi, Ranipet, Walajah, Gudiyattam,
+                    Madhanur, Ussoor, K.V. Kuppam, Vallalar Ranagapuram, Pallikonda, Katpadi, Arcot, and Chittoor.
+                    The number of buses is increased corresponding to the increase in the intake of students, ensuring
+                    comfortable commutes for the entire campus community.</p>
+                <p>Each bus is assigned an experienced driver with a dedicated route, and the fleet is maintained under
+                    the supervision of the Transport In-charge and a technician team. The buses operate on a fixed
+                    schedule for both morning (arrival) and afternoon (departure) sessions, with well-defined pickup
+                    and drop points to maximize coverage while minimizing travel time for students and staff.</p>
+            </div>
+
+            <!-- Accordion -->
+            <div class="transport-accordion" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Transport In-charge -->
+                <div class="transport-acc-item open">
+                    <div class="transport-acc-header">
+                        <h4>Transport In-charge</h4>
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                    <div class="transport-acc-body">
+                        Name&nbsp;: <strong>Mr. G. Babu</strong><br>
+                        Contact no&nbsp;: <strong>98423 90002</strong>
+                    </div>
+                </div>
+
+                <!-- Transport Assistant -->
+                <div class="transport-acc-item">
+                    <div class="transport-acc-header">
+                        <h4>Transport Assistant</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="transport-acc-body">
+                        Name&nbsp;: <strong>Mr. Arun Pandiyan</strong><br>
+                        Contact no&nbsp;: <strong>93636 93609</strong>
+                    </div>
+                </div>
+
+                <!-- Technician / Mechanical -->
+                <div class="transport-acc-item">
+                    <div class="transport-acc-header">
+                        <h4>Technician / Mechanical</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="transport-acc-body">
+                        Name&nbsp;: <strong>Mr. A. SURESH</strong><br>
+                        Contact no&nbsp;: <strong>74026 11999</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TABLE 1: Bus Details (10 rows) -->
+            <p class="table-section-heading" data-aos="fade-up">Bus Details</p>
+            <div class="bus-table-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <table class="bus-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Route No.</th>
+                            <th>Stopping Name</th>
+                            <th>Driver Name</th>
+                            <th>Driver No.</th>
+                            <th>Vehicle No.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bus-table-1-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE 2: Route / Schedule (25 rows) -->
+            <p class="table-section-heading" data-aos="fade-up">Session & Timing Details</p>
+            <div class="bus-table-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <table class="bus-table">
+                    <thead>
+                        <tr>
+                            <th>Session</th>
+                            <th>Vehicle Id</th>
+                            <th>Route Id</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Arriving Time</th>
+                            <th>Departure Time</th>
+                            <th>Waiting Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bus-table-2-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         ROUTE DETAILS — PDF Viewer
+         ======================================================== -->
+    <section class="infra-section bg-light">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Route Details</h2>
+            <div class="infra-subheading-line"></div>
+
+            <div class="route-pdf-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="route-pdf-toolbar">
+                    <span><i class="fa-solid fa-file-pdf"></i>&nbsp; RouteDetails.pdf</span>
+                    <a href="../assets/pdfs/Bus_routes.pdf" download class="route-pdf-download">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                </div>
+                <object data="../assets/pdfs/Bus_routes.pdf" type="application/pdf" class="route-pdf-embed">
+                    <div class="route-pdf-placeholder">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <p>PDF not yet uploaded. Place <strong>RouteDetails.pdf</strong> inside
+                            <code>assets/pdfs/academics-pdf/</code>
+                        </p>
+                        <a href="../assets/pdfs/Bus_routes.pdf" download class="route-pdf-download">
+                            <i class="fa-solid fa-download"></i> Download when ready
+                        </a>
+                    </div>
+                </object>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         CANTEEN — Left text + Right stacked scroll images (3)
+         ======================================================== -->
+    <section class="infra-section bg-white">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Canteen</h2>
+            <div class="infra-subheading-line"></div>
+
+            <div class="canteen-layout" data-aos="fade-up" data-aos-delay="100">
+                <!-- Left: 3 Paragraphs -->
+                <div class="canteen-text">
+                    <p>Kingston Engineering College provides a well-maintained and hygienic canteen facility within the
+                        campus, serving a wide variety of freshly prepared nutritious meals, snacks, and beverages to
+                        students and staff throughout the day. The canteen operates under strict hygiene standards
+                        ensuring a safe and healthy dining experience for the entire campus community.</p>
+                    <p>The canteen menu includes a diverse range of South Indian, North Indian, and continental foods
+                        catering to the varied tastes and dietary preferences of students from different parts of the
+                        country. Special provisions are made for students with dietary restrictions, and fresh juices,
+                        snacks, and desserts are available at affordable rates throughout the day.</p>
+                    <p>The spacious seating area offers a comfortable and refreshing environment for students to dine
+                        and relax between their academic schedules. Regular quality audits and feedback mechanisms are
+                        in place to continuously improve the services, ensuring maximum satisfaction for the college's
+                        growing student population.</p>
+                </div>
+                <!-- Right: 3 Stacked Images -->
+                <div class="canteen-img-stack">
+                    <img src="../assets/images/canteen/01.jpeg" alt="Canteen 1" style="height:155px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/canteen/02.jpeg" alt="Canteen 2" style="height:155px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/canteen/03.jpeg" alt="Canteen 3" style="height:155px;" loading="lazy" decoding="async">
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         MESS — Left text + Right stacked scroll images (5)
+         ======================================================== -->
+    <section class="infra-section bg-light">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Mess</h2>
+            <div class="infra-subheading-line"></div>
+
+            <div class="canteen-layout" data-aos="fade-up" data-aos-delay="100">
+                <!-- Left: 3 Paragraphs -->
+                <div class="canteen-text">
+                    <p>The Mess facility at Kingston Engineering College is dedicated to providing wholesome home-style
+                        meals to hostel residents and day scholars. Operating multiple sessions throughout the day for
+                        breakfast, lunch, and dinner, the mess ensures that students receive balanced and nutritious
+                        food at highly subsidized and affordable rates, without compromising on quality.</p>
+                    <p>Our mess operates under the supervision of qualified catering staff who prioritize cleanliness,
+                        taste, and nutrition in every meal served. The weekly rotating menu is thoughtfully planned by a
+                        dietician to include essential nutrients, seasonal vegetables, proteins, and balanced
+                        carbohydrates, ensuring the health and well-being of all students residing in the campus
+                        hostels.</p>
+                    <p>The dining hall is equipped with efficient service counters and ample seating capacity to
+                        accommodate a large number of students simultaneously. Regular feedback is collected from mess
+                        committee members and students to improve the quality, variety, and overall dining experience
+                        throughout the academic year.</p>
+                </div>
+                <!-- Right: 5 Local Mess Images -->
+                <div class="canteen-img-stack">
+                    <img src="../assets/images/mess/DSC_5830.JPG" alt="Mess Dining Hall"
+                        style="height:110px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/mess/DSC_5833.JPG" alt="Mess Kitchen"
+                        style="height:110px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/mess/IMG_5319.JPG" alt="Mess Serving Area 1"
+                        style="height:110px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/mess/IMG_5320.JPG" alt="Mess Serving Area 2"
+                        style="height:110px;" loading="lazy" decoding="async">
+                    <img src="../assets/images/mess/IMG_5321.JPG" alt="Mess Seating"
+                        style="height:110px;" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================
+         WATER CONSERVATION — Auto-swiper (5 images) + content
+         ======================================================== -->
+    <section class="infra-section bg-white">
+        <div class="container">
+
+            <h2 class="infra-subheading" data-aos="fade-up">Water Conservation</h2>
+            <div class="infra-subheading-line"></div>
+
+            <!-- 5-image Swiper (auto-loop, no controls) -->
+            <div class="swiper water-auto-swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="../assets/images/water_cons/0.png" 
+                            alt="Water Conservation 1" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img
+                            src="../assets/images/water_cons/1.png"
+                            alt="Water Conservation 2" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img
+                            src="../assets/images/water_cons/2.png"
+                            alt="Water Conservation 3" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img
+                            src="../assets/images/water_cons/3.png"
+                            alt="Water Conservation 4" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img
+                            src="../assets/images/water_cons/4.png"
+                            alt="Water Conservation 5" loading="lazy" decoding="async"></div>
+                </div>
+                <div class="swiper-pagination" style="margin-top:12px; position:static; text-align:left;"></div>
+            </div>
+
+            <!-- Content bullets below images -->
+            <div class="water-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Rain water harvesting pits have been established across the campus to recharge groundwater and
+                        reduce surface run-off effectively.</p>
+                </div>
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Sensor-based taps and automated drip irrigation systems have been installed to minimize water
+                        wastage in all campus buildings and gardens.</p>
+                </div>
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Treated wastewater from the campus sewage treatment plant is reused for irrigation of lawns and
+                        gardens throughout the college premises.</p>
+                </div>
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Awareness campaigns and workshops on water conservation practices are conducted regularly for
+                        students, staff, and campus residents.</p>
+                </div>
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Multiple water storage tanks and underground sumps have been constructed to ensure adequate water
+                        supply even during dry seasons.</p>
+                </div>
+                <div class="water-content-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>The institution has achieved significant reduction in per capita water consumption due to
+                        systematic conservation initiatives adopted campus-wide.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        // ===== Water Conservation Swiper =====
+        new Swiper('.water-auto-swiper', {
+            slidesPerView: 1,
+            loop: true,
+            speed: 1200,
+            autoplay: { delay: 3200, disableOnInteraction: false },
+            pagination: { el: '.water-auto-swiper .swiper-pagination', clickable: true },
+        });
+
+        // ===== Transport Accordion =====
+        document.querySelectorAll('.transport-acc-header').forEach(hdr => {
+            hdr.addEventListener('click', () => {
+                const item = hdr.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.transport-acc-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('i').className = 'fa-solid fa-chevron-down';
+                });
+                if (!wasOpen) {
+                    item.classList.add('open');
+                    hdr.querySelector('i').className = 'fa-solid fa-chevron-up';
+                }
+            });
+        });
+
+        // ===== TABLE 1 — Bus Details (10 rows) =====
+        const routes = [
+            ['1', 'KANNAMANGALAM', 'A. BASKARAN', '9486308687', 'TN 23 BF 5121'],
+            ['2', 'THORAPADI', 'C. VIJAYAKUMAR', '7010710570', 'TN 23 CB 6489'],
+            ['3', 'RANIPET', 'P. PURUSHOTHAMAN', '9790512398', 'TN 23 DE 0219'],
+            ['4', 'WALAJAH', 'M. NAWAB BAIG', '9344819783', 'TN 23 CB 6484'],
+            ['5', 'GUDIYATTAM', 'P. DAVID', '9585089689', 'TN 23 BF 5670'],
+            ['6', 'MADHANUR', 'M. VENKATESAN', '9487861055', 'TN 23 BF 5040'],
+            ['8', 'USSOOR', 'N. RAMESH', '9976626260', 'TN 23 CB 6498'],
+            ['12', 'K V KUPPAM', 'C. RAVI', '8778117755', 'TN 23 BA 9727'],
+            ['13', 'VALLALAR RANAGAPURAM', 'G. VENUGOPAL', '8667372733', 'TN 23 DE 0294'],
+            ['18', 'CHITTOOR', 'C. KESAVAN', '9488063398', 'TN 23 BA 9979'],
+        ];
+        const t1 = document.getElementById('bus-table-1-body');
+        routes.forEach((r, i) => {
+            t1.innerHTML += `<tr>
+                <td>${i + 1}</td><td><a href="#">${r[0]}</a></td><td>${r[1]}</td>
+                <td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td>
+            </tr>`;
+        });
+
+        // ===== TABLE 2 — Session & Timing (25 rows) =====
+        const sessions = [
+            ['M', '1', 'R 1', 'Kanamangalam', 'College Campus', '8:50 AM', '7:25 AM', '0:00'],
+            ['M', '2', 'R 2', 'Thorapadi', 'College Campus', '8:50 AM', '7:45 AM', '0:00'],
+            ['M', '3', 'R 2', 'Ranipet', 'College Campus', '8:50 AM', '7:25 AM', '0:00'],
+            ['M', '4', 'R 4', 'Wallajah', 'College Campus', '8:50 AM', '7:30 AM', '0:00'],
+            ['M', '5', 'R 5', 'Gudiyattam', 'College Campus', '8:50 AM', '7:50 AM', '0:00'],
+            ['M', '6', 'R 6', 'Madhanur', 'College Campus', '8:50 AM', '7:30 AM', '0:00'],
+            ['M', '7', 'R 7', 'Ussoor', 'College Campus', '8:50 AM', '7:35 AM', '0:00'],
+            ['M', '8', 'R 12', 'K.V.Kuppam', 'College Campus', '8:50 AM', '7:15 AM', '0:00'],
+            ['M', '9', 'R 13', 'Vallalar Panagapuram', 'College Campus', '8:50 AM', '7:40 AM', '0:00'],
+            ['M', '10', 'R 18', 'Chittoor', 'College Campus', '8:50 AM', '6:45 AM', '0:00'],
+            ['N', '1', 'R 1', 'College Campus', 'Kanamangalam', '4:30 PM', '4:45 PM', '0:00'],
+            ['N', '2', 'R 2', 'College Campus', 'Thorapadi', '4:30 PM', '4:50 PM', '0:00'],
+            ['N', '3', 'R 2', 'College Campus', 'Ranipet', '4:30 PM', '4:45 PM', '0:00'],
+            ['N', '4', 'R 4', 'College Campus', 'Wallajah', '4:30 PM', '4:48 PM', '0:00'],
+            ['N', '5', 'R 5', 'College Campus', 'Gudiyattam', '4:30 PM', '4:52 PM', '0:00'],
+            ['N', '6', 'R 6', 'College Campus', 'Madhanur', '4:30 PM', '4:46 PM', '0:00'],
+            ['N', '7', 'R 7', 'College Campus', 'Ussoor', '4:30 PM', '4:49 PM', '0:00'],
+            ['N', '8', 'R 12', 'College Campus', 'K.V.Kuppam', '4:30 PM', '4:40 PM', '0:00'],
+            ['N', '9', 'R 13', 'College Campus', 'Vallalar Panagapuram', '4:30 PM', '4:51 PM', '0:00'],
+            ['N', '10', 'R 18', 'College Campus', 'Chittoor', '4:30 PM', '4:55 PM', '0:00'],
+            ['M', '11', 'R 1', 'Pallikonda', 'College Campus', '8:50 AM', '7:30 AM', '0:00'],
+            ['M', '12', 'R 3', 'Katpadi', 'College Campus', '8:50 AM', '8:10 AM', '0:00'],
+            ['N', '11', 'R 1', 'College Campus', 'Pallikonda', '4:30 PM', '5:00 PM', '0:00'],
+            ['N', '12', 'R 3', 'College Campus', 'Katpadi', '4:30 PM', '4:42 PM', '0:00'],
+            ['M', '13', 'R 4', 'Arcot', 'College Campus', '8:50 AM', '7:20 AM', '0:00'],
+        ];
+        const t2 = document.getElementById('bus-table-2-body');
+        sessions.forEach(s => {
+            t2.innerHTML += `<tr>
+                <td>${s[0]}</td><td><a href="#">${s[1]}</a></td><td><a href="#">${s[2]}</a></td>
+                <td>${s[3]}</td><td>${s[4]}</td>
+                <td>${s[5]}</td><td>${s[6]}</td><td>${s[7]}</td>
+            </tr>`;
+        });
+    </script>
+
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

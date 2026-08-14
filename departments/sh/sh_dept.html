@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Department - Science and Humanities | Kingston Engineering College</title>
+    <meta name="description" content="- Science and Humanities: | Kingston Engineering College Vision...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/ai-assistant.css">
+    <style>
+        .salient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .salient-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: 0.4s;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+        .salient-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(163, 31, 36, 0.12);
+            border-color: #a31f24;
+        }
+        .salient-icon-box {
+            width: 70px;
+            height: 70px;
+            background: #a31f24;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        .lab-card {
+            background: linear-gradient(145deg, #1A1A2E, #16213E);
+            color: #E94560;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0F3460;
+            box-shadow: 0 8px 32px rgba(22, 33, 62, 0.5);
+            transition: all 0.3s ease;
+        }
+        .lab-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 40px rgba(233, 69, 96, 0.3);
+            border-left: 5px solid #E94560;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- INCLUDE:components/header.html --><div id="include-header"></div>
+
+<div class="dept-details-wrapper">
+
+    <aside class="dept-sidebar">
+        <ul class="dept-sidebar-menu">
+            <li><a href="sh_dept.html" ><i class="fa-solid fa-house"></i> About the Department</a></li>
+            <li><a href="sh_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+            <li><a href="sh_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+            <li><a href="sh_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+            <li><a href="sh_non_teaching_faculty.html"><i class="fa-solid fa-users"></i> Non Teaching Faculty</a></li>
+            <li><a href="sh_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a></li>
+            <li><a href="sh_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+            <li><a href="sh_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department Academic Calendar</a></li>
+            <li><a href="sh_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+            <li><a href="sh_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+            <li><a href="sh_research.html"><i class="fa-solid fa-microscope"></i> Ph.D./M.S. (Research)</a></li>
+            <li><a href="sh_research_publications.html"><i class="fa-regular fa-bookmark"></i> Research Publications</a></li>
+            <li><a href="sh_best_practices.html"><i class="fa-regular fa-thumbs-up"></i> Best Practices</a></li>
+            <li><a href="sh_ipr.html"><i class="fa-solid fa-file-contract"></i> IPR</a></li>
+            <li><a href="sh_research_projects.html"><i class="fa-solid fa-flask"></i> Research Projects</a></li>
+            <li><a href="sh_consultancy.html"><i class="fa-solid fa-briefcase"></i> Consultancy</a></li>
+            <li><a href="sh_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a></li>
+            <li><a href="sh_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty Upskilling</a></li>
+            <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+            <li><a href="sh_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+            <li><a href="sh_higher_education.html"><i class="fa-solid fa-school"></i> Higher Education</a></li>
+            <li><a href="sh_entrepreneurship.html"><i class="fa-solid fa-lightbulb"></i> Entrepreneurship</a></li>
+            <li><a href="sh_practical_laboratory.html"><i class="fa-solid fa-flask"></i> Practical Laboratory</a></li>
+                <li><a href="sh_toppers.html"><i class="fa-solid fa-award"></i> Toppers List</a></li>
+                
+                
+            <li><a href="sh_professional_societies.html"><i class="fa-solid fa-people-group"></i> Professional Societies</a></li>
+            <li><a href="sh_clubs.html"><i class="fa-solid fa-puzzle-piece"></i> Club Activities (Clubs)</a></li>
+            <li><a href="sh_association.html"><i class="fa-solid fa-handshake"></i> Association Activities</a></li>
+            <li><a href="sh_guest_lectures.html"><i class="fa-solid fa-chalkboard-user"></i> Guest Lectures</a></li>
+            <li><a href="sh_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student Publications</a></li>
+            <li><a href="sh_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+            <li><a href="sh_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a></li>
+            <li><a href="sh_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <main class="dept-main-content">
+        <h1 class="dept-title-red" data-aos="fade-up">ABOUT THE DEPARTMENT</h1>
+        <div class="dept-subpage-content" data-aos="fade-up">
+            <section class="dept-section" data-aos="fade-up">
+                <h3>ABOUT THE DEPARTMENT</h3>
+                <div class="glass-card-premium" style="border-left: 5px solid #a31f24;">
+                    <p>The Department of Science and Humanities offers courses of study in basic Physical Science, Chemistry, Mathematics and English language during the first year of the four year course in Engineering and Technology. Students pursuing Engineering courses undergo study of basics in sciences, since Engineering is the application of science. Mathematics is the language for studying science and Engineering, and English helps students improve language skills in both writing and communication.</p>
+                    <p>The department was established with a view to consolidating the basics of sciences and English language. Courses are designed to strengthen fundamental principles, enabling students to comprehend core engineering subjects. Conceptual learning is enhanced through practical lab sessions. As part of English language teaching, life skills are imparted to improve students' marketability and employability. The department has a well-established multimedia language lab with advanced licensed software to equip students to be effective communicators.</p>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>KEY HIGHLIGHTS</h3>
+                <div class="salient-grid">
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-flask"></i></div>
+                        <h4>Well-Equipped Labs</h4>
+                        <p>Physics, Chemistry, Computer Practices and Language laboratories with state-of-the-art facilities.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4>Expert Faculty</h4>
+                        <p>Well-experienced, technically equipped faculty with proven excellence in teaching and research.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-language"></i></div>
+                        <h4>Language Lab</h4>
+                        <p>Multimedia language lab with advanced licensed software for communication skills development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>OBJECTIVES</h3>
+                <div class="glass-card" style="border-left: 5px solid #f5c518;">
+                    <ul style="line-height:1.8;">
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To offer basic science awareness and improve mathematical skills.</li>
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To improve skills in writing and communication.</li>
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To train students to excel in professional interviews.</li>
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To develop high technical skills bundled with interpersonal skills.</li>
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To produce committed engineers with Indian values and ethics.</li>
+                        <li><i class="fa-solid fa-check" style="color:#a31f24; margin-right:8px;"></i> To recognize the potential of each student and empower them to achieve their goals.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>HIGHLIGHTS</h3>
+                <div class="grid-2">
+                    <div class="lab-card" style="align-items:center; text-align:center;">
+                        <i class="fa-solid fa-flask" style="font-size:2rem; color:#f5c518; margin-bottom:10px;"></i>
+                        <h4 style="color:white;">Physics & Chemistry Lab</h4>
+                        <p style="color:#ccc;">Well equipped, spacious laboratories</p>
+                    </div>
+                    <div class="lab-card" style="align-items:center; text-align:center;">
+                        <i class="fa-solid fa-language" style="font-size:2rem; color:#f5c518; margin-bottom:10px;"></i>
+                        <h4 style="color:white;">Language Laboratory</h4>
+                        <p style="color:#ccc;">Multimedia system with latest software & Wi-Fi</p>
+                    </div>
+                    <div class="lab-card" style="align-items:center; text-align:center;">
+                        <i class="fa-solid fa-computer" style="font-size:2rem; color:#f5c518; margin-bottom:10px;"></i>
+                        <h4 style="color:white;">Computer Practices Lab</h4>
+                        <p style="color:#ccc;">Hands-on computing for engineering applications</p>
+                    </div>
+                    <div class="lab-card" style="align-items:center; text-align:center;">
+                        <i class="fa-solid fa-book" style="font-size:2rem; color:#f5c518; margin-bottom:10px;"></i>
+                        <h4 style="color:white;">Department Library</h4>
+                        <p style="color:#ccc;">Titles in Physics, Chemistry, Mathematics, English</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>FACULTY & TEACHING</h3>
+                <div class="glass-card" style="border-left: 5px solid #003366;">
+                    <p>The department has a team of well-experienced, technically equipped, well-qualified faculty with proven excellence in teaching and research. Members of faculty are well-qualified, well-experienced and committed. Students are encouraged to attend Seminars, Symposia, Workshops at Regional and National level. Continuous evaluation through regular tests and examinations ensures academic rigor. Personal attention and academic support is given to each student.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<!-- INCLUDE:components/footer.html --><div id="include-footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+<script src="../../assets/js/include-components.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src="../../assets/js/ai-assistant.js" defer></script>
+<script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 });
+</script>
+
+    <style>
+    </style>
+
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const bttBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('show', window.scrollY > 400);
+        }, { passive: true });
+    </script></body>
+</html>

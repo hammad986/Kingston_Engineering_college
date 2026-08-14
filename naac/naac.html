@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAAC - National Assessment and Accreditation Council - Kingston Engineering College</title>
+    <meta name="description" content="NAAC - National Assessment and Accreditation Council — AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/naac/naac.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="NAAC - National Assessment and Accreditation Council - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/naac/naac.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="NAAC - National Assessment and Accreditation Council — AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NAAC - National Assessment and Accreditation Council - Kingston Engineering College">
+    <meta name="twitter:description" content="NAAC - National Assessment and Accreditation Council — AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    
+    <style>
+        /* ---- PREMIUM HERO ---- */
+        .page-hero-premium {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003366 0%, #004a99 45%, #001f42 100%);
+            padding: 60px 0 80px;
+        }
+        .hero-premium-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .hero-gradient-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(245,197,24,0.12) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-particles span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: float-particle 8s infinite ease-in-out;
+        }
+        .hero-particles span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-particles span:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; width: 4px; height: 4px; }
+        .hero-particles span:nth-child(3) { top: 70%; left: 15%; animation-delay: 2s; }
+        .hero-particles span:nth-child(4) { top: 40%; left: 80%; animation-delay: 0.5s; }
+        .hero-particles span:nth-child(5) { top: 60%; left: 70%; animation-delay: 1.5s; width: 8px; height: 8px; }
+        .hero-particles span:nth-child(6) { top: 80%; left: 40%; animation-delay: 2.5s; }
+        .hero-particles span:nth-child(7) { top: 30%; left: 90%; animation-delay: 3s; width: 5px; height: 5px; }
+        .hero-particles span:nth-child(8) { top: 85%; left: 85%; animation-delay: 0.8s; }
+        .hero-particles span:nth-child(9) { top: 50%; left: 5%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-particles span:nth-child(10) { top: 10%; left: 60%; animation-delay: 2.2s; }
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+        .hero-accent-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,197,24,0.08);
+            top: -150px;
+            right: -100px;
+        }
+        .hero-accent-circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -50px;
+            top: auto;
+            right: auto;
+            border-color: rgba(255,255,255,0.05);
+        }
+        .hero-premium-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,197,24,0.15);
+            border: 1px solid rgba(245,197,24,0.3);
+            color: #f5c518;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(6px);
+        }
+        .hero-premium-badge i { font-size: 0.9rem; }
+        .hero-premium-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-premium-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-premium-breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .hero-premium-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .hero-premium-breadcrumb a:hover { color: #f5c518; }
+        .hero-premium-breadcrumb i { font-size: 0.7rem; color: rgba(255,255,255,0.3); }
+        .hero-premium-breadcrumb span { color: #f5c518; font-weight: 600; }
+        .hero-wave-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            pointer-events: none;
+        }
+        .hero-wave-divider svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .page-hero-premium { min-height: 260px; padding: 40px 0 60px; }
+            .hero-premium-title { font-size: 2rem; }
+            .hero-premium-subtitle { font-size: 1rem; }
+            .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+
+        /* ---- NAAC CARD GRID (same as UGC reference) ---- */
+        .naac-section {
+            padding: 90px 0;
+            background: #f4f7f6;
+            position: relative;
+            overflow: hidden;
+        }
+        .naac-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 35px;
+            position: relative;
+            z-index: 1;
+        }
+        .naac-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+            text-decoration: none;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        .naac-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, #8b1a2b, #d9534f);
+            transition: width 0.4s ease;
+        }
+        .naac-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 45px rgba(139, 26, 43, 0.12);
+        }
+        .naac-card:hover::after {
+            width: 100%;
+            opacity: 0.03;
+        }
+        .naac-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #fcf4f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #8b1a2b;
+            flex-shrink: 0;
+            transition: all 0.4s;
+            position: relative;
+            z-index: 1;
+        }
+        .naac-card:hover .naac-icon-wrapper {
+            background: #8b1a2b;
+            color: #fff;
+            transform: rotate(-10deg);
+        }
+        .naac-content {
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
+        .naac-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            transition: color 0.4s;
+        }
+        .naac-card:hover .naac-content h3 {
+            color: #8b1a2b;
+        }
+        .naac-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.4s;
+        }
+        .naac-card:hover .naac-badge {
+            background: rgba(139, 26, 43, 0.1);
+            color: #8b1a2b;
+        }
+        .naac-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555;
+            transition: all 0.4s;
+            position: relative;
+            z-index: 1;
+        }
+        .naac-card:hover .naac-arrow {
+            background: #8b1a2b;
+            color: #fff;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero-premium">
+        <div class="hero-premium-bg">
+            <div class="hero-gradient-layer"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-accent-circle"></div>
+            <div class="hero-accent-circle hero-accent-circle-2"></div>
+        </div>
+        <div class="container hero-premium-content" data-aos="fade-up">
+            <div class="hero-premium-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-award"></i> Accreditation & Assessment
+            </div>
+            <h1 class="hero-premium-title" data-aos="fade-up" data-aos-delay="300">NAAC</h1>
+            <p class="hero-premium-subtitle" data-aos="fade-up" data-aos-delay="400">National Assessment and Accreditation Council — "A" Grade Institution (CGPA 3.07/4.0)</p>
+            <nav class="hero-premium-breadcrumb" data-aos="fade-up" data-aos-delay="500">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>NAAC</span>
+            </nav>
+        </div>
+        <div class="hero-wave-divider">
+            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30C240 60 480 0 720 30C960 60 1200 0 1440 30V60H0V30Z" fill="var(--bg-light, #f8f9fa)"/>
+            </svg>
+        </div>
+    </section>
+
+    <section class="naac-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-down" style="margin-bottom:70px;">
+                <p style="text-transform:uppercase; letter-spacing:2px; font-weight:700; color:#8b1a2b; margin-bottom:10px; font-size:0.9rem;">
+                    Accreditation & Quality Framework</p>
+                <h2 style="font-family:'Poppins',sans-serif; font-size:2.8rem; font-weight:800; color:#111; margin-bottom:15px; text-transform:uppercase;">
+                    NAAC <span style="color:#8b1a2b;">Dashboard</span></h2>
+                <div style="width:120px; height:4px; background:linear-gradient(90deg, #8b1a2b, #e74c3c); margin:0 auto; border-radius:2px;"></div>
+            </div>
+            <div class="naac-grid">
+
+                <a href="naac_iiqa.html" class="naac-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="naac-icon-wrapper"><i class="fas fa-file-invoice"></i></div>
+                    <div class="naac-content">
+                        <h3>IIQA</h3>
+                        <span class="naac-badge">Application</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_ssr.html" class="naac-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="naac-icon-wrapper"><i class="fas fa-book"></i></div>
+                    <div class="naac-content">
+                        <h3>SSR</h3>
+                        <span class="naac-badge">Self Study Report</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_dvv.html" class="naac-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="naac-icon-wrapper"><i class="fas fa-check-double"></i></div>
+                    <div class="naac-content">
+                        <h3>DVV Clarification</h3>
+                        <span class="naac-badge">Verification</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_rti.html" class="naac-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="naac-icon-wrapper"><i class="fas fa-balance-scale"></i></div>
+                    <div class="naac-content">
+                        <h3>RTI</h3>
+                        <span class="naac-badge">Information</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_extended_profile.html" class="naac-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="naac-icon-wrapper"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <div class="naac-content">
+                        <h3>Extended Profile</h3>
+                        <span class="naac-badge">Metrics</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_curricular_aspects.html" class="naac-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="naac-icon-wrapper"><i class="fas fa-book-open"></i></div>
+                    <div class="naac-content">
+                        <h3>Curricular Aspects</h3>
+                        <span class="naac-badge">Criteria 1</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_teaching_learning.html" class="naac-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="naac-icon-wrapper"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="naac-content">
+                        <h3>Teaching Learning & Evaluation</h3>
+                        <span class="naac-badge">Criteria 2</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_research_innovation.html" class="naac-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="naac-icon-wrapper"><i class="fas fa-microscope"></i></div>
+                    <div class="naac-content">
+                        <h3>Research Innovation & Extension</h3>
+                        <span class="naac-badge">Criteria 3</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_infrastructure.html" class="naac-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="naac-icon-wrapper"><i class="fas fa-building"></i></div>
+                    <div class="naac-content">
+                        <h3>Infrastructure & Learning Resources</h3>
+                        <span class="naac-badge">Criteria 4</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_student_support.html" class="naac-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="naac-icon-wrapper"><i class="fas fa-user-graduate"></i></div>
+                    <div class="naac-content">
+                        <h3>Student Support & Progression</h3>
+                        <span class="naac-badge">Criteria 5</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_governance.html" class="naac-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="naac-icon-wrapper"><i class="fas fa-landmark"></i></div>
+                    <div class="naac-content">
+                        <h3>Governance Leadership & Management</h3>
+                        <span class="naac-badge">Criteria 6</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="naac_institutional_values.html" class="naac-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="naac-icon-wrapper"><i class="fas fa-star"></i></div>
+                    <div class="naac-content">
+                        <h3>Institutional Values & Best Practices</h3>
+                        <span class="naac-badge">Criteria 7</span>
+                    </div>
+                    <div class="naac-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 50
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

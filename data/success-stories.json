@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Ramesh",
+    "batch": "2024",
+    "department": "CSE",
+    "company": "Cognizant",
+    "role": "Programmer Analyst",
+    "package_lpa": 4.5,
+    "photo_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+    "testimonial": "The placement cell at Kingston gave me structured mock interviews and communication workshops. The sessions with industry mentors helped me crack my Cognizant interview with confidence."
+  },
+  {
+    "id": 2,
+    "name": "Arun Kumar S",
+    "batch": "2024",
+    "department": "AI & ML",
+    "company": "TCS",
+    "role": "Digital Analyst",
+    "package_lpa": 7.0,
+    "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    "testimonial": "Joining TCS as a Digital Analyst was a dream come true. The AI & ML curriculum at KEC gave me a strong foundation in Python and data science, which was directly relevant to my role."
+  },
+  {
+    "id": 3,
+    "name": "Deepika Nair",
+    "batch": "2023",
+    "department": "IT",
+    "company": "Infosys",
+    "role": "Systems Engineer",
+    "package_lpa": 3.6,
+    "photo_url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
+    "testimonial": "KEC's campus placement drives and aptitude training programs were exactly what I needed. The exposure to real placement scenarios made me thoroughly prepared for the Infosys recruitment process."
+  },
+  {
+    "id": 4,
+    "name": "Vikram S",
+    "batch": "2024",
+    "department": "ECE",
+    "company": "L&T Technology Services",
+    "role": "Graduate Engineer Trainee",
+    "package_lpa": 4.2,
+    "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+    "testimonial": "I never imagined landing a core engineering role straight from campus. The lab infrastructure at KEC and the guidance from my faculty in final year helped me prepare a strong project portfolio."
+  },
+  {
+    "id": 5,
+    "name": "Kavya Menon",
+    "batch": "2023",
+    "department": "CSE",
+    "company": "Accenture",
+    "role": "Associate Software Engineer",
+    "package_lpa": 4.5,
+    "photo_url": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80",
+    "testimonial": "The placement team organized a 10-week pre-placement bootcamp covering data structures, aptitude and HR rounds. That intensive preparation gave me the edge I needed to secure Accenture."
+  },
+  {
+    "id": 6,
+    "name": "Mohamed Siddiq",
+    "batch": "2024",
+    "department": "CSE",
+    "company": "Deloitte",
+    "role": "Technology Analyst",
+    "package_lpa": 12.5,
+    "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+    "testimonial": "Deloitte was my dream company and KEC made it possible. The focus on problem-solving and competitive coding during my final year, combined with mock interviews, prepared me exceptionally well."
+  },
+  {
+    "id": 7,
+    "name": "Sowmiya R",
+    "batch": "2023",
+    "department": "IT",
+    "company": "Capgemini",
+    "role": "Analyst",
+    "package_lpa": 4.0,
+    "photo_url": "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=200&q=80",
+    "testimonial": "Kingston's emphasis on communication and soft skills was a big differentiator. The Capgemini HR round was challenging, but the personality development sessions at KEC had prepared me really well."
+  },
+  {
+    "id": 8,
+    "name": "Rahul Anand",
+    "batch": "2022",
+    "department": "Mechanical",
+    "company": "L&T Construction",
+    "role": "Junior Engineer",
+    "package_lpa": 3.8,
+    "photo_url": "https://images.unsplash.com/photo-1590086782957-93c06ef21604?w=200&q=80",
+    "testimonial": "Getting placed in a core mechanical role was challenging. The placement director's industry network and dedicated coaching for core engineering companies helped me land my role at L&T."
+  }
+]

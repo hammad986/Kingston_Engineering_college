@@ -1,0 +1,512 @@
+/**
+ * ai-assistant-rag.css
+ * =====================
+ * RAG Chatbot UI Styles — Kingston Engineering College
+ *
+ * Builds on the existing ai-assistant.css by importing it and
+ * adding RAG-specific styles for source citations, confidence
+ * badges, and navigation links.
+ */
+
+/* ── Reuse existing chatbot base styles ──────────────────── */
+
+/* ── RAG Chat Container ────────────────────────────────── */
+.rag-chat-panel {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+}
+
+.rag-chat-header {
+    background: linear-gradient(135deg, #003366, #1a5490);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rag-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rag-header-logo {
+    height: 40px;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.rag-header-text h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.rag-header-text p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+/* ── Chat Messages ─────────────────────────────────────── */
+.rag-chat-messages {
+    flex: 1;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    background: #f7f9fc;
+    scroll-behavior: smooth;
+    min-height: 0;
+}
+
+.rag-chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.rag-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.rag-chat-messages::-webkit-scrollbar-thumb {
+    background: #d0d8e8;
+    border-radius: 4px;
+}
+
+/* ── Message Groups ────────────────────────────────────── */
+.rag-message-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 92%;
+    animation: ragFadeIn 0.3s ease-out forwards;
+    opacity: 0;
+}
+
+.rag-message-group.animate {
+    animation: ragFadeIn 0.3s ease-out forwards;
+}
+
+.rag-message-group.bot {
+    align-self: flex-start;
+}
+
+.rag-message-group.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+@keyframes ragFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Bot Avatar ────────────────────────────────────────── */
+.rag-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #003366, #1a5490);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.rag-avatar i {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+/* ── Message Bubbles ───────────────────────────────────── */
+.rag-bubble {
+    padding: 14px 18px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.rag-bubble.bot {
+    background: #ffffff;
+    color: #1a1a2e;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e8edf5;
+}
+
+.rag-bubble.user {
+    background: linear-gradient(135deg, #003366, #1a5490);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.25);
+}
+
+/* ── Answer Text ───────────────────────────────────────── */
+.rag-answer {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.rag-answer strong {
+    color: #003366;
+}
+
+.rag-answer ul {
+    margin: 6px 0;
+    padding-left: 20px;
+}
+
+.rag-answer li {
+    margin-bottom: 4px;
+}
+
+/* ── Confidence Badge ──────────────────────────────────── */
+.rag-confidence-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.rag-confidence-badge.high {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.rag-confidence-badge.medium {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.rag-confidence-badge.low,
+.rag-confidence-badge.verylow,
+.rag-confidence-badge.none {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.rag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.rag-confidence-badge.high .rag-dot { background: #22c55e; }
+.rag-confidence-badge.medium .rag-dot { background: #eab308; }
+.rag-confidence-badge.low .rag-dot,
+.rag-confidence-badge.verylow .rag-dot,
+.rag-confidence-badge.none .rag-dot { background: #ef4444; }
+
+/* ── Sources Section ───────────────────────────────────── */
+.rag-sources {
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: #f0f4ff;
+    border-radius: 10px;
+    border-left: 3px solid #003366;
+}
+
+.rag-section-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.rag-source-list {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0 0;
+}
+
+.rag-source-list li {
+    margin-bottom: 3px;
+    font-size: 0.78rem;
+}
+
+.rag-source-list a {
+    color: #1a5490;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.rag-source-list a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+/* ── Navigation Link ───────────────────────────────────── */
+.rag-navigation {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e8edf5;
+    font-size: 0.78rem;
+}
+
+.rag-nav-link {
+    color: #1a5490;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.rag-nav-link:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+.rag-nav-link i {
+    font-size: 0.7rem;
+}
+
+/* ── Typing Indicator ──────────────────────────────────── */
+.rag-typing-bubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 18px;
+    min-width: 60px;
+}
+
+.rag-dot-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a0aec0;
+    animation: ragPulse 1.2s infinite ease-in-out;
+    display: inline-block;
+}
+
+.rag-dot-pulse:nth-child(2) { animation-delay: 0.2s; }
+.rag-dot-pulse:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes ragPulse {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30%            { transform: translateY(-6px); opacity: 1; }
+}
+
+/* ── Input Section ─────────────────────────────────────── */
+.rag-input-section {
+    padding: 20px;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rag-quick-actions {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.rag-quick-btn {
+    white-space: nowrap;
+    background: #f0f3f7;
+    border: 1px solid #dde2e9;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #003366;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rag-quick-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+    border-color: #003366;
+    transform: translateY(-1px);
+}
+
+.rag-input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.rag-input-field {
+    flex: 1;
+    border: 2px solid #eef0f2;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.rag-input-field:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.05);
+}
+
+.rag-send-btn {
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.rag-send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(26, 84, 144, 0.25);
+}
+
+/* ── Info Panel ────────────────────────────────────────── */
+.rag-info-panel {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.rag-info-section {
+    margin-bottom: 25px;
+}
+
+.rag-info-section h4 {
+    color: #003366;
+    font-weight: 800;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.rag-info-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.rag-info-card {
+    padding: 14px 16px;
+    background: #f8f9fb;
+    border-radius: 12px;
+    border-left: 4px solid #003366;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rag-info-card:hover {
+    background: #eef2f7;
+    transform: translateX(5px);
+}
+
+.rag-info-card h5 {
+    margin: 0 0 3px 0;
+    color: #003366;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.rag-info-card p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #777;
+}
+
+/* ── Status Bar ────────────────────────────────────────── */
+.rag-status-bar {
+    padding: 6px 20px;
+    font-size: 0.72rem;
+    color: #666;
+    background: #f0f2f5;
+    text-align: center;
+    border-top: 1px solid #e8edf5;
+    min-height: 22px;
+}
+
+/* ── Clear Button ──────────────────────────────────────── */
+.rag-clear-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.rag-clear-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Status Dot ────────────────────────────────────────── */
+.rag-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    opacity: 0.85;
+}
+
+.rag-status-online {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: ragOnlinePulse 2s infinite;
+}
+
+@keyframes ragOnlinePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%       { transform: scale(1.3); opacity: 0.6; }
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .rag-message-group {
+        max-width: 95%;
+    }
+
+    .rag-chat-messages {
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
+    .rag-quick-actions {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .rag-input-field {
+        font-size: 0.85rem;
+    }
+
+    .rag-sources {
+        padding: 8px 10px;
+    }
+
+    .rag-info-card {
+        padding: 10px 12px;
+    }
+}

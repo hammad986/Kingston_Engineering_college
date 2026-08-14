@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards and Achievements - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- ════════════════════════════════════════════════════════════
+         AWARDS & ACHIEVEMENTS — Premium Animated Interactive Showcase
+         ════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Awards Hero Banner ── */
+        .aw-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, #8b1a2b 0%, #a82035 40%, #c0392b 70%, #6d1220 100%);
+            padding: 68px 20px 76px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .aw-hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg,
+                    rgba(255, 255, 255, 0.04) 0px,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px,
+                    transparent 38px);
+            animation: awStripe 22s linear infinite;
+        }
+
+        @keyframes awStripe {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 220px 220px;
+            }
+        }
+
+        .aw-hero-banner::after {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 460px;
+            border-radius: 50%;
+            border: 72px solid rgba(245, 197, 24, 0.07);
+            bottom: -160px;
+            left: -80px;
+            animation: awSpin 30s linear infinite;
+        }
+
+        @keyframes awSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .aw-banner-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .aw-banner-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 14px;
+            animation: awUp 0.7s 0.2s both;
+        }
+
+        .aw-banner-eyebrow::before,
+        .aw-banner-eyebrow::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: #f5c518;
+        }
+
+        .aw-banner-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: awUp 0.7s 0.35s both;
+        }
+
+        .aw-banner-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.72);
+            max-width: 560px;
+            margin: 0 auto 26px;
+            animation: awUp 0.7s 0.5s both;
+        }
+
+        .aw-banner-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: awUp 0.7s 0.65s both;
+        }
+
+        .aw-banner-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 18px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .aw-banner-pill:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        @keyframes awUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Wave Divider ── */
+        .aw-wave {
+            line-height: 0;
+            background: #8b1a2b;
+        }
+
+        .aw-wave svg {
+            display: block;
+        }
+
+        /* ── Main Section ── */
+        .aw-main-section {
+            background: #f7f3f0;
+            padding: 64px 0 84px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating shapes */
+        .aw-shape {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .aw-shape-1 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgba(139, 26, 43, 0.1);
+            top: 30px;
+            right: -70px;
+            animation: awShapeSpin 20s linear infinite;
+        }
+
+        .aw-shape-2 {
+            width: 130px;
+            height: 130px;
+            border: 3px solid rgba(245, 197, 24, 0.18);
+            border-radius: 50%;
+            bottom: 80px;
+            left: -50px;
+            animation: awShapeSpin2 16s linear infinite;
+        }
+
+        .aw-shape-3 {
+            width: 70px;
+            height: 70px;
+            background: rgba(139, 26, 43, 0.05);
+            border-radius: 12px;
+            top: 45%;
+            left: 50px;
+            animation: awShapeFloat 9s ease-in-out infinite;
+        }
+
+        @keyframes awShapeSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes awShapeSpin2 {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes awShapeFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(15deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(28deg);
+            }
+        }
+
+        /* ── Section header ── */
+        .aw-section-header {
+            text-align: center;
+            margin-bottom: 42px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .aw-section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: #8b1a2b;
+            margin-bottom: 12px;
+        }
+
+        .aw-section-eyebrow::before,
+        .aw-section-eyebrow::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b1a2b, transparent);
+        }
+
+        .aw-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            color: #1a1a1a;
+            margin: 0 0 10px;
+        }
+
+        .aw-section-title span {
+            color: #8b1a2b;
+        }
+
+        .aw-section-divider {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #8b1a2b, #f5c518);
+            border-radius: 2px;
+            margin: 0 auto 14px;
+        }
+
+        .aw-section-sub {
+            font-size: 0.96rem;
+            color: #666;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* ── Filter Tabs ── */
+        .aw-filter-wrap {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .aw-filter-btn {
+            padding: 9px 22px;
+            border-radius: 50px;
+            border: 2px solid rgba(139, 26, 43, 0.25);
+            background: #fff;
+            color: #555;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+            letter-spacing: 0.04em;
+        }
+
+        .aw-filter-btn:hover {
+            border-color: #8b1a2b;
+            color: #8b1a2b;
+            transform: translateY(-2px);
+        }
+
+        .aw-filter-btn.active {
+            background: linear-gradient(135deg, #8b1a2b, #c0392b);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(139, 26, 43, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* ── Masonry Grid ── */
+        .aw-grid {
+            columns: 4 280px;
+            column-gap: 18px;
+            position: relative;
+            z-index: 5;
+            padding: 0 4px;
+        }
+
+        .aw-card {
+            break-inside: avoid;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.38s ease;
+            animation: awCardIn 0.55s both;
+            display: block;
+        }
+
+        .aw-card.hidden-card {
+            display: none;
+        }
+
+        @keyframes awCardIn {
+            from {
+                opacity: 0;
+                transform: translateY(28px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .aw-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(139, 26, 43, 0.22);
+            z-index: 10;
+        }
+
+        .aw-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.45s ease;
+            object-fit: cover;
+        }
+
+        .aw-card:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Overlay on hover */
+        .aw-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(139, 26, 43, 0.88) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+        }
+
+        .aw-card:hover .aw-card-overlay {
+            opacity: 1;
+        }
+
+        .aw-card-overlay-text {
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .aw-card-overlay-text i {
+            font-size: 0.9rem;
+        }
+
+        /* Year badge */
+        .aw-year-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #8b1a2b;
+            color: #fff;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            z-index: 5;
+        }
+
+        .aw-year-badge.gold {
+            background: #e5a800;
+            color: #111;
+        }
+
+        .aw-year-badge.blue {
+            background: #003366;
+        }
+
+        /* ── Lightbox ── */
+        .aw-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s;
+        }
+
+        .aw-lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .aw-lightbox-inner {
+            position: relative;
+            max-width: 92vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aw-lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            object-fit: contain;
+            transform: scale(0.9);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .aw-lightbox.open .aw-lightbox-img {
+            transform: scale(1);
+        }
+
+        .aw-lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 26px;
+            width: 42px;
+            height: 42px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+        }
+
+        .aw-lightbox-close:hover {
+            background: #8b1a2b;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .aw-lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            z-index: 10000;
+        }
+
+        .aw-lightbox-nav:hover {
+            background: #8b1a2b;
+            border-color: #8b1a2b;
+        }
+
+        .aw-lightbox-prev {
+            left: 16px;
+        }
+
+        .aw-lightbox-next {
+            right: 16px;
+        }
+
+        .aw-lightbox-counter {
+            margin-top: 14px;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        /* ── Stats Row ── */
+        .aw-stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 18px;
+            margin-top: 64px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .aw-stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 4px 22px rgba(0, 0, 0, 0.07);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s;
+        }
+
+        .aw-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--ac, #8b1a2b);
+        }
+
+        .aw-stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
+        }
+
+        .aw-stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin: 0 auto 12px;
+        }
+
+        .aw-stat-num {
+            font-size: 2.1rem;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            line-height: 1;
+        }
+
+        .aw-stat-label {
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 6px;
+        }
+
+        /* ── Entrance animation ── */
+        [data-aw-animate] {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        [data-aw-animate].is-vis {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Hero Banner -->
+    <div class="aw-hero-banner">
+        <div class="aw-banner-inner">
+            <div class="aw-banner-eyebrow"><span>Pride &amp; Recognition</span></div>
+            <h2 class="aw-banner-title">Awards &amp; Achievements</h2>
+            <p class="aw-banner-sub">Celebrating the milestones, accolades, and triumphs that define Kingston
+                Engineering College's legacy of excellence</p>
+            <div class="aw-banner-pills">
+                <span class="aw-banner-pill"><i class="fa-solid fa-trophy"></i> National Awards</span>
+                <span class="aw-banner-pill"><i class="fa-solid fa-medal"></i> Student Achievements</span>
+                <span class="aw-banner-pill"><i class="fa-solid fa-certificate"></i> Institutional Honors</span>
+                <span class="aw-banner-pill"><i class="fa-solid fa-star"></i> 50+ Recognitions</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wave -->
+    <div class="aw-wave">
+        <svg viewBox="0 0 1440 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:52px;">
+            <path d="M0,0 C280,52 580,0 820,38 C1060,76 1280,10 1440,36 L1440,0 Z" fill="#f7f3f0" />
+        </svg>
+    </div>
+
+    <!-- Main Section -->
+    <div class="aw-main-section" id="awMainSection">
+        <!-- Floating shapes -->
+        <div class="aw-shape aw-shape-1"></div>
+        <div class="aw-shape aw-shape-2"></div>
+        <div class="aw-shape aw-shape-3"></div>
+
+        <div class="container">
+
+            <!-- Section header -->
+            <div class="aw-section-header" data-aw-animate>
+                <div class="aw-section-eyebrow"><span>Gallery</span></div>
+                <h2 class="aw-section-title">Recent <span>Achievements</span> — 2024</h2>
+                <div class="aw-section-divider"></div>
+                <p class="aw-section-sub">Browse our growing collection of awards, certificates, and proud moments from
+                    our students and faculty.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="aw-filter-wrap" data-aw-animate style="transition-delay:0.12s;">
+                <button class="aw-filter-btn active" onclick="awFilter(this,'all')">All</button>
+                <button class="aw-filter-btn" onclick="awFilter(this,'2023')">2023</button>
+                <button class="aw-filter-btn" onclick="awFilter(this,'2022')">2022</button>
+                <button class="aw-filter-btn" onclick="awFilter(this,'2019')">2019</button>
+                <button class="aw-filter-btn" onclick="awFilter(this,'2018')">2018</button>
+            </div>
+
+            <!-- Awards Masonry Grid -->
+            <div class="aw-grid" id="awGrid" data-aw-animate style="transition-delay:0.22s;">
+
+            
+                <!-- 2023 Images -->
+                <div class="aw-card" data-year="2023" onclick="awOpenLightbox(13)">
+                    <span class="aw-year-badge gold">2023</span>
+                    <img src="../assets/images/awards&achievements/19.4.23 Award-1.jpg" alt="Award April 2023"
+                        loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2023" onclick="awOpenLightbox(14)">
+                    <span class="aw-year-badge gold">2023</span>
+                    <img src="../assets/images/awards&achievements/Kingston-Award 21.4.23-1.jpg"
+                        alt="Kingston Award 2023" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2023" onclick="awOpenLightbox(15)">
+                    <span class="aw-year-badge gold">2023</span>
+                    <img src="../assets/images/awards&achievements/APCE certificate 19-Jul-2023 09-08-47-1.jpg"
+                        alt="APCE Certificate 2023" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2023" onclick="awOpenLightbox(16)">
+                    <span class="aw-year-badge gold">2023</span>
+                    <img src="../assets/images/awards&achievements/yrc zonal level students 2023-1.jpg"
+                        alt="YRC Zonal Level 2023" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2023" onclick="awOpenLightbox(17)">
+                    <span class="aw-year-badge gold">2023</span>
+                    <img src="../assets/images/awards&achievements/CMC blood donation 2023-1.jpg"
+                        alt="CMC Blood Donation 2023" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+
+                <!-- 2022 Images -->
+                <div class="aw-card" data-year="2022" onclick="awOpenLightbox(18)">
+                    <span class="aw-year-badge blue">2022</span>
+                    <img src="../assets/images/awards&achievements/outstanding leader in higher education 2022-1.jpg"
+                        alt="Outstanding Leader 2022" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2022" onclick="awOpenLightbox(19)">
+                    <span class="aw-year-badge blue">2022</span>
+                    <img src="../assets/images/awards&achievements/tamilnadu college speech competition 2022-1.jpg"
+                        alt="Speech Competition 2022" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+
+                <!-- 2019 Images -->
+                <div class="aw-card" data-year="2019" onclick="awOpenLightbox(20)">
+                    <span class="aw-year-badge">2019</span>
+                    <img src="../assets/images/awards&achievements/awards 2019-1.jpg" alt="Awards 2019" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2019" onclick="awOpenLightbox(21)">
+                    <span class="aw-year-badge">2019</span>
+                    <img src="../assets/images/awards&achievements/global excellence recognition awards 2019-1.jpg"
+                        alt="Global Excellence 2019" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2019" onclick="awOpenLightbox(22)">
+                    <span class="aw-year-badge">2019</span>
+                    <img src="../assets/images/awards&achievements/Hr Conclave MWC 2019-1.jpg" alt="HR Conclave 2019"
+                        loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+
+                <!-- 2018 Images -->
+                <div class="aw-card" data-year="2018" onclick="awOpenLightbox(23)">
+                    <span class="aw-year-badge gold">2018</span>
+                    <img src="../assets/images/awards&achievements/2018.jpg" alt="Award 2018" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2018" onclick="awOpenLightbox(24)">
+                    <span class="aw-year-badge gold">2018</span>
+                    <img src="../assets/images/awards&achievements/Rotaract club 2018-1.jpg" alt="Rotaract Club 2018"
+                        loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+                <div class="aw-card" data-year="2018" onclick="awOpenLightbox(25)">
+                    <span class="aw-year-badge gold">2018</span>
+                    <img src="../assets/images/awards&achievements/mic  2018-1.jpg" alt="MIC 2018" loading="lazy">
+                    <div class="aw-card-overlay"><span class="aw-card-overlay-text"><i class="fa-solid fa-expand"></i>
+                            View Full</span></div>
+                </div>
+
+            </div><!-- /aw-grid -->
+
+            <!-- Stats -->
+            <div class="aw-stats-row">
+                <div class="aw-stat-card" style="--ac:#8b1a2b;" data-aw-animate style="transition-delay:0.1s;">
+                    <div class="aw-stat-icon" style="background:#fdf0f2;"><i class="fa-solid fa-trophy"
+                            style="color:#8b1a2b;"></i></div>
+                    <div class="aw-stat-num" data-count="50">0</div>
+                    <div class="aw-stat-label">Awards Won</div>
+                </div>
+                <div class="aw-stat-card" style="--ac:#e5a800;" data-aw-animate style="transition-delay:0.2s;">
+                    <div class="aw-stat-icon" style="background:#fffde7;"><i class="fa-solid fa-medal"
+                            style="color:#e5a800;"></i></div>
+                    <div class="aw-stat-num" data-count="25">0</div>
+                    <div class="aw-stat-label">Years of Excellence</div>
+                </div>
+                <div class="aw-stat-card" style="--ac:#2563eb;" data-aw-animate style="transition-delay:0.3s;">
+                    <div class="aw-stat-icon" style="background:#eff6ff;"><i class="fa-solid fa-star"
+                            style="color:#2563eb;"></i></div>
+                    <div class="aw-stat-num" data-count="100">0</div>
+                    <div class="aw-stat-label">Student Achievers</div>
+                </div>
+                <div class="aw-stat-card" style="--ac:#059669;" data-aw-animate style="transition-delay:0.4s;">
+                    <div class="aw-stat-icon" style="background:#ecfdf5;"><i class="fa-solid fa-certificate"
+                            style="color:#059669;"></i></div>
+                    <div class="aw-stat-num" data-count="30">0</div>
+                    <div class="aw-stat-label">National Rankings</div>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </div><!-- /aw-main-section -->
+
+    <!-- Lightbox -->
+    <div class="aw-lightbox" id="awLightbox">
+        <button class="aw-lightbox-close" onclick="awCloseLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="aw-lightbox-nav aw-lightbox-prev" onclick="awNavLightbox(-1)"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="aw-lightbox-nav aw-lightbox-next" onclick="awNavLightbox(1)"><i
+                class="fa-solid fa-chevron-right"></i></button>
+        <div class="aw-lightbox-inner">
+            <img class="aw-lightbox-img" id="awLightboxImg" src="" alt="Achievement" loading="lazy" decoding="async">
+            <div class="aw-lightbox-counter" id="awLightboxCounter"></div>
+        </div>
+    </div>
+
+    <!-- Awards Interactive Script -->
+    <script>
+        (function () {
+            /* ── Build image list from grid ── */
+            const cards = Array.from(document.querySelectorAll('.aw-card'));
+            const imgs = cards.map(c => ({ src: c.querySelector('img').src, alt: c.querySelector('img').alt }));
+            let curIdx = 0;
+            let visibleIdxs = cards.map((_, i) => i);
+
+            /* ── Lightbox ── */
+            const lb = document.getElementById('awLightbox');
+            const lbImg = document.getElementById('awLightboxImg');
+            const lbCtr = document.getElementById('awLightboxCounter');
+
+            function updateLightbox() {
+                const vi = visibleIdxs.indexOf(curIdx);
+                lbImg.src = imgs[curIdx].src;
+                lbImg.alt = imgs[curIdx].alt;
+                lbCtr.textContent = (vi + 1) + ' / ' + visibleIdxs.length;
+            }
+
+            window.awOpenLightbox = function (idx) {
+                curIdx = idx;
+                lb.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                updateLightbox();
+            };
+            window.awCloseLightbox = function () {
+                lb.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+            window.awNavLightbox = function (dir) {
+                const vi = visibleIdxs.indexOf(curIdx);
+                const ni = (vi + dir + visibleIdxs.length) % visibleIdxs.length;
+                curIdx = visibleIdxs[ni];
+                lbImg.style.opacity = '0';
+                lbImg.style.transform = 'scale(0.92)';
+                setTimeout(() => {
+                    updateLightbox();
+                    lbImg.style.opacity = '1';
+                    lbImg.style.transform = 'scale(1)';
+                }, 180);
+            };
+            lbImg.style.transition = 'opacity 0.2s, transform 0.2s';
+            lb.addEventListener('click', e => { if (e.target === lb) awCloseLightbox(); });
+            document.addEventListener('keydown', e => {
+                if (!lb.classList.contains('open')) return;
+                if (e.key === 'Escape') awCloseLightbox();
+                if (e.key === 'ArrowRight') awNavLightbox(1);
+                if (e.key === 'ArrowLeft') awNavLightbox(-1);
+            });
+
+            /* ── Fix click index for filtered view ── */
+            cards.forEach((card, i) => {
+                card.onclick = () => awOpenLightbox(i);
+            });
+
+            /* ── Filter ── */
+            window.awFilter = function (btn, year) {
+                document.querySelectorAll('.aw-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                visibleIdxs = [];
+                cards.forEach((card, i) => {
+                    const match = year === 'all' || card.dataset.year === year;
+                    if (match) {
+                        card.classList.remove('hidden-card');
+                        card.style.animation = 'none';
+                        card.offsetHeight; // reflow
+                        card.style.animation = 'awCardIn 0.45s both';
+                        visibleIdxs.push(i);
+                    } else {
+                        card.classList.add('hidden-card');
+                    }
+                });
+            };
+
+            /* ── Scroll-triggered entrance ── */
+            const awEls = document.querySelectorAll('[data-aw-animate]');
+            const io = new IntersectionObserver(ents => {
+                ents.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-vis'); io.unobserve(e.target); } });
+            }, { threshold: 0.12 });
+            awEls.forEach(el => io.observe(el));
+
+            /* ── Counter animation ── */
+            function animCount(el, target) {
+                let cur = 0;
+                const step = Math.ceil(target / 55);
+                const t = setInterval(() => {
+                    cur = Math.min(cur + step, target);
+                    el.textContent = cur + '+';
+                    if (cur >= target) clearInterval(t);
+                }, 22);
+            }
+            const cEls = document.querySelectorAll('.aw-stat-num[data-count]');
+            const cIO = new IntersectionObserver(ents => {
+                ents.forEach(e => {
+                    if (e.isIntersecting) {
+                        animCount(e.target, parseInt(e.target.dataset.count));
+                        cIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            cEls.forEach(el => cIO.observe(el));
+        })();
+    </script>
+
+
+    <!-- Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/news.js" defer></script>
+    <script src="../assets/js/events.js" defer></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+</body>
+
+</html>

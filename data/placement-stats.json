@@ -1,0 +1,67 @@
+{
+  "years": [
+    {
+      "year": "2024-25",
+      "label": "2024–25",
+      "overall": {
+        "placement_percent": 78,
+        "avg_package_lpa": 4.8,
+        "highest_package_lpa": 14.0,
+        "companies_visited": 85,
+        "students_eligible": 795,
+        "students_placed": 620
+      },
+      "departments": [
+        { "name": "CSE",        "eligible": 185, "placed": 157, "percent": 85, "avg_lpa": 5.4, "highest_lpa": 14.0 },
+        { "name": "IT",         "eligible": 120, "placed": 99,  "percent": 83, "avg_lpa": 5.1, "highest_lpa": 12.0 },
+        { "name": "AI & ML",    "eligible": 90,  "placed": 80,  "percent": 89, "avg_lpa": 5.8, "highest_lpa": 14.0 },
+        { "name": "ECE",        "eligible": 155, "placed": 124, "percent": 80, "avg_lpa": 4.5, "highest_lpa": 10.5 },
+        { "name": "EEE",        "eligible": 80,  "placed": 58,  "percent": 73, "avg_lpa": 4.0, "highest_lpa": 8.0  },
+        { "name": "Mechanical", "eligible": 100, "placed": 68,  "percent": 68, "avg_lpa": 3.8, "highest_lpa": 7.5  },
+        { "name": "Civil",      "eligible": 65,  "placed": 34,  "percent": 52, "avg_lpa": 3.5, "highest_lpa": 6.5  }
+      ]
+    },
+    {
+      "year": "2023-24",
+      "label": "2023–24",
+      "overall": {
+        "placement_percent": 76,
+        "avg_package_lpa": 4.5,
+        "highest_package_lpa": 12.5,
+        "companies_visited": 78,
+        "students_eligible": 776,
+        "students_placed": 590
+      },
+      "departments": [
+        { "name": "CSE",        "eligible": 180, "placed": 149, "percent": 83, "avg_lpa": 5.0, "highest_lpa": 12.5 },
+        { "name": "IT",         "eligible": 118, "placed": 95,  "percent": 81, "avg_lpa": 4.8, "highest_lpa": 11.0 },
+        { "name": "AI & ML",    "eligible": 72,  "placed": 61,  "percent": 85, "avg_lpa": 5.2, "highest_lpa": 12.5 },
+        { "name": "ECE",        "eligible": 150, "placed": 118, "percent": 79, "avg_lpa": 4.2, "highest_lpa": 9.5  },
+        { "name": "EEE",        "eligible": 82,  "placed": 57,  "percent": 70, "avg_lpa": 3.8, "highest_lpa": 7.5  },
+        { "name": "Mechanical", "eligible": 105, "placed": 68,  "percent": 65, "avg_lpa": 3.6, "highest_lpa": 7.0  },
+        { "name": "Civil",      "eligible": 69,  "placed": 42,  "percent": 61, "avg_lpa": 3.4, "highest_lpa": 6.0  }
+      ]
+    },
+    {
+      "year": "2022-23",
+      "label": "2022–23",
+      "overall": {
+        "placement_percent": 73,
+        "avg_package_lpa": 4.2,
+        "highest_package_lpa": 11.0,
+        "companies_visited": 72,
+        "students_eligible": 747,
+        "students_placed": 545
+      },
+      "departments": [
+        { "name": "CSE",        "eligible": 175, "placed": 140, "percent": 80, "avg_lpa": 4.7, "highest_lpa": 11.0 },
+        { "name": "IT",         "eligible": 115, "placed": 89,  "percent": 77, "avg_lpa": 4.4, "highest_lpa": 10.0 },
+        { "name": "AI & ML",    "eligible": 48,  "placed": 40,  "percent": 83, "avg_lpa": 5.0, "highest_lpa": 11.0 },
+        { "name": "ECE",        "eligible": 148, "placed": 112, "percent": 76, "avg_lpa": 3.9, "highest_lpa": 8.5  },
+        { "name": "EEE",        "eligible": 85,  "placed": 58,  "percent": 68, "avg_lpa": 3.6, "highest_lpa": 7.0  },
+        { "name": "Mechanical", "eligible": 108, "placed": 65,  "percent": 60, "avg_lpa": 3.4, "highest_lpa": 6.5  },
+        { "name": "Civil",      "eligible": 68,  "placed": 41,  "percent": 60, "avg_lpa": 3.2, "highest_lpa": 5.8  }
+      ]
+    }
+  ]
+}

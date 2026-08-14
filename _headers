@@ -1,0 +1,31 @@
+# Cloudflare Pages security headers — static site + Pages Functions
+# https://developers.cloudflare.com/pages/platform/headers/
+#
+# Intentionally permissive on script/style/font sources because the site legally
+# loads vendor code from public CDNs (swiper, AOS, Font Awesome, Google Fonts)
+# and uses inline event handlers throughout. A strict CSP that blocks these would
+# break the site. This file sets the no-regression headers; tightening script-src
+# with nonces is a documented future hardening step.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Model / wasm / vector assets are immutable content; safe to cache aggressively.
+/assets/models/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/assets/vendor/transformers/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/data/vectors.bin
+  Cache-Control: public, max-age=86400
+  X-Content-Type-Options: nosniff
+
+# RAG JSON data changes when the corpus is regenerated — keep it fresh.
+/data/*.json
+  Cache-Control: public, max-age=0, must-revalidate

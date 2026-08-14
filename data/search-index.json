@@ -1,0 +1,2154 @@
+[
+ {
+  "title": "Home",
+  "url": "index.html",
+  "description": "Kingston Engineering College – Autonomous, AICTE Approved, NAAC A Grade institution in Vellore.",
+  "category": "General",
+  "keywords": [
+   "home",
+   "kingston",
+   "engineering college",
+   "autonomous",
+   "naac",
+   "aicte",
+   "vellore"
+  ]
+ },
+ {
+  "title": "About Kingston Engineering College",
+  "url": "about.html",
+  "description": "Learn about Kingston Engineering College's history, mission, vision, and values.",
+  "category": "About",
+  "keywords": [
+   "about",
+   "history",
+   "mission",
+   "vision",
+   "kingston",
+   "college",
+   "overview",
+   "autonomous"
+  ]
+ },
+ {
+  "title": "Chairman's Message",
+  "url": "about/about_chairman.html",
+  "description": "Message from the Chairman of Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "chairman",
+   "message",
+   "leadership",
+   "management",
+   "founder"
+  ]
+ },
+ {
+  "title": "Principal's Message",
+  "url": "about/about_principal.html",
+  "description": "Message from the Principal of Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "principal",
+   "director",
+   "message",
+   "leadership",
+   "head"
+  ]
+ },
+ {
+  "title": "Memorandum of Understanding (MOU)",
+  "url": "about/about_mou.html",
+  "description": "List of MOUs signed with industry and academic partners.",
+  "category": "About",
+  "keywords": [
+   "mou",
+   "memorandum",
+   "collaboration",
+   "partnership",
+   "industry",
+   "academic"
+  ]
+ },
+ {
+  "title": "Awards and Achievements",
+  "url": "about/about_awards.html",
+  "description": "National and international awards won by Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "awards",
+   "achievements",
+   "recognition",
+   "honors",
+   "medals",
+   "trophies"
+  ]
+ },
+ {
+  "title": "Organogram",
+  "url": "about/about_organogram.html",
+  "description": "Organizational chart of Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "organogram",
+   "organizational chart",
+   "structure",
+   "hierarchy",
+   "management"
+  ]
+ },
+ {
+  "title": "Governing Council",
+  "url": "about/about_governing.html",
+  "description": "Members of the Governing Council of Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "governing council",
+   "board",
+   "members",
+   "trustees",
+   "administration"
+  ]
+ },
+ {
+  "title": "Accreditation",
+  "url": "about/about_accreditation.html",
+  "description": "Details on NAAC, NBA, AICTE accreditations held by Kingston Engineering College.",
+  "category": "About",
+  "keywords": [
+   "accreditation",
+   "naac",
+   "nba",
+   "aicte",
+   "anna university",
+   "iso",
+   "ugc",
+   "approval"
+  ]
+ },
+ {
+  "title": "Departments",
+  "url": "departments.html",
+  "description": "All academic departments offered at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "departments",
+   "courses",
+   "programs",
+   "streams",
+   "branches",
+   "engineering"
+  ]
+ },
+ {
+  "title": "Computer Science and Engineering (CSE)",
+  "url": "dept_cse.html",
+  "description": "Department of Computer Science and Engineering at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "cse",
+   "computer science",
+   "engineering",
+   "department",
+   "software",
+   "programming"
+  ]
+ },
+ {
+  "title": "Electronics and Communication Engineering (ECE)",
+  "url": "dept_ece.html",
+  "description": "Department of Electronics and Communication Engineering.",
+  "category": "Departments",
+  "keywords": [
+   "ece",
+   "electronics",
+   "communication",
+   "department",
+   "vlsi",
+   "embedded"
+  ]
+ },
+ {
+  "title": "Mechanical Engineering",
+  "url": "dept_mech.html",
+  "description": "Department of Mechanical Engineering at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "mechanical",
+   "engineering",
+   "department",
+   "automobile",
+   "design",
+   "manufacturing"
+  ]
+ },
+ {
+  "title": "Information Technology (IT)",
+  "url": "dept_IT.html",
+  "description": "Department of Information Technology at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "information technology",
+   "it",
+   "department",
+   "software",
+   "networking"
+  ]
+ },
+ {
+  "title": "Artificial Intelligence and Data Science (AI&DS)",
+  "url": "dept_aids.html",
+  "description": "Department of Artificial Intelligence and Data Science.",
+  "category": "Departments",
+  "keywords": [
+   "ai",
+   "data science",
+   "artificial intelligence",
+   "machine learning",
+   "department"
+  ]
+ },
+ {
+  "title": "CSE with AI & ML",
+  "url": "dept_AI&ML.html",
+  "description": "Computer Science Engineering with Artificial Intelligence and Machine Learning.",
+  "category": "Departments",
+  "keywords": [
+   "aiml",
+   "ai",
+   "machine learning",
+   "cse",
+   "department",
+   "artificial intelligence"
+  ]
+ },
+ {
+  "title": "Computer Science and Business Systems (CSBS)",
+  "url": "dept_csbs.html",
+  "description": "Department of Computer Science and Business Systems.",
+  "category": "Departments",
+  "keywords": [
+   "csbs",
+   "computer science",
+   "business systems",
+   "department",
+   "management"
+  ]
+ },
+ {
+  "title": "Bachelor of Architecture (B.Arch)",
+  "url": "dept_BA.html",
+  "description": "Department of Architecture at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "architecture",
+   "b.arch",
+   "design",
+   "department",
+   "building",
+   "planning"
+  ]
+ },
+ {
+  "title": "Masters in Business Administration (MBA)",
+  "url": "dept_MBA.html",
+  "description": "MBA program at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "mba",
+   "management",
+   "business administration",
+   "masters",
+   "postgraduate"
+  ]
+ },
+ {
+  "title": "Science and Humanities",
+  "url": "dept_S&H.html",
+  "description": "Department of Science and Humanities.",
+  "category": "Departments",
+  "keywords": [
+   "science",
+   "humanities",
+   "physics",
+   "chemistry",
+   "maths",
+   "english",
+   "department"
+  ]
+ },
+ {
+  "title": "Department of Architecture",
+  "url": "dept_BA.html",
+  "description": "Architecture department programs and faculty information.",
+  "category": "Departments",
+  "keywords": [
+   "architecture",
+   "design",
+   "planning",
+   "drawing",
+   "department"
+  ]
+ },
+ {
+  "title": "Chemistry Department",
+  "url": "departments/sh/sh_dept.html",
+  "description": "Chemistry department at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "chemistry",
+   "science",
+   "lab",
+   "department",
+   "chemical"
+  ]
+ },
+ {
+  "title": "Mathematics Department",
+  "url": "departments/sh/sh_dept.html",
+  "description": "Mathematics department at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "mathematics",
+   "maths",
+   "calculus",
+   "algebra",
+   "department"
+  ]
+ },
+ {
+  "title": "Physics Department",
+  "url": "departments/sh/sh_dept.html",
+  "description": "Physics department at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "physics",
+   "science",
+   "lab",
+   "department",
+   "optics"
+  ]
+ },
+ {
+  "title": "English Department",
+  "url": "departments/sh/sh_dept.html",
+  "description": "English department at Kingston Engineering College.",
+  "category": "Departments",
+  "keywords": [
+   "english",
+   "language",
+   "communication",
+   "department",
+   "literature"
+  ]
+ },
+ {
+  "title": "Academics",
+  "url": "academics.html",
+  "description": "Academic programs, curriculum, regulations and academic calendar at Kingston.",
+  "category": "Academics",
+  "keywords": [
+   "academics",
+   "curriculum",
+   "syllabus",
+   "programs",
+   "courses",
+   "calendar",
+   "regulation"
+  ]
+ },
+ {
+  "title": "Admission",
+  "url": "admission.html",
+  "description": "Admission process, eligibility, and requirements for Kingston Engineering College.",
+  "category": "Admission",
+  "keywords": [
+   "admission",
+   "apply",
+   "eligibility",
+   "tnea",
+   "counselling",
+   "seat",
+   "enroll"
+  ]
+ },
+ {
+  "title": "Facilities",
+  "url": "facilities.html",
+  "description": "Overview of facilities available at Kingston Engineering College campus.",
+  "category": "Facilities",
+  "keywords": [
+   "facilities",
+   "campus",
+   "infrastructure",
+   "amenities",
+   "services"
+  ]
+ },
+ {
+  "title": "Infrastructure",
+  "url": "facilities/facilities_infrastructure.html",
+  "description": "Buildings, labs, classrooms, and campus infrastructure.",
+  "category": "Facilities",
+  "keywords": [
+   "infrastructure",
+   "buildings",
+   "labs",
+   "classrooms",
+   "campus",
+   "facilities"
+  ]
+ },
+ {
+  "title": "IT Infrastructure",
+  "url": "facilities/facilities_it.html",
+  "description": "IT labs, internet connectivity, and computing facilities.",
+  "category": "Facilities",
+  "keywords": [
+   "it",
+   "computer lab",
+   "internet",
+   "wifi",
+   "computing",
+   "servers",
+   "technology"
+  ]
+ },
+ {
+  "title": "Library",
+  "url": "facilities/facilities_library.html",
+  "description": "Central library with books, journals, e-resources and digital library.",
+  "category": "Facilities",
+  "keywords": [
+   "library",
+   "books",
+   "journals",
+   "digital",
+   "e-resources",
+   "reading room",
+   "knowledge centre"
+  ]
+ },
+ {
+  "title": "Welfare Measures",
+  "url": "facilities/facilities_welfare.html",
+  "description": "Student welfare measures including counselling, health, and support services.",
+  "category": "Facilities",
+  "keywords": [
+   "welfare",
+   "student support",
+   "counselling",
+   "health",
+   "grievance",
+   "canteen"
+  ]
+ },
+ {
+  "title": "Event Gallery",
+  "url": "facilities/facilities_event_gallery.html",
+  "description": "Photos and videos from events and activities at Kingston Engineering College.",
+  "category": "Facilities",
+  "keywords": [
+   "gallery",
+   "events",
+   "photos",
+   "pictures",
+   "activities",
+   "functions",
+   "cultural"
+  ]
+ },
+ {
+  "title": "Campus Tour",
+  "url": "campus_tour.html",
+  "description": "Virtual campus tour of Kingston Engineering College.",
+  "category": "Facilities",
+  "keywords": [
+   "campus tour",
+   "virtual tour",
+   "campus",
+   "walkthrough",
+   "visit"
+  ]
+ },
+ {
+  "title": "Placement & Training Cell",
+  "url": "placements/placement_pat.html",
+  "description": "Placement and training activities at Kingston Engineering College.",
+  "category": "Placements",
+  "keywords": [
+   "placement",
+   "training",
+   "jobs",
+   "career",
+   "cell",
+   "pat",
+   "recruitment"
+  ]
+ },
+ {
+  "title": "Placement Report",
+  "url": "placements/placement_report.html",
+  "description": "Annual placement statistics, packages, and company recruitment data.",
+  "category": "Placements",
+  "keywords": [
+   "placement report",
+   "statistics",
+   "package",
+   "lpa",
+   "salary",
+   "annual report"
+  ]
+ },
+ {
+  "title": "Campus Hiring",
+  "url": "placements/placement_campus_hiring.html",
+  "description": "Campus hiring drives and on-campus recruitment at Kingston Engineering College.",
+  "category": "Placements",
+  "keywords": [
+   "campus hiring",
+   "recruitment",
+   "drive",
+   "on-campus",
+   "companies",
+   "interview"
+  ]
+ },
+ {
+  "title": "Top Recruiters",
+  "url": "placements/placement_recruiters.html",
+  "description": "List of top companies that recruit from Kingston Engineering College.",
+  "category": "Placements",
+  "keywords": [
+   "recruiters",
+   "companies",
+   "tcs",
+   "infosys",
+   "wipro",
+   "amazon",
+   "microsoft",
+   "hiring"
+  ]
+ },
+ {
+  "title": "Industry Connect",
+  "url": "placements/placement_industry_connect.html",
+  "description": "Industry collaborations and partnerships for student career development.",
+  "category": "Placements",
+  "keywords": [
+   "industry",
+   "connect",
+   "collaboration",
+   "internship",
+   "corporate",
+   "tie-up"
+  ]
+ },
+ {
+  "title": "Capacity Development Programs",
+  "url": "placements/placement_capacity_dev.html",
+  "description": "Capacity development and skill enhancement programs for students.",
+  "category": "Placements",
+  "keywords": [
+   "capacity",
+   "development",
+   "skill",
+   "training",
+   "soft skills",
+   "employability"
+  ]
+ },
+ {
+  "title": "Value Added Courses",
+  "url": "placements/placement_value_added.html",
+  "description": "Value added courses offered to enhance student skills and employability.",
+  "category": "Placements",
+  "keywords": [
+   "value added",
+   "courses",
+   "certification",
+   "skills",
+   "extra",
+   "training"
+  ]
+ },
+ {
+  "title": "Placement Vision and Mission",
+  "url": "placements/placement_vision_mission.html",
+  "description": "Vision and mission of the placement cell at Kingston Engineering College.",
+  "category": "Placements",
+  "keywords": [
+   "placement",
+   "vision",
+   "mission",
+   "goals",
+   "objectives"
+  ]
+ },
+ {
+  "title": "IQAC – About",
+  "url": "iqac/iqac_about.html",
+  "description": "About the Internal Quality Assurance Cell (IQAC) at Kingston Engineering College.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "quality",
+   "assurance",
+   "internal",
+   "cell",
+   "about"
+  ]
+ },
+ {
+  "title": "IQAC – Annual Reports",
+  "url": "iqac/iqac_annual_reports.html",
+  "description": "Annual quality assurance reports published by IQAC.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "annual report",
+   "quality",
+   "assessment",
+   "naac"
+  ]
+ },
+ {
+  "title": "IQAC – Academic Audit",
+  "url": "iqac/iqac_academic_audit.html",
+  "description": "Academic audit reports and findings by the IQAC.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "academic audit",
+   "quality",
+   "audit",
+   "review"
+  ]
+ },
+ {
+  "title": "IQAC – Feedback",
+  "url": "iqac/iqac_feedback.html",
+  "description": "Student and stakeholder feedback collected by IQAC.",
+  "category": "IQAC",
+  "keywords": [
+   "feedback",
+   "iqac",
+   "student feedback",
+   "stakeholder",
+   "survey"
+  ]
+ },
+ {
+  "title": "IQAC – Minutes of Meeting",
+  "url": "iqac/iqac_mom.html",
+  "description": "Minutes of meetings of the IQAC committee.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "minutes",
+   "meeting",
+   "mom",
+   "committee"
+  ]
+ },
+ {
+  "title": "IQAC – Quality Initiatives",
+  "url": "iqac/iqac_quality_initiatives.html",
+  "description": "Quality improvement initiatives taken by IQAC.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "quality initiatives",
+   "improvement",
+   "programs",
+   "activities"
+  ]
+ },
+ {
+  "title": "IQAC – Strategic Plan",
+  "url": "iqac/iqac_strategic_plan.html",
+  "description": "Strategic development plan formulated by IQAC.",
+  "category": "IQAC",
+  "keywords": [
+   "iqac",
+   "strategic plan",
+   "goals",
+   "roadmap",
+   "development"
+  ]
+ },
+ {
+  "title": "NAAC – Self Study Report (SSR)",
+  "url": "naac/naac_ssr.html",
+  "description": "NAAC Self Study Report of Kingston Engineering College.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "ssr",
+   "self study report",
+   "accreditation",
+   "a grade"
+  ]
+ },
+ {
+  "title": "NAAC – IIQA",
+  "url": "naac/naac_iiqa.html",
+  "description": "Institutional Information for Quality Assessment (IIQA) submitted to NAAC.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "iiqa",
+   "quality assessment",
+   "application",
+   "accreditation"
+  ]
+ },
+ {
+  "title": "NAAC – DVV Clarification",
+  "url": "naac/naac_dvv.html",
+  "description": "Data Verification and Validation (DVV) clarification for NAAC.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "dvv",
+   "data verification",
+   "validation",
+   "clarification"
+  ]
+ },
+ {
+  "title": "NAAC – Extended Profile",
+  "url": "naac/naac_extended_profile.html",
+  "description": "Extended institutional profile submitted for NAAC evaluation.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "extended profile",
+   "institutional data",
+   "profile"
+  ]
+ },
+ {
+  "title": "NAAC – Curricular Aspects",
+  "url": "naac/naac_curricular_aspects.html",
+  "description": "NAAC criterion on curricular design and development.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "curriculum",
+   "curricular",
+   "syllabus",
+   "design",
+   "criterion 1"
+  ]
+ },
+ {
+  "title": "NAAC – Teaching Learning and Evaluation",
+  "url": "naac/naac_teaching_learning.html",
+  "description": "NAAC criterion on teaching, learning, and evaluation processes.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "teaching",
+   "learning",
+   "evaluation",
+   "pedagogy",
+   "criterion 2"
+  ]
+ },
+ {
+  "title": "NAAC – Research, Innovations and Extension",
+  "url": "naac/naac_research_innovation.html",
+  "description": "NAAC criterion on research, innovation, and extension activities.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "research",
+   "innovation",
+   "extension",
+   "criterion 3",
+   "publications"
+  ]
+ },
+ {
+  "title": "NAAC – Infrastructure and Learning Resources",
+  "url": "naac/naac_infrastructure.html",
+  "description": "NAAC criterion on infrastructure and physical learning resources.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "infrastructure",
+   "resources",
+   "labs",
+   "library",
+   "criterion 4"
+  ]
+ },
+ {
+  "title": "NAAC – Student Support and Progression",
+  "url": "naac/naac_student_support.html",
+  "description": "NAAC criterion on student support, welfare, and progression.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "student support",
+   "welfare",
+   "scholarship",
+   "progression",
+   "criterion 5"
+  ]
+ },
+ {
+  "title": "NAAC – Governance, Leadership and Management",
+  "url": "naac/naac_governance.html",
+  "description": "NAAC criterion on governance, leadership, and management practices.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "governance",
+   "leadership",
+   "management",
+   "criterion 6"
+  ]
+ },
+ {
+  "title": "NAAC – Institutional Values and Best Practices",
+  "url": "naac/naac_institutional_values.html",
+  "description": "NAAC criterion on institutional values, best practices and distinctiveness.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "values",
+   "best practices",
+   "criterion 7",
+   "distinctiveness"
+  ]
+ },
+ {
+  "title": "NAAC – RTI",
+  "url": "naac/naac_rti.html",
+  "description": "Right to Information disclosures for NAAC.",
+  "category": "NAAC",
+  "keywords": [
+   "naac",
+   "rti",
+   "right to information",
+   "transparency",
+   "disclosure"
+  ]
+ },
+ {
+  "title": "Alumni",
+  "url": "alumni.html",
+  "description": "Kingston Engineering College alumni network and notable graduates.",
+  "category": "Alumni",
+  "keywords": [
+   "alumni",
+   "graduates",
+   "pass out",
+   "old students",
+   "network",
+   "former students"
+  ]
+ },
+ {
+  "title": "Contact Us",
+  "url": "contact.html",
+  "description": "Contact Kingston Engineering College – phone, email, address and enquiry form.",
+  "category": "General",
+  "keywords": [
+   "contact",
+   "phone",
+   "email",
+   "address",
+   "location",
+   "enquiry",
+   "call",
+   "reach us"
+  ]
+ },
+ {
+  "title": "Blog",
+  "url": "blog.html",
+  "description": "Latest news, articles, and updates from Kingston Engineering College.",
+  "category": "General",
+  "keywords": [
+   "blog",
+   "news",
+   "articles",
+   "updates",
+   "events",
+   "posts"
+  ]
+ },
+ {
+  "title": "Testimonials",
+  "url": "testimonials.html",
+  "description": "Student and parent testimonials about Kingston Engineering College.",
+  "category": "General",
+  "keywords": [
+   "testimonials",
+   "reviews",
+   "feedback",
+   "student stories",
+   "experiences"
+  ]
+ },
+ {
+  "title": "FAQ",
+  "url": "faq.html",
+  "description": "Frequently asked questions about Kingston Engineering College.",
+  "category": "General",
+  "keywords": [
+   "faq",
+   "frequently asked",
+   "questions",
+   "queries",
+   "help",
+   "common questions"
+  ]
+ },
+ {
+  "title": "Achievements",
+  "url": "achievements.html",
+  "description": "Student and institutional achievements at Kingston Engineering College.",
+  "category": "General",
+  "keywords": [
+   "achievements",
+   "awards",
+   "recognition",
+   "success",
+   "accomplishments",
+   "medals"
+  ]
+ },
+ {
+  "title": "AI Assistant",
+  "url": "ai-assistant.html",
+  "description": "Chat with the Kingston Engineering College AI assistant for quick answers.",
+  "category": "General",
+  "keywords": [
+   "ai assistant",
+   "chatbot",
+   "chat",
+   "help",
+   "assistant",
+   "virtual assistant"
+  ]
+ },
+ {
+  "title": "Policies",
+  "url": "policies.html",
+  "description": "Academic and administrative policies of Kingston Engineering College.",
+  "category": "Policies",
+  "keywords": [
+   "policies",
+   "rules",
+   "regulations",
+   "academic policy",
+   "code of conduct"
+  ]
+ },
+ {
+  "title": "Privacy Policy",
+  "url": "privacy_policy.html",
+  "description": "Privacy policy and data handling practices of Kingston Engineering College.",
+  "category": "Policies",
+  "keywords": [
+   "privacy policy",
+   "data",
+   "personal information",
+   "gdpr",
+   "confidentiality"
+  ]
+ },
+ {
+  "title": "COE – Controller of Examinations",
+  "url": "coe.html",
+  "description": "Controller of Examinations office – exam schedules, results, and notifications.",
+  "category": "Examinations",
+  "keywords": [
+   "coe",
+   "controller of examinations",
+   "exams",
+   "results",
+   "schedule",
+   "notifications"
+  ]
+ },
+ {
+  "title": "Public Self Disclosure",
+  "url": "public_self_disclosure.html",
+  "description": "Mandatory public self-disclosure information as per UGC and AICTE norms.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "public self disclosure",
+   "ugc",
+   "aicte",
+   "mandatory",
+   "disclosure",
+   "transparency"
+  ]
+ },
+ {
+  "title": "UGC Mandatory Committee",
+  "url": "ugc/ugc_mandatory.html",
+  "description": "UGC mandatory committees and their details.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "mandatory committee",
+   "compliance",
+   "statutory",
+   "regulations"
+  ]
+ },
+ {
+  "title": "UGC Mandatory Committee – Overview",
+  "url": "ugc/ugc_mandatory_committee.html",
+  "description": "Details of all UGC mandatory statutory committees.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "mandatory committee",
+   "statutory",
+   "compliance"
+  ]
+ },
+ {
+  "title": "UGC – Anti-Ragging Committee",
+  "url": "ugc/ugc_mc_arc.html",
+  "description": "Anti-ragging committee details as per UGC regulations.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "anti-ragging",
+   "ragging",
+   "committee",
+   "ugc",
+   "safety",
+   "discipline"
+  ]
+ },
+ {
+  "title": "UGC – Equal Opportunity Committee",
+  "url": "ugc/ugc_mc_eqc.html",
+  "description": "Equal Opportunity Cell for SC/ST/OBC and differently-abled students.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "equal opportunity",
+   "sc/st",
+   "obc",
+   "differently abled",
+   "committee",
+   "ugc"
+  ]
+ },
+ {
+  "title": "UGC – ICC (Internal Complaints Committee)",
+  "url": "ugc/ugc_mc_icc.html",
+  "description": "Internal Complaints Committee for prevention of sexual harassment.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "icc",
+   "complaints",
+   "sexual harassment",
+   "posh",
+   "committee",
+   "ugc"
+  ]
+ },
+ {
+  "title": "UGC – POSH Committee",
+  "url": "ugc/ugc_mc_posh.html",
+  "description": "Prevention of Sexual Harassment (POSH) committee at Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "posh",
+   "sexual harassment",
+   "prevention",
+   "committee",
+   "ugc",
+   "women safety"
+  ]
+ },
+ {
+  "title": "UGC – SC/ST/EWS Grievance Committee",
+  "url": "ugc/ugc_mc_sedg.html",
+  "description": "SC/ST/EWS Grievance Redressal Committee details.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "sc/st",
+   "ews",
+   "grievance",
+   "redressal",
+   "committee",
+   "ugc",
+   "sedg"
+  ]
+ },
+ {
+  "title": "UGC – Student Grievance Redressal Committee",
+  "url": "ugc/ugc_mc_sgrc.html",
+  "description": "Student grievance redressal committee and complaint mechanism.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "grievance",
+   "redressal",
+   "students",
+   "complaints",
+   "sgrc",
+   "committee",
+   "ugc"
+  ]
+ },
+ {
+  "title": "UGC Undertaking",
+  "url": "ugc/ugc_undertaking.html",
+  "description": "Undertaking letter submitted to UGC by Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "undertaking",
+   "letter",
+   "compliance",
+   "declaration"
+  ]
+ },
+ {
+  "title": "UGC Undertaking Letter – 1",
+  "url": "ugc/ugc_ul_1.html",
+  "description": "First UGC undertaking letter by HOI.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "undertaking",
+   "hoi",
+   "letter",
+   "compliance"
+  ]
+ },
+ {
+  "title": "UGC Undertaking Letter – 2",
+  "url": "ugc/ugc_ul_2.html",
+  "description": "Second UGC undertaking letter by HOI.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "undertaking",
+   "hoi",
+   "letter",
+   "compliance"
+  ]
+ },
+ {
+  "title": "UGC PS – About Kingston",
+  "url": "ugc/ugc_ps_aboutus.html",
+  "description": "About Kingston Engineering College as per UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "public self disclosure",
+   "about",
+   "kingston"
+  ]
+ },
+ {
+  "title": "UGC PS – About Us",
+  "url": "ugc/ugc_ps_aboutus.html",
+  "description": "Institutional overview under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "public self disclosure",
+   "about",
+   "institution"
+  ]
+ },
+ {
+  "title": "UGC PS – Academic Calendar",
+  "url": "ugc/ugc_ps_academic_calendar.html",
+  "description": "Academic calendar disclosed under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "academic calendar",
+   "schedule",
+   "semester",
+   "dates"
+  ]
+ },
+ {
+  "title": "UGC PS – Academic Leadership",
+  "url": "ugc/ugc_ps_academic_leadership.html",
+  "description": "Academic leadership details for UGC disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "academic leadership",
+   "management",
+   "principal",
+   "dean"
+  ]
+ },
+ {
+  "title": "UGC PS – Academic Programs",
+  "url": "ugc/ugc_ps_academic_programs.html",
+  "description": "All academic programs under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "programs",
+   "courses",
+   "degrees",
+   "academic programs"
+  ]
+ },
+ {
+  "title": "UGC PS – Accreditation",
+  "url": "ugc/ugc_ps_accreditation.html",
+  "description": "Accreditation details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "accreditation",
+   "naac",
+   "nba",
+   "approval"
+  ]
+ },
+ {
+  "title": "UGC PS – Act & Statutes",
+  "url": "ugc/ugc_ps_act_statutes.html",
+  "description": "Acts and statutes governing Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "act",
+   "statutes",
+   "regulations",
+   "governance",
+   "law"
+  ]
+ },
+ {
+  "title": "UGC PS – Admission Policy",
+  "url": "ugc/ugc_ps_admission_policy.html",
+  "description": "Admission policy under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "admission policy",
+   "eligibility",
+   "criteria",
+   "tnea"
+  ]
+ },
+ {
+  "title": "UGC PS – Affiliating University",
+  "url": "ugc/ugc_ps_affiliating.html",
+  "description": "Affiliating university details – Anna University.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "affiliating",
+   "anna university",
+   "affiliation"
+  ]
+ },
+ {
+  "title": "UGC PS – AICTE",
+  "url": "ugc/ugc_ps_aicte.html",
+  "description": "AICTE approval details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "aicte",
+   "approval",
+   "technical education",
+   "compliance"
+  ]
+ },
+ {
+  "title": "UGC PS – Alumni",
+  "url": "ugc/ugc_ps_alumni.html",
+  "description": "Alumni information under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "alumni",
+   "graduates",
+   "pass outs"
+  ]
+ },
+ {
+  "title": "UGC PS – Announcements",
+  "url": "ugc/ugc_ps_announcements.html",
+  "description": "Official announcements under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "announcements",
+   "notifications",
+   "notices"
+  ]
+ },
+ {
+  "title": "UGC PS – Annual Accounts",
+  "url": "ugc/ugc_ps_annual_accounts.html",
+  "description": "Annual financial accounts under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "annual accounts",
+   "finance",
+   "budget",
+   "expenditure"
+  ]
+ },
+ {
+  "title": "UGC PS – Annual Reports",
+  "url": "ugc/ugc_ps_annual_reports.html",
+  "description": "Annual reports under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "annual reports",
+   "aqar",
+   "report"
+  ]
+ },
+ {
+  "title": "UGC PS – Board of Studies",
+  "url": "ugc/ugc_ps_bos.html",
+  "description": "Board of Studies details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "board of studies",
+   "bos",
+   "curriculum",
+   "committee"
+  ]
+ },
+ {
+  "title": "UGC PS – Circulars",
+  "url": "ugc/ugc_ps_circulars.html",
+  "description": "Official circulars issued under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "circulars",
+   "official notices",
+   "notifications"
+  ]
+ },
+ {
+  "title": "UGC PS – COE",
+  "url": "ugc/ugc_ps_coe.html",
+  "description": "Controller of Examinations details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "coe",
+   "examinations",
+   "controller",
+   "exam"
+  ]
+ },
+ {
+  "title": "UGC PS – CVO",
+  "url": "ugc/ugc_ps_cvo.html",
+  "description": "Chief Vigilance Officer details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "cvo",
+   "vigilance",
+   "officer",
+   "compliance"
+  ]
+ },
+ {
+  "title": "UGC PS – Differently Abled",
+  "url": "ugc/ugc_ps_differentlyabled.html",
+  "description": "Facilities and support for differently-abled students.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "differently abled",
+   "disability",
+   "ramp",
+   "facilities",
+   "support"
+  ]
+ },
+ {
+  "title": "UGC PS – Events",
+  "url": "facilities/facilities_event_gallery.html",
+  "description": "Events and activities under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "events",
+   "activities",
+   "programs",
+   "functions"
+  ]
+ },
+ {
+  "title": "UGC PS – Examinations",
+  "url": "ugc/ugc_ps_examinations.html",
+  "description": "Examination details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "examinations",
+   "exam schedule",
+   "results",
+   "marks"
+  ]
+ },
+ {
+  "title": "UGC PS – Fee Refund Policy",
+  "url": "ugc/ugc_ps_feerefund.html",
+  "description": "Fee refund policy as per UGC regulations.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "fee refund",
+   "refund policy",
+   "fees",
+   "cancellation"
+  ]
+ },
+ {
+  "title": "UGC PS – Finance",
+  "url": "ugc/ugc_ps_finance.html",
+  "description": "Financial details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "finance",
+   "accounts",
+   "budget",
+   "expenditure",
+   "fees"
+  ]
+ },
+ {
+  "title": "UGC PS – Health Centre",
+  "url": "ugc/ugc_ps_health.html",
+  "description": "Health centre and medical facilities at Kingston Engineering College.",
+  "category": "Facilities",
+  "keywords": [
+   "health centre",
+   "medical",
+   "clinic",
+   "doctor",
+   "first aid",
+   "ugc"
+  ]
+ },
+ {
+  "title": "UGC PS – Hostel",
+  "url": "ugc/ugc_ps_hostel.html",
+  "description": "Hostel facilities and accommodation details at Kingston Engineering College.",
+  "category": "Facilities",
+  "keywords": [
+   "hostel",
+   "accommodation",
+   "boarding",
+   "rooms",
+   "mess",
+   "stay",
+   "ugc"
+  ]
+ },
+ {
+  "title": "UGC PS – IDP",
+  "url": "ugc/ugc_ps_idp.html",
+  "description": "Institutional Development Plan under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "idp",
+   "development plan",
+   "institutional",
+   "growth"
+  ]
+ },
+ {
+  "title": "UGC PS – Incubation Centre",
+  "url": "ugc/ugc_ps_incubation.html",
+  "description": "Incubation centre and startup support at Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "incubation",
+   "startup",
+   "entrepreneurship",
+   "innovation",
+   "iic"
+  ]
+ },
+ {
+  "title": "UGC PS – Mission and Vision",
+  "url": "ugc/ugc_ps_mission_vision.html",
+  "description": "Mission and vision of Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "mission",
+   "vision",
+   "goals",
+   "values"
+  ]
+ },
+ {
+  "title": "UGC PS – MOU",
+  "url": "ugc/ugc_ps_mou.html",
+  "description": "MOU agreements under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "mou",
+   "memorandum",
+   "collaboration",
+   "partnership"
+  ]
+ },
+ {
+  "title": "UGC PS – Newsletters",
+  "url": "ugc/ugc_ps_newsletters.html",
+  "description": "Institutional newsletters under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "newsletters",
+   "publications",
+   "magazine"
+  ]
+ },
+ {
+  "title": "UGC PS – NSS",
+  "url": "ugc/ugc_ps_nss.html",
+  "description": "National Service Scheme activities at Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "nss",
+   "national service scheme",
+   "social service",
+   "volunteers"
+  ]
+ },
+ {
+  "title": "UGC PS – Ombudsperson",
+  "url": "ugc/ugc_ps_ombudsperson.html",
+  "description": "Ombudsperson details for student grievance resolution.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "ombudsperson",
+   "grievance",
+   "resolution",
+   "complaints"
+  ]
+ },
+ {
+  "title": "UGC PS – Prospectus",
+  "url": "ugc/ugc_ps_prospectus.html",
+  "description": "Official college prospectus under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "prospectus",
+   "brochure",
+   "college information",
+   "programs"
+  ]
+ },
+ {
+  "title": "UGC PS – Recognition",
+  "url": "ugc/ugc_ps_recognition.html",
+  "description": "Institutional recognition and approvals under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "recognition",
+   "approval",
+   "accreditation",
+   "status"
+  ]
+ },
+ {
+  "title": "UGC PS – Research and Development",
+  "url": "ugc/ugc_ps_rnd.html",
+  "description": "Research and Development Cell at Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "research",
+   "development",
+   "rnd",
+   "innovation",
+   "projects"
+  ]
+ },
+ {
+  "title": "UGC PS – RTI",
+  "url": "ugc/ugc_ps_rti.html",
+  "description": "Right to Information disclosures under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "rti",
+   "right to information",
+   "transparency",
+   "disclosure"
+  ]
+ },
+ {
+  "title": "UGC PS – Anti-Ragging",
+  "url": "ugc/ugc_ps_sl_antiragging.html",
+  "description": "Anti-ragging statutory regulations and committee details.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "anti-ragging",
+   "ragging",
+   "safety",
+   "discipline",
+   "regulations"
+  ]
+ },
+ {
+  "title": "UGC PS – Equal Opportunity",
+  "url": "ugc/ugc_ps_sl_equalopportunity.html",
+  "description": "Equal Opportunity Cell details under statutory requirements.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "equal opportunity",
+   "sc/st",
+   "obc",
+   "reservation",
+   "cell"
+  ]
+ },
+ {
+  "title": "UGC PS – ICC",
+  "url": "ugc/ugc_ps_sl_icc.html",
+  "description": "Internal Complaints Committee under statutory regulations.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "icc",
+   "complaints",
+   "posh",
+   "statutory"
+  ]
+ },
+ {
+  "title": "UGC PS – SC/ST/EWS Grievance",
+  "url": "ugc/ugc_ps_sl_sedg.html",
+  "description": "SC/ST/EWS Grievance Redressal details.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "sc/st",
+   "ews",
+   "sedg",
+   "grievance",
+   "redressal"
+  ]
+ },
+ {
+  "title": "UGC PS – Student Grievance Redressal",
+  "url": "ugc/ugc_ps_sl_sgrc.html",
+  "description": "Student Grievance Redressal Committee (SGRC) under statutory requirements.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "sgrc",
+   "grievance",
+   "redressal",
+   "students",
+   "complaints"
+  ]
+ },
+ {
+  "title": "UGC PS – Sponsoring Body",
+  "url": "ugc/ugc_ps_sponsoring_body.html",
+  "description": "Sponsoring body and trust details of Kingston Engineering College.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "sponsoring body",
+   "trust",
+   "management",
+   "founding"
+  ]
+ },
+ {
+  "title": "UGC PS – Sports",
+  "url": "ugc/ugc_ps_sports.html",
+  "description": "Sports facilities and achievements at Kingston Engineering College.",
+  "category": "Facilities",
+  "keywords": [
+   "ugc",
+   "sports",
+   "games",
+   "facilities",
+   "ground",
+   "athletics",
+   "tournaments"
+  ]
+ },
+ {
+  "title": "UGC PS – Staff",
+  "url": "ugc/ugc_ps_staff.html",
+  "description": "Staff details under UGC Public Self Disclosure.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "staff",
+   "faculty",
+   "employees",
+   "teaching",
+   "non-teaching"
+  ]
+ },
+ {
+  "title": "UGC PS – Study in India",
+  "url": "ugc/ugc_ps_studyinindia.html",
+  "description": "Study in India scheme information for international students.",
+  "category": "UGC / Compliance",
+  "keywords": [
+   "ugc",
+   "study in india",
+   "international students",
+   "foreign",
+   "nri"
+  ]
+ },
+ {
+  "title": "CSE – About Department",
+  "url": "departments/cse/cse_dept.html",
+  "description": "About the CSE department – overview, strengths and specialisations.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "about",
+   "computer science",
+   "department",
+   "overview"
+  ]
+ },
+ {
+  "title": "CSE – Academic Calendar",
+  "url": "departments/cse/cse_academic_calendar.html",
+  "description": "Academic calendar for the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "academic calendar",
+   "schedule",
+   "semester",
+   "dates"
+  ]
+ },
+ {
+  "title": "CSE – Association",
+  "url": "departments/cse/cse_association.html",
+  "description": "CSE department student association and activities.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "association",
+   "student club",
+   "activities",
+   "events"
+  ]
+ },
+ {
+  "title": "CSE – Best Practices",
+  "url": "departments/cse/cse_best_practices.html",
+  "description": "Best practices followed in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "best practices",
+   "pedagogy",
+   "teaching methods",
+   "innovation"
+  ]
+ },
+ {
+  "title": "CSE – Board of Studies",
+  "url": "departments/cse/cse_board_of_studies.html",
+  "description": "Board of Studies members for the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "board of studies",
+   "bos",
+   "curriculum",
+   "committee"
+  ]
+ },
+ {
+  "title": "CSE – Clubs",
+  "url": "departments/cse/cse_clubs.html",
+  "description": "Student clubs and technical groups in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "clubs",
+   "student clubs",
+   "technical",
+   "coding",
+   "hackathon"
+  ]
+ },
+ {
+  "title": "CSE – COE",
+  "url": "departments/cse/cse_coe.html",
+  "description": "Centre of Excellence in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "coe",
+   "centre of excellence",
+   "lab",
+   "advanced"
+  ]
+ },
+ {
+  "title": "CSE – Consultancy",
+  "url": "departments/cse/cse_consultancy.html",
+  "description": "Consultancy activities carried out by CSE department faculty.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "consultancy",
+   "industry",
+   "services",
+   "revenue",
+   "faculty"
+  ]
+ },
+ {
+  "title": "CSE – Contact",
+  "url": "departments/cse/cse_contact.html",
+  "description": "Contact details of the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "contact",
+   "phone",
+   "email",
+   "department"
+  ]
+ },
+ {
+  "title": "CSE – Curriculum",
+  "url": "departments/cse/cse_curriculum.html",
+  "description": "Curriculum and syllabus for the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "curriculum",
+   "syllabus",
+   "subjects",
+   "courses",
+   "regulation"
+  ]
+ },
+ {
+  "title": "CSE – Distinguished Alumni",
+  "url": "departments/cse/cse_distinguished_alumni.html",
+  "description": "Notable alumni from the CSE department of Kingston Engineering College.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "alumni",
+   "distinguished",
+   "graduates",
+   "notable",
+   "successful"
+  ]
+ },
+ {
+  "title": "CSE – Entrepreneurship",
+  "url": "departments/cse/cse_entrepreneurship.html",
+  "description": "Entrepreneurship initiatives and startup support in CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "entrepreneurship",
+   "startup",
+   "innovation",
+   "iic"
+  ]
+ },
+ {
+  "title": "CSE – Events",
+  "url": "facilities/facilities_event_gallery.html",
+  "description": "Events and technical activities hosted by the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "events",
+   "technical",
+   "symposium",
+   "workshops",
+   "seminars"
+  ]
+ },
+ {
+  "title": "CSE – Faculty",
+  "url": "departments/cse/cse_faculty.html",
+  "description": "List of faculty members in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "faculty",
+   "professors",
+   "staff",
+   "teaching",
+   "lecturers"
+  ]
+ },
+ {
+  "title": "CSE – Faculty Achievements",
+  "url": "departments/cse/cse_faculty_achievements.html",
+  "description": "Awards and achievements of CSE faculty members.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "faculty achievements",
+   "awards",
+   "recognition",
+   "professors"
+  ]
+ },
+ {
+  "title": "CSE – Faculty Upskilling",
+  "url": "departments/cse/cse_faculty_upskilling.html",
+  "description": "Faculty development programs and training in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "faculty",
+   "upskilling",
+   "training",
+   "development",
+   "fdp"
+  ]
+ },
+ {
+  "title": "CSE – Guest Lectures",
+  "url": "departments/cse/cse_guest_lectures.html",
+  "description": "Guest lectures organised by the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "guest lectures",
+   "industry experts",
+   "talks",
+   "seminars"
+  ]
+ },
+ {
+  "title": "CSE – Higher Education",
+  "url": "departments/cse/cse_higher_education.html",
+  "description": "Higher education (M.Tech / Ph.D) details for CSE students.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "higher education",
+   "mtech",
+   "phd",
+   "gate",
+   "postgraduate"
+  ]
+ },
+ {
+  "title": "CSE – IPR",
+  "url": "departments/cse/cse_ipr.html",
+  "description": "Intellectual Property Rights and patents from the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "ipr",
+   "patents",
+   "intellectual property",
+   "research"
+  ]
+ },
+ {
+  "title": "CSE – Newsletter",
+  "url": "departments/cse/cse_newsletter.html",
+  "description": "CSE department newsletters and publications.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "newsletter",
+   "magazine",
+   "publication",
+   "department news"
+  ]
+ },
+ {
+  "title": "CSE – Non-Teaching Faculty",
+  "url": "departments/cse/cse_non_teaching_faculty.html",
+  "description": "Non-teaching staff in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "non-teaching",
+   "staff",
+   "lab assistants",
+   "support staff"
+  ]
+ },
+ {
+  "title": "CSE – Online Courses",
+  "url": "departments/cse/cse_online_courses.html",
+  "description": "Online certifications and MOOCs pursued by CSE students.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "online courses",
+   "mooc",
+   "nptel",
+   "coursera",
+   "certification"
+  ]
+ },
+ {
+  "title": "CSE – PEOs",
+  "url": "departments/cse/cse_peos.html",
+  "description": "Programme Educational Objectives (PEOs) of the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "peo",
+   "programme objectives",
+   "outcomes",
+   "nba"
+  ]
+ },
+ {
+  "title": "CSE – Placement",
+  "url": "departments/cse/cse_placement.html",
+  "description": "Placement statistics and records for CSE graduates.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "placement",
+   "jobs",
+   "salary",
+   "package",
+   "companies",
+   "recruitment"
+  ]
+ },
+ {
+  "title": "CSE – Professional Societies",
+  "url": "departments/cse/cse_professional_societies.html",
+  "description": "Professional bodies and societies associated with the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "professional societies",
+   "ieee",
+   "csi",
+   "iste",
+   "memberships"
+  ]
+ },
+ {
+  "title": "CSE – Research",
+  "url": "departments/cse/cse_research.html",
+  "description": "Research activities and areas in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "research",
+   "projects",
+   "phd",
+   "innovation",
+   "labs"
+  ]
+ },
+ {
+  "title": "CSE – Research Projects",
+  "url": "departments/cse/cse_research_projects.html",
+  "description": "Funded research projects in the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "research projects",
+   "funding",
+   "grants",
+   "sponsored"
+  ]
+ },
+ {
+  "title": "CSE – Research Publications",
+  "url": "departments/cse/cse_research_publications.html",
+  "description": "Journal and conference publications by CSE faculty and students.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "publications",
+   "journals",
+   "papers",
+   "conferences",
+   "research"
+  ]
+ },
+ {
+  "title": "CSE – Student Publications",
+  "url": "departments/cse/cse_student_publications.html",
+  "description": "Papers and publications authored by CSE students.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "student publications",
+   "papers",
+   "journals",
+   "research"
+  ]
+ },
+ {
+  "title": "CSE – Timetable",
+  "url": "departments/cse/cse_timetable.html",
+  "description": "Class timetable for the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "timetable",
+   "schedule",
+   "class",
+   "timing",
+   "semester"
+  ]
+ },
+ {
+  "title": "CSE – Vision and Mission",
+  "url": "departments/cse/cse_vision_mission.html",
+  "description": "Vision and mission statement of the CSE department.",
+  "category": "CSE Department",
+  "keywords": [
+   "cse",
+   "vision",
+   "mission",
+   "goals",
+   "objectives",
+   "values"
+  ]
+ }
+]

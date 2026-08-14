@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "Chairman Mr. T.M. Kathir Anand's 51st Birthday & Blood Donation Camp",
+    "category": "Event",
+    "date": "2025-06-21",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/51 bday celeb.jpeg",
+    "summary": "Kingston Engineering College celebrated the 51st birthday of Chairman Mr. T.M. Kathir Anand with a massive blood donation camp, organized in association with the Sri Narayani Research Centre Hospital.",
+    "tags": ["Birthday", "Social Service", "Events"]
+  },
+  {
+    "id": 2,
+    "title": "Leadership Milestone: 51 Years of Commitment to Excellence",
+    "category": "Announcement",
+    "date": "2025-06-21",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/51bday.jpeg",
+    "summary": "Commemorating 51 years of leadership and vision. Faculty and students gathered to honour our Chairman's contribution to the education sector and college development.",
+    "tags": ["Leadership", "Milestone"]
+  },
+  {
+    "id": 3,
+    "title": "Grand Alumni Meet 2025: Connecting Graduates and Reconnecting Bonds",
+    "category": "Alumni",
+    "date": "2025-10-03",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/alumni meet.jpeg",
+    "summary": "Hundreds of former students returned to campus for the Annual Alumni Meet. They shared their career journeys and success stories with current students while enjoying a day of nostalgia.",
+    "tags": ["Alumni", "Reunion", "Networking"]
+  },
+  {
+    "id": 4,
+    "title": "Annual Day Extravaganza: A Celebration of Art, Talent, and Achievement",
+    "category": "Cultural",
+    "date": "2025-12-15",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/annual day.jpeg",
+    "summary": "The grand annual day celebrations showcased vibrant cultural performances and distributed awards to top achievers in academic and co-curricular categories.",
+    "tags": ["Annual Day", "Culture", "Awards"]
+  },
+  {
+    "id": 5,
+    "title": "KEC Granted 10-Year Autonomous Status by the UGC",
+    "category": "Achievement",
+    "date": "2026-01-10",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/automomous 2026.jpeg",
+    "summary": "Kingston Engineering College is proud to announce it has been granted autonomous status by the UGC for a decadal term (2026-2036), allowing for faster academic innovation.",
+    "tags": ["Autonomy", "UGC", "Achievement"]
+  },
+  {
+    "id": 6,
+    "title": "A New Era of Academic Freedom: Celebrating Autonomous Day",
+    "category": "Announcement",
+    "date": "2026-01-15",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/autonomous day.jpeg",
+    "summary": "Detailed event celebrating the college's landmark transition into an autonomous institution, empowering faculty and students with modern curriculum flexibility.",
+    "tags": ["Autonomy", "Future"]
+  },
+  {
+    "id": 7,
+    "title": "NSS Volunteers Conduct Campus Cleaning Drive for a Greener KEC",
+    "category": "Social",
+    "date": "2025-08-15",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/cleaning.jpeg",
+    "summary": "As part of the Swachh Bharat mission, NSS volunteers at KEC conducted a comprehensive cleaning drive to promote hygiene and ecological responsibility on campus.",
+    "tags": ["NSS", "Cleaning", "Social Work"]
+  },
+  {
+    "id": 8,
+    "title": "Innovation in Green Mobility: Student-Made E-Vehicle Showcase",
+    "category": "Research",
+    "date": "2025-11-20",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/e-vehical.jpeg",
+    "summary": "KEC student engineers showcased their latest electric vehicle prototype, built using innovative energy recovery systems and modern materials for sustainable transport.",
+    "tags": ["E-Vehicle", "Innovation", "Green Tech"]
+  },
+  {
+    "id": 9,
+    "title": "Welcoming Future Leaders: Induction Ceremony for the 2025 Batch",
+    "category": "Academic",
+    "date": "2025-09-01",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/induction day 2025.jpeg",
+    "summary": "KEC welcomed its first-year students with a grand induction ceremony. Keynote speakers highlighted the value of engineering ethics and multidisciplinary learning.",
+    "tags": ["Induction", "Admission", "Freshers"]
+  },
+  {
+    "id": 10,
+    "title": "Orientation Program for Aspiring Engineering Minds",
+    "category": "Academic",
+    "date": "2025-09-02",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/induction day.jpeg",
+    "summary": "Orienting the new batch of students to college culture, laboratories, and placement opportunities that await them at Kingston Engineering College.",
+    "tags": ["Orientation", "Academics"]
+  },
+  {
+    "id": 11,
+    "title": "Inspiring Future Innovators: Highlights from Induction Day 2025",
+    "category": "Academic",
+    "date": "2025-09-03",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/induction day2025.jpeg",
+    "summary": "Key highlights from our 2025 batch induction event, featuring interactions with senior faculty and industry-readiness briefing sessions.",
+    "tags": ["Induction", "Events"]
+  },
+  {
+    "id": 12,
+    "title": "Government Free Laptop Distribution: Empowering Rural Education",
+    "category": "Social",
+    "date": "2025-07-20",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/laptop distr2.jpeg",
+    "summary": "Government merit laptops were recently distributed to students to facilitate digital learning and online research, following the state's welfare initiative.",
+    "tags": ["Laptop", "Govt Scheme", "Education"]
+  },
+  {
+    "id": 13,
+    "title": "Bridging the Digital Divide: Free Laptop Distribution Ceremony at KEC",
+    "category": "Announcement",
+    "date": "2025-07-21",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/laptop distribution.jpeg",
+    "summary": "Nearly all deserving students now have access to high-speed laptops for their engineering projects and technical upskilling at Kingston Engineering College.",
+    "tags": ["Education", "Laptops"]
+  },
+  {
+    "id": 14,
+    "title": "Record-Breaking Results: 360 Students Secure Multiple Job Offers",
+    "category": "Placement",
+    "date": "2025-05-24",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/placement 360.jpeg",
+    "summary": "More than 360 students of KEC have secure job offers in top MNCs this season. A grand ceremony was held where job letters were officially distributed by our Chairwoman Sangeetha Kathir Anand.",
+    "tags": ["Placements", "Success", "Careers"]
+  },
+  {
+    "id": 15,
+    "title": "Job Offer Letter Hand-Over: Celebrating the Success of 360 Students",
+    "category": "Placement",
+    "date": "2025-05-25",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/placement360.jpeg",
+    "summary": "A momentous day for KEC as parents witnessed their children receive appointment orders for positions in Fortune 500 companies and tech leaders.",
+    "tags": ["Placements", "Career Goal"]
+  },
+  {
+    "id": 16,
+    "title": "Social Awareness Rally Organize by KEC Students in Vellore",
+    "category": "Social",
+    "date": "2025-11-12",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/rally.jpeg",
+    "summary": "Students took to the streets of Vellore to raise awareness about road safety and environmental care, interacting with citizens and local authorities.",
+    "tags": ["Rally", "Awareness", "Vellore"]
+  },
+  {
+    "id": 17,
+    "title": "National Technical Symposium 'Spectra 2025' Highlights Innovation",
+    "category": "Academic",
+    "date": "2025-03-20",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/spectra25.jpeg",
+    "summary": "Spectra 25 brought together brilliant engineering students from across the country to showcase world-class technical papers, robots, and innovative software solutions.",
+    "tags": ["Spectra", "Symposium", "Symposium"]
+  },
+  {
+    "id": 18,
+    "title": "Annual Sports Meet: Honouring Athletic Spirit and Teamwork",
+    "category": "Sports",
+    "date": "2026-02-14",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/sports day.jpeg",
+    "summary": "An energetic day on the field as our students competed in track and field, basketball, and football, showing immense sportsmanship and athletic talent.",
+    "tags": ["Sports Day", "Athletics", "Competition"]
+  },
+  {
+    "id": 19,
+    "title": "Inter-Department Championship: Record Participation on Sports Day",
+    "category": "Sports",
+    "date": "2026-02-15",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/sports dayy.jpeg",
+    "summary": "Departments battled it out on the ground for the overall championship trophy. Sports Day at KEC continues to be the city’s most anticipated collegiate sports event.",
+    "tags": ["Sports", "Departments"]
+  },
+  {
+    "id": 20,
+    "title": "KEC Sports Day 2026: A Vision for Health and Discipline",
+    "category": "Sports",
+    "date": "2026-02-16",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/sports2026.jpeg",
+    "summary": "Sports day remains a core tradition at KEC for building character and leadership through organized team competitions and individual excellence.",
+    "tags": ["Wellness", "Sports Spirit"]
+  },
+  {
+    "id": 21,
+    "title": "Trophies and Victories: Highlights from KEC Sports Fest Celebration",
+    "category": "Sports",
+    "date": "2026-02-17",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/sprts day.jpeg",
+    "summary": "Closing ceremony highlights for the sports calendar year at KEC, celebrating winners and all enthusiastic participants across various disciplines.",
+    "tags": ["Sports", "Celebration"]
+  },
+  {
+    "id": 22,
+    "title": "International Women's Day Celebration: Inspiring Empowerment at KEC",
+    "category": "Event",
+    "date": "2026-03-08",
+    "featured": true,
+    "fallback_image": "assets/images/NEWS/womens day.jpeg",
+    "summary": "Kingston Engineering College celebrated International Women's Day by honouring female icons and discussing pathways for professional growth for our female students.",
+    "tags": ["Women Empowerment", "IWD", "Events"]
+  },
+  {
+    "id": 23,
+    "title": "Honouring Our Female Faculty for Extraordinary Contributions on Women's Day",
+    "category": "Event",
+    "date": "2026-03-09",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/womens days.jpeg",
+    "summary": "Special tribute and awards ceremony held for female faculty members whose leadership has been pivotal in the college's recent success.",
+    "tags": ["IWD", "Awards"]
+  },
+  {
+    "id": 24,
+    "title": "Inspiring Future Women Leaders of the Engineering World",
+    "category": "Event",
+    "date": "2026-03-10",
+    "featured": false,
+    "fallback_image": "assets/images/NEWS/womens dayy.jpeg",
+    "summary": "Workshops and sessions for female students on leadership and breaking industry barriers, held as part of the International Women's Day activities.",
+    "tags": ["IWD", "Future Leaders"]
+  }
+]

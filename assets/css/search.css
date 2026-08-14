@@ -1,0 +1,347 @@
+/* ============================================================
+   Kingston Engineering College – Site-Wide Search Styles
+   ============================================================ */
+
+/* Make nav container flex so search trigger sits inline */
+.main-nav .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .container .nav-links {
+    flex: 1;
+}
+
+/* Search trigger button in navbar */
+.ks-search-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1.5px solid #0b223c;
+    cursor: pointer;
+    color: #0b223c;
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.04em;
+}
+
+.ks-search-trigger:hover {
+    background: #0b223c;
+    color: #fff;
+}
+
+.ks-search-trigger i {
+    font-size: 0.82rem;
+}
+
+/* Overlay backdrop */
+.ks-search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 20, 50, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.ks-search-overlay.ks-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Search box container */
+.ks-search-box {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 16px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0,0,50,0.25);
+    overflow: hidden;
+    transform: translateY(-20px) scale(0.97);
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.ks-search-overlay.ks-active .ks-search-box {
+    transform: translateY(0) scale(1);
+}
+
+/* Input row */
+.ks-search-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.ks-search-input-row i.fa-magnifying-glass {
+    color: #003366;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+#ks-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    font-family: inherit;
+    color: #111;
+    background: transparent;
+    caret-color: #003366;
+}
+
+#ks-search-input::placeholder {
+    color: #aab0bb;
+}
+
+.ks-search-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 1rem;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s;
+    flex-shrink: 0;
+}
+
+.ks-search-close:hover {
+    background: #f0f2f6;
+    color: #333;
+}
+
+/* Results area */
+.ks-search-results {
+    max-height: 420px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.ks-search-results::-webkit-scrollbar {
+    width: 6px;
+}
+.ks-search-results::-webkit-scrollbar-track {
+    background: #f5f6fa;
+}
+.ks-search-results::-webkit-scrollbar-thumb {
+    background: #ccd0d8;
+    border-radius: 4px;
+}
+
+/* Empty/hint state */
+.ks-search-hint {
+    padding: 24px 22px;
+    color: #9099a8;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Category label */
+.ks-result-category {
+    padding: 6px 18px 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #003366;
+    background: #f5f8ff;
+    border-top: 1px solid #eef0f4;
+}
+
+.ks-result-category:first-child {
+    border-top: none;
+}
+
+/* Single result item */
+.ks-result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+    border-bottom: 1px solid #f3f4f8;
+}
+
+.ks-result-item:last-child {
+    border-bottom: none;
+}
+
+.ks-result-item:hover,
+.ks-result-item.ks-focused {
+    background: #f0f5ff;
+}
+
+.ks-result-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #e8eef8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ks-result-icon i {
+    color: #003366;
+    font-size: 0.8rem;
+}
+
+.ks-result-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.ks-result-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+}
+
+.ks-result-title mark {
+    background: #ffe082;
+    color: #111;
+    border-radius: 2px;
+    padding: 0 1px;
+    font-weight: 700;
+}
+
+.ks-result-desc {
+    font-size: 0.8rem;
+    color: #666;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.ks-result-arrow {
+    color: #bbb;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* Footer */
+.ks-search-footer {
+    padding: 8px 18px;
+    border-top: 1px solid #eef0f4;
+    font-size: 0.75rem;
+    color: #aab0bb;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ks-kbd {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.ks-kbd kbd {
+    background: #f0f2f5;
+    border: 1px solid #dde0e7;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.7rem;
+    font-family: inherit;
+    color: #555;
+}
+
+/* No results */
+.ks-no-results {
+    padding: 28px 22px;
+    text-align: center;
+    color: #9099a8;
+    font-size: 0.9rem;
+}
+
+.ks-no-results strong {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* Category icon mapping */
+.ks-icon-general { color: #1a73e8; }
+.ks-icon-about { color: #0d9488; }
+.ks-icon-departments { color: #7c3aed; }
+.ks-icon-academics { color: #dc2626; }
+.ks-icon-admission { color: #ea580c; }
+.ks-icon-facilities { color: #16a34a; }
+.ks-icon-placements { color: #d97706; }
+.ks-icon-iqac { color: #0891b2; }
+.ks-icon-naac { color: #7c3aed; }
+.ks-icon-alumni { color: #be185d; }
+.ks-icon-policies { color: #64748b; }
+.ks-icon-examinations { color: #dc2626; }
+.ks-icon-ugc { color: #0f766e; }
+.ks-icon-cse { color: #1d4ed8; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ks-search-trigger span {
+        display: none;
+    }
+
+    .ks-search-trigger {
+        padding: 5px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* On mobile the nav collapses, keep search trigger accessible */
+    .main-nav .container {
+        flex-wrap: wrap;
+    }
+
+    .ks-search-trigger {
+        order: -1;
+        margin-left: auto;
+        border-color: #ccc;
+        color: #333;
+    }
+}
+
+@media (max-width: 600px) {
+    .ks-search-overlay {
+        padding-top: 50px;
+        align-items: flex-start;
+    }
+
+    .ks-search-box {
+        margin: 0 8px;
+        border-radius: 12px;
+    }
+
+    .ks-search-results {
+        max-height: 60vh;
+    }
+}

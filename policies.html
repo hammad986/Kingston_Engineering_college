@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies - Kingston Engineering College</title>
+    <meta name="description" content="Policies at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <style>
+        .policies-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .policies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .policy-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: #f5c518;
+        }
+
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #003366, #f5c518);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+
+        .policy-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .policy-icon {
+            font-size: 3rem;
+            color: #003366;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .policy-card:hover .policy-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .policy-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .btn-view-policy {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #003366;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+
+        .btn-view-policy:hover {
+            background: #f5c518;
+            color: #003366;
+            box-shadow: 0 5px 15px rgba(245, 197, 24, 0.3);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h1 {
+            font-size: 2.5rem;
+            color: #003366;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #f5c518;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+    </style>
+
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <main>
+        <section class="policies-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h1>Institutional Policies</h1>
+                    <p>Guiding principles for excellence in education and governance</p>
+                </div>
+
+                <div class="policies-grid">
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">ALUMNI POLICY</h3>
+                        <a href="assets/pdfs/policies/alumni.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">ACADEMIC AUDIT POLICY</h3>
+                        <a href="assets/pdfs/policies/academic.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <!-- Admission Policy UNAVAILABLE — PDF not yet provided -->
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">CODE OF ETHICS AND CONDUCT</h3>
+                        <a href="assets/pdfs/policies/code_of_ethics_and_conduct.pdf" target="_blank"
+                            class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">E-GOVERNANCE POLICY</h3>
+                        <a href="assets/pdfs/policies/e_governance_policy.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">ENVIRONMENTAL AND GREEN CAMPUS POLICIES</h3>
+                        <a href="assets/pdfs/policies/environmental.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">E-WASTE MANAGEMENT POLICY</h3>
+                        <a href="assets/pdfs/policies/e_waste.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">FINANCE POLICY</h3>
+                        <a href="assets/pdfs/policies/finance_1.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">HUMAN RESOURCES POLICY</h3>
+                        <a href="assets/pdfs/policies/resources.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">INFORMATION TECHNOLOGY POLICY</h3>
+                        <a href="assets/pdfs/policies/informa_tion.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">INFRASTRUCTURE MAINTENANCE POLICY</h3>
+                        <a href="assets/pdfs/policies/infrastructure.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">INTERNAL QUALITY ASSURANCE POLICY</h3>
+                        <a href="assets/pdfs/policies/internal.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">LIBRARY POLICY</h3>
+                        <a href="assets/pdfs/policies/library.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">MOU POLICY</h3>
+                        <a href="assets/pdfs/policies/policy.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">PLACEMENT POLICY</h3>
+                        <a href="assets/pdfs/policies/placement.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">PURCHASE POLICY</h3>
+                        <a href="assets/pdfs/policies/purchase.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">R&D POLICY</h3>
+                        <a href="assets/pdfs/policies/research.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">SCHOLARSHIP POLICY</h3>
+                        <a href="assets/pdfs/policies/scholarship_policy_1.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">SPORTS POLICY</h3>
+                        <a href="assets/pdfs/policies/sports.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">STUDENT EMPOWERMENT POLICY</h3>
+                        <a href="assets/pdfs/policies/student.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">VALUE ADDED POLICY</h3>
+                        <a href="assets/pdfs/policies/value_added.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                    <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="policy-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="policy-title">FEEDBACK POLICY</h3>
+                        <a href="assets/pdfs/policies/Feedback_Policy.pdf" target="_blank" class="btn-view-policy">
+                            <i class="fa-solid fa-file-pdf mr-2"></i> View Policy
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AOS) { AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 }); }
+        });
+    </script>
+    <script src="assets/js/include-components.js"></script>
+</body>
+
+</html>

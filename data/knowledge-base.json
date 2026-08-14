@@ -1,0 +1,225 @@
+{
+  "college": {
+    "name": "Kingston Engineering College",
+    "tagline": "Autonomous | AICTE Approved | NAAC 'A' Grade",
+    "phone": "+91-416-2244777",
+    "email": "admission@kingston.ac.in",
+    "address": "Chittoor Main Road, Vellore, Tamil Nadu – 632 059",
+    "about": "Kingston Engineering College is an autonomous institution approved by AICTE and affiliated to Anna University. We have achieved NAAC 'A' grade and are committed to providing world-class education in engineering and technology."
+  },
+  "intents": [
+    {
+      "id": "greeting",
+      "keywords": ["hi", "hello", "hey", "greetings", "good morning", "good afternoon", "good evening", "namaste", "hii", "helo", "vanakkam", "namaskar"],
+      "title": "Hello! Welcome to Kingston 👋",
+      "content_points": [
+        "I'm your Kingston Engineering College assistant, available 24/7!",
+        "I can help with: Admissions • Fees • Placements • Departments • Facilities • Scholarships • Hostel • Academics",
+        "Just ask me anything about Kingston! What would you like to know?"
+      ],
+      "actions": [
+        {"text": "📋 Admission Info", "query": "Tell me about admissions"},
+        {"text": "💰 Fee Structure", "query": "What is the fee structure?"},
+        {"text": "📊 Placements", "query": "Tell me about placements"},
+        {"text": "🏫 Departments", "query": "What departments are available?"}
+      ]
+    },
+    {
+      "id": "admission",
+      "keywords": ["admission", "apply", "enroll", "join", "how to apply", "apply now", "enrollment", "application", "counselling", "tnea", "seat", "apply karna", "admission kaise", "register", "entry", "intake"],
+      "title": "Admission at Kingston 🎓",
+      "content_points": [
+        "📌 B.E. / B.Tech: 12th pass with Physics, Chemistry & Mathematics",
+        "📌 B.Arch: 12th pass with 50% aggregate + Maths",
+        "📌 M.Tech: B.E./B.Tech degree in relevant branch (2 years)",
+        "📌 MBA: Any graduation + valid CAT/MAT score (2 years)",
+        "✅ B.E. admissions: Through TNEA counselling (Anna University)",
+        "✅ Direct Admission: Available for NRI, management quota & international students",
+        "💡 Pro Tip: Apply early! Seats fill quickly. Contact admission cell for guidance."
+      ],
+      "actions": [
+        {"text": "Contact Admission", "url": "contact.html"}
+      ]
+    },
+    {
+      "id": "fees",
+      "keywords": ["fee", "fees", "fee structure", "cost", "charges", "tuition", "payment", "kitna", "fee kitna", "how much", "amount", "scholarship", "fee kya hai", "hostel fee", "refund", "installment"],
+      "title": "Fee Structure 💰",
+      "content_points": [
+        "📍 B.E. / B.Tech: ₹1,60,000 per annum",
+        "📍 B.Arch: ₹1,80,000 per annum",
+        "📍 M.Tech: ₹1,50,000 per annum",
+        "📍 MBA: ₹2,00,000 per annum",
+        "🏠 Hostel (Boys & Girls): ₹1,00,000 per annum (optional, all facilities included)",
+        "🚌 Transportation: ₹50,000–₹1,00,000 per annum (varies by distance)",
+        "💡 Financial Support: Scholarships for SC/ST/BC/MBC • Merit-based support • Educational loans • Fee refund policy available"
+      ],
+      "actions": [
+        {"text": "Scholarship Info", "query": "Tell me about scholarships"},
+        {"text": "Pay Online", "url": "pay_online.html"}
+      ]
+    },
+    {
+      "id": "placement",
+      "keywords": ["placement", "package", "company", "recruiters", "job", "salary", "hiring", "lpa", "offer", "placed", "recruit", "campus", "career", "naukri", "jobs", "placement rate", "salary package"],
+      "title": "Placements at Kingston 📊",
+      "content_points": [
+        "✨ Placement Rate: 95%+ consistently across all batches",
+        "💰 Highest Package: ₹25 LPA",
+        "📈 Average Package: ₹6.5 LPA",
+        "🏢 Top Recruiters: TCS • Infosys • Wipro • HCL • Amazon • Microsoft • Zoho • Cognizant • Accenture • Capgemini",
+        "🎯 What We Offer: Dedicated Placement & Training Cell • On-campus recruitment drives • Mock interviews • Aptitude coaching • Industry internships • Higher education guidance",
+        "💼 Latest: 500+ students placed in last batch • Average 3-4 offers per student"
+      ],
+      "actions": [
+        {"text": "Placement Report", "url": "placement_report.html"},
+        {"text": "Placement Cell", "url": "placement_pat.html"},
+        {"text": "Top Recruiters", "url": "placement_recruiters.html"}
+      ]
+    },
+    {
+      "id": "scholarship",
+      "keywords": ["scholarship", "scholarships", "grant", "financial aid", "financial support", "merit", "sc", "st", "obc", "bc", "mbc", "bpl", "nri", "scholarship apply", "scholarship kitna"],
+      "title": "Scholarships & Financial Aid 🏆",
+      "content_points": [
+        "🎓 Merit Scholarships: Top 10% students get partial/full tuition waiver",
+        "📋 Reservation Category: SC/ST/BC/MBC students eligible for govt scholarships",
+        "💰 BPL Students: Special financial support & fee concessions available",
+        "🌍 NRI/International: Special rates & payment plans available",
+        "🏥 Special Schemes: Sports scholars • Differently-abled students • Girl child education",
+        "📚 Higher Education: Scholarship support for postgraduate studies",
+        "⚡ How to Apply: Contact admission office for details. Scholarships awarded during admission."
+      ],
+      "actions": [
+        {"text": "Contact Us", "url": "contact.html"}
+      ]
+    },
+    {
+      "id": "contact",
+      "keywords": ["contact", "phone", "email", "address", "location", "call", "reach", "map", "where", "helpline", "number", "contact us", "sampark", "pata", "phone number"],
+      "title": "Contact Kingston 📞",
+      "content_points": [
+        "📧 Email: admission@kingston.ac.in | info@kingston.ac.in",
+        "☎️ Main Office: +91-416-2244777",
+        "📱 Admission Helpline: +91-75400-37999 (Available 9 AM – 6 PM IST, Mon–Sat)",
+        "📍 Address: Chittoor Main Road, Vellore, Tamil Nadu – 632 059",
+        "🕐 Office Hours: Monday–Saturday, 9:00 AM – 5:00 PM IST | Closed Sundays & Public Holidays",
+        "💻 Visit Us: www.kingston.ac.in | Social: Facebook, LinkedIn, Instagram"
+      ],
+      "actions": [
+        {"text": "Contact Us Page", "url": "contact.html"},
+        {"text": "Campus Tour", "url": "campus_tour.html"}
+      ]
+    },
+    {
+      "id": "departments",
+      "keywords": ["department", "departments", "courses", "engineering", "cse", "ece", "mechanical", "it", "civil", "ai", "branch", "stream", "programme", "program", "which course", "available courses", "ba", "mba", "mtech"],
+      "title": "Our Departments & Programs 🏫",
+      "content_points": [
+        "🎓 Undergraduate Programs:",
+        "  • B.E. Computer Science & Engineering (CSE)",
+        "  • B.E. Information Technology (IT)",
+        "  • B.E. Electronics & Communication (ECE)",
+        "  • B.E. Mechanical Engineering",
+        "  • B.E. Civil Engineering",
+        "  • B.Arch Architecture (5 years)",
+        "🚀 Specialized UG Programs: AI & ML • AI & Data Science • Computer Science & Business Systems",
+        "📚 Postgraduate: M.Tech (4 specializations) • MBA"
+      ],
+      "actions": [
+        {"text": "View All Departments", "url": "departments.html"},
+        {"text": "CSE Details", "url": "dept_cse.html"},
+        {"text": "Admission Info", "query": "Tell me about admissions"}
+      ]
+    },
+    {
+      "id": "facilities",
+      "keywords": ["facility", "facilities", "infrastructure", "lab", "library", "hostel", "canteen", "sports", "gym", "medical", "wifi", "internet", "campus", "amenities", "grounds"],
+      "title": "Campus Facilities & Amenities 🏢",
+      "content_points": [
+        "🏫 Academic: State-of-the-art labs • Modern classrooms • Digital library • 24/7 WiFi • Auditorium with 2000 capacity",
+        "🏠 Hostel: Boys & Girls hostels • Spacious rooms • Common areas • Recreational facilities • Mess with nutritious meals",
+        "📚 Library: 50,000+ books • Online databases • Quiet study zones • Student lounge",
+        "⚽ Sports: Basketball & volleyball courts • Cricket ground • Badminton hall • Gym with modern equipment",
+        "🍽️ Dining: Multi-cuisine canteen • Hygienic food preparation • Dietary preferences respected",
+        "🏥 Health: On-campus medical clinic • Doctor on call • Emergency services available"
+      ],
+      "actions": [
+        {"text": "Facilities Details", "url": "facilities.html"},
+        {"text": "Virtual Tour", "url": "campus_tour.html"}
+      ]
+    },
+    {
+      "id": "hostel",
+      "keywords": ["hostel", "hostel fees", "accommodation", "room", "dorm", "lodging", "stay", "residence", "boys hostel", "girls hostel", "hostel facilities"],
+      "title": "Hostel & Accommodation 🏠",
+      "content_points": [
+        "✨ Modern Facilities: 2-3 bed rooms • Attached washrooms • Hot/cold water • 24/7 electricity & WiFi",
+        "💰 Cost: ₹1,00,000 per annum (includes mess, electricity, maintenance)",
+        "🍽️ Mess: Nutritious meals • Breakfast, lunch, dinner • Special dietary options available",
+        "🎮 Recreation: TV lounge • Gaming area • Common room • Sports facilities",
+        "🔒 Security: CCTV monitoring • Trained staff • Regular maintenance • Emergency support 24/7",
+        "📋 Rules: Peaceful environment • No ragging policy • Respect for diverse backgrounds"
+      ],
+      "actions": [
+        {"text": "Hostel Details", "url": "facilities_welfare.html"},
+        {"text": "Fee Structure", "query": "What is the fee structure?"}
+      ]
+    },
+    {
+      "id": "library",
+      "keywords": ["library", "books", "online resources", "database", "reference", "study", "digital library", "e-books", "research"],
+      "title": "Library & Learning Resources 📚",
+      "content_points": [
+        "📖 Collection: 50,000+ books • Journals & magazines • Rare collections • Audio-visual materials",
+        "💻 Digital Access: Online databases • E-books • Journals • Research papers • 24/7 remote access",
+        "🏢 Spaces: Reading halls • Study zones • Quiet areas • Collaborative spaces • Computer lab",
+        "👥 Services: Reference support • Document delivery • Literature search • Research guidance",
+        "⏰ Hours: Monday–Saturday 8 AM – 6 PM | Sunday 10 AM – 4 PM"
+      ],
+      "actions": [
+        {"text": "Library Page", "url": "facilities_library.html"}
+      ]
+    },
+    {
+      "id": "academics",
+      "keywords": ["academic", "academics", "syllabus", "curriculum", "semester", "examination", "exam", "exam schedule", "results", "transcript", "degree", "study material", "books required"],
+      "title": "Academic Programs & Schedule 📖",
+      "content_points": [
+        "📅 Academic Calendar: Semesters follow Anna University guidelines • Regular updates on portal",
+        "📚 Curriculum: Updated regularly • Industry-relevant • Practical focus • Internship requirements",
+        "👨‍🎓 Faculty: PhD-qualified instructors • Industry experts • Mentorship programs",
+        "✍️ Assessment: Continuous evaluation • Mid-terms • End-semester exams • Project work • Industrial training",
+        "🎯 Learning: Classroom teaching • Lab experiments • Project-based learning • Seminar presentations"
+      ],
+      "actions": [
+        {"text": "Academic Details", "url": "academics.html"},
+        {"text": "Departments", "url": "departments.html"}
+      ]
+    },
+    {
+      "id": "not_found",
+      "keywords": ["unclear", "don't know", "help", "other", "something else"],
+      "title": "Let Me Help You Find What You're Looking For! 🔍",
+      "content_points": [
+        "I couldn't find a specific answer to your question, but here are some useful resources:",
+        "💡 Popular topics: Admissions • Fees • Placements • Departments • Facilities • Hostel • Contact",
+        "🔗 You can also explore: Our departments page • Academic programs • Events calendar",
+        "📞 For detailed questions, our admission team is happy to help!"
+      ],
+      "actions": [
+        {"text": "Homepage", "url": "index.html"},
+        {"text": "Contact Us", "url": "contact.html"}
+      ]
+    }
+  ],
+  "fallback": {
+    "message": "I couldn't find exact information on that, but let me point you to some useful resources:",
+    "suggestions": [
+      {"text": "📋 Admission Process", "query": "Tell me about admissions"},
+      {"text": "💰 Fee Structure", "query": "What is the fee structure?"},
+      {"text": "📊 Placement Info", "query": "Tell me about placements"},
+      {"text": "📞 Contact Us", "query": "How to contact Kingston?"}
+    ]
+  }
+}

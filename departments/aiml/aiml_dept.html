@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Department - AI & ML | Kingston Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/ai-assistant.css">
+    <style>
+        .salient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .salient-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: 0.4s;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+        .salient-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(163, 31, 36, 0.12);
+            border-color: #a31f24;
+        }
+        .salient-icon-box {
+            width: 70px;
+            height: 70px;
+            background: #a31f24;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        .glass-card-ai {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 204, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card-ai:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0, 51, 102, 0.2);
+            border-color: rgba(0, 153, 204, 0.5);
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- INCLUDE:components/header.html --><div id="include-header"></div>
+
+<div class="dept-details-wrapper">
+
+    <aside class="dept-sidebar">
+        <ul class="dept-sidebar-menu">
+            <li><a href="aiml_dept.html" ><i class="fa-solid fa-house"></i> About the Department</a></li>
+            <li><a href="aiml_vision_mission.html"><i class="fa-solid fa-bullseye"></i> Vision and Mission</a></li>
+            <li><a href="aiml_peos.html"><i class="fa-regular fa-file-lines"></i> PEOs, POs and PSOs</a></li>
+            <li><a href="aiml_practical_laboratory.html"><i class="fa-solid fa-flask"></i> Practical Laboratory</a></li>
+                <li><a href="aiml_toppers.html"><i class="fa-solid fa-award"></i> Toppers List</a></li>
+                
+                
+            <li><a href="aiml_faculty.html"><i class="fa-solid fa-user-tie"></i> Faculty</a></li>
+            <li><a href="aiml_non_teaching_faculty.html"><i class="fa-solid fa-users"></i> Non Teaching Faculty</a></li>
+            <li><a href="aiml_board_of_studies.html"><i class="fa-solid fa-graduation-cap"></i> Board of Studies</a></li>
+            <li><a href="aiml_curriculum.html"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+            <li><a href="aiml_academic_calendar.html"><i class="fa-regular fa-calendar-days"></i> Department Academic Calendar</a></li>
+            <li><a href="aiml_timetable.html"><i class="fa-solid fa-table-cells"></i> Time Table</a></li>
+            <li><a href="aiml_coe.html"><i class="fa-solid fa-trophy"></i> Centre of Excellence</a></li>
+            <li><a href="aiml_research.html"><i class="fa-solid fa-microscope"></i> Ph.D./M.S. (Research)</a></li>
+            <li><a href="aiml_research_publications.html"><i class="fa-regular fa-bookmark"></i> Research Publications</a></li>
+            <li><a href="aiml_best_practices.html"><i class="fa-regular fa-thumbs-up"></i> Best Practices</a></li>
+            <li><a href="aiml_ipr.html"><i class="fa-solid fa-file-contract"></i> IPR</a></li>
+            <li><a href="aiml_research_projects.html"><i class="fa-solid fa-flask"></i> Research Projects</a></li>
+            <li><a href="aiml_consultancy.html"><i class="fa-solid fa-briefcase"></i> Consultancy</a></li>
+            <li><a href="aiml_faculty_achievements.html"><i class="fa-solid fa-medal"></i> Faculty Achievements</a></li>
+            <li><a href="aiml_faculty_upskilling.html"><i class="fa-solid fa-arrow-trend-up"></i> Faculty Upskilling</a></li>
+            <li><a href="/facilities/facilities_event_gallery.html"><i class="fa-regular fa-calendar-check"></i> Events Organized</a></li>
+            <li><a href="aiml_placement.html"><i class="fa-solid fa-briefcase"></i> Placement</a></li>
+            <li><a href="aiml_higher_education.html"><i class="fa-solid fa-school"></i> Higher Education</a></li>
+            <li><a href="aiml_entrepreneurship.html"><i class="fa-solid fa-lightbulb"></i> Entrepreneurship</a></li>
+            <li><a href="aiml_professional_societies.html"><i class="fa-solid fa-people-group"></i> Professional Societies</a></li>
+            <li><a href="aiml_clubs.html"><i class="fa-solid fa-puzzle-piece"></i> Club Activities (Clubs)</a></li>
+            <li><a href="aiml_association.html"><i class="fa-solid fa-handshake"></i> Association Activities</a></li>
+            <li><a href="aiml_guest_lectures.html"><i class="fa-solid fa-chalkboard-user"></i> Guest Lectures</a></li>
+            <li><a href="aiml_student_publications.html"><i class="fa-solid fa-newspaper"></i> Student Publications</a></li>
+            <li><a href="aiml_online_courses.html"><i class="fa-solid fa-laptop"></i> Online Courses</a></li>
+            <li><a href="aiml_newsletter.html"><i class="fa-regular fa-newspaper"></i> Newsletter and Magazines</a></li>
+            <li><a href="aiml_contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <main class="dept-main-content">
+        <h1 class="dept-title-red" data-aos="fade-up">ABOUT THE DEPARTMENT</h1>
+        <div class="dept-subpage-content" data-aos="fade-up">
+            <section class="dept-section" data-aos="fade-up">
+                <h3>ABOUT THE DEPARTMENT</h3>
+                <div class="glass-card-premium" style="border-left: 5px solid #a31f24;">
+                    <p>The Department of Computer Science Engineering with Artificial Intelligence and Machine Learning (AI & ML) offers a cutting-edge program that integrates core computer science principles with specialized knowledge in artificial intelligence and machine learning. The curriculum is designed to equip students with the skills needed to develop intelligent systems, analyze complex data, and create innovative solutions using AI technologies.</p>
+                    <p>The department focuses on providing students with a strong foundation in algorithms, data structures, programming, and mathematics, combined with specialized training in machine learning, deep learning, natural language processing, computer vision, and robotics. Students gain hands-on experience through project-based learning and industry collaborations.</p>
+                    <p>The department has well-equipped computing laboratories and experienced faculty dedicated to nurturing the next generation of AI professionals and researchers.</p>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>KEY HIGHLIGHTS</h3>
+                <div class="salient-grid">
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-brain"></i></div>
+                        <h4>AI & ML Specialization</h4>
+                        <p>Specialized curriculum covering machine learning, deep learning, NLP, computer vision, and reinforcement learning.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4>Hands-on Learning</h4>
+                        <p>Project-based curriculum with real-world datasets, industry tools, and modern computing infrastructure.</p>
+                    </div>
+                    <div class="salient-card">
+                        <div class="salient-icon-box"><i class="fa-solid fa-industry"></i></div>
+                        <h4>Industry Connect</h4>
+                        <p>Collaborations with AtoS, NTT Data, LTIMindtree for Centres of Excellence and industry training.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dept-section" data-aos="fade-up">
+                <h3>PROGRAM HIGHLIGHTS</h3>
+                <div class="grid-2">
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #a31f24;">
+                        <h4 style="color:#003366;"><i class="fa-solid fa-brain" style="color:#a31f24;"></i> AI & ML Specialization</h4>
+                        <p style="font-size:0.9rem; color:#555;">In-depth coverage of machine learning, deep learning, NLP, computer vision, and reinforcement learning.</p>
+                    </div>
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #f5c518;">
+                        <h4 style="color:#003366;"><i class="fa-solid fa-laptop-code" style="color:#f5c518;"></i> Hands-on Learning</h4>
+                        <p style="font-size:0.9rem; color:#555;">Project-based curriculum with real-world datasets, industry tools, and modern computing infrastructure.</p>
+                    </div>
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #003366;">
+                        <h4 style="color:#003366;"><i class="fa-solid fa-industry" style="color:#003366;"></i> Industry Connect</h4>
+                        <p style="font-size:0.9rem; color:#555;">Collaborations with industry partners for training, internships, and placement opportunities in AI roles.</p>
+                    </div>
+                    <div class="glass-card-ai" style="padding:20px; border-top:4px solid #28a745;">
+                        <h4 style="color:#003366;"><i class="fa-solid fa-flask" style="color:#28a745;"></i> Research Focus</h4>
+                        <p style="font-size:0.9rem; color:#555;">Encouragement of innovative research in emerging AI domains with faculty mentorship.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<!-- INCLUDE:components/footer.html --><div id="include-footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+<script src="../../assets/js/include-components.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src="../../assets/js/ai-assistant.js" defer></script>
+<script>
+    AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 });
+</script>
+
+    <style>
+    </style>
+
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const bttBtn = document.getElementById('backToTopBtn');
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('show', window.scrollY > 400);
+        }, { passive: true });
+    </script></body>
+</html>

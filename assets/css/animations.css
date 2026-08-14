@@ -1,0 +1,52 @@
+/* ==========================================================================
+   CSS ANIMATIONS & TRANSITIONS (Vanilla)
+   ========================================================================== */
+
+/* 1. Register Now Marquee (Horizontal right to left) */
+.notice-marquee {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-left 25s linear infinite;
+    gap: 50px;
+}
+.notice-marquee span {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+@keyframes marquee-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+    /* Requires duplicate content to loop seamlessly */
+}
+
+/* 2. Programs Infinite Marquee (Horizontal left to right) */
+.programs-marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-right 40s linear infinite;
+}
+.programs-marquee:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+/* 3. Hero Subtlebounce */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Customize AOS durations or delays globally if needed */
+[data-aos] {
+    transition-duration: 800ms !important;
+}

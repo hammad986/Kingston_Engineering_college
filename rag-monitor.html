@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>RAG Diagnostics — Kingston Engineering College</title>
+    <style>
+        body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 24px; }
+        .wrap { max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.3rem; color: #f5c518; margin-bottom: 4px; }
+        .sub { color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+        .card h2 { font-size: 0.95rem; margin: 0 0 10px; color: #e2e8f0; }
+        .kv { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #293548; font-size: 0.85rem; }
+        .kv:last-child { border-bottom: none; }
+        .k { color: #94a3b8; }
+        .v { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+        .ok { color: #22c55e; } .bad { color: #ef4444; } .warn { color: #eab308; }
+        #log { background: #0b1220; border: 1px solid #22304a; border-radius: 8px; padding: 12px; font-family: 'Cascadia Code', Consolas, monospace; font-size: 0.78rem; line-height: 1.5; max-height: 260px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; }
+        #log .ts { color: #64748b; }
+        #query-form { display: flex; gap: 8px; margin: 12px 0; }
+        #q { flex: 1; background: #0b1220; color: #fff; border: 1px solid #334155; border-radius: 8px; padding: 10px 12px; font-size: 0.88rem; }
+        button { background: #003366; color: #fff; border: none; border-radius: 8px; padding: 10px 16px; font-size: 0.85rem; cursor: pointer; font-weight: 600; }
+        button:hover { background: #004a99; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 8px; }
+        th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid #293548; }
+        th { color: #94a3b8; font-weight: 600; }
+        a { color: #60a5fa; }
+        .note { font-size: 0.75rem; color: #64748b; margin-top: 6px; line-height: 1.4; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <h1>🔬 RAG Diagnostics</h1>
+    <div class="sub">Kingston Engineering College · AI Assistant &amp; retrieval pipeline monitor · <strong>developer/audit only — not public-linked</strong> · served from <code>/ai-assistant-diagnostics.html</code></div>
+
+    <div class="card">
+        <h2>Runtime state</h2>
+        <div id="state">Loading…</div>
+    </div>
+
+    <div class="card">
+        <h2>Asset loading checkpoints</h2>
+        <div id="assets">Loading…</div>
+        <div class="note">These confirm the local embedding model, vectors, and chunks are served from this project (no Hugging Face / CDN).</div>
+    </div>
+
+    <div class="card">
+        <h2>Retrieval smoke test</h2>
+        <div id="query-form">
+            <input id="q" placeholder="Ask a Kingston question (e.g. 'What is the NAAC grade?')">
+            <button id="go">Test retrieval</button>
+        </div>
+        <div id="results"></div>
+        <div id="log"></div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var $ = id => document.getElementById(id);
+    function log(msg) { var l = $('log'); l.innerHTML += '<span class="ts">' + new Date().toLocaleTimeString() + '</span> ' + msg + '\n'; l.scrollTop = l.scrollHeight; }
+    function kv(k, v, cls) { return '<div class="kv"><span class="k">' + k + '</span><span class="v ' + (cls || '') + '">' + v + '</span></div>'; }
+
+    // 1. Assets that must load from THIS project (no external model fetch)
+    var checks = [
+        { name: 'transformers.js (vendored)', url: '/assets/vendor/transformers/transformers.min.js', head: true },
+        { name: 'ORT wasm (vendored)', url: '/assets/vendor/transformers/ort-wasm-simd.wasm', head: true },
+        { name: 'Model config', url: '/assets/models/all-MiniLM-L6-v2/config.json', head: true },
+        { name: 'Model tokenizer', url: '/assets/models/all-MiniLM-L6-v2/tokenizer.json', head: true },
+        { name: 'Model weights (ONNX)', url: '/assets/models/all-MiniLM-L6-v2/onnx/model_quantized.onnx', head: true },
+        { name: 'vectors.bin', url: '/data/vectors.bin', head: true },
+        { name: 'chunks.json', url: '/data/chunks.json', head: true },
+        { name: 'knowledge-base.json', url: '/data/knowledge-base.json', head: true },
+        { name: 'search-index.json', url: '/data/search-index.json', head: true },
+    ];
+    var assetsHtml = '';
+    Promise.all(checks.map(function (c) {
+        return fetch(c.url, { method: 'HEAD' }).then(function (r) {
+            return { c: c, status: r.status, bytes: r.headers.get('content-length') || '?' };
+        }).catch(function (e) { return { c: c, status: 'ERR', bytes: '-' }; });
+    })).then(function (rows) {
+        assetsHtml = rows.map(function (r) {
+            var cls = r.status === 200 ? 'ok' : 'bad';
+            return '<div class="kv"><span class="k">' + r.c.name + '</span><span class="v ' + cls + '">' + r.status + ' · ' + r.bytes + ' B</span></div>';
+        }).join('');
+        $('assets').innerHTML = assetsHtml;
+        log('Asset checks complete.');
+    });
+
+    // 2. Live runtime state (reads the assistant's global diagnostics)
+    function renderState() {
+        var A = window.KingstonAI;
+        var html = '';
+        html += kv('AIAssistant loaded', A ? 'yes' : 'no', A ? 'ok' : 'bad');
+        if (A) {
+            html += kv('_ragReady', A._ragReady, A._ragReady ? 'ok' : 'bad');
+            html += kv('_ragWorkerReady', A._ragWorkerReady, A._ragWorkerReady ? 'ok' : 'bad');
+            html += kv('_ragError', A._ragError || 'none');
+            html += kv('_ragChunks loaded', A._ragChunks ? A._ragChunks.length : 0, 'ok');
+        }
+        html += kv('KEC_RAG_READY (window)', window.KEC_RAG_READY === true, window.KEC_RAG_READY === true ? 'ok' : 'bad');
+        html += kv('KEC_ENABLE_LLM', window.KEC_ENABLE_LLM === true, window.KEC_ENABLE_LLM === true ? 'ok' : 'warn');
+        $('state').innerHTML = html;
+    }
+    renderState();
+    setInterval(renderState, 1000);
+
+    // 3. Retrieval smoke test
+    $('go').addEventListener('click', async function () {
+        var q = $('q').value.trim();
+        if (!q) { log('Enter a question first.'); return; }
+        var A = window.KingstonAI;
+        if (!A || !A._ragReady) { log('RAG not ready yet — cannot run retrieval.'); return; }
+        log('Query: "' + q + '"');
+        log('Calling _ragQuery…');
+        var t0 = performance.now();
+        try {
+            var res = await A._ragQuery(q, 5);
+            var ms = Math.round(performance.now() - t0);
+            if (!res) { $('results').innerHTML = '<span class="bad">No results (RAG returned null — see worker/model state above).</span>'; return; }
+            log('Retrieval: ' + res.length + ' results in ' + ms + 'ms');
+            var html = '<table><tr><th>#</th><th>Similarity</th><th>Final score</th><th>Chunk source</th></tr>';
+            res.forEach(function (r, i) {
+                html += '<tr><td>' + (i + 1) + '</td><td>' + r.score.toFixed(4) + '</td><td>' + r.finalScore.toFixed(4) + '</td><td><a href="' + r.source + '" target="_blank" rel="noopener">' + r.source + '</a> — ' + (r.title || '').slice(0, 60) + '</td></tr>';
+            });
+            html += '</table>';
+            $('results').innerHTML = html;
+        } catch (e) { log('ERROR: ' + e.message); $('results').innerHTML = '<span class="bad">Retrieval error: ' + e.message + '</span>'; }
+    });
+})();
+</script>
+
+<!-- The diagnostics page ISOLATES RAG verification from the production assistant.
+     It reads window.KingstonAI's runtime state (which is only set by the real
+     ai-assistant.js on the live assistant page). On a page WITHOUT ai-assistant.js
+     (like this one), window.KingstonAI will be absent — that confirms the local
+     RAG model + vectors load independently on demand. -->
+</body>
+</html>

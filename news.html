@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - Kingston Engineering College</title>
+    <meta name="description" content="News & Updates at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/news.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="News & Updates - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/news.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="News & Updates at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News & Updates - Kingston Engineering College">
+    <meta name="twitter:description" content="News & Updates at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <div class="blog-page-hero"
+            style="background: linear-gradient(135deg, #003366 0%, #00509e 60%, #0072ce 100%); padding: 56px 0 48px; position: relative; overflow: hidden; color: #fff;">
+            <div class="container" style="position: relative; z-index: 1;">
+                <p class="blog-breadcrumb"
+                    style="color: rgba(255,255,255,0.65); font-size: 0.85rem; margin-bottom: 16px;">
+                    <a href="index.html" style="color: rgba(255,255,255,0.75); text-decoration: none;">Home</a> / News &
+                    Announcements
+                </p>
+                <h1 style="color: #fff; font-size: 2.4rem; font-weight: 800; margin: 0 0 8px; letter-spacing: 1px;"><i
+                        class="fa-solid fa-newspaper" style="font-size:1.8rem;margin-right:12px;opacity:0.85;"></i>News
+                    &
+                    Announcements</h1>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin: 0;">Stay informed with the latest
+                    updates, events, achievements and announcements from Kingston Engineering College.</p>
+            </div>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="blog-controls"
+            style="background: #fff; border-bottom: 1px solid #e8edf5; padding: 18px 0; position: relative; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.07);">
+            <div class="container blog-controls-inner"
+                style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                <div class="blog-search-wrap" style="position: relative; flex: 0 0 260px;">
+                    <i class="fa-solid fa-magnifying-glass"
+                        style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.85rem;"></i>
+                    <input type="search" id="blog-search" placeholder="Search news…" autocomplete="off"
+                        style="width: 100%; padding: 9px 14px 9px 34px; border: 1.5px solid #dde4f0; border-radius: 8px; font-size: 0.9rem; outline: none; transition: border-color 0.2s; background: #f8faff;">
+                </div>
+                <div id="blog-filter-bar" style="display: flex; gap: 8px; flex-wrap: wrap; flex: 1;">
+                    <!-- Populated by news.js -->
+                </div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <section class="blog-news-section" style="padding: 48px 0 64px; background: #f4f7fb;">
+            <div class="container">
+                <div id="blog-news-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px;">
+                    <!-- Populated by news.js -->
+                    <div style="grid-column:1/-1;text-align:center;padding:60px 0;color:#888;">
+                        <i class="fa-solid fa-spinner fa-spin fa-2x" style="color:#003366;"></i>
+                        <p style="margin-top:16px;">Loading news…</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.AOS) {
+                AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+            }
+        });
+    </script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+</body>
+
+</html>

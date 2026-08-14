@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure - Kingston Engineering College</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <style>
+        /* ---- IT Card grid ---- */
+        .it-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .it-card p {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #555;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* ---- Section wrappers (shared with facilities.html) ---- */
+        .fac-section {
+            padding: 76px 0;
+        }
+
+        .fac-section.bg-light {
+            background: #f8f9fa;
+        }
+
+        .fac-heading {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .fac-heading-line {
+            width: 72px;
+            height: 4px;
+            background: #c0393b;
+            border-radius: 2px;
+            margin-bottom: 38px;
+        }
+
+        .fac-hero {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .fac-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fac-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 60%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 44px 64px;
+        }
+
+        .fac-hero-overlay h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-left: 6px solid #f5c518;
+            padding-left: 22px;
+        }
+
+
+        .it-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: 0.4s;
+            border-bottom: 5px solid transparent;
+        }
+
+        .it-card:hover {
+            transform: translateY(-10px);
+            border-color: #f5c518;
+        }
+
+        .it-icon {
+            font-size: 3rem;
+            color: #003366;
+            margin-bottom: 25px;
+        }
+
+        .it-card h3 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+    </style>
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section class="fac-hero">
+            <video autoplay muted loop playsinline>
+                <source src="../assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="fac-hero-overlay">
+                <h1>IT Infrastructure</h1>
+            </div>
+        </section>
+
+        <section class="fac-section bg-light">
+            <div class="container">
+
+                <h2 class="fac-heading" data-aos="fade-up">IT Infrastructure</h2>
+                <div class="fac-heading-line"></div>
+
+                <div class="it-grid">
+                    <div class="it-card" data-aos="fade-up">
+                        <div class="it-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Internet & Intranet</h3>
+                        <p>1155 Mbps 1:1 dedicated leased line connectivity. Access from more than 2000 computers across
+                            all departments.</p>
+                    </div>
+                    <div class="it-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="it-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>PCs / Laptops</h3>
+                        <p>More than 2000 Desktop PCs / Laptops connected through a robust fibre optic backbone.</p>
+                    </div>
+                    <div class="it-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="it-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h3>Wi-Fi Campus</h3>
+                        <p>Free 24x7 Wi-Fi facility covering entire campus including hostels, cafeteria, and seminar
+                            halls.</p>
+                    </div>
+                    <div class="it-card" data-aos="fade-up">
+                        <div class="it-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>Data Center</h3>
+                        <p>900 Sq.Ft Data Centre hosting Rack & Blade servers with uninterrupted power and 4 TB NAS
+                            storage.</p>
+                    </div>
+                    <div class="it-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="it-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Firewall Security</h3>
+                        <p>Cyberoam 300ING firewall deployed for secure campus networking and load handling.</p>
+                    </div>
+                    <div class="it-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="it-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h3>ICT Facilities</h3>
+                        <p>Interactive panels, smartboards, and lecture capturing systems in classrooms and seminar
+                            halls.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.AOS) {
+                AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+            }
+        });
+    </script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+    <div id="ai-widget-container">
+        <div class="ai-widget-box">
+            <div class="ai-widget-header">
+                <div class="ai-header-left">
+                    <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="ai-header-info">
+                        <span class="ai-header-name">Kingston AI Assistant</span>
+                        <span class="ai-header-status">
+                            <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                        </span>
+                    </div>
+                </div>
+                <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+            </div>
+            <div class="ai-widget-content">
+                <div id="ai-messages" class="ai-messages"></div>
+                <div class="ai-chips-bar">
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓
+                        Admissions</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰
+                        Fees</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊
+                        Placements</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚
+                        Courses</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠
+                        Hostel</button>
+                    <button class="ai-chip-btn"
+                        onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆
+                        Scholarships</button>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                    <button id="ai-send-btn" class="ai-send-btn" title="Send"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

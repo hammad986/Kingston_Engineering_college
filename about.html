@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Kingston Engineering College</title>
+    <meta name="description" content="About Kingston Engineering College, Vellore: our history, vision, accreditations (AICTE, NAAC A, Anna University), governance and commitment to technical...">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="About - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/about.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="About Kingston Engineering College, Vellore: our history, vision, accreditations (AICTE, NAAC A, Anna University), governance and commitment to technical...">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About - Kingston Engineering College">
+    <meta name="twitter:description" content="About Kingston Engineering College, Vellore: our history, vision, accreditations (AICTE, NAAC A, Anna University), governance and commitment to technical...">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Kingston Engineering College",
+  "url": "https://engineering.kingston.ac.in/",
+  "description": "About Kingston Engineering College, Vellore: our history, vision, accreditations (AICTE, NAAC A, Anna University), governance and commitment to technical...",
+  "logo": "https://engineering.kingston.ac.in/assets/images/logo.png",
+  "image": "https://engineering.kingston.ac.in/assets/images/og-cover.png"
+}
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════════════
+           ABOUT PAGE — Page-Specific Styles (overrides)
+           Global typography now in assets/css/typography.css
+           ═══════════════════════════════════════════════ */
+
+        /* Custom colored bullets for Vision/Mission lists */
+        .v-list-body {
+            margin: 0;
+            padding: 0 0 0 22px;
+            list-style-type: none;
+        }
+
+        .v-list-body li {
+            padding-left: 8px;
+            position: relative;
+        }
+
+        .v-list-body li::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #a4101e;
+            flex-shrink: 0;
+        }
+
+        .v-col:nth-child(2) .v-list-body li::before {
+            background: #43a047;
+        }
+
+        .v-col:nth-child(3) .v-list-body li::before {
+            background: #00acc1;
+        }
+
+        .v-list-body li strong {
+            font-weight: 700;
+            color: #222;
+        }
+
+        .why-subtitle {
+            letter-spacing: 3px;
+        }
+
+        .why-title {
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        .v-title-red,
+        .v-title-green,
+        .v-title-cyan {
+            font-weight: 700;
+            font-size: 1.35rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .v-title-red,
+            .v-title-green,
+            .v-title-cyan {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/typography.css">
+
+    <!-- ════════════════════════════════════════════════════
+         ABOUT POPUP — Premium Modal Styles
+         ════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Overlay ── */
+        .about-popup-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+
+        .about-popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ── Dialog ── */
+        .about-popup-dialog {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            max-height: 85vh;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow:
+                0 24px 80px rgba(0, 0, 0, 0.35),
+                0 8px 32px rgba(0, 0, 0, 0.15);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 44px 48px 40px;
+            transform: scale(0.92) translateY(16px);
+            transition: transform 0.40s cubic-bezier(0.34, 1.56, 0.64, 1);
+            /* Premium scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: var(--brand-red, #a4101e) #f0f0f0;
+        }
+
+        .about-popup-dialog::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .about-popup-dialog::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .about-popup-dialog::-webkit-scrollbar-thumb {
+            background: var(--brand-red, #a4101e);
+            border-radius: 10px;
+        }
+
+        .about-popup-overlay.active .about-popup-dialog {
+            transform: scale(1) translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .about-popup-overlay {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                transition: opacity 0.15s ease, visibility 0.15s ease;
+            }
+
+            .about-popup-dialog {
+                transition: none;
+            }
+        }
+
+        /* ── Close Button ── */
+        .about-popup-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #f2f4f8;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            transition: all 0.25s ease;
+            z-index: 5;
+        }
+
+        .about-popup-close:hover {
+            background: var(--brand-red, #a4101e);
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+        /* ── Title ── */
+        .about-popup-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--brand-blue, #0b223c);
+            line-height: 1.25;
+            margin-bottom: 6px;
+            padding-right: 40px;
+        }
+
+        .about-popup-title-bar {
+            width: 50px;
+            height: 4px;
+            background: var(--brand-red, #a4101e);
+            border-radius: 2px;
+            margin-bottom: 28px;
+        }
+
+        /* ── Content Body ── */
+        .about-popup-body p {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: #444;
+            margin-bottom: 18px;
+            letter-spacing: 0.01em;
+            word-spacing: 0.02em;
+        }
+
+        .about-popup-body p:last-of-type {
+            margin-bottom: 32px;
+        }
+
+        /* ── Institution Name Intro ── */
+        .about-popup-institution {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--brand-red, #a4101e);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* ── Highlight Milestone Card ── */
+        .about-popup-milestone {
+            background: linear-gradient(135deg, #fbf5ef 0%, #fdf8f3 100%);
+            border: 2px solid #e8d5b8;
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 8px;
+            box-shadow: 0 4px 20px rgba(180, 120, 60, 0.10);
+        }
+
+        .about-popup-milestone-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--brand-red, #a4101e), #c0392b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.6rem;
+            box-shadow: 0 6px 20px rgba(164, 16, 30, 0.25);
+        }
+
+        .about-popup-milestone-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a08060;
+            margin-bottom: 4px;
+        }
+
+        .about-popup-milestone-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--brand-blue, #0b223c);
+            line-height: 1.35;
+        }
+
+        .about-popup-milestone-text strong {
+            color: var(--brand-red, #a4101e);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .about-popup-dialog {
+                padding: 30px 22px 28px;
+                max-height: 90vh;
+                border-radius: 16px;
+            }
+
+            .about-popup-title {
+                font-size: 1.25rem;
+                padding-right: 32px;
+            }
+
+            .about-popup-title-bar {
+                margin-bottom: 20px;
+            }
+
+            .about-popup-body p {
+                font-size: 0.9rem;
+                line-height: 1.75;
+                margin-bottom: 14px;
+            }
+
+            .about-popup-close {
+                top: 14px;
+                right: 14px;
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+
+            .about-popup-milestone {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+                gap: 16px;
+            }
+
+            .about-popup-milestone-text {
+                font-size: 1.05rem;
+            }
+
+            .about-popup-institution {
+                font-size: 1.05rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-popup-overlay {
+                padding: 10px;
+            }
+
+            .about-popup-dialog {
+                padding: 24px 16px 24px;
+                border-radius: 14px;
+            }
+
+            .about-popup-title {
+                font-size: 1.1rem;
+            }
+
+            .about-popup-body p {
+                font-size: 0.85rem;
+            }
+
+            .about-popup-milestone {
+                padding: 20px 16px;
+            }
+
+            .about-popup-milestone-icon {
+                width: 52px;
+                height: 52px;
+                font-size: 1.3rem;
+            }
+
+            .about-popup-milestone-text {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/main.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+    </section>
+
+    <!-- Why Choose Kingston Grid -->
+    <section class="why-choose-section">
+        <div class="container why-grid">
+
+            <!-- Left Column -->
+            <div class="why-col-left">
+                <div class="red-stat-box" data-aos="flip-up" data-aos-duration="1000">
+                    <h2>25 Industry Visits</h2>
+                    <p>Where Classrooms Meet the<br>Corporate World</p>
+                </div>
+                <img src="assets/images/2nd -img-hero.png" alt="Students grouping" class="why-img-left"
+                    data-aos="fade-right" data-aos-delay="200">
+            </div>
+
+            <!-- Middle Column -->
+            <div class="why-col-middle">
+                <img src="assets/images/alumni_hero_premium_bg.jpeg" alt="Global Exposure" class="why-img-middle"
+                    data-aos="fade-up" data-aos-delay="100">
+                <div class="white-overlap-box" data-aos="zoom-in" data-aos-delay="400">
+                    <h2>2 Weeks of<br>Global Exposure</h2>
+                    <p>Learning, Culture &<br>Discovery Beyond Borders</p>
+                </div>
+            </div>
+
+            <!-- Right Column Text -->
+            <div class="why-col-right" data-aos="fade-left" data-aos-delay="300">
+                <div class="why-subtitle">ABOUT US</div>
+                <h2 class="why-title">Why Choose <span class="highlight-underline">Kingston</span></h2>
+
+                <p class="why-desc">
+                    At Kingston Engineering College, we blend academic rigor with real-world experience. Our mission is
+                    to nurture innovation, leadership, and a spirit of inquiry among students through industry-relevant
+                    education and value-driven learning.
+                </p>
+
+                <ul class="why-features-list">
+                    <li><i class="fa-solid fa-circle-check text-green-500"></i> PhD faculty predominantly hold degrees
+                        from top-tier institutes such as IITs & NITs.</li>
+                    <li><i class="fa-solid fa-circle-check text-green-500"></i> Rural & National immersion Programs</li>
+                    <li><i class="fa-solid fa-circle-check text-green-500"></i> 7-day paid international study tour
+                        Programs (subsidised for golden scholar batch)</li>
+                    <li><i class="fa-solid fa-circle-check text-green-500"></i> 25 industry study tours</li>
+                </ul>
+
+                <a href="#" class="btn-more-details" id="btn-more-details">More Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission-section relative overflow-hidden">
+        <!-- Floating decor / background glow if needed -->
+        <div class="container text-center mb-16 relative z-10">
+            <h2 class="section-title text-black" data-aos="zoom-in" data-aos-duration="800">Vision & Mission</h2>
+        </div>
+
+        <div class="container vision-images-grid relative z-10">
+            <img src="assets\images\about\vision-innovation.jpg"
+                alt="Innovation Lightbulb" class="v-img v-small" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets\images\about\vision-target.jpg" alt="Target Dart"
+                class="v-img v-large" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets\images\about\vision-growth.jpg" alt="Growth Graph"
+                class="v-img v-medium" data-aos="fade-down" data-aos-delay="300">
+            <img src="assets\images\about\vision-education.jpg" alt="Education Books"
+                class="v-img v-tall" data-aos="fade-left" data-aos-delay="400">
+        </div>
+
+        <div class="container vision-text-grid mt-12 relative z-10">
+            <!-- Vision -->
+            <div class="v-col" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="v-title-red">Our Vision</h3>
+                <p class="v-text-body">
+                    To be a pioneer in engineering and management education by providing amicable ambience and being a
+                    centre for learning thereby perpetuating versatile professionals in engineering and management
+                    suitable for industry, higher education and research.
+                </p>
+            </div>
+
+            <!-- Mission -->
+            <div class="v-col" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="v-title-green">Our Mission</h3>
+                <ul class="v-list-body">
+                    <li>Developing, nurturing and building professionals with technical, research and managerial
+                        expertise, intellectual proficiency, right attitude and moral ethics.
+                    </li>
+                    <li>Building infrastructure that earmarks the institution to be the most preferred educational
+                        destination and provides the right ambience for creative and innovative teaching - learning
+                        process.</li>
+                    <li>Enabling learners to broaden their horizon and helping to meet global challenges.</li>
+                    <li>Empowering students to lead with ethics, drive sustainable development, and make transformative
+                        contributions to society and industry.</li>
+                </ul>
+            </div>
+
+            <!-- Core Values -->
+            <div class="v-col" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="v-title-cyan">Our Core Values</h3>
+                <ul class="v-list-body">
+                    <li><strong>EXCELLENCE :</strong> We create value through hard work, effective teaching, and
+                        academic excellence.</li>
+                    <li><strong>CREATIVITY :</strong> Fresh ideas, bold thinking, and an entrepreneurial spirit keep us
+                        creative.</li>
+                    <li><strong>EMPATHY & COMPASSION :</strong> Our core values and primary focus are on uplifting the
+                        human condition in all endeavours of life.</li>
+                    <li><strong>INCLUSION :</strong> We foster a welcoming culture that empowers diverse talent to
+                        excel.</li>
+                    <li><strong>INTEGRITY :</strong> We uphold the highest standards of ethics, transparency, and
+                        accountability.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         ACHIEVEMENTS GLASSMORPHIC SHOWCASE — Highly Animated & Interactive
+         ═══════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Section Container ── */
+        .ach-glass-section {
+            position: relative;
+            overflow: hidden;
+            padding: 90px 0 100px;
+            background: linear-gradient(135deg, #0a0e1a 0%, #0d1b2a 40%, #0a1628 70%, #060c18 100%);
+        }
+
+        /* ── Animated Mesh Background ── */
+        .ach-mesh-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 51, 102, 0.35) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 80% 70%, rgba(180, 0, 40, 0.25) 0%, transparent 65%),
+                radial-gradient(ellipse 50% 40% at 50% 10%, rgba(245, 197, 24, 0.12) 0%, transparent 60%);
+            animation: meshPulse 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes meshPulse {
+            0% {
+                opacity: 0.7;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1.04);
+            }
+        }
+
+        /* ── Floating Orbs ── */
+        .ach-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.18;
+            animation: orbFloat 12s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ach-orb-1 {
+            width: 340px;
+            height: 340px;
+            background: #003366;
+            top: -80px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .ach-orb-2 {
+            width: 260px;
+            height: 260px;
+            background: #cc0033;
+            bottom: -60px;
+            right: -80px;
+            animation-delay: 3s;
+        }
+
+        .ach-orb-3 {
+            width: 200px;
+            height: 200px;
+            background: #f5c518;
+            top: 30%;
+            left: 45%;
+            animation-delay: 6s;
+        }
+
+        @keyframes orbFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.1);
+            }
+        }
+
+        /* ── Particle Canvas ── */
+        #achParticleCanvas {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ── Grid Lines Overlay ── */
+        .ach-grid-lines {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* ── Section Header ── */
+        .ach-header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .ach-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #f5c518;
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: fadeSlideUp 0.8s 0.3s forwards;
+        }
+
+        .ach-eyebrow::before,
+        .ach-eyebrow::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #f5c518, transparent);
+        }
+
+        .ach-main-title {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+            margin: 0 0 16px;
+            opacity: 0;
+            animation: fadeSlideUp 0.8s 0.5s forwards;
+            background: linear-gradient(135deg, #ffffff 0%, #c8d8f0 50%, #f5c518 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ach-title-shimmer {
+            display: inline-block;
+            position: relative;
+        }
+
+        .ach-title-shimmer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmerText 3s 1.5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shimmerText {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .ach-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.55);
+            max-width: 560px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeSlideUp 0.8s 0.7s forwards;
+        }
+
+        /* ── Stats Row ── */
+        .ach-stats-row {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 52px;
+        }
+
+        .ach-stat-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            padding: 10px 22px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeSlideUp 0.8s forwards;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .ach-stat-pill:nth-child(1) {
+            animation-delay: 0.9s;
+        }
+
+        .ach-stat-pill:nth-child(2) {
+            animation-delay: 1.05s;
+        }
+
+        .ach-stat-pill:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+
+        .ach-stat-pill:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(245, 197, 24, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 197, 24, 0.15);
+        }
+
+        .ach-stat-pill .pill-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .pill-icon.gold {
+            background: rgba(245, 197, 24, 0.2);
+            color: #f5c518;
+        }
+
+        .pill-icon.blue {
+            background: rgba(0, 100, 200, 0.2);
+            color: #60a5fa;
+        }
+
+        .pill-icon.red {
+            background: rgba(200, 0, 40, 0.2);
+            color: #f87171;
+        }
+
+        /* ── Marquee Track ── */
+        .ach-marquee-outer {
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            padding: 20px 0;
+            /* Fade edges */
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+        }
+
+        .ach-marquee-track {
+            display: flex;
+            gap: 28px;
+            width: max-content;
+            animation: achMarqueeScroll 32s linear infinite;
+        }
+
+        .ach-marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes achMarqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ── Glass Logo Card ── */
+        .ach-logo-card {
+            position: relative;
+            flex-shrink: 0;
+            width: 190px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.18),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease,
+                border-color 0.35s ease,
+                background 0.35s ease;
+        }
+
+        /* Shine sweep on hover */
+        .ach-logo-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: translateX(-100%) rotate(-15deg);
+            transition: transform 0.55s ease;
+            border-radius: inherit;
+            z-index: 1;
+        }
+
+        /* Glow ring */
+        .ach-logo-card::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 21px;
+            background: transparent;
+            border: 2px solid transparent;
+            transition: border-color 0.35s ease, box-shadow 0.35s ease;
+            z-index: 0;
+        }
+
+        .ach-logo-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            background: rgba(255, 255, 255, 0.13);
+            border-color: rgba(245, 197, 24, 0.5);
+            box-shadow:
+                0 24px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(245, 197, 24, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .ach-logo-card:hover::before {
+            transform: translateX(200%) rotate(-15deg);
+        }
+
+        .ach-logo-card:hover::after {
+            border-color: rgba(245, 197, 24, 0.3);
+            box-shadow: 0 0 20px rgba(245, 197, 24, 0.15);
+        }
+
+        .ach-logo-card img {
+            position: relative;
+            z-index: 2;
+            max-width: 130px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: brightness(1) saturate(1);
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .ach-logo-card:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.1) saturate(1.2) drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+        }
+
+        .ach-card-label {
+            position: relative;
+            z-index: 2;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        .ach-logo-card:hover .ach-card-label {
+            color: #f5c518;
+        }
+
+        /* ── Bottom Accent Bar ── */
+        .ach-bottom-accent {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 52px;
+            opacity: 0;
+            animation: fadeSlideUp 0.8s 1.4s forwards;
+        }
+
+        .ach-accent-line {
+            flex: 1;
+            max-width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .ach-accent-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #f5c518;
+            box-shadow: 0 0 12px #f5c518;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 12px #f5c518;
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 0 24px #f5c518, 0 0 48px rgba(245, 197, 24, 0.3);
+                transform: scale(1.3);
+            }
+        }
+
+        .ach-accent-text {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ── Shared Fade-Up Keyframe ── */
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <section class="ach-glass-section" id="achievements-glass-section">
+        <!-- Background layers -->
+        <div class="ach-mesh-bg"></div>
+        <div class="ach-orb ach-orb-1"></div>
+        <div class="ach-orb ach-orb-2"></div>
+        <div class="ach-orb ach-orb-3"></div>
+        <canvas id="achParticleCanvas"></canvas>
+        <div class="ach-grid-lines"></div>
+
+        <!-- Header -->
+        <div class="container ach-header">
+            <div class="ach-eyebrow">
+                <span>Recognized Excellence</span>
+            </div>
+            <h2 class="ach-main-title">
+                <span class="ach-title-shimmer">Our Accreditations</span>
+            </h2>
+            <p class="ach-subtitle">Trusted and recognized by India's premier regulatory and accreditation bodies</p>
+        </div>
+
+        <!-- Stats Pills -->
+        <div class="ach-stats-row">
+            <div class="ach-stat-pill">
+                <span class="pill-icon gold"><i class="fa-solid fa-trophy"></i></span>
+                <span>NAAC 'A' Grade</span>
+            </div>
+            <div class="ach-stat-pill">
+                <span class="pill-icon blue"><i class="fa-solid fa-award"></i></span>
+                <span>AICTE Approved</span>
+            </div>
+            <div class="ach-stat-pill">
+                <span class="pill-icon red"><i class="fa-solid fa-certificate"></i></span>
+                <span>ISO 9001:2015</span>
+            </div>
+        </div>
+
+        <!-- Infinite Marquee -->
+        <div class="ach-marquee-outer">
+            <div class="ach-marquee-track" id="achMarqueeTrack">
+                <!-- Set A -->
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/002-UGC_India_Logo.png" alt="UGC">
+                    <span class="ach-card-label">UGC</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="AICTE">
+                    <span class="ach-card-label">AICTE</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/004-coa.png" alt="COA">
+                    <span class="ach-card-label">COA</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University">
+                    <span class="ach-card-label">Anna University</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/006-naaclogo-a.png" alt="NAAC">
+                    <span class="ach-card-label">NAAC</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/008-blue-horizontal.png" alt="NBA">
+                    <span class="ach-card-label">NBA</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/007-IIC_logo-e1671727022354.png" alt="IIC">
+                    <span class="ach-card-label">IIC</span>
+                </div>
+                <!-- Set B (duplicate for seamless loop) -->
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/002-UGC_India_Logo.png" alt="UGC">
+                    <span class="ach-card-label">UGC</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="AICTE">
+                    <span class="ach-card-label">AICTE</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/004-coa.png" alt="COA">
+                    <span class="ach-card-label">COA</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University">
+                    <span class="ach-card-label">Anna University</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/006-naaclogo-a.png" alt="NAAC">
+                    <span class="ach-card-label">NAAC</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/008-blue-horizontal.png" alt="NBA">
+                    <span class="ach-card-label">NBA</span>
+                </div>
+                <div class="ach-logo-card">
+                    <img src="assets/images/icons/007-IIC_logo-e1671727022354.png" alt="IIC">
+                    <span class="ach-card-label">IIC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Accent -->
+        <div class="ach-bottom-accent">
+            <div class="ach-accent-line"></div>
+            <div class="ach-accent-dot"></div>
+            <span class="ach-accent-text">Empowering Excellence Since 2008</span>
+            <div class="ach-accent-dot"></div>
+            <div class="ach-accent-line"></div>
+        </div>
+    </section>
+
+    <!-- Particle Animation Script -->
+    <script>
+        (function () {
+            const canvas = document.getElementById('achParticleCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [], W, H, animId;
+
+            function resize() {
+                W = canvas.width = canvas.offsetWidth;
+                H = canvas.height = canvas.offsetHeight;
+            }
+
+            function createParticle() {
+                return {
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    r: Math.random() * 1.8 + 0.4,
+                    dx: (Math.random() - 0.5) * 0.35,
+                    dy: -(Math.random() * 0.6 + 0.2),
+                    alpha: Math.random() * 0.5 + 0.1,
+                    color: Math.random() > 0.6 ? '#f5c518' : Math.random() > 0.5 ? '#4488cc' : '#ffffff'
+                };
+            }
+
+            function init() {
+                resize();
+                particles = Array.from({ length: 70 }, createParticle);
+                window.removeEventListener('resize', resize);
+                window.addEventListener('resize', resize);
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                particles.forEach((p, i) => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.alpha;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                    p.x += p.dx;
+                    p.y += p.dy;
+                    if (p.y < -10 || p.x < -10 || p.x > W + 10) {
+                        particles[i] = { ...createParticle(), y: H + 5 };
+                    }
+                });
+                animId = requestAnimationFrame(draw);
+            }
+
+            // Only run when section is in viewport (IntersectionObserver)
+            const section = document.getElementById('achievements-glass-section');
+            if ('IntersectionObserver' in window) {
+                const obs = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) { init(); draw(); }
+                        else { cancelAnimationFrame(animId); }
+                    });
+                }, { threshold: 0.1 });
+                obs.observe(section);
+            } else {
+                init(); draw();
+            }
+        })();
+    </script>
+
+    <!-- ════════════════════════════════════════════════════
+         ABOUT POPUP — Modal HTML
+         ════════════════════════════════════════════════════ -->
+    <div class="about-popup-overlay" id="aboutPopupOverlay" role="dialog" aria-modal="true" aria-labelledby="aboutPopupTitle">
+        <div class="about-popup-dialog" id="aboutPopupDialog">
+            <!-- Close Button -->
+            <button class="about-popup-close" id="aboutPopupClose" aria-label="Close dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Title -->
+            <h2 class="about-popup-title" id="aboutPopupTitle">About Kingston Engineering College</h2>
+            <div class="about-popup-title-bar"></div>
+
+            <!-- Content Body -->
+            <div class="about-popup-body">
+                <span class="about-popup-institution">Kingston Engineering College</span>
+
+                <p>Kingston Engineering College, located in the sprawling campus of <strong>11.62 acres</strong> in <strong>Vellore City</strong>, on the <strong>Chittoor National Highway</strong>, is situated just <strong>5 km from Katpadi Railway Station</strong>. It was established under the flagship of <strong>M/s. Duraimurugan Educational Trust</strong>, approved by <strong>AICTE, New Delhi</strong>, and affiliated with <strong>Anna University, Chennai</strong>.</p>
+
+                <p>Kingston Engineering College has ventured into the field of technical education with the vision of imparting knowledge, technical expertise, professional competence, and strong ethical values to students. The institution prepares graduates to meet rapidly evolving technological advancements, address the changing needs of society, and contribute meaningfully to Engineering and Technology.</p>
+
+                <p>The mission of the institution is to provide an excellent environment for teaching, learning, innovation, and research that reflects the highest standards of technical education. Kingston Engineering College has developed a strong academic ecosystem supported by quality infrastructure, modern laboratories, experienced faculty, and committed management to achieve this objective.</p>
+
+                <p>The learning experience at Kingston Engineering College offers students an inspiring academic journey enriched by a multicultural campus environment, collaborative learning, research opportunities, and continuous pursuit of academic excellence and professional growth.</p>
+            </div>
+
+            <!-- Milestone Highlight Card -->
+            <div class="about-popup-milestone">
+                <div class="about-popup-milestone-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <div class="about-popup-milestone-label">Institutional Milestone</div>
+                    <div class="about-popup-milestone-text">
+                        <strong>1st Autonomous Engineering College</strong><br>
+                        in Vellore – Ranipet – Tirupattur Region
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="include-footer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/news.js" defer></script>
+    <script src="assets/js/events.js" defer></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js" defer></script>
+    <script>
+        // Hero Main Swiper
+        new Swiper('#hero-main-swiper', {
+            loop: true,
+            speed: 900,
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            pagination: { el: '.hero-swiper-pagination', clickable: true },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+        });
+    </script>
+
+    <!-- ════════════════════════════════════════════════════
+         ABOUT POPUP — JavaScript
+         ════════════════════════════════════════════════════ -->
+    <script>
+        (function() {
+            'use strict';
+
+            const btn = document.getElementById('btn-more-details');
+            const overlay = document.getElementById('aboutPopupOverlay');
+            const dialog = document.getElementById('aboutPopupDialog');
+            const closeBtn = document.getElementById('aboutPopupClose');
+            let previousActiveElement = null;
+
+            if (!btn || !overlay || !closeBtn) return;
+
+            // ── Focus-trap: keep Tab cycling inside modal ──
+            function trapFocus(e) {
+                if (!overlay.classList.contains('active')) return;
+                var focusable = dialog.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                if (focusable.length === 0) return;
+                var first = focusable[0];
+                var last  = focusable[focusable.length - 1];
+                if (e.key === 'Tab') {
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            }
+
+            // ── Open ──
+            function openModal(e) {
+                if (e) e.preventDefault();
+                previousActiveElement = document.activeElement;
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.body.style.paddingRight = getScrollbarWidth() + 'px';
+                setTimeout(function() { closeBtn.focus(); }, 100);
+            }
+
+            // ── Close ──
+            function closeModal() {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                if (previousActiveElement && previousActiveElement.focus) {
+                    previousActiveElement.focus();
+                }
+            }
+
+            // ── Scrollbar width helper (prevents layout shift) ──
+            function getScrollbarWidth() {
+                var outer = document.createElement('div');
+                outer.style.visibility = 'hidden';
+                outer.style.overflow = 'scroll';
+                outer.style.position = 'absolute';
+                outer.style.top = '-9999px';
+                document.body.appendChild(outer);
+                var inner = document.createElement('div');
+                outer.appendChild(inner);
+                var width = outer.offsetWidth - inner.offsetWidth;
+                outer.parentNode.removeChild(outer);
+                return width;
+            }
+
+            // ── ESC key ──
+            function handleKeydown(e) {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    e.stopPropagation();
+                    closeModal();
+                }
+            }
+
+            // ── Outside click (on overlay, not dialog) ──
+            function handleOverlayClick(e) {
+                if (e.target === overlay) {
+                    closeModal();
+                }
+            }
+
+            // ── Bind events ──
+            btn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            document.addEventListener('keydown', handleKeydown);
+            document.addEventListener('keydown', trapFocus);
+            overlay.addEventListener('click', handleOverlayClick);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1237 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet & Mobile Layouts */
+@media (max-width: 1024px) {
+    html { font-size: 15px; } /* Proportional shrink */
+    .hidden-mobile { display: none !important; }
+    
+    /* Header adjustments */
+    .top-bar-inner { justify-content: space-between; }
+    .main-logo { height: 45px; }
+    .logo-text h1 { font-size: 1.15rem; }
+    .logo-text h2 { font-size: 0.75rem; }
+    .notice-bar { height: 28px; }
+    .notice-label { font-size: 0.65rem; padding: 0 10px; }
+    
+    /* Footer adjustments */
+    .footer-area { padding: 30px 0; }
+    .footer-title { font-size: 0.95rem; }
+    .footer-address p, .footer-links li a { font-size: 0.75rem; }
+    
+    /* Logo Bar - Convert to Marquee on Tablet/Mobile */
+    .logo-bar-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .accreditations-area {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        display: block !important; /* Ensure it shows if hidden-mobile was used incorrectly */
+        background: #f8f9fa;
+        padding: 5px 0;
+    }
+    .accred-logos {
+        display: flex;
+        width: max-content;
+        animation: logo-scroll 20s linear infinite;
+        gap: 30px;
+    }
+    .accred-logos img {
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    @keyframes logo-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    /* Hero adjustments */
+    .hero-content h2 { font-size: 1.2rem; }
+    .nirf-heading { font-size: 1.8rem; }
+    .hero-content {
+        left: 5%;
+        width: 90%;
+    }
+    
+    /* Grids to Columns */
+    .explore-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 13px; } /* Aggressively downsize everything */
+
+    /* Mobile Header Optimization */
+    .top-bar { display: none !important; }
+    .logo-bar { padding: 4px 0 !important; }
+    .main-logo { height: 30px !important; width: auto !important; }
+    .logo-text h1 { font-size: 0.85rem !important; }
+    .logo-text h2 { font-size: 0.5rem !important; }
+    .logo-area { gap: 4px !important; }
+    .notice-bar { font-size: 0.55rem !important; padding: 0 !important; height: 22px !important; }
+    .notice-label { font-size: 0.55rem !important; padding: 0 6px !important; }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px !important;
+        min-height: 44px;
+        min-width: 88px;
+        background: var(--brand-blue);
+        color: white;
+        font-size: 0.75rem !important;
+        border-radius: 4px;
+        gap: 8px;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 1000;
+        padding-top: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-links > li > a {
+        padding: 12px 14px !important;
+        font-size: 0.8rem !important;
+    }
+    .nav-links.active {
+        display: flex;
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-links > li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .dropdown {
+        position: static;
+        box-shadow: none;
+        border: none;
+        display: none;
+        background: var(--brand-light);
+        opacity: 1;
+        transform: none;
+    }
+    .dropdown a {
+        padding: 10px 18px !important;
+        font-size: 0.78rem !important;
+    }
+    .dropdown-columns { column-count: 1; min-width: 100%; }
+    /* Accordion behavior injected via JS class 'open' */
+    .nav-links > li.open > .dropdown { display: block; }
+    
+    /* Hide Floating Side Tabs on Mobile */
+    .floating-side-buttons { display: none !important; }
+
+    /* Hide Floating Side Tabs on Mobile */
+    .floating-side-buttons { display: none !important; }
+
+
+    /* Hero */
+    .hero-section { min-height: 400px; height: auto; padding: 48px 0 64px; }
+    .hero-slides-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    /* Compact yet complete carousel + card on mobile — never clip the stat text */
+    .hero-main-swiper .swiper-slide { height: auto !important; }
+    .hero-slide-card {
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        padding: 14px 14px 10px;
+    }
+    /* Compact card interior */
+    .hero-card-title { font-size: 1.05rem; margin-bottom: 12px; }
+    .hero-card-flex { gap: 8px; }
+    .hero-slide-card h1, .hero-slide-card h2, .hero-slide-card h3 { font-size: .9rem; }
+    .hero-slide-card p, .hero-slide-card li { font-size: 0.7rem; line-height: 1.3; margin: 0; }
+    .hero-card-logo-box { min-height: 60px; padding: 8px 8px 6px; margin-bottom: 8px; }
+    .hero-card-logo-box img { max-height: 36px; max-width: 56px; width: auto; }
+    .hero-card-logo-box p { font-size: 0.58rem; }
+    .hero-card-label, .hero-card-value { font-size: 0.66rem; }
+    .hero-card-divider { display: none; }
+    .hero-slide-autonomous-img { height: 240px; max-height: 240px; object-fit: cover; }
+    .hero-swiper-pagination { bottom: 6px; }
+    .hero-swiper-pagination .swiper-pagination-bullet { width: 7px; height: 7px; }
+    
+    .nirf-badges { flex-direction: column; gap: 15px; }
+
+    /* News */
+    .news-container { flex-direction: column; }
+    .news-left { flex: none; align-items: center; text-align: center; margin-bottom: 20px;}
+    
+    /* Explore */
+    .explore-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Footer */
+    .footer-area { padding: 20px 0 !important; }
+    .footer-grid { 
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .footer-col {
+        margin-bottom: 20px;
+    }
+    .footer-title {
+        font-size: 0.85rem !important;
+        margin-bottom: 8px !important;
+    }
+    .footer-address p, .footer-links li a { font-size: 0.7rem !important; }
+    .social-links {
+        justify-content: center;
+    }
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.65rem !important; }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 { font-size: 1.1rem; }
+    .logo-text h2 { font-size: 0.7rem; }
+    .logo-address { display: none; }
+
+    /* Hide Search button on mobile only */
+    .ks-search-trigger {
+        display: none !important;
+    }
+    
+    .explore-grid { grid-template-columns: 1fr; }
+    
+    /* Touch target spacing */
+    .nav-links > li > a {
+        padding: 14px 16px;
+        font-size: 0.85rem !important;
+    }
+    .nav-links > li.open > .dropdown a {
+        padding: 12px 16px !important;
+        font-size: 0.8rem !important;
+    }
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+}
+
+/* ==========================================================================
+   MOBILE OVERLAY & BODY SCROLL LOCK — Coordinated with style.css
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-overlay.show {
+        display: block;
+    }
+    .nav-links.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1001;
+        background: #fff;
+        padding: 70px 0 20px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .mobile-menu-toggle {
+        position: relative;
+        z-index: 1002;
+    }
+    .mobile-menu-toggle.active {
+        position: fixed;
+        top: 8px;
+        right: 12px;
+        left: auto;
+        width: auto;
+        padding: 6px 10px !important;
+        background: var(--brand-red);
+        border-radius: 6px;
+        z-index: 1003;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .mobile-menu-toggle.active .menu-label {
+        display: none;
+    }
+    .mobile-menu-toggle.active .hamburger-icon {
+        width: 18px;
+        height: 16px;
+    }
+
+    /* Ensure dropdown accordions animate smoothly */
+    .dropdown {
+        transition: max-height 0.35s ease, opacity 0.25s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .has-dropdown.open > .dropdown,
+    .flyout-trigger.open > .psd-mega-menu {
+        max-height: 2000px !important;
+        opacity: 1 !important;
+        padding: 6px 0 !important;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE TABLES — Auto-wrap all tables on mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+    table:not(.no-responsive) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    table:not(.no-responsive) th,
+    table:not(.no-responsive) td {
+        white-space: nowrap;
+    }
+}
+
+/* ==========================================================================
+   FLOATING WIDGETS ON MOBILE — Safe area & spacing
+   ========================================================================== */
+@media (max-width: 768px) {
+    .floating-circle-buttons {
+        right: 15px;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        gap: 10px;
+    }
+    .circle-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    #ai-widget-container {
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+    #ai-widget-container .ai-widget-box {
+        max-width: 100% !important;
+        height: 450px;
+    }
+    /* Ensure sticky CTA doesn't overlap with widgets */
+    .mobile-sticky-cta {
+        z-index: 9999;
+    }
+}
+
+/* ==========================================================================
+   FORM ELEMENTS ON MOBILE — Touch-friendly sizing
+   ========================================================================== */
+@media (max-width: 768px) {
+    input, select, textarea, button, .ai-input {
+        font-size: 16px !important; /* Prevent iOS zoom on focus */
+        touch-action: manipulation;
+    }
+    .btn-enquiry, .btn-apply, .btn-side, .admission-btn {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+        padding: 12px 16px;
+        min-height: 44px;
+    }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY SCALING ON MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.4rem !important; }
+    h3 { font-size: 1.15rem !important; }
+    .section-title { font-size: 1.6rem !important; }
+    .section-subtitle { font-size: 0.9rem !important; }
+    .hero-card-title { font-size: 1.2rem !important; }
+    .nav-l1 { font-size: 0.68rem !important; }
+    .nav-l2 { font-size: 0.65rem !important; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    h3 { font-size: 1rem !important; }
+    .section-title { font-size: 1.3rem !important; }
+}
+
+/* ==========================================================================
+   IMAGE OVERFLOW PREVENTION ON MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .hero-slide-card {
+        padding: 20px !important;
+    }
+    .hero-card-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero-card-divider {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   GALLERY & CARDS ON MOBILE — Prevent cut-off
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-card {
+        padding: 20px 15px;
+    }
+    .explore-card i {
+        font-size: 2.2rem;
+    }
+    .campus-gallery-grid,
+    [class*="gallery-grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .testi-card {
+        min-height: auto;
+        padding: 20px;
+    }
+    .testi-photo-wrap {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campus-gallery-grid,
+    [class*="gallery-grid"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   AI ASSISTANT WIDGET — Mobile specific
+   ========================================================================== */
+@media (max-width: 640px) {
+    .ai-widget-hidden {
+        width: calc(100vw - 28px);
+        bottom: 115px;
+        right: 14px;
+        left: 14px;
+    }
+    .ai-widget-box {
+        height: 470px !important;
+    }
+    .ai-message-bubble,
+    .ai-message-text {
+        font-size: 0.83rem !important;
+        max-width: 84% !important;
+    }
+    .ai-input {
+        font-size: 16px !important;
+    }
+}
+
+/* ==========================================================================
+   HERO SECTION — Mobile adjustments (max-width: 768px)
+   Note: This block previously lacked its @media wrapper, causing the rules to
+   apply globally (desktop included) AND breaking all CSS rules below this
+   block (footer/departments/about/events). Restored the @media so desktop is
+   untouched and downstream rules apply correctly.
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Mobile Hero — compact, premium, fully-visible (DESKTOP UNTOUCHED) */
+    .hero-section {
+        min-height: 0;
+        height: auto;
+        padding: 14px 0 18px;
+    }
+    /* Tighter absolute top-bar */
+    .hero-top-panel { top: 8px; padding: 0 12px; }
+    .hero-logo-medium { width: 44px; }
+    .hero-brand-text h2 { font-size: 0.95rem; line-height: 1.15; margin: 0; }
+    .hero-brand-text p { font-size: 0.62rem; margin: 2px 0 0; opacity: .92; }
+    .hero-admission-year { font-size: 1.7rem; margin: 0 8px; }
+    .hero-tnea-box { padding: 5px 10px; font-size: 0.68rem; }
+    .hero-content h2 { font-size: 1.05rem; line-height: 1.2; }
+    .hero-slides-wrap { margin-top: 16px; }
+    .hero-content {
+        left: 5%;
+        width: 90%;
+    }
+    .nirf-glass-card {
+        padding: 25px;
+    }
+    .nirf-glass-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nirf-divider {
+        width: 80%;
+        height: 1px;
+    }
+    .nirf-logo-square {
+        width: 150px;
+        height: 150px;
+    }
+    .nirf-glass-title {
+        font-size: 1.4rem;
+    }
+
+    /* ── PART 4: Premium Mobile Hero (mobile-only, additive) ───────────
+       Goals: better proportions, faster perceived load, stronger CTA
+       placement, better readability. Desktop values are not touched.
+    */
+    /* 1. Video: keep autoplay but relieve GPU on small screens by gently
+       scaling the wrapping layer and preferring hardware transforms. */
+    .hero-video-wrapper { will-change: transform; transform: translateZ(0); }
+    .hero-video { object-position: center; }
+
+    /* 2. Stronger overlay on phones for text legibility (video is busy) */
+    .hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 17, 38, 0.42) 0%,
+            rgba(0, 17, 38, 0.20) 35%,
+            rgba(0, 17, 38, 0.55) 100%
+        );
+    }
+
+    /* 3. TNEA pill: clearer contrast, never overlaps admission year text —
+       PART 22-24: also pin it visible (post-count) so mobiles keep seeing it */
+    .hero-tnea-box {
+        background: var(--brand-yellow, #ffc107);
+        color: #003366;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        letter-spacing: 0.5px;
+        position: absolute;
+        top: 76px;
+        left: 12px;
+        right: auto;
+        z-index: 25;
+        /* Persistent visibility (overrides anything that might fade it) */
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    /* After the counter has settled, make sure both pill and digit stay visible */
+    .hero-tnea-box .counter-finished,
+    .hero-tnea-box.counter-finished {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* 4. Slide card: tighter, less wasted space, larger hit zones */
+    .hero-slide-card {
+        background: rgba(255,255,255,0.96);
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    }
+    .hero-card-title {
+        color: #003366;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+    }
+
+    /* 5. Pagination: bigger touch-friendly bullets */
+    .hero-swiper-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        opacity: 0.5;
+        background: #003366;
+    }
+    .hero-swiper-pagination .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: var(--brand-yellow, #ffc107);
+    }
+}
+
+/* ── Sub-400px refinements for very narrow phones (320 / 360 / 375 / 390) ── */
+@media (max-width: 480px) {
+    .hero-top-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .hero-admission-year {
+        font-size: 1.45rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .hero-tnea-box {
+        align-self: flex-start;
+    }
+    .hero-slide-card {
+        border-radius: 12px;
+    }
+}
+
+/* ==========================================================================
+   FOOTER — Mobile refinements (compact, intentional layout)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Kill the desktop 60px top padding / 40px vertical gaps → compact stack. */
+    .main-footer {
+        padding-top: 24px !important;
+    }
+    .footer-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin-bottom: 14px !important;
+    }
+    .footer-col {
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+        padding-bottom: 14px !important;
+        margin-bottom: 14px !important;
+    }
+    .footer-col:last-of-type { border-bottom: none; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+    /* College identity block stays readable, but tighter. */
+    .footer-college-name { font-size: 1.05rem !important; margin-bottom: 8px !important; }
+    .about-col p { font-size: 0.78rem !important; margin-bottom: 8px !important; line-height: 1.45 !important; }
+    .contact-list li { font-size: 0.78rem !important; margin-bottom: 6px !important; gap: 8px !important; }
+
+    /* Links: compact, tappable, one column */
+    .footer-col h4 {
+        font-size: 0.82rem !important;
+        margin-bottom: 10px !important;
+        letter-spacing: 0.6px !important;
+    }
+    .footer-links { display: flex !important; flex-wrap: wrap !important; gap: 0 12px !important; }
+    .footer-links li { margin-bottom: 0 !important; width: 48%; }
+    .footer-links a {
+        font-size: 0.78rem !important;
+        padding: 7px 0 !important;
+        display: inline-block !important;
+    }
+
+    /* Accreditation badges: smaller, tight grid */
+    .accred-badges { gap: 6px !important; }
+    .badge { font-size: 0.62rem !important; padding: 3px 8px !important; }
+
+    /* Follow Us row: inline, compact */
+    .footer-col h4.mt-6 { margin-top: 10px !important; margin-bottom: 8px !important; }
+    .social-links { gap: 12px !important; flex-wrap: wrap !important; }
+    .social-links a { font-size: 0.72rem !important; padding: 6px 8px !important; }
+    .social-links a i { font-size: 1.05rem !important; }
+
+    /* Bottom bar: single compact column */
+    .footer-bottom { padding: 14px 0 !important; font-size: 0.72rem !important; }
+    .footer-bottom .container {
+        flex-direction: column !important;
+        gap: 8px !important;
+        text-align: center !important;
+    }
+    .footer-bottom p { margin: 0 !important; font-size: 0.72rem !important; }
+    .footer-bottom-links {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+    .footer-bottom-links a { font-size: 0.72rem !important; }
+}
+
+/* ==========================================================================
+   DEPARTMENT PAGES — Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+    .dept-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    .dept-card {
+        padding: 15px 10px;
+        min-height: 100px;
+    }
+    .dept-card i {
+        font-size: 1.5rem;
+    }
+    .dept-card span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dept-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   ABOUT PAGE — Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Defensive: mask any residual horizontal overflow from animated
+       children while still allowing inner content to size naturally. */
+    .why-choose-section,
+    .vision-mission-section,
+    .ach-glass-section {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    .why-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    .why-col-right {
+        padding-left: 0;
+    }
+    .why-title {
+        font-size: 1.6rem;
+    }
+    .vision-text-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    .vision-images-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .v-img {
+        width: 140px !important;
+        height: auto !important;
+    }
+    .about-hero-card {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about-hero-card h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+    .about-hero-text {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+   EVENTS & BLOG — Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+    .event-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .achievement-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Default hidden state for mobile elements */
+.mobile-sticky-cta { display: none; }
+
+@media (max-width: 768px) {
+    .mobile-sticky-cta {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: calc(48px + env(safe-area-inset-bottom, 0px));
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        background: white;
+        z-index: 9999;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+    .mobile-sticky-cta a {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+    }
+    .mobile-sticky-cta .btn-enquiry {
+        background: #f5c518;
+        min-height: 100%;
+    }
+}
+
+/* ==========================================================================
+   TABLET REFINEMENTS (768px - 1024px)
+   ========================================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .buildings-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .explore-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .prog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dept-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .metric-links-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section > .container {
+        padding: 0 20px;
+    }
+    /* Compact, fully-visible hero on portrait tablets */
+    .hero-section {
+        min-height: 0;
+        height: 60vh;
+    }
+    .hero-top-panel { top: 16px; }
+    .hero-admission-year { font-size: 2.3rem; }
+    .hero-slides-wrap { max-width: 46vw; }
+    .hero-slide-card { max-height: 44vh; overflow: auto; padding: 22px 24px 18px; }
+    .hero-slide-autonomous-img { max-height: 40vh; }
+
+    /* Portrait-tablet: desktop nav overflows (~950px). Switch to hamburger. */
+    .mobile-menu-toggle {
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px !important;
+        min-height: 44px;
+        min-width: 88px;
+        background: var(--brand-blue);
+        color: white;
+        font-size: 0.9rem;
+        border-radius: 4px;
+        gap: 8px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 1000;
+        padding-top: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links > li > a { padding: 14px 18px !important; font-size: 0.9rem !important; }
+    .dropdown { position: static; box-shadow: none; border: none; display: none; background: var(--brand-light); opacity: 1; transform: none; }
+    .nav-links > li.open > .dropdown { display: block; }
+    .nav-links > li.open > .dropdown a { font-size: 0.8rem; padding: 10px 20px !important; }
+}
+
+/* ==========================================================================
+   VERY SMALL SCREENS (320px-360px) — Compact everything
+   ========================================================================== */
+@media (max-width: 360px) {
+    html { font-size: 12.5px; }
+    .main-logo { height: 24px !important; }
+    .accred-logos img { height: 28px !important; }
+    .hero-section { min-height: 320px; padding: 32px 0 44px; }
+    .hero-slides-wrap { margin-top: 20px; padding: 0 8px; }
+    .hero-admission-year { font-size: 1.55rem; }
+    .explore-card { padding: 14px 10px; }
+    .explore-card i { font-size: 1.6rem; }
+    .mobile-sticky-cta { height: calc(44px + env(safe-area-inset-bottom, 0px)); }
+    .mobile-sticky-cta a { font-size: 0.7rem; }
+    .circle-btn { width: 40px; height: 40px; font-size: 18px; }
+    #ai-widget-container .ai-widget-box { height: 380px; }
+    .ai-chips-bar { padding: 5px 8px; gap: 5px; }
+    .ai-chip-btn { font-size: 0.65rem; padding: 4px 10px; }
+}
+
+@media (min-width: 1025px) {
+    .mobile-only-logo { display: none !important; }
+}
+
+/* ==========================================================================
+   PART 3+7 — MOBILE SWEEP: forms, tables, prevent iOS zoom, gallery grid
+   Mobile-only. Zero desktop impact (rules live inside @media ≤768px).
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Prevent iOS auto-zoom on focus for any user-editable control that was
+       missed by the typography block earlier (some pages have inline styles
+       that override the global input rule). 16px is the iOS threshold. */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    input[type="password"],
+    input[type="url"],
+    input[type="date"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+
+    /* Make any wide table horizontally scrollable instead of breaking layout.
+       .table-scroll already exists on some pages; this catches the rest. */
+    .table-container,
+    .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+    /* Cards & figures that may carry image or iframe children */
+    figure, .card, .pane, .tile { max-width: 100%; }
+
+    /* Long unbroken URLs / emails inside paragraphs shouldn't force overflow */
+    p, li, td, th, .rag-answer, .ai-message-bubble {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* Tap targets: nothing interactive smaller than 44×44 */
+    a, button, [role="button"] {
+        touch-action: manipulation;
+    }
+
+    /* Image-heavy pages: lazy images with fixed dimensions to prevent CLS.
+       If an <img> already has width/height attrs, aspect-ratio is auto. */
+    img[loading="lazy"] { content-visibility: auto; }
+}
+
+@media (max-width: 480px) {
+    /* Extra-tight padding for very small phones */
+    .container, [class*="container"] { padding-left: 14px; padding-right: 14px; }
+
+    /* Section paddings so content never hugs the edges */
+    section, .section { padding-left: 0; padding-right: 0; }
+
+    /* Gallery & card grids hold 2 columns even on smaller phones when the
+       design allows, falling back to 1 column below 360px (matches existing) */
+    .explore-grid { gap: 10px; }
+}
+
+@media (max-width: 360px) {
+    /* Very small phones: tighten everything that can still shrink */
+    .section-main-title, .section-title { font-size: 1.2rem !important; }
+    h1 { font-size: 1.4rem !important; }
+    h2 { font-size: 1.05rem !important; }
+    h3 { font-size: 0.95rem !important; }
+}
+
+/* ==========================================================================
+   NAAC & LONG DROPDOWNS — MOBILE NORMALIZATION (mobile-only, desktop untouched)
+   ==========================================================================
+   Problem: the site-wide accordion rule `.has-dropdown.open > .dropdown` uses
+   `max-height: 2000px !important` (see L292-297 above) which overrides NAAC's
+   own desktop `max-height: 380px`, so the open NAAC menu had no usable scroll
+   cap and read as an oversized panel. Meanwhile on 769–1024px portrait
+   tablets, NAAC's desktop width/scroll rule (style.css L212-219, not media-
+   gated) kept it absolutely-unaffected, producing the reported "hover-ish /
+   weird panel" feel. These rules give NAAC (and any other tall dropdown) a
+   sane, consistent accordion presentation on every mobile/tablet width —
+   desktop (≥1025px fine-pointer) is deliberately left exactly as before.
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* NAAC's desktop sizing is desktop-only now */
+    .naac-scrollable:not(.dropdown-columns):not(:has(.has-dropdown)) {
+        min-width: 0;
+        max-height: none;    /* mobile scroll is handled by the open rule below */
+        overflow-y: visible; /* collapsed state hides via max-height:0 anyway */
+        padding: 0;
+    }
+
+    /* Collapsed by default in the mobile drawer (accordion), regardless of the
+       display:none base — using max-height so the open transition is smooth. */
+    .dropdown {
+        min-width: 0;
+        box-shadow: none;
+    }
+
+    /* Open state: give tall menus like NAAC a real internal scroll instead of a
+       2000px runaway panel. 320px caps NAAC; long lists scroll, short lists
+       size to content. The `!important` matches the specificity of the base
+       accordion open rule and only affects ≤1024px. */
+    .has-dropdown.open > .dropdown,
+    .flyout-trigger.open > .psd-mega-menu {
+        max-height: min(60vh, 460px) !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* On very small phones, a slightly smaller cap keeps the trigger visible above
+   the open menu so the second-tap-to-navigate pattern stays discoverable. */
+@media (max-width: 480px) {
+    .has-dropdown.open > .dropdown,
+    .flyout-trigger.open > .psd-mega-menu {
+        max-height: min(52vh, 400px) !important;
+    }
+}
+
+/* ==========================================================================
+   ==========================================================================
+   MOBILE HERO — AUTHORITATIVE CONSOLIDATED BLOCK (max-width: 768px ONLY)
+   ==========================================================================
+   Why this block exists (last-wins cascade):
+   The earlier Hero mobile styles were fragmented across ~6 separate
+   @media(max-width:768px) blocks and inline styles, which produced the bug in
+   the attached 390px screenshot: a huge, near-full-width, semi-transparent card
+   stacked over the video ("About The Institution"/"Year of Establishment"/
+   "Student Strength" overlapping readable text), Hero consuming almost the
+   entire first screen, and the campus video effectively hidden.
+
+   This single block is the FINAL word on mobile Hero (≤768px). It is placed at
+   the very end of the stylesheet so it overrides every earlier, conflicting
+   mobile Hero rule. It does NOT touch desktop: every rule is gated by
+   @media(max-width:768px) and uses !important only where needed to beat the
+   fragmentary earlier rules.
+
+   Goals (per task): compact Hero, video visible, smaller cards, balanced
+   spacing, readable text, intentional mobile composition (not "desktop
+   squeezed to 390px").
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* ── Global mobile overflow guard (mobile-only) —────────────────────
+       Decorative absolutely-positioned elements (e.g. .hero-accent-circle,
+       .hero-accent-circle-2 on 80+ pages) and animated marquee tracks extend
+       past the viewport on narrow phones, pushing document scrollWidth to
+       ~336px on a 320px device (real horizontal-scrolling bug). Clipping at
+       the root prevents that page-level horizontal scroll without touching
+       any desktop behaviour. Desktop rules are ≥769px and unaffected. */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    /* Decorative hero accent circles: contain them so they can never scroll
+       the page. They are purely decorative blurred gradients. */
+    .hero-accent-circle, .hero-accent-circle-2, .hero-particles {
+        max-width: 100vw;
+    }
+
+    /* 1 — Hero section: compact height, video stays visible.
+       min-height:0 + height:auto stops the 700px/100vh desktop sizing. */
+    .hero-section {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 12px 0 20px !important;           /* compact top/bottom */
+        display: block !important;                  /* natural document flow */
+    }
+    /* Video: absolute fill stays, but hero-section height now comes from the
+       slides-wrap content below, so the video is genuinely visible around it. */
+    .hero-video { object-position: center 35%; }     /* show campus, not sky */
+    .hero-overlay {
+        /* Lighter, even overlay — video must be visible, not a black hole. */
+        background: rgba(0, 20, 40, 0.38) !important;
+    }
+
+    /* 2 — TNEA pill: keep the verified position/top-right behavior. The
+       previous fix anchored it to the top-right of the Hero; that behavior is
+       preserved and NOT changed. */
+    .hero-top-panel {
+        top: 10px !important;
+        padding: 0 12px !important;
+    }
+    /* TNEA: float top-RIGHT above the compact card, never overlapping slides.
+       The previous mobile rule pinned it at top:76px/left:12px which landed on
+       top of the slim chip-row card. Move it to the hero's top-right corner,
+       above the card stack, with a small safe clearance. */
+    .hero-tnea-box {
+        position: absolute !important;
+        top: 8px !important;
+        right: 12px !important;
+        left: auto !important;
+        z-index: 30 !important;
+        padding: 5px 10px !important;
+        font-size: 0.68rem !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 3 — Slides container: fills width but is comp ACT, centered, and does NOT
+       stretch to fill the viewport. max-width keeps content from growing into a
+       desktop-like panel; auto margins center it. */
+    .hero-slides-wrap {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: auto !important;
+        max-width: 430px !important;              /* ≈ phone content width */
+        margin: 0 auto !important;
+        padding: 0 14px 20px !important;
+        /* modest height so Hero doesn't own the whole screen */
+    }
+
+    /* 4 — Swiper slide: never let it grow taller than needed. */
+    .hero-main-swiper .swiper-slide {
+        height: auto !important;
+    }
+
+    /* 5 — THE CARD ITSELF: the core fix. Compact size, solid background so
+       the overlapping see-through text mess is impossible, readable but small. */
+    .hero-slide-card {
+        background: rgba(8, 24, 44, 0.86) !important; /* solid, readable, premium */
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 14px !important;
+        padding: 16px 14px 12px !important;            /* was 36px 42px 28px */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.30) !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        overflow: hidden !important;                   /* clip only inside the card, not page */
+    }
+    .hero-slide-card:hover { transform: none !important; }
+
+    /* 6 — Title: compact, mobile-sized. */
+    .hero-card-title {
+        font-size: 1.02rem !important;
+        margin: 0 0 12px !important;
+        color: #fff !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    /* 7 — Internal card items as a COMPACT horizontal chip-row on mobile.
+       The desktop card lays 3 items side-by-side with big logo boxes stacked
+       above labels (→ 419-439px tall). On mobile we go to a tight horizontal
+       flex where each item is [logo | label+value] side-by-side, driving card
+       height down to what the content actually needs (~150-200px). */
+    .hero-card-flex {
+        display: flex !important;
+        flex-direction: column !important;   /* stack items vertically, each slim */
+        gap: 8px !important;
+    }
+    .hero-card-item {
+        display: flex !important;
+        flex-direction: row !important;      /* logo left, text right */
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 0 !important;
+        text-align: left !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-radius: 9px !important;
+        padding: 8px 10px !important;
+        min-height: 56px !important;                 /* slim chip row */
+    }
+    .hero-card-logo-box {
+        flex: 0 0 auto !important;
+        width: 48px !important;
+        min-width: 48px !important;
+        height: 48px !important;
+        max-height: 48px !important;
+        min-height: 0 !important;
+        padding: 4px !important;
+        margin-bottom: 0 !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .hero-card-logo-box img { max-width: 36px !important; max-height: 30px !important; object-fit: contain !important; }
+    .hero-card-logo-box p { display: none !important; }  /* inner caption spans overflow the chip on mobile */
+    /* Any nested box inside the logo chip (the TUV/ISO decorative box) is
+       fundamentally a tall multi-span block; on mobile we collapse it to the
+       chip size and show only its first line via the flex centering of the
+       parent. Hard-clamp so it can never paint outside the 48px chip. */
+    .hero-card-logo-box > * {
+        max-width: 44px !important;
+        max-height: 44px !important;
+        overflow: hidden !important;
+        font-size: 0.40rem !important;
+        line-height: 1.0 !important;
+        border: none !important;
+        padding: 1px !important;
+        margin: 0 !important;
+    }
+
+    /* 8 — Labels/values sit side-by-side within the slim item bar. */
+    .hero-card-label,
+    .hero-card-value { font-size: 0.72rem !important; line-height: 1.25 !important; margin-bottom: 0 !important; }
+    .hero-card-label {
+        color: #ffd34d !important; font-weight: 700 !important;
+        display: block !important; margin-right: 6px !important;
+    }
+    .hero-card-value {
+        color: #fff !important; font-weight: 700 !important;
+        display: block !important; font-size: 0.78rem !important;
+    }
+
+    /* 9 — Dividers between items: hidden on mobile (they belong to desktop). */
+    .hero-card-divider { display: none !important; }
+
+    /* 10 — Autonomous slide image: compact and framed, not a giant panel. */
+    .hero-slide-autonomous-img {
+        height: 220px !important;
+        max-height: 220px !important;
+        object-fit: cover;
+        border-radius: 12px !important;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25) !important;
+    }
+
+    /* 11 — Pagination: compact, usable, not lost. */
+    .hero-swiper-pagination { margin-top: 10px !important; bottom: auto !important; }
+    .hero-swiper-pagination .swiper-pagination-bullet {
+        width: 7px !important; height: 7px !important; opacity: 0.55 !important;
+        background: #fff !important;
+    }
+    .hero-swiper-pagination .swiper-pagination-bullet-active {
+        opacity: 1 !important; background: var(--brand-yellow, #ffc107) !important;
+    }
+}
+
+/* Tighter again on very small phones (320 / 360 / 375 / 390) */
+@media (max-width: 480px) {
+    .hero-section { padding: 10px 0 16px !important; }
+    .hero-slides-wrap { padding: 0 12px 16px !important; }
+    .hero-slide-card { padding: 14px 12px 12px !important; }
+    .hero-card-title { font-size: 0.98rem !important; }
+    .hero-card-logo-box { min-height: 64px !important; }
+    .hero-slide-autonomous-img { height: 200px !important; max-height: 200px !important; }
+}
+
+/* Smallest modern phone width (320px) — keep it usable, not cramped */
+@media (max-width: 360px) {
+    .hero-slides-wrap { padding: 0 10px 14px !important; }
+    .hero-slide-card { padding: 12px 10px 10px !important; }
+    .hero-card-title { font-size: 0.94rem !important; }
+    .hero-card-logo-box { min-height: 56px !important; }
+    .hero-slide-autonomous-img { height: 180px !important; max-height: 180px !important; }
+}
