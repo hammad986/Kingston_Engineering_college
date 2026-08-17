@@ -387,7 +387,7 @@
         <section class="ev-section bg-light">
             <div class="container">
 
-                <h2 class="ev-heading" data-aos="fade-up">Campus Events &amp; Placement Gallery</h2>
+                <h2 class="ev-heading" data-aos="fade-up">Event Gallery</h2>
                 <div class="ev-heading-line"></div>
 
                 <div class="ev-filters" data-aos="fade-up" data-aos-delay="80">
@@ -430,23 +430,34 @@
     <script src="../assets/js/ai-assistant.js" defer></script>
 
     <script>
-        // ===== Event Gallery — 12 real placement images =====
+        // ===== Event Gallery — 12 event images with official website captions =====
         const evImgs = [
             'IMG_8933.JPG', 'IMG_8935.JPG', 'IMG_8937.JPG', 'IMG_8938.JPG',
             'IMG_8940.JPG', 'IMG_8943.JPG', 'IMG_8944.JPG', 'IMG_8949.JPG',
             'IMG_8951.JPG', 'IMG_8953.JPG', 'IMG_8956.JPG', 'IMG_8957.JPG',
         ];
 
-        // Generic category labels from folder context — images are placement/event photos
-        const evTypes = [
-            'placement', 'placement', 'placement', 'campus',
-            'campus', 'placement', 'placement', 'campus',
-            'campus', 'campus', 'campus', 'campus',
+        // Official website event captions (Event Gallery 2024 / 2019 / 2018)
+        const evLabels = [
+            'On Campus Drive',
+            'Cultural and Annual Day',
+            'Cultural Program | 24-Oct-2019',
+            'Integrated innovative lab by PADMA SHRI Dr. Mylswamy Annadurai | 15-Oct-2019',
+            'Induction day 2019 | 23-Sep-2019',
+            'Independence Day 2019',
+            'First Year Orientation',
+            'Event Annual Day 2018',
+            'Basketball Tournament',
+            'Cultural Festober 2018',
+            'On Campus Drive',
+            'Cultural and Annual Day',
         ];
 
-        const evLabels = evTypes.map(t =>
-            t === 'placement' ? 'Placement Activity' : 'Campus Event'
-        );
+        const evTypes = [
+            'campus', 'campus', 'campus', 'campus',
+            'campus', 'campus', 'campus', 'campus',
+            'campus', 'campus', 'campus', 'campus',
+        ];
 
         const evGrid = document.getElementById('evGrid');
         const BASE = '../assets/images/placement_images/';

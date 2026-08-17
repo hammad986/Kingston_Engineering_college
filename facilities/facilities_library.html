@@ -617,6 +617,228 @@
             color: #f5c518;
             margin-bottom: 10px;
         }
+
+        /* ===== Library Resources ===== */
+        .lib-resources-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .lib-resources-table-wrap {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .lib-resources-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .lib-resources-table th {
+            background: #003366;
+            color: #fff;
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .lib-resources-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.92rem;
+            color: #333;
+        }
+
+        .lib-resources-table tr:nth-child(even) td {
+            background: #fafbfc;
+        }
+
+        /* ===== KOHA & OPAC ===== */
+        .lib-koha-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .koha-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .koha-card {
+            background: linear-gradient(135deg, #f0f7ff, #fff);
+            border: 1px solid #e3edf7;
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 5px solid #003366;
+        }
+
+        .koha-card .koha-icon {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 12px;
+        }
+
+        .koha-card h3 {
+            font-size: 1.15rem;
+            color: #003366;
+            margin-bottom: 12px;
+        }
+
+        .koha-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* ===== Borrowing Rules ===== */
+        .borrowing-rules {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .borrowing-rules h3,
+        .lib-services h3,
+        .lib-useful-links h3 {
+            font-size: 1.4rem;
+            color: #111;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .borrow-table-wrap {
+            overflow-x: auto;
+            margin-bottom: 25px;
+        }
+
+        .borrow-table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .borrow-table th {
+            background: #a31f24;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .borrow-table td {
+            padding: 12px 16px;
+            border: 1px solid #eee;
+            text-align: center;
+            font-size: 0.92rem;
+            color: #333;
+        }
+
+        .borrow-notes {
+            list-style: none;
+            padding: 0;
+        }
+
+        .borrow-notes li {
+            padding: 8px 0 8px 22px;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.92rem;
+            border-bottom: 1px dashed #e5e5e5;
+        }
+
+        .borrow-notes li::before {
+            content: '\f0da';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #a31f24;
+        }
+
+        /* ===== Services ===== */
+        .lib-services {
+            margin-bottom: 50px;
+        }
+
+        .lib-services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .lib-services-list li {
+            padding: 10px 14px 10px 38px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+            color: #444;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .lib-services-list li::before {
+            content: '\f02d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 14px;
+            color: #003366;
+        }
+
+        /* ===== Useful Links ===== */
+        .lib-useful-links {
+            background: linear-gradient(135deg, #003366, #1a4d8f);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .lib-useful-links h3 {
+            color: #fff;
+        }
+
+        .lib-links-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lib-links-list li {
+            padding: 10px 0;
+            color: #dbe7f5;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .lib-links-list a {
+            color: #f5c518;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .lib-links-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .koha-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lib-services-list {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     <!-- Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -645,7 +867,23 @@
                             Where <span class="highlight">Innovation</span><br>Meets Knowledge
                         </h2>
                         <p class="overview-desc">
-                            The Kingston Engineering College Library stands as a beacon of intellectual growth, operating a state-of-the-art <b>Open Access System</b> and fully computerized <b>RFID Technology</b> that empowers students and researchers to explore a universe of technical information directly and effortlessly.
+                            The Institute's Learning Center is important for encouraging and displaying students' thirst
+                            for knowledge, information, and understanding and supporting their growth in these areas as
+                            well as in their personal, professional, and spiritual life. The Learning Center gives
+                            professors, staff, researchers, and students access to a vast range of technological ideas
+                            and information while inspiring and supporting them in all aspects of their goals to
+                            imagine, study, create, and share knowledge.
+                        </p>
+                        <p class="overview-desc">
+                            Library is the Heart of the Institution. Library is supported to the Teaching &amp; Learning
+                            System through the Library Resources. Kingston Engineering College Library was established
+                            in the year 2008. Library functions on Open Access System for all the users. Library is
+                            well equipped with Textbooks, Reference Books, Journals, Magazines, News papers etc. DDC
+                            (Dewey Decimal Classification) is using for classifying the Library books &amp; Arrangement
+                            of books for Subject-wise. Library Management Software is used for all the Housekeeping
+                            operations of the Library and is fully computerized &amp; automated with RFID code
+                            Technology. OPAC (Online Public Access Catalogue) is available for searching all RFID
+                            TAGGED resources to access within our Campus.
                         </p>
                         <div class="lib-cta-chips">
                             <a href="#library-gallery" class="lib-chip lib-chip-primary"><i class="fa-solid fa-images"></i>&nbsp; View Gallery</a>
@@ -787,6 +1025,168 @@
                         <div class="hour-label"><i class="fa-solid fa-umbrella-beach"></i> Vacation / Holiday Hours</div>
                         <span class="hour-time">09:00 AM — 05:30 PM</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ LIBRARY RESOURCES SECTION ============ -->
+        <section class="lib-resources-section">
+            <div class="lib-particle-bg"></div>
+            <div class="container">
+                <div class="section-eyebrow" data-aos="fade-down">
+                    <div class="tag">Collection</div>
+                    <h2>Library <em>Resources</em> (As on 30.04.2024)</h2>
+                </div>
+                <div class="lib-resources-table-wrap" data-aos="fade-up">
+                    <table class="lib-resources-table">
+                        <thead>
+                            <tr>
+                                <th>Particulars</th>
+                                <th>Resource Available</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>BOOKS VOLUMES</td><td>19343</td></tr>
+                            <tr><td>BOOKS TITLE</td><td>6331</td></tr>
+                            <tr><td>PRINT JOURNALS (NATIONAL &amp; INTERNATIONAL)</td><td>168</td></tr>
+                            <tr><td>MAGAZINES</td><td>15</td></tr>
+                            <tr><td>PROJECT REPORTS</td><td>2004</td></tr>
+                            <tr><td>NON-BOOK MATERIALS (CD&rsquo;S &amp; DVD&rsquo;S)</td><td>1194</td></tr>
+                            <tr><td>DAILY (NEWS PAPER)</td><td>11</td></tr>
+                            <tr><td>BACK VOLUMES (UPTO 2017)</td><td>960</td></tr>
+                            <tr><td>ARTICLES (FROM BACKVOLUMES)</td><td>17100</td></tr>
+                            <tr><td>E-JOURNALS FROM DELNET (All Engineering Disciplines, Management &amp; Science &amp; Humanities)</td><td>1569</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ KOHA & OPAC SECTION ============ -->
+        <section class="lib-koha-section">
+            <div class="container">
+                <div class="koha-grid">
+                    <div class="koha-card" data-aos="fade-up">
+                        <div class="koha-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>KOHA Integrated Library System (ILS)</h3>
+                        <p>Koha is an Integrated Library System with a range of features including: Online Public Access
+                            Catalogue (OPAC) module which provides a simple and clear interface for library users to
+                            perform tasks such as searching for and renewing books and suggesting new items.</p>
+                    </div>
+                    <div class="koha-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="koha-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>Library Online Public Access Catalogue (OPAC)</h3>
+                        <p>In case of any clarification, contact Librarian through email ID:
+                            <a href="mailto:librarian@kingston.ac.in">librarian@kingston.ac.in</a></p>
+                    </div>
+                </div>
+
+                <!-- Borrowing Rules -->
+                <div class="borrowing-rules" data-aos="fade-up">
+                    <h3>Library Rules</h3>
+                    <div class="borrow-table-wrap">
+                        <table class="borrow-table">
+                            <thead>
+                                <tr>
+                                    <th>Books</th>
+                                    <th>UG</th>
+                                    <th>PG</th>
+                                    <th>Teaching</th>
+                                    <th>Non-Teaching</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Number of Books</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td>20 Days</td>
+                                    <td>90 Days</td>
+                                    <td>30 Days</td>
+                                    <td>30 Days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="borrow-notes">
+                        <li>Books borrowed must be returned on the due date. An overdue charge of Rs. 1/- per day per
+                            book will be charged for the late return of books. Renewal of borrowing is allowed for one
+                            subsequent time if the particular book is not reserved by other users.</li>
+                        <li>All the books are affixed RFID tags for identification. Users are requested not to tamper or
+                            mutilate the RFID tag. If the tag is damaged, the return of the book will not be authorized,
+                            and the user has to pay a penalty of Rs. 100/-.</li>
+                        <li>Renewal of borrowing can be done through online.</li>
+                        <li>RFID Cards are not transferable. Hence, the students are advised to borrow books by using
+                            their own cards only.</li>
+                        <li>Users will get an acknowledgement slip for their issue &amp; return transactions. In
+                            addition, they will get an email alert for their transactions.</li>
+                        <li>The library users are advised to check their circulation history and due date through
+                            online.</li>
+                        <li>Before borrowing the books, students must ensure that the book is in good condition and
+                            pages are intact. Defects must be brought to the notice of the Librarian. Otherwise, the
+                            borrower is liable to be held responsible.</li>
+                        <li>No user shall deface the library books by underlining or scribbling notes in the margins.
+                        </li>
+                        <li>Loss of books issued should be reported to the Librarian immediately.</li>
+                        <li>If the borrower is unable to replace the lost book by another good copy, the user has to pay
+                            the current price of the book in triple along with overdue charges &amp; RFID Tag penalty.
+                        </li>
+                        <li>Journals, Magazines, and Project Reports shall not be issued.</li>
+                        <li>Personal books and files should be handed over to the attendant in the Property Counter at
+                            the entrance of the Learning Centre. Plain sheets/Notebooks may be taken instead. Students
+                            are advised not to keep their valuable things in the Learning Centre. Learning Centre
+                            authorities are not responsible for any loss of such items.</li>
+                        <li>Silence is to be maintained in the Learning Centre. Those who violate are first warned and
+                            then they are asked to leave the Learning Centre.</li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="lib-services" data-aos="fade-up">
+                    <h3>Library Services and Facilities</h3>
+                    <ul class="lib-services-list">
+                        <li>Reference Books.</li>
+                        <li>Back-volumes (Articles-searching through OPAC).</li>
+                        <li>Rare Book Titles (inter-library Loan- DELNET).</li>
+                        <li>Group Discussion Room as well as MULTIMEDIA FACILITY ROOM</li>
+                        <li>Materials for GATE, GRE, Competitive Exams, TOFEL Books, TANCET, Handbooks &amp; etc.</li>
+                        <li>Department Library established for each department. (CSE, CIVIL, ECE, EEE, MECHANICAL, IT,
+                            SCIENCE &amp; HUMANITIES &amp; MANAGEMENT)</li>
+                        <li>New Arrivals of Book, Journals &amp; Magazines are displayed</li>
+                        <li>Reprography Facility.</li>
+                        <li>Project Report Service.</li>
+                        <li>Book Exhibition &ndash; organizing all the academic year.</li>
+                        <li>OPAC facility.</li>
+                        <li>Books &amp; journals, Members-automated with bar code technology.</li>
+                        <li>Question booklet service.</li>
+                        <li>E-resources &ndash; The following URL links are available in our Library website for
+                            accessing easily. (OPAC, DELNET, NDL, SWAYAM-NPTEL ONLINE COURSES, NPTEL MATERIALS(VIDEO
+                            &amp; WEB PROGRAMS), E-BOOKS, E-PG &ndash;PATHSHALA, OPEN ACCESS JOURNALS, &amp; ANNA
+                            UNIVERSITY SYLLABUS)</li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="lib-useful-links" data-aos="fade-up">
+                    <h3>Useful Links</h3>
+                    <ul class="lib-links-list">
+                        <li><strong>NPTEL RESOURCES (WEB &amp; VIDEO CLASSES):</strong>
+                            <a href="https://nptel.ac.in/resources.html" target="_blank" rel="noopener noreferrer">https://nptel.ac.in/resources.html</a>
+                            (online access)</li>
+                        <li><strong>NATIONAL DIGITAL LIBRARY OF INDIA:</strong>
+                            <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">https://ndl.iitkgp.ac.in/</a></li>
+                        <li><strong>NDLI CLUB:</strong>
+                            <a href="https://club.ndl.iitkgp.ac.in" target="_blank" rel="noopener noreferrer">https://club.ndl.iitkgp.ac.in</a></li>
+                        <li><strong>OPEN RESOURCES ACCESS LINKS:</strong>
+                            <a href="https://doaj.org" target="_blank" rel="noopener noreferrer">https://doaj.org</a></li>
+                        <li><a href="https://epgp.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer">https://epgp.inflibnet.ac.in/</a></li>
+                        <li><a href="https://epathshala.nic.in/" target="_blank" rel="noopener noreferrer">https://epathshala.nic.in/</a></li>
+                    </ul>
                 </div>
             </div>
         </section>

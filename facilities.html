@@ -166,128 +166,21 @@
         }
 
         /* ---- HOSTEL --- */
-        .hostel-tabs {
-            display: flex;
-            gap: 0;
-            margin-bottom: 44px;
-            border-bottom: 3px solid #e0e0e0;
-        }
-
-        .hostel-tab-btn {
-            padding: 14px 36px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            color: #888;
-            border-bottom: 3px solid transparent;
-            margin-bottom: -3px;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hostel-tab-btn.active {
-            color: #c0393b;
-            border-bottom-color: #c0393b;
-        }
-
-        .hostel-tab-btn i {
-            font-size: 1.1rem;
-        }
-
-        .hostel-panel {
-            display: none;
-        }
-
-        .hostel-panel.active {
-            display: block;
-        }
-
-        /* Hostel Swiper */
-        .hostel-swiper {
-            width: 100%;
-            border-radius: 14px;
-            overflow: hidden;
-            margin-bottom: 32px;
-        }
-
-        .hostel-swiper .swiper-slide {
-            position: relative;
-            height: 380px;
-            overflow: hidden;
-        }
-
-        .hostel-swiper .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-
-        .hostel-swiper .swiper-slide:hover img {
-            transform: scale(1.06);
-        }
-
-        .hostel-swiper .swiper-slide .slide-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
-            color: #fff;
-            padding: 30px 24px 18px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .hostel-swiper .swiper-pagination-bullet-active {
-            background: #c0393b;
-        }
-
-        .hostel-swiper .swiper-button-next,
-        .hostel-swiper .swiper-button-prev {
-            color: #fff;
-        }
-
-        .hostel-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .hostel-info-card {
-            padding: 22px 20px;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .hostel-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
             background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+            border-left: 5px solid #a31f24;
         }
 
-        .hostel-info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .hostel-info-card i {
-            font-size: 1.8rem;
-            color: #c0393b;
-            margin-bottom: 10px;
-        }
-
-        .hostel-info-card h5 {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 4px;
-        }
-
-        .hostel-info-card p {
-            font-size: 0.75rem;
-            color: #777;
+        .hostel-content p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 16px;
         }
 
         /* ---- SPORTS 30-image masonry+marquee ---- */
@@ -500,143 +393,6 @@
             background: #c0393b;
         }
 
-        /* ---- Sports Stats Cards ---- */
-        .sports-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-        .sports-stat {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 14px;
-            padding: 24px 18px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .sports-stat:hover {
-            transform: translateY(-4px);
-        }
-        .sports-stat-num {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #f5c518;
-            line-height: 1;
-        }
-        .sports-stat-label {
-            font-size: 0.68rem;
-            color: rgba(255,255,255,0.6);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 6px;
-        }
-
-        /* ---- Championship Badges ---- */
-        .sports-champs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            margin-bottom: 40px;
-        }
-        .champ-badge {
-            background: rgba(245,197,24,0.12);
-            border: 1px solid rgba(245,197,24,0.25);
-            border-radius: 10px;
-            padding: 14px 10px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .champ-badge:hover {
-            background: rgba(245,197,24,0.2);
-            transform: translateY(-3px);
-        }
-        .champ-badge i {
-            color: #f5c518;
-            font-size: 0.9rem;
-        }
-        .champ-badge span {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        /* ---- National Medalist Cards ---- */
-        .medalists-section {
-            margin-bottom: 40px;
-        }
-        .medalists-title {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 18px;
-            border-left: 4px solid #f5c518;
-            padding-left: 14px;
-        }
-        .medalist-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 14px;
-        }
-        .medalist-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px;
-            padding: 16px 18px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .medalist-card:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateX(4px);
-        }
-        .medalist-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .medalist-icon.gold {
-            background: rgba(255,215,0,0.15);
-        }
-        .medalist-icon.gold i {
-            color: #ffd700;
-        }
-        .medalist-icon.silver {
-            background: rgba(192,192,192,0.15);
-        }
-        .medalist-icon.silver i {
-            color: #c0c0c0;
-        }
-        .medalist-icon.bronze {
-            background: rgba(205,127,50,0.15);
-        }
-        .medalist-icon.bronze i {
-            color: #cd7f32;
-        }
-        .medalist-icon i {
-            font-size: 1rem;
-        }
-        .medalist-name {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #fff;
-        }
-        .medalist-event {
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.6);
-        }
-
         @media (max-width: 900px) {
             .auditorium-layout {
                 grid-template-columns: 1fr;
@@ -644,10 +400,6 @@
 
             .sports-content {
                 columns: 1;
-            }
-
-            .hostel-info-grid {
-                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
@@ -689,18 +441,13 @@
             <div class="auditorium-layout">
                 <!-- Left: Content -->
                 <div class="auditorium-text" data-aos="fade-right" data-aos-delay="100">
-                    <p>Kingston Engineering College is home to a state-of-the-art auditorium that serves as the central
-                        hub for cultural, academic, and ceremonial events across the campus. The auditorium is designed
-                        with world-class acoustics, modern lighting systems, and an elegant interior that creates an
-                        impressive atmosphere for all occasions.</p>
-                    <p>With a seating capacity of over 1,200 people, the main auditorium is equipped with advanced
-                        audio-visual systems, LED projection screens, and a fully furnished stage that can accommodate
-                        large-scale performances, seminars, conferences, and convocation ceremonies. The infrastructure
-                        meets international standards ensuring a premium experience for every event.</p>
-                    <p>The facility is also equipped with modern climate control systems, high-speed internet
-                        connectivity, and professional stage management equipment, making it ideal for both formal
-                        academic events and vibrant cultural celebrations. Our dedicated team of technicians ensures
-                        every event is executed flawlessly.</p>
+                    <p>The auditorium with state-of-the-art multimedia system. It is frequently used for presentations,
+                        seminars, fests, events of the college. Equipped with modern facilities like multimedia
+                        projector and sound systems, the auditorium has large lobbies and verandahs ideally suited to
+                        hold International Conferences and Exhibitions.</p>
+                    <p>Kalaignar Auditorium has a capacity of 1500 seating and an excellent stage to be used for all
+                        common functions, events, cultural activities, sporting activities and other games also use to
+                        be organized here.</p>
                 </div>
 
                 <!-- Right: 3 mixed images -->
@@ -725,104 +472,17 @@
             <h2 class="fac-heading" data-aos="fade-up">Hostel</h2>
             <div class="fac-heading-line"></div>
 
-            <!-- Tab buttons -->
-            <div class="hostel-tabs" data-aos="fade-up" data-aos-delay="80">
-                <button class="hostel-tab-btn active" onclick="switchHostelTab('boys', this)">
-                    <i class="fa-solid fa-mars"></i> Boys Hostel
-                </button>
-                <button class="hostel-tab-btn" onclick="switchHostelTab('girls', this)">
-                    <i class="fa-solid fa-venus"></i> Girls Hostel
-                </button>
-            </div>
-
-            <!-- Boys Hostel -->
-            <div class="hostel-panel active" id="panel-boys">
-                <div class="swiper hostel-swiper" data-aos="fade-up">
-                    <div class="swiper-wrapper" id="boys-swiper-wrapper">
-                        <!-- Slides injected by JS -->
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-
-                <div class="hostel-info-grid" data-aos="fade-up" data-aos-delay="100">
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-bed"></i>
-                        <h5>800+ Beds</h5>
-                        <p>Spacious rooms with attached bathrooms and 24/7 hot water supply</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-wifi"></i>
-                        <h5>High-Speed Wi-Fi</h5>
-                        <p>Uninterrupted internet connectivity throughout all hostel blocks</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h5>24/7 Security</h5>
-                        <p>CCTV surveillance, biometric access and trained security personnel</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-dumbbell"></i>
-                        <h5>Gym & Recreation</h5>
-                        <p>In-house gymnasium and common recreation room for students</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-bolt"></i>
-                        <h5>Power Backup</h5>
-                        <p>24-hour generator backup ensuring uninterrupted power supply</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        <h5>In-House Mess</h5>
-                        <p>Nutritious home-style meals served three times daily by qualified cooks</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Girls Hostel -->
-            <div class="hostel-panel" id="panel-girls">
-                <div class="swiper hostel-swiper" data-aos="fade-up">
-                    <div class="swiper-wrapper" id="girls-swiper-wrapper">
-                        <!-- Slides injected by JS -->
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-
-                <div class="hostel-info-grid" data-aos="fade-up" data-aos-delay="100">
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-bed"></i>
-                        <h5>600+ Beds</h5>
-                        <p>Comfortable rooms with attached bathrooms and 24/7 hot water</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-lock"></i>
-                        <h5>Lady Warden</h5>
-                        <p>Dedicated lady warden and resident staff for safety and guidance</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-wifi"></i>
-                        <h5>High-Speed Wi-Fi</h5>
-                        <p>Seamless internet connectivity across all blocks</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-kit-medical"></i>
-                        <h5>Medical Room</h5>
-                        <p>In-campus medical room with a nurse available round the clock</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-tv"></i>
-                        <h5>Common Hall</h5>
-                        <p>Spacious common hall with TV and recreational facilities</p>
-                    </div>
-                    <div class="hostel-info-card">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        <h5>Separate Mess</h5>
-                        <p>Dedicated girls' dining hall with hygienic meals and diverse menu</p>
-                    </div>
-                </div>
+            <div class="hostel-content" data-aos="fade-up" data-aos-delay="100">
+                <p>In Our institution we are providing hostel facility for both genders separately with all
+                    facilities and with a choice of between vegetarian and non-vegetarian food. However, we try our
+                    best to provide accommodation to the needy students from areas outside and various parts of our
+                    country / world.</p>
+                <p>Computer terminals are available in each hostel for the students. Each room is provided with a
+                    telephone. The rooms are spaciously designed with adequate storage moving areas. The wi-fi
+                    facility extends to most of the hostels. In addition, some rooms are provided with a wired
+                    connection. Access to internet from hostels is a facility that aids the quest for knowledge. Each
+                    hostel is attached with a modern kitchen, a dining hall, a reading room with newspapers,
+                    periodicals and magazines, a TV and a telephone.</p>
             </div>
 
         </div>
@@ -846,156 +506,56 @@
                 <div class="sports-gallery-row row-odd" id="sports-row-2"></div>
             </div>
 
-            <!-- Sports Stats Strip -->
-            <div class="sports-stats" data-aos="fade-up" data-aos-delay="100">
-                <div class="sports-stat">
-                    <div class="sports-stat-num">12</div>
-                    <div class="sports-stat-label">Gold Medals</div>
-                </div>
-                <div class="sports-stat">
-                    <div class="sports-stat-num">248</div>
-                    <div class="sports-stat-label">Overall Points</div>
-                </div>
-                <div class="sports-stat">
-                    <div class="sports-stat-num">85</div>
-                    <div class="sports-stat-label">Student Athletes</div>
-                </div>
-                <div class="sports-stat">
-                    <div class="sports-stat-num">5×</div>
-                    <div class="sports-stat-label">Consecutive Wins</div>
-                </div>
-            </div>
-
-            <!-- 2-column verified sports content (from project PDFs) -->
+            <!-- Sports content (from official website) -->
             <div class="sports-content" data-aos="fade-up" data-aos-delay="120" style="color:#f7f7f7;">
-                <p>Kingston Engineering College has always been a proud promoter of sports and athletic excellence,
-                    offering world-class sporting facilities to nurture talent and build holistic development among
-                    students. The sprawling sports complex is equipped with international-standard courts and fields for
-                    cricket, football, basketball, volleyball, badminton, table tennis, kabaddi, kho-kho, athletics,
-                    and many other indoor and outdoor sports disciplines. The college actively encourages participation
-                    in inter-collegiate, state, and national level competitions, with over 85 students competing across
-                    18 sporting disciplines at the Anna University Zonal Sports Meet 2023 alone.</p>
-                <p>Kingston Engineering College was crowned the <strong>Overall Champion at the 2023 Anna University
-                    Zonal Sports Meet</strong>, securing 12 Gold, 8 Silver, and 15 Bronze medals — the Best Performance
-                    Trophy among 45+ affiliated colleges. The college also emerged as <strong>Overall Winners of the
-                    Inter-Collegiate Sports Meet 2023</strong> for the fifth consecutive year, amassing 248 points
-                    against top institutions including VIT Vellore (212) and SRM Chennai (196). Championship titles
-                    were won in Cricket, Basketball (Men), Volleyball, Badminton, Athletics, and Kabaddi, with 25
-                    students qualifying for the Inter-Zone Championship. The men's 4×100m relay team set a new meet
-                    record of 42.3 seconds.</p>
+                <p>Our College focuses on the holistic development of students. As a sequel to this, equal emphasis is
+                    laid on sports and games along with academics. Students are encouraged to participate and excel in
+                    sports in order to provide relaxation, channelise their energy, nurture competitive spirit, enhance
+                    team spirit and achieve leadership qualities.</p>
+                <p>Sport is an integral part of the curriculum, various sports facility is provided to the students
+                    within the campus. The college is committed to create a balanced atmosphere of academic, cultural
+                    and sports activities for the overall personality development of its students. Various sports
+                    competitions such as inter departmental, Inter collegiate, Inter University, etc help in developing
+                    team spirit in students. Their interpersonal relationship is enhanced in a very healthy manner.
+                    Students are provided with honors like medals, trophies and certificates.</p>
+                <p>&lsquo;Sports and Games&rsquo; is an area much sought after by the student community of this college.
+                    Playground and Equipment for outdoors and indoor games facilities are available for meeting the
+                    enthusiasm of such students and faculty. Men and women vie with each other to participate in games
+                    like Cricket, Foot ball, Hockey, Basketball, Volleyball, Tennis, Table Tennis, Ball-Badminton,
+                    Badminton, Chess, Throw Ball, etc and in various athletic events.</p>
+                <p>Students of this college have achieved remarkable feats as Winners and Runners-up ranging from the
+                    Inter-collegiate to University level in games and athletic events and have retained the
+                    championship in the University Division.</p>
+                <p>Many of our students have won medals and cash prizes at Anna University and Zonal and Inter-Zonal
+                    levels and State level tournaments in Throw Ball, Volley Ball, Table Tennis and Foot Ball.</p>
             </div>
 
-            <!-- Championship Sports Row -->
-            <div class="sports-champs" data-aos="fade-up" data-aos-delay="140">
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Cricket</span></div>
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Basketball</span></div>
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Volleyball</span></div>
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Badminton</span></div>
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Athletics</span></div>
-                <div class="champ-badge"><i class="fa-solid fa-trophy"></i><span>Kabaddi</span></div>
-            </div>
-
-            <!-- National Medalists Section -->
-            <div class="medalists-section" data-aos="fade-up" data-aos-delay="160">
-                <h3 class="medalists-title">National-Level Athletics Medal Winners</h3>
-                <div class="medalist-grid">
-                    <div class="medalist-card">
-                        <div class="medalist-icon gold"><i class="fa-solid fa-medal"></i></div>
-                        <div><div class="medalist-name">R. Vignesh (III CSE)</div><div class="medalist-event">Gold — 800m Run (1:52.4)</div></div>
-                    </div>
-                    <div class="medalist-card">
-                        <div class="medalist-icon silver"><i class="fa-solid fa-medal"></i></div>
-                        <div><div class="medalist-name">S. Priyadharshini (II ECE)</div><div class="medalist-event">Silver — Long Jump (5.86m)</div></div>
-                    </div>
-                    <div class="medalist-card">
-                        <div class="medalist-icon bronze"><i class="fa-solid fa-medal"></i></div>
-                        <div><div class="medalist-name">M. Kathirvel (III MECH)</div><div class="medalist-event">Bronze — 200m Sprint (21.8s)</div></div>
-                    </div>
-                    <div class="medalist-card">
-                        <div class="medalist-icon bronze"><i class="fa-solid fa-medal"></i></div>
-                        <div><div class="medalist-name">K. Divya (IV IT)</div><div class="medalist-event">Bronze — Shot Put (12.4m)</div></div>
-                    </div>
-                    <div class="medalist-card">
-                        <div class="medalist-icon gold"><i class="fa-solid fa-medal"></i></div>
-                        <div><div class="medalist-name">Kingston Relay Team</div><div class="medalist-event">Gold — 4×400m Relay (3:18.6)</div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sports Support & Policy Info -->
-            <div class="sports-content" data-aos="fade-up" data-aos-delay="180" style="color:#f7f7f7;">
-                <p>Under the guidance of qualified sports coaches and the Director of Physical Education, Kingston
-                    athletes receive comprehensive support including fully funded travel and accommodation, diet plans,
-                    sports psychology sessions, modern equipment, and uniforms provided by the college. Sports students
-                    are eligible for academic relaxations including a minimum 60% attendance requirement for Anna
-                    University examinations, rescheduling of internal assessment tests during sports participation,
-                    and tuition fee relaxation for winners at zonal, university, state, and national levels. Regular
-                    yoga sessions, fitness camps, and wellness programs are conducted throughout the academic year.
-                </p>
-                <p>Kingston Engineering College plans to continue its legacy of sporting excellence with the
-                    construction of a new indoor stadium and synthetic athletic track. Winners are honored annually
-                    at the college Sports Day with awards, certificates, and enhanced sports scholarships. The college's
-                    commitment to sporting excellence alongside academic achievement has made Kingston a recognized
-                    powerhouse in university-level sports across Tamil Nadu.</p>
-            </div>
-
-            <!-- Sports PDF download table (linked to real project PDFs) -->
+            <!-- Inter College Level Sports Details -->
             <div class="sports-pdf-section" data-aos="fade-up" data-aos-delay="120">
-                <p class="sports-pdf-heading" style="color:#fff;border-left-color:#f5c518;">Sports Achievements &amp; Policy Documents</p>
+                <p class="sports-pdf-heading" style="color:#fff;border-left-color:#f5c518;">Inter College Level Sports Details</p>
                 <table class="sports-pdf-table">
                     <tbody>
                         <tr>
-                            <td>Inter-Collegiate Sports Meet 2023 — Overall Winners</td>
+                            <td>Academic Year : 2016-2017</td>
                             <td>
                                 <div class="pdf-actions">
-                                    <a href="assets/pdfs/sports/inter_collegiate_sports_meet_2023.pdf" target="_blank" rel="noopener noreferrer"
-                                        class="btn-download-pdf">View PDF</a>
-                                    <a href="assets/pdfs/sports/inter_collegiate_sports_meet_2023.pdf" download
-                                        class="btn-download-icon"><i class="fa-solid fa-download"></i></a>
+                                    <span class="btn-download-pdf" style="display:inline-block; padding:8px 18px; background:#f5c518; color:#111; border-radius:6px; font-weight:700; font-size:0.85rem;">Download Pdf</span>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Anna University Zonal Champions 2023</td>
+                            <td>Academic Year : 2017-2018</td>
                             <td>
                                 <div class="pdf-actions">
-                                    <a href="assets/pdfs/sports/anna_university_zonal_champions_2023.pdf" target="_blank" rel="noopener noreferrer"
-                                        class="btn-download-pdf">View PDF</a>
-                                    <a href="assets/pdfs/sports/anna_university_zonal_champions_2023.pdf" download
-                                        class="btn-download-icon"><i class="fa-solid fa-download"></i></a>
+                                    <span class="btn-download-pdf" style="display:inline-block; padding:8px 18px; background:#f5c518; color:#111; border-radius:6px; font-weight:700; font-size:0.85rem;">Download Pdf</span>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>National Athletics Medal Winners</td>
+                            <td>Academic Year : 2018-2019</td>
                             <td>
                                 <div class="pdf-actions">
-                                    <a href="assets/pdfs/sports/national_athletics_medal_winners.pdf" target="_blank" rel="noopener noreferrer"
-                                        class="btn-download-pdf">View PDF</a>
-                                    <a href="assets/pdfs/sports/national_athletics_medal_winners.pdf" download
-                                        class="btn-download-icon"><i class="fa-solid fa-download"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>State Kabaddi Championship 2023 — Champions</td>
-                            <td>
-                                <div class="pdf-actions">
-                                    <a href="assets/pdfs/sports/state_kabaddi_championship_2023.pdf" target="_blank" rel="noopener noreferrer"
-                                        class="btn-download-pdf">View PDF</a>
-                                    <a href="assets/pdfs/sports/state_kabaddi_championship_2023.pdf" download
-                                        class="btn-download-icon"><i class="fa-solid fa-download"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sports Policy Document</td>
-                            <td>
-                                <div class="pdf-actions">
-                                    <a href="assets/pdfs/policies/sports.pdf" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"
-                                        class="btn-download-pdf">View PDF</a>
-                                    <a href="assets/pdfs/policies/sports.pdf" download
-                                        class="btn-download-icon"><i class="fa-solid fa-download"></i></a>
+                                    <span class="btn-download-pdf" style="display:inline-block; padding:8px 18px; background:#f5c518; color:#111; border-radius:6px; font-weight:700; font-size:0.85rem;">Download Pdf</span>
                                 </div>
                             </td>
                         </tr>
@@ -1082,58 +642,6 @@
             r2.appendChild(img);
         });
 
-        // ---- Boys Hostel Swiper Images (all 6 available) ----
-        const boysImgs = [
-            { src: 'assets/images/hostel/boys/entry.png', cap: 'Boys Hostel — Entry' },
-            { src: 'assets/images/hostel/boys/interior.png', cap: 'Boys Hostel — Interior' },
-            { src: 'assets/images/hostel/boys/IMG_5319.JPG', cap: 'Boys Hostel — Room View' },
-            { src: 'assets/images/hostel/boys/IMG_5320.JPG', cap: 'Boys Hostel — Corridor' },
-            { src: 'assets/images/hostel/boys/IMG_5324.JPG', cap: 'Boys Hostel — Building Exterior' },
-            { src: 'assets/images/hostel/boys/IMG_5327.JPG', cap: 'Boys Hostel — Campus View' },
-        ];
-        const boyWrapper = document.getElementById('boys-swiper-wrapper');
-        boysImgs.forEach(item => {
-            boyWrapper.innerHTML += `<div class="swiper-slide">
-                <img src="${item.src}" alt="${item.cap}" loading="lazy">
-                <div class="slide-caption">${item.cap}</div>
-            </div>`;
-        });
-
-        // ---- Girls Hostel Swiper Images (all 12 available) ----
-        const girlsImgs = [
-            { src: 'assets/images/hostel/girls/entry.png', cap: 'Girls Hostel — Entry' },
-            { src: 'assets/images/hostel/girls/interior.png', cap: 'Girls Hostel — Interior' },
-            { src: 'assets/images/hostel/girls/DSC_5620.JPG', cap: 'Girls Hostel — Building View' },
-            { src: 'assets/images/hostel/girls/DSC_5625.JPG', cap: 'Girls Hostel — Surroundings' },
-            { src: 'assets/images/hostel/girls/DSC_5632.JPG', cap: 'Girls Hostel — Entrance' },
-            { src: 'assets/images/hostel/girls/DSC_5637.JPG', cap: 'Girls Hostel — Garden Area' },
-            { src: 'assets/images/hostel/girls/DSC_5640.JPG', cap: 'Girls Hostel — Walkway' },
-            { src: 'assets/images/hostel/girls/DSC_5830.JPG', cap: 'Girls Hostel — Common Area' },
-            { src: 'assets/images/hostel/girls/IMG_5089.JPG', cap: 'Girls Hostel — Room Interior' },
-            { src: 'assets/images/hostel/girls/IMG_5092.JPG', cap: 'Girls Hostel — Dining Area' },
-            { src: 'assets/images/hostel/girls/DSC_5830.JPG', cap: 'Girls Hostel — Common Area' },
-            { src: 'assets/images/hostel/girls/IMG_5111.JPG', cap: 'Girls Hostel — Study Area' },
-        ];
-        const girlWrapper = document.getElementById('girls-swiper-wrapper');
-        girlsImgs.forEach(item => {
-            girlWrapper.innerHTML += `<div class="swiper-slide">
-                <img src="${item.src}" alt="${item.cap}" loading="lazy">
-                <div class="slide-caption">${item.cap}</div>
-            </div>`;
-        });
-
-        // ---- Initialize Boys Swiper ----
-        const boySwiper = new Swiper('#panel-boys .hostel-swiper', {
-            loop: true,
-            speed: 1000,
-            autoplay: { delay: 3500, disableOnInteraction: false },
-            pagination: { el: '#panel-boys .swiper-pagination', clickable: true },
-            navigation: { nextEl: '#panel-boys .swiper-button-next', prevEl: '#panel-boys .swiper-button-prev' },
-        });
-
-        // ---- Initialize Girls Swiper (lazy init) ----
-        let girlSwiperInst = null;
-
         // ---- Achievements data (13 real project images from assets/images/achievment/) ----
         const achievData = [
             { img: 'assets/images/achievment/recent_achievement_2024_1.jpg', title: 'Recent Achievement — 2024', desc: 'Kingston Engineering College continues its legacy of excellence with yet another prestigious recognition in 2024.' },
@@ -1177,24 +685,6 @@
                 1024: { slidesPerView: 3 },
             }
         });
-
-        // ---- Hostel tab switch ----
-        function switchHostelTab(tab, btn) {
-            document.querySelectorAll('.hostel-tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.hostel-panel').forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById('panel-' + tab).classList.add('active');
-
-            if (tab === 'girls' && !girlSwiperInst) {
-                girlSwiperInst = new Swiper('#panel-girls .hostel-swiper', {
-                    loop: true,
-                    speed: 1000,
-                    autoplay: { delay: 3800, disableOnInteraction: false },
-                    pagination: { el: '#panel-girls .swiper-pagination', clickable: true },
-                    navigation: { nextEl: '#panel-girls .swiper-button-next', prevEl: '#panel-girls .swiper-button-prev' },
-                });
-            }
-        }
     </script>
     <script src="assets/js/ai-assistant.js" defer></script>
 </body>

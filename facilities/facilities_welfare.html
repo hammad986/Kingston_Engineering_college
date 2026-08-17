@@ -104,74 +104,12 @@
         .wf-hero-title span { color: var(--gold); }
         .wf-hero-sub {
             font-size: 1.05rem; color: rgba(255,255,255,0.72);
-            max-width: 600px; margin: 0 auto 32px;
+            max-width: 700px; margin: 0 auto 32px;
             animation: wfFadeUp 0.7s 0.4s both;
-        }
-
-        /* hero pill badges */
-        .wf-pill-row {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-            animation: wfFadeUp 0.7s 0.55s both;
-        }
-        .wf-pill {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 8px 20px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 50px; color: #fff;
-            font-size: 0.82rem; font-weight: 600;
-            transition: background 0.3s, transform 0.3s, border-color 0.3s;
-        }
-        .wf-pill:hover {
-            background: rgba(245,197,24,0.18);
-            border-color: rgba(245,197,24,0.45);
-            transform: translateY(-3px); color: var(--gold);
         }
         @keyframes wfFadeUp {
             from { opacity:0; transform:translateY(22px); }
             to { opacity:1; transform:translateY(0); }
-        }
-
-        /* wave divider */
-        .wf-wave { line-height:0; }
-        .wf-wave svg { display:block; }
-
-        /* ─── STATS STRIP ─── */
-        .wf-stats { background: var(--navy); }
-        .wf-stats-grid {
-            display: grid; grid-template-columns: repeat(5,1fr);
-            max-width: 1200px; margin: 0 auto;
-        }
-        .wf-stat {
-            padding: 26px 16px; text-align: center;
-            border-right: 1px solid rgba(255,255,255,0.1);
-            position: relative; overflow: hidden;
-            transition: background 0.3s;
-        }
-        .wf-stat:last-child { border-right: none; }
-        .wf-stat::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(135deg, transparent 60%, rgba(245,197,24,0.07));
-            opacity: 0; transition: opacity 0.3s;
-        }
-        .wf-stat:hover::before { opacity: 1; }
-        .wf-stat-num {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem; font-weight: 900; color: var(--gold); line-height: 1;
-        }
-        .wf-stat-label {
-            font-size: 0.68rem; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 0.1em;
-            color: rgba(255,255,255,0.6); margin-top: 6px;
-        }
-        @media(max-width:700px){
-            .wf-stats-grid { grid-template-columns: repeat(3,1fr); }
-            .wf-stat:nth-child(3) { border-right:none; }
-        }
-        @media(max-width:480px){
-            .wf-stats-grid { grid-template-columns: repeat(2,1fr); }
-            .wf-stat:nth-child(2) { border-right:none; }
         }
 
         /* ─── MAIN SECTION ─── */
@@ -195,389 +133,121 @@
             margin: 0 0 12px;
         }
         .wf-sec-title span { color: var(--navy); }
-        .wf-sec-desc { font-size: 1rem; color: #666; max-width: 580px; margin: 0 auto; }
+        .wf-sec-desc { font-size: 1rem; color: #666; max-width: 760px; margin: 0 auto; line-height: 1.8; }
 
-        /* ─── CATEGORY FILTER TABS ─── */
-        .wf-filter-row {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+        /* ─── WELFARE MEASURE CARDS ─── */
+        .wf-measures-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .wf-measure-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 30px 28px;
+            border: 2px solid #e8edf4;
+            border-top: 4px solid var(--m-color, #003366);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.32s cubic-bezier(.25,.8,.25,1), box-shadow 0.32s;
+        }
+        .wf-measure-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+        .wf-measure-card .wf-m-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: var(--m-color, #003366);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 24px color-mix(in srgb, var(--m-color,#003366) 35%, transparent);
+        }
+        .wf-measure-card .wf-m-icon i { color: #fff; font-size: 1.25rem; }
+        .wf-measure-card h3 {
+            font-size: 1.05rem; font-weight: 800;
+            color: var(--dark); margin: 0 0 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .wf-measure-card p {
+            font-size: 0.9rem; color: #555; line-height: 1.8; margin: 0;
+        }
+        @media(max-width: 768px) {
+            .wf-measures-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ─── INTRO / CLOSING CARDS ─── */
+        .wf-intro-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #004a99 60%, var(--navy-deep) 100%);
+            border-radius: 22px;
+            padding: 44px 48px;
+            color: rgba(255,255,255,0.85);
+            font-size: 1rem; line-height: 1.9;
+            position: relative; overflow: hidden;
             margin-bottom: 48px;
         }
-        .wf-filter-btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 10px 22px;
-            background: #fff;
-            border: 2px solid #e2e8f0;
-            border-radius: 50px;
-            font-weight: 700; font-size: 0.83rem; color: #555;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
-            position: relative; overflow: hidden;
-        }
-        .wf-filter-btn::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(135deg, var(--navy), var(--navy-mid));
-            opacity: 0; transition: opacity 0.3s;
-        }
-        .wf-filter-btn > * { position: relative; z-index: 1; }
-        .wf-filter-btn:hover, .wf-filter-btn.active {
-            color: #fff; border-color: var(--navy);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,51,102,0.28);
-        }
-        .wf-filter-btn:hover::before, .wf-filter-btn.active::before { opacity: 1; }
-
-        /* ─── PRIMARY WELFARE CARDS ─── */
-        .wf-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-        }
-        .wf-card {
-            background: #fff;
-            border-radius: 22px;
-            overflow: hidden;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-            transition: all 0.45s cubic-bezier(0.34,1.56,0.64,1);
-            position: relative;
-            cursor: pointer;
-        }
-        .wf-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 28px 70px rgba(0,0,0,0.14);
-        }
-        /* top accent bar */
-        .wf-card::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 4px;
-            background: var(--card-color, var(--navy));
-            transform: scaleX(0); transform-origin: left;
-            transition: transform 0.4s;
-        }
-        .wf-card:hover::before { transform: scaleX(1); }
-
-        .wf-card-top {
-            padding: 36px 28px 24px;
-            position: relative;
-        }
-        /* large bg icon watermark */
-        .wf-card-top::after {
-            content: '';
-            position: absolute; right: 20px; top: 20px;
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 5rem;
-            color: var(--card-color, var(--navy));
-            opacity: 0.05;
-            line-height: 1;
-            pointer-events: none;
-        }
-
-        .wf-card-icon-wrap {
-            width: 72px; height: 72px; border-radius: 18px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem; color: #fff; margin-bottom: 20px;
-            background: var(--card-color, var(--navy));
-            position: relative; overflow: hidden;
-            transition: transform 0.4s;
-        }
-        .wf-card:hover .wf-card-icon-wrap { transform: rotate(-6deg) scale(1.1); }
-        /* shimmer on icon */
-        .wf-card-icon-wrap::after {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 60%);
-            transform: translateX(-120%) skewX(-15deg);
-            transition: transform 0.6s;
-        }
-        .wf-card:hover .wf-card-icon-wrap::after { transform: translateX(120%) skewX(-15deg); }
-
-        .wf-card-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.15rem; font-weight: 900; color: var(--dark); margin: 0 0 8px;
-        }
-        .wf-card-desc {
-            font-size: 0.88rem; color: #777; line-height: 1.7; margin: 0;
-        }
-
-        .wf-card-bottom {
-            padding: 0 28px 28px;
-            border-top: 1px solid #f5f5f5;
-            margin-top: 0;
-        }
-        /* expandable detail list */
-        .wf-card-items {
-            list-style: none; padding: 0; margin: 18px 0 0;
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.45s ease, opacity 0.45s ease;
-            opacity: 0;
-        }
-        .wf-card.expanded .wf-card-items {
-            max-height: 400px; opacity: 1;
-        }
-        .wf-card-items li {
-            display: flex; align-items: flex-start; gap: 10px;
-            padding: 7px 0;
-            font-size: 0.83rem; color: #555; line-height: 1.5;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .wf-card-items li:last-child { border-bottom: none; }
-        .wf-card-items li i {
-            color: var(--card-color, var(--navy));
-            font-size: 0.75rem; flex-shrink: 0; margin-top: 3px;
-        }
-
-        .wf-card-expand-btn {
-            display: inline-flex; align-items: center; gap: 6px;
-            margin-top: 16px;
-            padding: 8px 18px;
-            background: transparent;
-            border: 2px solid var(--card-color, var(--navy));
-            border-radius: 50px;
-            color: var(--card-color, var(--navy));
-            font-size: 0.78rem; font-weight: 800;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .wf-card-expand-btn:hover {
-            background: var(--card-color, var(--navy));
-            color: #fff;
-        }
-        .wf-card-expand-btn .btn-arrow {
-            transition: transform 0.3s;
-        }
-        .wf-card.expanded .wf-card-expand-btn .btn-arrow {
-            transform: rotate(180deg);
-        }
-        .wf-card.expanded .wf-card-expand-btn { background: var(--card-color,var(--navy)); color:#fff; }
-
-        /* hidden by filter */
-        .wf-card[data-hidden="true"] { display: none; }
-
-        /* ─── HIGHLIGHT FEATURE STRIP ─── */
-        .wf-highlight {
-            margin-top: 80px;
-            background: linear-gradient(135deg, var(--navy) 0%, #004a99 50%, var(--navy-deep) 100%);
-            border-radius: 24px;
-            padding: 56px 48px;
-            position: relative;
-            overflow: hidden;
-        }
-        .wf-highlight::before {
+        .wf-intro-card::before {
             content: '';
             position: absolute; inset: 0;
             background: repeating-linear-gradient(-45deg,
                 rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px,
                 transparent 1px, transparent 36px);
         }
-        /* spinning ring decoration */
-        .wf-highlight::after {
-            content: '';
+        .wf-intro-card p { position: relative; z-index: 2; margin: 0 0 14px; }
+        .wf-intro-card p:last-child { margin-bottom: 0; }
+        @media(max-width: 600px) { .wf-intro-card { padding: 30px 24px; } }
+
+        /* ─── OFFICE NOTE ─── */
+        .wf-officenote-section { margin-top: 80px; }
+        .wf-officenote-card {
+            background: linear-gradient(135deg, #fff8e6, #fff);
+            border: 2px solid #f0e2c0;
+            border-radius: 18px;
+            padding: 40px;
+            border-left: 5px solid #e5a800;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .wf-officenote-card > p {
+            color: #555;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .wf-officenote-list { list-style: none; padding: 0; }
+        .wf-officenote-list li {
+            padding: 10px 0 10px 28px;
+            position: relative;
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed #e8dcc0;
+        }
+        .wf-officenote-list li:last-child { border-bottom: none; }
+        .wf-officenote-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
             position: absolute;
-            width: 360px; height: 360px;
-            border: 50px solid rgba(245,197,24,0.06);
-            border-radius: 50%;
-            bottom: -140px; right: -80px;
-            animation: wfRingRotate 22s linear infinite;
+            left: 0;
+            color: #e5a800;
         }
-        .wf-highlight-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 56px; align-items: center;
-            position: relative; z-index: 2;
+        .wf-officenote-sub {
+            list-style: none; padding: 8px 0 0 18px; margin: 0;
         }
-        @media(max-width:768px){ .wf-highlight-inner { grid-template-columns:1fr; gap:36px; } }
+        .wf-officenote-sub li {
+            padding: 6px 0 6px 24px;
+            border-bottom: none;
+            font-size: 0.92rem;
+        }
+        .wf-officenote-sub li::before {
+            content: '\f054';
+            font-size: 0.7rem;
+            color: #c07f00;
+        }
+        .wf-officenote-sub strong { color: var(--dark); font-weight: 700; }
 
-        .wf-highlight-text h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.6rem,3vw,2.2rem);
-            font-weight: 900; color: #fff; margin: 0 0 12px;
-        }
-        .wf-highlight-text h3 span { color: var(--gold); }
-        .wf-highlight-text p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.96rem; line-height: 1.8; margin: 0 0 24px;
-        }
-
-        .wf-highlight-checkmarks {
-            list-style: none; padding: 0; margin: 0;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
-        }
-        .wf-highlight-checkmarks li {
-            display: flex; align-items: center; gap: 10px;
-            color: rgba(255,255,255,0.85); font-size: 0.85rem; font-weight: 500;
-        }
-        .wf-highlight-checkmarks li i { color: var(--gold); font-size: 0.8rem; }
-
-        /* feature boxes on right */
-        .wf-feature-boxes {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-        }
-        .wf-feat-box {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 16px;
-            padding: 22px 18px;
-            text-align: center;
-            transition: background 0.3s, transform 0.4s;
-        }
-        .wf-feat-box:hover {
-            background: rgba(245,197,24,0.12);
-            border-color: rgba(245,197,24,0.3);
-            transform: translateY(-5px);
-        }
-        .wf-feat-box i {
-            font-size: 1.8rem; color: var(--gold); margin-bottom: 10px; display: block;
-        }
-        .wf-feat-box span {
-            font-size: 0.8rem; font-weight: 700;
-            color: rgba(255,255,255,0.85); line-height: 1.4;
-        }
-
-        /* ─── MARQUEE SCROLL STRIP ─── */
-        .wf-marquee-section {
-            background: var(--gold);
-            padding: 18px 0; overflow: hidden;
-            margin-top: 70px;
-        }
-        .wf-marquee-track {
-            display: flex; gap: 0;
-            animation: wfMarqScroll 20s linear infinite;
-            white-space: nowrap;
-        }
-        .wf-marquee-track:hover { animation-play-state: paused; }
-        @keyframes wfMarqScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .wf-marq-item {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 0 36px;
-            font-weight: 800; font-size: 0.85rem;
-            color: var(--dark);
-            text-transform: uppercase; letter-spacing: 0.05em;
-        }
-        .wf-marq-item i { font-size: 1rem; }
-        .wf-marq-dot {
-            display: inline-block; width: 6px; height: 6px;
-            background: var(--dark); border-radius: 50; margin: 0 2px;
-        }
-
-        /* ─── ACCORDION DEEP DIVE ─── */
-        .wf-accordion-section {
-            margin-top: 80px;
-        }
-        .wf-accordion-item {
-            background: #fff;
-            border-radius: 16px;
-            margin-bottom: 14px;
-            overflow: hidden;
-            box-shadow: 0 3px 14px rgba(0,0,0,0.06);
-            border-left: 4px solid var(--item-color, var(--navy));
-            transition: box-shadow 0.3s;
-        }
-        .wf-accordion-item:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        .wf-accordion-trigger {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 22px 28px;
-            cursor: pointer; background: #fff;
-            border: none; width: 100%; text-align: left;
-            transition: background 0.25s;
-        }
-        .wf-accordion-trigger:hover { background: #fafcff; }
-        .wf-accordion-trigger.open { background: #f7f9ff; }
-        .wf-acc-left {
-            display: flex; align-items: center; gap: 16px;
-        }
-        .wf-acc-icon-sm {
-            width: 44px; height: 44px; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem; color: #fff; flex-shrink: 0;
-        }
-        .wf-acc-heading {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0;
-        }
-        .wf-acc-sub {
-            font-size: 0.78rem; color: #999; margin: 2px 0 0;
-        }
-        .wf-acc-chevron {
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            background: #f0f4f8;
-            display: flex; align-items: center; justify-content: center;
-            color: #555; font-size: 0.9rem;
-            transition: transform 0.3s, background 0.3s;
-            flex-shrink: 0;
-        }
-        .wf-accordion-trigger.open .wf-acc-chevron {
-            transform: rotate(180deg);
-            background: var(--navy);
-            color: #fff;
-        }
-        .wf-accordion-body {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.4s ease;
-            padding: 0 28px;
-        }
-        .wf-accordion-body.open {
-            max-height: 800px;
-            padding: 0 28px 24px;
-        }
-        .wf-acc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            padding-top: 20px;
-        }
-        .wf-acc-chip {
-            display: flex; align-items: center; gap: 10px;
-            padding: 12px 16px;
-            background: var(--slate-bg);
-            border-radius: 12px;
-            font-size: 0.82rem; font-weight: 600; color: var(--dark);
-            transition: background 0.3s, transform 0.3s;
-        }
-        .wf-acc-chip:hover {
-            background: #e8eef8;
-            transform: translateX(4px);
-        }
-        .wf-acc-chip i {
-            color: var(--item-color, var(--navy));
-            font-size: 0.9rem; flex-shrink: 0;
-        }
-
-        /* ─── RESPONSIVE ─── */
-        @media(max-width:768px){
-            .wf-cards-grid { grid-template-columns:1fr; }
-            .wf-highlight { padding:36px 24px; }
-            .wf-highlight-checkmarks { grid-template-columns:1fr; }
-            .wf-feature-boxes { grid-template-columns:1fr 1fr; }
-        }
-    </style>
-    <!-- Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../assets/css/typography.css">
-</head>
-
-<body>
-
-    <div id="include-header"></div>
-
-    <style>
-        /* ══════════════════════════════════════════
-           GALLERY SECTION
-           ══════════════════════════════════════════ */
-        .wf-gallery-section {
-            margin-top: 80px;
-            padding-top: 20px;
-        }
-        .wf-gal-group {
-            margin-bottom: 56px;
-        }
+        /* ─── GALLERY ─── */
+        .wf-gallery-section { margin-top: 80px; padding-top: 20px; }
+        .wf-gal-group { margin-bottom: 56px; }
         .wf-gal-group-header {
             display: flex;
             align-items: center;
@@ -594,25 +264,19 @@
             flex-shrink: 0;
             box-shadow: 0 6px 20px color-mix(in srgb, var(--g-color,#003366) 35%, transparent);
         }
-        .wf-gal-group-icon i {
-            color: #fff; font-size: 1.3rem;
-        }
+        .wf-gal-group-icon i { color: #fff; font-size: 1.3rem; }
         .wf-gal-group-title {
             font-size: 1.25rem; font-weight: 800;
             color: var(--dark); margin: 0 0 4px;
             font-family: 'Poppins', sans-serif;
         }
-        .wf-gal-group-sub {
-            font-size: 0.85rem; color: #64748b; margin: 0;
-        }
+        .wf-gal-group-sub { font-size: 0.85rem; color: #64748b; margin: 0; }
         .wf-gal-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 14px;
         }
-        .wf-gal-grid--wide {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        .wf-gal-grid--wide { grid-template-columns: repeat(3, 1fr); }
         .wf-gal-item {
             position: relative; overflow: hidden;
             border-radius: 14px;
@@ -633,9 +297,7 @@
             transition: transform 0.5s ease;
             display: block;
         }
-        .wf-gal-item:hover img {
-            transform: scale(1.08);
-        }
+        .wf-gal-item:hover img { transform: scale(1.08); }
         .wf-gal-overlay {
             position: absolute; inset: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.0) 55%);
@@ -645,9 +307,7 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        .wf-gal-item:hover .wf-gal-overlay {
-            opacity: 1;
-        }
+        .wf-gal-item:hover .wf-gal-overlay { opacity: 1; }
         .wf-gal-overlay i {
             color: #fff; font-size: 1.4rem;
             background: rgba(255,255,255,0.15);
@@ -671,18 +331,14 @@
             text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
 
-        /* ══════════════════════════════════════════
-           LIGHTBOX
-           ══════════════════════════════════════════ */
+        /* ─── LIGHTBOX ─── */
         .wf-lightbox {
             position: fixed; inset: 0; z-index: 9999;
             display: flex; align-items: center; justify-content: center;
             visibility: hidden; opacity: 0;
             transition: opacity 0.35s, visibility 0.35s;
         }
-        .wf-lightbox.open {
-            visibility: visible; opacity: 1;
-        }
+        .wf-lightbox.open { visibility: visible; opacity: 1; }
         .wf-lb-backdrop {
             position: absolute; inset: 0;
             background: rgba(5, 8, 18, 0.92);
@@ -746,84 +402,21 @@
             font-size: 0.78rem; font-family: monospace;
         }
 
-        /* ══════════════════════════════════════════
-           POLICY SECTION
-           ══════════════════════════════════════════ */
-        .wf-policy-section {
-            margin-top: 80px;
-            padding-top: 20px;
-        }
-        .wf-policy-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-        .wf-policy-card {
-            background: #fff;
-            border-radius: 18px;
-            padding: 28px 26px;
-            border: 2px solid #e8edf4;
-            border-top: 4px solid var(--pc-color, #003366);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: transform 0.32s cubic-bezier(.25,.8,.25,1), box-shadow 0.32s;
-            position: relative; overflow: hidden;
-        }
-        .wf-policy-card::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg,
-                color-mix(in srgb, var(--pc-color,#003366) 4%, transparent),
-                transparent 60%);
-            pointer-events: none;
-        }
-        .wf-policy-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-        }
-        .wf-pc-icon {
-            width: 52px; height: 52px;
-            border-radius: 14px;
-            background: var(--pc-color, #003366);
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 16px;
-            box-shadow: 0 8px 24px color-mix(in srgb, var(--pc-color,#003366) 35%, transparent);
-        }
-        .wf-pc-icon i {
-            color: #fff; font-size: 1.25rem;
-        }
-        .wf-pc-title {
-            font-size: 1rem; font-weight: 800;
-            color: var(--dark);
-            margin: 0 0 14px;
-            font-family: 'Poppins', sans-serif;
-        }
-        .wf-pc-list {
-            list-style: none; padding: 0; margin: 0;
-            display: flex; flex-direction: column; gap: 10px;
-        }
-        .wf-pc-list li {
-            display: flex; align-items: flex-start; gap: 10px;
-            font-size: 0.84rem; color: #374151; line-height: 1.5;
-        }
-        .wf-pc-list li i {
-            color: var(--pc-color, #003366);
-            font-size: 0.7rem;
-            margin-top: 4px; flex-shrink: 0;
-        }
-        .wf-pc-list li strong { color: var(--dark); font-weight: 700; }
-
-        /* Responsive tweaks */
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 900px) {
             .wf-gal-grid, .wf-gal-grid--wide { grid-template-columns: repeat(2,1fr); }
-            .wf-policy-grid { grid-template-columns: repeat(2,1fr); }
         }
         @media (max-width: 600px) {
             .wf-gal-grid, .wf-gal-grid--wide { grid-template-columns: 1fr; }
-            .wf-policy-grid { grid-template-columns: 1fr; }
             .wf-lb-prev { left: 4px; }
             .wf-lb-next { right: 4px; }
         }
     </style>
+</head>
+
+<body>
+
+    <div id="include-header"></div>
 
     <!-- ══ ANIMATED HERO BAND ══ -->
     <div class="wf-hero">
@@ -833,49 +426,9 @@
         <div class="wf-ring wf-ring-1"></div>
         <div class="wf-ring wf-ring-2"></div>
         <div class="wf-hero-inner">
-            <div class="wf-eyebrow"><span>Faculty &amp; Staff Excellence</span></div>
-            <h2 class="wf-hero-title">Caring for <span>Our People</span></h2>
-            <p class="wf-hero-sub">Kingston Engineering College believes that happy, empowered faculty and staff create exceptional students. Our comprehensive welfare ecosystem ensures every team member thrives.</p>
-            <div class="wf-pill-row">
-                <span class="wf-pill"><i class="fa-solid fa-hand-holding-dollar"></i> Financial Support</span>
-                <span class="wf-pill"><i class="fa-solid fa-heart-pulse"></i> Health &amp; Family</span>
-                <span class="wf-pill"><i class="fa-solid fa-graduation-cap"></i> Career Growth</span>
-                <span class="wf-pill"><i class="fa-solid fa-van-shuttle"></i> Amenities</span>
-                <span class="wf-pill"><i class="fa-solid fa-shield-halved"></i> Job Security</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- wave -->
-    <div class="wf-wave" style="background:var(--navy);">
-        <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:54px;display:block;">
-            <path d="M0,0 C320,54 640,0 960,36 C1120,60 1320,12 1440,28 L1440,0 Z" fill="#f0f4f8"/>
-        </svg>
-    </div>
-
-    <!-- ══ STATS STRIP ══ -->
-    <div class="wf-stats">
-        <div class="wf-stats-grid">
-            <div class="wf-stat" data-aos="fade-up" data-aos-delay="0">
-                <div class="wf-stat-num" data-count="200">0</div>
-                <div class="wf-stat-label">Staff Members</div>
-            </div>
-            <div class="wf-stat" data-aos="fade-up" data-aos-delay="60">
-                <div class="wf-stat-num" data-count="15">0</div>
-                <div class="wf-stat-label">Welfare Programs</div>
-            </div>
-            <div class="wf-stat" data-aos="fade-up" data-aos-delay="120">
-                <div class="wf-stat-num" data-count="25">0</div>
-                <div class="wf-stat-label">Years of Service</div>
-            </div>
-            <div class="wf-stat" data-aos="fade-up" data-aos-delay="180">
-                <div class="wf-stat-num" data-count="100">0<span>%</span></div>
-                <div class="wf-stat-label">EPF Coverage</div>
-            </div>
-            <div class="wf-stat" data-aos="fade-up" data-aos-delay="240">
-                <div class="wf-stat-num" data-count="30">0</div>
-                <div class="wf-stat-label">Bus Routes</div>
-            </div>
+            <div class="wf-eyebrow"><span>Welfare Measures</span></div>
+            <h2 class="wf-hero-title">Faculty <span>Facilities</span></h2>
+            <p class="wf-hero-sub">The institution has an integrated performance appraisal system and effective welfare measures for teaching and non-teaching staff.</p>
         </div>
     </div>
 
@@ -883,511 +436,291 @@
     <div class="wf-main">
         <div class="wf-container">
 
-            <!-- Section Heading -->
-            <div class="wf-sec-head" data-aos="fade-up">
-                <div class="wf-sec-eyebrow"><span>Our Commitment to You</span></div>
-                <h2 class="wf-sec-title">Welfare <span>Measures</span></h2>
-                <p class="wf-sec-desc">A holistic suite of benefits designed to support every dimension of our faculty and staff's professional and personal lives.</p>
+            <!-- Intro -->
+            <div class="wf-intro-card" data-aos="fade-up">
+                <p>The institution follows a comprehensive performance appraisal system and provides benefits to the teaching and non-teaching employees. These benefits are intended to provide financial security, recognition, and support to employees, helping them feel valued and appreciated for their work. By offering these perks, the institution aims to foster a positive work environment and promote employee well-being.</p>
             </div>
 
-            <!-- Category Filter -->
-            <div class="wf-filter-row" data-aos="fade-up" data-aos-delay="80">
-                <button class="wf-filter-btn active" data-filter="all">
-                    <i class="fa-solid fa-grip"></i><span>All</span>
-                </button>
-                <button class="wf-filter-btn" data-filter="financial">
-                    <i class="fa-solid fa-hand-holding-dollar"></i><span>Financial</span>
-                </button>
-                <button class="wf-filter-btn" data-filter="career">
-                    <i class="fa-solid fa-graduation-cap"></i><span>Career</span>
-                </button>
-                <button class="wf-filter-btn" data-filter="amenities">
-                    <i class="fa-solid fa-van-shuttle"></i><span>Amenities</span>
-                </button>
-                <button class="wf-filter-btn" data-filter="health">
-                    <i class="fa-solid fa-heart-pulse"></i><span>Health &amp; Family</span>
-                </button>
-                <button class="wf-filter-btn" data-filter="recognition">
-                    <i class="fa-solid fa-star"></i><span>Recognition</span>
-                </button>
+            <!-- Welfare Measures Grid -->
+            <div class="wf-measures-grid">
+
+                <div class="wf-measure-card" style="--m-color:#003366;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3>Performance Appraisal Measures</h3>
+                    <p>The institution follows a comprehensive performance appraisal approach to ensure a well-rounded assessment, fostering a balanced and productive work environment. This holistic approach measures an individual's contributions to academic, research, and service activities. By evaluating faculty members in these three interconnected areas, it promotes excellence, collaboration, and a commitment to the broader mission of higher education.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#059669;" data-aos="fade-up" data-aos-delay="80">
+                    <div class="wf-m-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Comprehensive Employee Welfare Programs</h3>
+                    <p>Comprehensive Employee Welfare Programs are implemented to create positive and productive work environment. Our forward-thinking institution contributes towards Employee Provident Fund (EPF), Employee's State Insurance (ESIC) by prioritizing the well-being of the employee's often experiencing higher levels of job satisfaction.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#e5a800;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>Financial Support</h3>
+                    <p>Financial support like Concession in Academic Fees, Festival Advance, Salary Advance, financial incentives to attend conferences, Faculty development Programs, Workshops and financial reimbursement for paper publications provided by the management is a recognition and morale support to employees.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#0ea5e9;" data-aos="fade-up" data-aos-delay="80">
+                    <div class="wf-m-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h3>Amenities</h3>
+                    <p>Amenities covering individual computing system, free wi-fi, mobile phone to HOD's provide a platform to perform their role effectively. This investment in technology demonstrates a commitment to creating a modern and adaptive environment.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#7c3aed;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-bus"></i></div>
+                    <h3>Facilities</h3>
+                    <p>Facilities such as chargeless transport, complementary food on added working days, gratuitous refreshment during add-on working hours are given to create a supportive and inclusive workplace which contributes to employee's satisfaction but also lead to increased productivity and overall institutional success.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#003366;" data-aos="fade-up" data-aos-delay="80">
+                    <div class="wf-m-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Career Progression Care</h3>
+                    <p>Career progression care is given by the institution through organizing Faculty Development Programs and they are encouraged to attend FDP's, Conferences, Workshop's. By investing in the professional development and recognition of faculty, institution create a positive cycle of excellence that benefits the entire academic community and contributes to the advancement of knowledge.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#059669;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-fire"></i></div>
+                    <h3>Career Motivation Culture</h3>
+                    <p>Career motivation culture is implemented through Monetary benefits for academic results which is a powerful motivator for staff members, leading to enhanced skills, improved performance, and greater job satisfaction. By carefully designing and implementing such a program, institution foster a culture of continuous learning and development, ultimately benefiting both employees and the company.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#8b1a2b;" data-aos="fade-up" data-aos-delay="80">
+                    <div class="wf-m-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Cultivating Expert Technophiles</h3>
+                    <p>Cultivating expert Technophiles is done by the institution through a multifaceted approach that combines technical proficiency and passion for exploration aligns with the broader goals of innovation and societal progress.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#e5a800;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-house-heart"></i></div>
+                    <h3>Family - Friendly Workplace</h3>
+                    <p>Family - friendly workplace is maintained by the management by providing maternity and paternity leave and also celebrating staff birthdays acknowledging employees on their special day contributes to a sense of belonging and camaraderie within the organization.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#059669;" data-aos="fade-up" data-aos-delay="80">
+                    <div class="wf-m-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Holistic Staff Health</h3>
+                    <p>Holistic staff health is well organized by implementation of General health care programs and awareness programs.</p>
+                </div>
+
+                <div class="wf-measure-card" style="--m-color:#0ea5e9;" data-aos="fade-up" data-aos-delay="0">
+                    <div class="wf-m-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+                    <h3>Molding Virtuoso for Social Consciousness</h3>
+                    <p>It is encouraged by the management towards staff members by extending their technical mastery for the betterment of society as a whole.</p>
+                </div>
+
+            </div><!-- /wf-measures-grid -->
+
+            <!-- Closing paragraph -->
+            <div class="wf-intro-card" data-aos="fade-up" style="margin-top:48px; margin-bottom:0;">
+                <p>The institution follows effective welfare measure for teaching and non-teaching staff which provided them various opportunities for their pedagogical and professional progression with assurance of financial security.</p>
             </div>
 
-            <!-- Welfare Cards Grid -->
-            <div class="wf-cards-grid" id="wfGrid">
-
-                <!-- Card 1: Financial Support -->
-                <div class="wf-card" style="--card-color:#003366;" data-category="financial" data-aos="fade-up" data-aos-delay="0">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
-                        </div>
-                        <h3 class="wf-card-title">Financial Support</h3>
-                        <p class="wf-card-desc">Comprehensive financial security programs ensuring every employee is protected and incentivized for outstanding contributions.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Employee Provident Fund (EPF) for all permanent staff</li>
-                            <li><i class="fa-solid fa-circle-check"></i> ESIC health insurance scheme coverage</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Festival Advance facility during major festivals</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Fee concession for children of staff members</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Incentives for research publications &amp; patents</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Performance-based salary increments</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Benefits</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 2: Facilities & Amenities -->
-                <div class="wf-card" style="--card-color:#059669;" data-category="amenities" data-aos="fade-up" data-aos-delay="80">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-van-shuttle"></i>
-                        </div>
-                        <h3 class="wf-card-title">Facilities &amp; Amenities</h3>
-                        <p class="wf-card-desc">Day-to-day conveniences that make campus life comfortable, productive, and enjoyable for every team member.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Free transportation across 30+ routes in Vellore</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Complimentary food on extra-working days</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Individual computing system for each faculty</li>
-                            <li><i class="fa-solid fa-circle-check"></i> High-speed internet &amp; Wi-Fi across campus</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Modern air-conditioned staff rooms</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Dedicated parking facilities</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Amenities</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 3: Career Progression -->
-                <div class="wf-card" style="--card-color:#7c3aed;" data-category="career" data-aos="fade-up" data-aos-delay="160">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="wf-card-title">Career Progression</h3>
-                        <p class="wf-card-desc">A culture dedicated to continuous learning, professional development, and opportunities for academic advancement.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Funded Faculty Development Programs (FDPs)</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Support for attending national &amp; intl. conferences</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Seed funding for research projects</li>
-                            <li><i class="fa-solid fa-circle-check"></i> PhD. sponsorship &amp; study leave policies</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Career motivation mentoring programs</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Promotion based on academic achievements</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Details</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 4: Health & Family -->
-                <div class="wf-card" style="--card-color:#e5a800;" data-category="health" data-aos="fade-up" data-aos-delay="0">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-heart-pulse"></i>
-                        </div>
-                        <h3 class="wf-card-title">Health &amp; Family</h3>
-                        <p class="wf-card-desc">Holistic well-being programs that care for both the employee and their family, ensuring peace of mind and joy.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Maternity &amp; Paternity leave policies</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Holistic health care programs on campus</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Staff birthday celebrations &amp; gifting</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Annual staff family day events</li>
-                            <li><i class="fa-solid fa-circle-check"></i> On-campus medical aid facility</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Mental wellness support programs</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Benefits</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 5: Job Security -->
-                <div class="wf-card" style="--card-color:#8b1a2b;" data-category="financial" data-aos="fade-up" data-aos-delay="80">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h3 class="wf-card-title">Job Security</h3>
-                        <p class="wf-card-desc">Strong institutional commitment to long-term employment, regulatory compliance, and employee rights protection.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Permanent appointment with proper contracts</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Gratuity benefits as per norms</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Transparent HR policies &amp; grievance redressal</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Statutory compliance with labour laws</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Salary on time — no delays ever</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Details</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 6: Recognition & Rewards -->
-                <div class="wf-card" style="--card-color:#0ea5e9;" data-category="recognition" data-aos="fade-up" data-aos-delay="160">
-                    <div class="wf-card-top">
-                        <div class="wf-card-icon-wrap">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                        <h3 class="wf-card-title">Recognition &amp; Rewards</h3>
-                        <p class="wf-card-desc">Celebrating excellence at every level — from classroom innovation to research breakthroughs and community leadership.</p>
-                    </div>
-                    <div class="wf-card-bottom">
-                        <ul class="wf-card-items">
-                            <li><i class="fa-solid fa-circle-check"></i> Best Teacher Award — annual institution ceremony</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Research Excellence Award with cash prizes</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Innovation Champion recognition program</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Long Service Awards for dedicated staff</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Publication incentive bonuses</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Social media &amp; website faculty spotlights</li>
-                        </ul>
-                        <button class="wf-card-expand-btn">
-                            <span>View Awards</span>
-                            <i class="fa-solid fa-chevron-down btn-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div><!-- /wf-cards-grid -->
-
-            <!-- ══ HIGHLIGHT FEATURE STRIP ══ -->
-            <div class="wf-highlight" data-aos="fade-up" data-aos-delay="100">
-                <div class="wf-highlight-inner">
-                    <div class="wf-highlight-text">
-                        <h3>Why Work at <span>Kingston?</span></h3>
-                        <p>We don't just offer jobs — we offer a thriving career ecosystem. Our faculty are researchers, mentors, innovators, and leaders who are recognized and rewarded for their impact.</p>
-                        <ul class="wf-highlight-checkmarks">
-                            <li><i class="fa-solid fa-check"></i> 100% EPF &amp; ESIC compliance</li>
-                            <li><i class="fa-solid fa-check"></i> Free daily transport</li>
-                            <li><i class="fa-solid fa-check"></i> Research funding available</li>
-                            <li><i class="fa-solid fa-check"></i> PhD study leave support</li>
-                            <li><i class="fa-solid fa-check"></i> On-time salary every month</li>
-                            <li><i class="fa-solid fa-check"></i> Family welfare programs</li>
-                            <li><i class="fa-solid fa-check"></i> Merit-based promotions</li>
-                            <li><i class="fa-solid fa-check"></i> Annual recognition ceremony</li>
-                        </ul>
-                    </div>
-                    <div class="wf-feature-boxes">
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
-                            <span>EPF &amp; ESIC<br>Coverage</span>
-                        </div>
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-bus"></i>
-                            <span>Free Campus<br>Transport</span>
-                        </div>
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-microscope"></i>
-                            <span>Research<br>Seed Funds</span>
-                        </div>
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-trophy"></i>
-                            <span>Annual<br>Awards Night</span>
-                        </div>
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-baby"></i>
-                            <span>Maternity &amp;<br>Paternity Leave</span>
-                        </div>
-                        <div class="wf-feat-box">
-                            <i class="fa-solid fa-laptop"></i>
-                            <span>Personal<br>Computing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ══ SCROLLING MARQUEE ══ -->
-            <div class="wf-marquee-section" data-aos="fade-up">
-                <div class="wf-marquee-track">
-                    <!-- duplicated for seamless loop -->
-                    <span class="wf-marq-item"><i class="fa-solid fa-hand-holding-dollar"></i> EPF Benefits</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-heart-pulse"></i> ESIC Coverage</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-bus"></i> Free Transport</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-graduation-cap"></i> FDP Support</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-trophy"></i> Best Teacher Award</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-microscope"></i> Research Funding</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-baby"></i> Maternity Leave</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-laptop"></i> Personal Computers</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-gift"></i> Festival Advance</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-shield-halved"></i> Job Security</span>
-                    <span class="wf-marq-dot"></span>
-                    <!-- duplicate -->
-                    <span class="wf-marq-item"><i class="fa-solid fa-hand-holding-dollar"></i> EPF Benefits</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-heart-pulse"></i> ESIC Coverage</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-bus"></i> Free Transport</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-graduation-cap"></i> FDP Support</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-trophy"></i> Best Teacher Award</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-microscope"></i> Research Funding</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-baby"></i> Maternity Leave</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-laptop"></i> Personal Computers</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-gift"></i> Festival Advance</span>
-                    <span class="wf-marq-dot"></span>
-                    <span class="wf-marq-item"><i class="fa-solid fa-shield-halved"></i> Job Security</span>
-                </div>
-            </div>
-
-            <!-- ══ ACCORDION DEEP DIVE ══ -->
-            <div class="wf-accordion-section" data-aos="fade-up">
+            <!-- ══ OFFICE NOTE ══ -->
+            <div class="wf-officenote-section" data-aos="fade-up">
                 <div class="wf-sec-head" style="margin-bottom:36px;">
-                    <div class="wf-sec-eyebrow"><span>Detailed Breakdown</span></div>
-                    <h2 class="wf-sec-title">Benefits <span>In Detail</span></h2>
-                    <p class="wf-sec-desc">Click any category to explore the full range of benefits available to Kingston's faculty and staff.</p>
+                    <div class="wf-sec-eyebrow"><span>Official Communication</span></div>
+                    <h2 class="wf-sec-title">Office <span>Note</span></h2>
                 </div>
-
-                <!-- Accordion 1 -->
-                <div class="wf-accordion-item" style="--item-color:#003366;">
-                    <button class="wf-accordion-trigger" id="acc1-btn">
-                        <div class="wf-acc-left">
-                            <div class="wf-acc-icon-sm" style="background:#003366;"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                            <div>
-                                <div class="wf-acc-heading">Financial &amp; Statutory Benefits</div>
-                                <div class="wf-acc-sub">EPF, ESIC, Advances, Incentives — 6 programs</div>
-                            </div>
-                        </div>
-                        <div class="wf-acc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-                    </button>
-                    <div class="wf-accordion-body" id="acc1-body">
-                        <div class="wf-acc-grid">
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-piggy-bank"></i> Employee Provident Fund</div>
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-hospital"></i> ESIC Medical Insurance</div>
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-gift"></i> Festival Advance Facility</div>
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-graduation-cap"></i> Children Fee Concession</div>
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-file-invoice-dollar"></i> Research Incentive Bonus</div>
-                            <div class="wf-acc-chip" style="--item-color:#003366;"><i class="fa-solid fa-handshake"></i> Gratuity as per statute</div>
-                        </div>
-                    </div>
+                <div class="wf-officenote-card">
+                    <p>Dear Staff Members the following financial support and concessions are provided by the management towards the welfare of the Teaching and Non-teaching employees of the Institution.</p>
+                    <ul class="wf-officenote-list">
+                        <li>ESIC and EPF are provided as per the Government Norms.</li>
+                        <li>The employees with two years of continuous work experience are eligible to avail WARD ACADEMIC FEES CONCESSION which starts with 25% concession on the academic fees and the rate increases to 40%.</li>
+                        <li>70% of the salary is given as FESTIVAL ADVANCE and SALARY ADVANCE and it is to be repaid in 6 equal installments. Emergency situations and important requirements are considered when there is a LUMPSUM need.</li>
+                        <li>On any EMERGENCY CRITICAL MEDICAL SITUATION as per the immediate need SALARY ADVANCE is provided.</li>
+                        <li>Registration Fees, Travelling Allowances (TA), Daily Allowances (DA) charges can be claimed as FINANCIAL INCENTIVES to attend FDP's, workshops, conferences, etc., which are held outside the Institution, and book publication and paper publication expenses can be reimbursed as FINANCIAL REIMBURSEMENTS.</li>
+                        <li>Bus fees from the boarding point to College are waived for staff members as CHARGELESS TRANSPORT.</li>
+                        <li>As a welfare measure, COMPLEMENTARY FOOD and GRATUITOUS REFRESHMENTS for employees are provided during added working days.</li>
+                        <li><strong>LEAVE CONCESSIONS:</strong>
+                            <ul class="wf-officenote-sub">
+                                <li><strong>MATERNITY LEAVE:</strong> It is allowed as per GOVERNMENT NORMS.</li>
+                                <li><strong>PATERNITY LEAVE:</strong> 1 month leave is allowed with pay.</li>
+                                <li><strong>MARRIAGE LEAVE:</strong> 7 days with pay is allowed.</li>
+                                <li><strong>FUNERAL LEAVE:</strong> 7 days is allowed with pay.</li>
+                                <li><strong>COMPENSATORY LEAVE:</strong> If worked on Sunday, compensatory leave can be claimed on working days with pay.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Accordion 2 -->
-                <div class="wf-accordion-item" style="--item-color:#059669;">
-                    <button class="wf-accordion-trigger" id="acc2-btn">
-                        <div class="wf-acc-left">
-                            <div class="wf-acc-icon-sm" style="background:#059669;"><i class="fa-solid fa-van-shuttle"></i></div>
-                            <div>
-                                <div class="wf-acc-heading">Campus Facilities &amp; Amenities</div>
-                                <div class="wf-acc-sub">Transport, Computing, Food — 6 perks</div>
-                            </div>
-                        </div>
-                        <div class="wf-acc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-                    </button>
-                    <div class="wf-accordion-body" id="acc2-body">
-                        <div class="wf-acc-grid">
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-bus"></i> Free Transport (30+ routes)</div>
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-utensils"></i> Free Food (extra days)</div>
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-laptop"></i> Personal Computer Desk</div>
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-wifi"></i> Campus-wide Wi-Fi</div>
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-snowflake"></i> AC Staff Rooms</div>
-                            <div class="wf-acc-chip" style="--item-color:#059669;"><i class="fa-solid fa-car"></i> Dedicated Parking</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion 3 -->
-                <div class="wf-accordion-item" style="--item-color:#7c3aed;">
-                    <button class="wf-accordion-trigger" id="acc3-btn">
-                        <div class="wf-acc-left">
-                            <div class="wf-acc-icon-sm" style="background:#7c3aed;"><i class="fa-solid fa-graduation-cap"></i></div>
-                            <div>
-                                <div class="wf-acc-heading">Career Development &amp; Research</div>
-                                <div class="wf-acc-sub">FDPs, Conferences, PhD support — 6 opportunities</div>
-                            </div>
-                        </div>
-                        <div class="wf-acc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-                    </button>
-                    <div class="wf-accordion-body" id="acc3-body">
-                        <div class="wf-acc-grid">
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-chalkboard-teacher"></i> Funded FDP Programs</div>
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-globe"></i> Conference Travel Fund</div>
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-flask"></i> Research Seed Grants</div>
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-book-open"></i> PhD Study Leave</div>
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-user-tie"></i> Mentoring Programs</div>
-                            <div class="wf-acc-chip" style="--item-color:#7c3aed;"><i class="fa-solid fa-arrow-up"></i> Merit Promotions</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion 4 -->
-                <div class="wf-accordion-item" style="--item-color:#e5a800;">
-                    <button class="wf-accordion-trigger" id="acc4-btn">
-                        <div class="wf-acc-left">
-                            <div class="wf-acc-icon-sm" style="background:#e5a800;"><i class="fa-solid fa-heart-pulse"></i></div>
-                            <div>
-                                <div class="wf-acc-heading">Health, Family &amp; Well-being</div>
-                                <div class="wf-acc-sub">Leave policies, healthcare, celebrations — 6 benefits</div>
-                            </div>
-                        </div>
-                        <div class="wf-acc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-                    </button>
-                    <div class="wf-accordion-body" id="acc4-body">
-                        <div class="wf-acc-grid">
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-baby"></i> Maternity &amp; Paternity Leave</div>
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-stethoscope"></i> Campus Health Facility</div>
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-cake-candles"></i> Birthday Celebrations</div>
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-people-group"></i> Annual Family Day</div>
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-brain"></i> Mental Wellness Support</div>
-                            <div class="wf-acc-chip" style="--item-color:#e5a800;"><i class="fa-solid fa-umbrella"></i> Emergency Leave Policy</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- /accordion -->
+            </div>
 
             <!-- ══ PHOTO GALLERY SECTION ══ -->
             <div class="wf-gallery-section" data-aos="fade-up">
                 <div class="wf-sec-head" style="margin-bottom:48px;">
                     <div class="wf-sec-eyebrow"><span>Real Moments, Real Care</span></div>
-                    <h2 class="wf-sec-title">A Glimpse of <span>Our Care</span></h2>
-                    <p class="wf-sec-desc">Every photo reflects Kingston's genuine commitment — from daily transport to birthday celebrations, from funded field visits to individual computing systems.</p>
+                    <h2 class="wf-sec-title">Facilities of using <span>Chargeless Transport, Food and Refreshment</span></h2>
                 </div>
 
-                <!-- Gallery Group: Transport -->
+                <!-- Gallery Group: Chargeless Transport -->
                 <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="0">
                     <div class="wf-gal-group-header">
                         <div class="wf-gal-group-icon" style="--g-color:#003366;"><i class="fa-solid fa-bus"></i></div>
                         <div>
-                            <h3 class="wf-gal-group-title">Chargeless Transport</h3>
-                            <p class="wf-gal-group-sub">Free daily transportation for all Teaching &amp; Non-Teaching Staff across Vellore</p>
+                            <h3 class="wf-gal-group-title">Chargeless Transport for Teaching Staffs</h3>
+                            <p class="wf-gal-group-sub">Free daily transportation for teaching staff members</p>
                         </div>
                     </div>
                     <div class="wf-gal-grid">
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Teaching Staffs/1.png" data-caption="Free Transport for Teaching Staff — Vellore City Routes">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Teaching Staffs/1.png" data-caption="Chargeless Transport for Teaching Staffs">
                             <img src="../assets/images/welfare/Chargeless Transport for Teaching Staffs/1.png" alt="Chargeless Transport for Teaching Staffs" loading="lazy">
                             <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Teaching Staff</span></div>
-                        </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/1.png" data-caption="Free Transport for Non-Teaching Staff">
-                            <img src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/1.png" alt="Chargeless Transport for Non-Teaching Staffs" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Non-Teaching Staff</span></div>
-                        </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/2.png" data-caption="Dedicated Bus Fleet — 30+ Routes">
-                            <img src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/2.png" alt="Chargeless Transport Routes" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>30+ Routes</span></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gallery Group: Food & Refreshment -->
+                <!-- Gallery Group: Non-Teaching Transport -->
                 <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
                     <div class="wf-gal-group-header">
-                        <div class="wf-gal-group-icon" style="--g-color:#059669;"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="wf-gal-group-icon" style="--g-color:#059669;"><i class="fa-solid fa-bus-simple"></i></div>
                         <div>
-                            <h3 class="wf-gal-group-title">Complimentary Food &amp; Refreshment</h3>
-                            <p class="wf-gal-group-sub">Free meals on extra working days and gratuitous refreshments for all staff members</p>
+                            <h3 class="wf-gal-group-title">Chargeless Transport for Non-Teaching Staffs</h3>
+                            <p class="wf-gal-group-sub">Free daily transportation for non-teaching staff members</p>
                         </div>
                     </div>
                     <div class="wf-gal-grid">
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/1.png" data-caption="Complimentary Food — Teaching Staff">
-                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/1.png" alt="Complimentary food for staff" loading="lazy">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/1.png" data-caption="Chargeless Transport for Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/1.png" alt="Chargeless Transport for Non-Teaching Staffs" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Non-Teaching Staff</span></div>
+                        </div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/2.png" data-caption="Chargeless Transport for Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Chargeless Transport for Non-Teaching Staffs/2.png" alt="Chargeless Transport for Non-Teaching Staffs" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Non-Teaching Staff</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Group: Complimentary Food -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
+                    <div class="wf-gal-group-header">
+                        <div class="wf-gal-group-icon" style="--g-color:#e5a800;"><i class="fa-solid fa-utensils"></i></div>
+                        <div>
+                            <h3 class="wf-gal-group-title">Complimentary Food for Teaching and Non-Teaching Staffs</h3>
+                            <p class="wf-gal-group-sub">Free meals provided on added working days</p>
+                        </div>
+                    </div>
+                    <div class="wf-gal-grid">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/1.png" data-caption="Complimentary Food for Teaching and Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/1.png" alt="Complimentary Food for Staff" loading="lazy">
                             <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Free Meals</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/2.png" data-caption="Complimentary Food — Non-Teaching Staff">
-                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/2.png" alt="Complimentary food non-teaching" loading="lazy">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/2.png" data-caption="Complimentary Food for Teaching and Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/2.png" alt="Complimentary Food for Staff" loading="lazy">
                             <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>All Staff</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/3.png" data-caption="Quality Dining Experience on Extra Working Days">
-                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/3.png" alt="Complimentary dining" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Extra Days</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/3.png" data-caption="Complimentary Food for Teaching and Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Complimentary food for Teaching and Non-Teaching Staffs/3.png" alt="Complimentary Food for Staff" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Added Days</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Gratuitous Refreshment for Teaching and Non-Teaching Staffs/1.png" data-caption="Gratuitous Refreshment for All Staff">
-                            <img src="../assets/images/welfare/Gratuitous Refreshment for Teaching and Non-Teaching Staffs/1.png" alt="Gratuitous Refreshment" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Gallery Group: Gratuitous Refreshment -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
+                    <div class="wf-gal-group-header">
+                        <div class="wf-gal-group-icon" style="--g-color:#059669;"><i class="fa-solid fa-mug-hot"></i></div>
+                        <div>
+                            <h3 class="wf-gal-group-title">Gratuitous Refreshment for Teaching and Non-Teaching Staffs</h3>
+                            <p class="wf-gal-group-sub">Gratuitous refreshment during add-on working hours</p>
+                        </div>
+                    </div>
+                    <div class="wf-gal-grid">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Gratuitous Refreshment for Teaching and Non-Teaching Staffs/1.png" data-caption="Gratuitous Refreshment for Teaching and Non-Teaching Staffs">
+                            <img src="../assets/images/welfare/Gratuitous Refreshment for Teaching and Non-Teaching Staffs/1.png" alt="Gratuitous Refreshment for Staff" loading="lazy">
                             <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Refreshments</span></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gallery Group: Birthday Celebrations -->
-                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="100">
+                <!-- Gallery Group: Cultivating Expert Technophiles -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
                     <div class="wf-gal-group-header">
-                        <div class="wf-gal-group-icon" style="--g-color:#e5a800;"><i class="fa-solid fa-cake-candles"></i></div>
+                        <div class="wf-gal-group-icon" style="--g-color:#7c3aed;"><i class="fa-solid fa-microchip"></i></div>
                         <div>
-                            <h3 class="wf-gal-group-title">Birthday Gift Celebrations</h3>
-                            <p class="wf-gal-group-sub">Every staff member — teaching and non-teaching — is celebrated personally on their birthday</p>
+                            <h3 class="wf-gal-group-title">Cultivating Expert Technophiles</h3>
+                            <p class="wf-gal-group-sub">The management shapes the professional growth of the teaching staff members. The staff members turn out to be Academic Leaders, Industrial Transformers, Business connectors where they bridge the gap between the need of the industry and the institution. The management has arranged various visits to upgrade their technical proficiency and the faculties are benefitted out of it.</p>
                         </div>
                     </div>
                     <div class="wf-gal-grid">
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Teaching Staff Birthday Gift/1.png" data-caption="Teaching Staff Birthday Gift — Personal Recognition">
-                            <img src="../assets/images/welfare/Teaching Staff Birthday Gift/1.png" alt="Teaching Staff Birthday Gift" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Teaching Staff</span></div>
-                        </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Non-Teaching Staff Birthday Gift/1.png" data-caption="Non-Teaching Staff Birthday Gift — Inclusive Care">
-                            <img src="../assets/images/welfare/Non-Teaching Staff Birthday Gift/1.png" alt="Non-Teaching Staff Birthday Gift" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Non-Teaching Staff</span></div>
-                        </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Amenities/1.png" data-caption="Personal Computing System for Each Faculty Member">
-                            <img src="../assets/images/welfare/Amenities/1.png" alt="Individual Computer for Faculty" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Computing Amenity</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Cultivating Expert Technophiles/1.png" data-caption="Motivating Professors to become academic leaders">
+                            <img src="../assets/images/welfare/Cultivating Expert Technophiles/1.png" alt="Motivating Professors to become academic leaders" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Academic Leaders</span></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gallery Group: Faculty Development -->
-                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="120">
+                <!-- Gallery Group: Transforming Professors -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
                     <div class="wf-gal-group-header">
-                        <div class="wf-gal-group-icon" style="--g-color:#7c3aed;"><i class="fa-solid fa-industry"></i></div>
+                        <div class="wf-gal-group-icon" style="--g-color:#8b1a2b;"><i class="fa-solid fa-industry"></i></div>
                         <div>
-                            <h3 class="wf-gal-group-title">Faculty Development &amp; Industry Connect</h3>
-                            <p class="wf-gal-group-sub">Cultivating expert technophiles and transforming professors into industrial connectors through funded visits and programs</p>
+                            <h3 class="wf-gal-group-title">Transforming Professors to Industrial Connectors</h3>
+                            <p class="wf-gal-group-sub">Faculties at Fintech-Software Company - 13/09/2022</p>
                         </div>
                     </div>
                     <div class="wf-gal-grid wf-gal-grid--wide">
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Cultivating Expert Technophiles/1.png" data-caption="Cultivating Expert Technophiles — Faculty Training Program">
-                            <img src="../assets/images/welfare/Cultivating Expert Technophiles/1.png" alt="Cultivating Expert Technophiles" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Expert Technophiles</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/1.png" data-caption="Faculties at Fintech-Software Company - 13/09/2022">
+                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/1.png" alt="Transforming Professors to Industrial connectors" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industrial Connect</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/1.png" data-caption="CEO Intellect Design — Faculty Industry Interaction">
-                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/1.png" alt="Transforming Professors CEO visit" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>CEO Connect</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/2.png" data-caption="Faculties at Fintech-Software Company - 13/09/2022">
+                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/2.png" alt="Transforming Professors to Industrial connectors" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industrial Connect</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/2.png" data-caption="IIT Madras Research Park Visit — Industry Immersion">
-                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/2.png" alt="IIT Madras visit" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>IIT-M Visit</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/3.png" data-caption="Faculties at Fintech-Software Company - 13/09/2022">
+                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/3.png" alt="Transforming Professors to Industrial connectors" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industrial Connect</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/3.png" data-caption="Faculty Team at IIT Madras Incubation Cell">
-                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/3.png" alt="IIT-M Incubation Cell" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Incubation Cell</span></div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/4.png" data-caption="Faculties at Fintech-Software Company - 13/09/2022">
+                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/4.png" alt="Transforming Professors to Industrial connectors" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industrial Connect</span></div>
                         </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/4.png" data-caption="Industrial Exposure — Kingston Faculty Delegation">
-                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/4.png" alt="Industrial connectors visit 4" loading="lazy">
-                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industry Exposure</span></div>
-                        </div>
-                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/5.png" data-caption="Transforming Professors to Industrial Connectors">
-                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/5.png" alt="Industrial connectors visit 5" loading="lazy">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Transforming Professors to Industrial connectors/5.png" data-caption="Faculties at Fintech-Software Company - 13/09/2022">
+                            <img src="../assets/images/welfare/Transforming Professors to Industrial connectors/5.png" alt="Transforming Professors to Industrial connectors" loading="lazy">
                             <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Industrial Connect</span></div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Gallery Group: Amenities -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
+                    <div class="wf-gal-group-header">
+                        <div class="wf-gal-group-icon" style="--g-color:#0ea5e9;"><i class="fa-solid fa-laptop"></i></div>
+                        <div>
+                            <h3 class="wf-gal-group-title">Amenities</h3>
+                            <p class="wf-gal-group-sub">Amenities covering individual computing system, free wi-fi, mobile phone to teaching staffs and administrative staffs are provided by the management to perform their role effectively. This investment in technology demonstrates a commitment to creating a modern and adaptive environment.</p>
+                        </div>
+                    </div>
+                    <div class="wf-gal-grid">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Amenities/1.png" data-caption="Amenities - Individual Computing System, Free Wi-Fi, Mobile Phone to HOD's">
+                            <img src="../assets/images/welfare/Amenities/1.png" alt="Amenities - Individual Computing System" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Amenities</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Group: Birthday Gifts -->
+                <div class="wf-gal-group" data-aos="fade-up" data-aos-delay="60">
+                    <div class="wf-gal-group-header">
+                        <div class="wf-gal-group-icon" style="--g-color:#e5a800;"><i class="fa-solid fa-cake-candles"></i></div>
+                        <div>
+                            <h3 class="wf-gal-group-title">Staff Birthday Gifts</h3>
+                            <p class="wf-gal-group-sub">Celebrating staff birthdays acknowledging employees on their special day</p>
+                        </div>
+                    </div>
+                    <div class="wf-gal-grid">
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Teaching Staff Birthday Gift/1.png" data-caption="Teaching Staff Birthday Gift">
+                            <img src="../assets/images/welfare/Teaching Staff Birthday Gift/1.png" alt="Teaching Staff Birthday Gift" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Teaching Staff</span></div>
+                        </div>
+                        <div class="wf-gal-item" data-src="../assets/images/welfare/Non-Teaching Staff Birthday Gift/1.png" data-caption="Non-Teaching Staff Birthday Gift">
+                            <img src="../assets/images/welfare/Non-Teaching Staff Birthday Gift/1.png" alt="Non-Teaching Staff Birthday Gift" loading="lazy">
+                            <div class="wf-gal-overlay"><i class="fa-solid fa-expand"></i><span>Non-Teaching Staff</span></div>
+                        </div>
+                    </div>
+                </div>
+
             </div><!-- /wf-gallery-section -->
 
             <!-- ══ LIGHTBOX ══ -->
@@ -1402,71 +735,6 @@
                     <div class="wf-lb-counter" id="wfLbCounter"></div>
                 </div>
             </div>
-
-            <!-- ══ POLICY DETAILS SECTION ══ -->
-            <div class="wf-policy-section" data-aos="fade-up">
-                <div class="wf-sec-head" style="margin-bottom:40px;">
-                    <div class="wf-sec-eyebrow"><span>Institutional Policy</span></div>
-                    <h2 class="wf-sec-title">Benefit <span>Policy Details</span></h2>
-                    <p class="wf-sec-desc">Transparent policies ensuring every employee is fully informed of their entitlements as per government norms and institutional guidelines.</p>
-                </div>
-                <div class="wf-policy-grid">
-                    <div class="wf-policy-card" style="--pc-color:#003366;" data-aos="fade-up" data-aos-delay="0">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-piggy-bank"></i></div>
-                        <h4 class="wf-pc-title">EPF &amp; ESIC</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> Employee Provident Fund for <strong>all permanent staff</strong> as per Government norms</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> ESIC health insurance with <strong>IN-PATIENT &amp; OUT-PATIENT</strong> coverage</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> 100% statutory compliance — no delays in remittance</li>
-                        </ul>
-                    </div>
-                    <div class="wf-policy-card" style="--pc-color:#059669;" data-aos="fade-up" data-aos-delay="60">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h4 class="wf-pc-title">Ward Academic Fee Concession</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> <strong>25% fee waiver</strong> for children of staff from day one</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Increases to <strong>40% after 2 continuous years</strong> of service</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Applicable to B.E. / B.Tech / MBA programs at Kingston</li>
-                        </ul>
-                    </div>
-                    <div class="wf-policy-card" style="--pc-color:#e5a800;" data-aos="fade-up" data-aos-delay="120">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-gift"></i></div>
-                        <h4 class="wf-pc-title">Festival Advance</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> Advance facility during <strong>major festivals</strong> (Diwali, Pongal, Eid, etc.)</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Repayment in <strong>6 equal monthly installments</strong></li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Salary advance also available for personal emergencies</li>
-                        </ul>
-                    </div>
-                    <div class="wf-policy-card" style="--pc-color:#7c3aed;" data-aos="fade-up" data-aos-delay="0">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                        <h4 class="wf-pc-title">On Duty &amp; Deputation</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> <strong>On Duty (OD)</strong> granted for official academic/research events</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Official deputation as per <strong>Institution norms</strong></li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Travel reimbursement for approved conferences &amp; FDPs</li>
-                        </ul>
-                    </div>
-                    <div class="wf-policy-card" style="--pc-color:#0ea5e9;" data-aos="fade-up" data-aos-delay="60">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-flask"></i></div>
-                        <h4 class="wf-pc-title">Contingency Grant</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> <strong>Contingency grant</strong> provided for teaching faculty for research consumables</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Seed funding available for new research projects</li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Publication incentive bonus for <strong>indexed journal papers</strong></li>
-                        </ul>
-                    </div>
-                    <div class="wf-policy-card" style="--pc-color:#8b1a2b;" data-aos="fade-up" data-aos-delay="120">
-                        <div class="wf-pc-icon"><i class="fa-solid fa-handshake"></i></div>
-                        <h4 class="wf-pc-title">Gratuity &amp; Service Benefits</h4>
-                        <ul class="wf-pc-list">
-                            <li><i class="fa-solid fa-circle-dot"></i> Gratuity paid as per <strong>Payment of Gratuity Act</strong></li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Transparent HR policies with <strong>grievance redressal cell</strong></li>
-                            <li><i class="fa-solid fa-circle-dot"></i> Salary credited on time — <strong>no delays, ever</strong></li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- /wf-policy-section -->
 
         </div>
     </div><!-- /wf-main -->
@@ -1483,82 +751,6 @@
     (function(){
         /* ── AOS ── */
         if(typeof AOS !== 'undefined') AOS.init({ duration:680, once:true, offset:60 });
-
-        /* ── Counter animation ── */
-        const statNums = document.querySelectorAll('.wf-stat-num[data-count]');
-        const cIO = new IntersectionObserver(ents => {
-            ents.forEach(e => {
-                if(!e.isIntersecting) return;
-                const el = e.target;
-                const target = parseInt(el.dataset.count);
-                const hasPct = el.querySelector('span');
-                let cur = 0;
-                const step = Math.ceil(target / 55);
-                const t = setInterval(() => {
-                    cur = Math.min(cur + step, target);
-                    el.childNodes[0].textContent = cur;
-                    if(cur >= target) clearInterval(t);
-                }, 20);
-                cIO.unobserve(el);
-            });
-        }, { threshold: 0.5 });
-        statNums.forEach(el => cIO.observe(el));
-
-        /* ── Category filter tabs ── */
-        const filterBtns = document.querySelectorAll('.wf-filter-btn');
-        const cards = document.querySelectorAll('.wf-card');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                cards.forEach(card => {
-                    const cat = card.dataset.category;
-                    if(filter === 'all' || cat === filter) {
-                        card.removeAttribute('data-hidden');
-                        card.style.display = '';
-                    } else {
-                        card.setAttribute('data-hidden', 'true');
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        /* ── Card expand/collapse ── */
-        document.querySelectorAll('.wf-card-expand-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const card = btn.closest('.wf-card');
-                card.classList.toggle('expanded');
-                const label = btn.querySelector('span');
-                if(card.classList.contains('expanded')) {
-                    label.textContent = 'Show Less';
-                } else {
-                    const orig = card.querySelector('.wf-card-title').textContent;
-                    label.textContent = orig.includes('Amenities') ? 'View Amenities'
-                        : orig.includes('Award') ? 'View Awards'
-                        : 'View Benefits';
-                }
-            });
-        });
-
-        /* ── Accordion ── */
-        document.querySelectorAll('.wf-accordion-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const isOpen = trigger.classList.contains('open');
-                // close all
-                document.querySelectorAll('.wf-accordion-trigger').forEach(t => {
-                    t.classList.remove('open');
-                    t.nextElementSibling.classList.remove('open');
-                });
-                // open clicked if it was closed
-                if(!isOpen) {
-                    trigger.classList.add('open');
-                    trigger.nextElementSibling.classList.add('open');
-                }
-            });
-        });
 
         /* ── Lightbox ── */
         (function(){
@@ -1577,7 +769,7 @@
             const allItems = Array.from(document.querySelectorAll('.wf-gal-item'));
             let currentIdx = 0;
 
-            function showItem(idx, direction = 0) {
+            function showItem(idx) {
                 currentIdx = (idx + allItems.length) % allItems.length;
                 const item = allItems[currentIdx];
                 lbImg.classList.add('switching');

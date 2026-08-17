@@ -402,7 +402,8 @@
         https://kb.yourdomain.com/data                  (custom domain)
     -->
     <script>
-        // window.KEC_RAG_DATA_BASE = 'https://your-r2-public-url/data';
+        // RAG data (vectors.bin + chunks.json) served from the same origin /data folder.
+        // To serve from R2 instead, set: window.KEC_RAG_DATA_BASE = 'https://<your-r2-url>/data';
 
         /* ── SERVER-SIDE LLM (OpenRouter via /api/chat Cloudflare Function) ──
            Enables the optional readable-summary enhancement that runs AFTER the
@@ -413,6 +414,7 @@
            The enhancement is fully graceful: if /api/chat is unreachable, returns
            an error, or returns no text, the assistant still shows the grounded
            RAG answer (retrieved from the local vector DB) — nothing breaks. */
+        window.KEC_RAG_DATA_BASE = 'https://your-r2-public-url/data';
         window.KEC_ENABLE_LLM = true;
     </script>
 

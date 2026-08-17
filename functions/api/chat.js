@@ -9,10 +9,10 @@
  *
  * Environment Variables (set in Cloudflare Pages dashboard):
  *   OPENROUTER_API_KEY  (required) — Your OpenRouter API key
- *   OPENROUTER_MODEL    (optional) — Model name, defaults to
- *                                    meta-llama/llama-3.1-8b-instruct
- *                                    (lowest-cost OpenRouter instruct model that
- *                                    reliably follows strict RAG grounding rules)
+ *   OPENROUTER_MODEL    (optional, legacy) — Model name. NOTE: the chat model
+ *                                    is currently hardcoded to openai/gpt-oss-20b:free
+ *                                    in onRequestPost; OPENROUTER_MODEL no longer
+ *                                    overrides it.
  *   ALLOWED_ORIGINS     (optional) — Comma-separated exact origins allowed for
  *                                    cross-origin calls, e.g.
  *                                    "https://engineering.kingston.ac.in,https://www.example.pages.dev"
@@ -114,10 +114,10 @@ export async function onRequestPost(context) {
         });
     }
 
-    // Lowest-cost OpenRouter model that reliably follows the strict RAG grounding
-    // system prompt. Verified cheaper than deepseek-chat-v3-0324, gemini flash,
-    // gpt-4o-mini, gpt-4.1-nano etc. at the time of selection (see ops report).
-    const model = env.OPENROUTER_MODEL || 'meta-llama/llama-3.1-8b-instruct';
+    // Chat (LLM) model — user-selected: openai/gpt-oss-20b:free (OpenRouter free tier).
+    // Note: hardcoded on purpose so the env var cannot silently override it.
+    // To switch back to env-var control, restore: env.OPENROUTER_MODEL || '...'
+    const model = 'openai/gpt-oss-20b:free';
 
     // ── SECURITY (SEC-005): throttle abuse of the paid endpoint ──
     // Reject oversized bodies BEFORE parsing so an attacker can't drain the
