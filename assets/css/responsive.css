@@ -804,8 +804,7 @@ html, body {
    ========================================================================== */
 @media (min-width: 769px) and (max-width: 1024px) {
     .buildings-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 22px;
     }
     .explore-grid {
         grid-template-columns: repeat(3, 1fr);
