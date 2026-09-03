@@ -78,28 +78,32 @@ html, body {
 
     /* Mobile Header Optimization */
     .top-bar { display: none !important; }
-    .logo-bar { padding: 4px 0 !important; }
-    .main-logo { height: 30px !important; width: auto !important; }
-    .logo-text h1 { font-size: 0.85rem !important; }
-    .logo-text h2 { font-size: 0.5rem !important; }
-    .logo-area { gap: 4px !important; }
-    .notice-bar { font-size: 0.55rem !important; padding: 0 !important; height: 22px !important; }
-    .notice-label { font-size: 0.55rem !important; padding: 0 6px !important; }
+    .logo-bar { padding: 6px 0 !important; }
+    .main-logo { height: 38px !important; width: auto !important; }
+    .logo-text h1 { font-size: 1.05rem !important; font-weight: 800; line-height: 1.15; }
+    .logo-text h2 { font-size: 0.65rem !important; font-weight: 700; color: var(--brand-red); letter-spacing: 0.04em; }
+    .logo-area { gap: 8px !important; align-items: center; }
+    .notice-bar { font-size: 0.72rem !important; padding: 0 !important; height: 26px !important; line-height: 26px; }
+    .notice-label { font-size: 0.68rem !important; padding: 0 8px !important; }
 
     /* Mobile Menu Toggle */
     .mobile-menu-toggle {
         display: flex;
         width: auto;
         align-items: center;
-        justify-content: space-between;
-        padding: 10px 16px !important;
-        min-height: 44px;
-        min-width: 88px;
+        justify-content: center;
+        padding: 8px 14px !important;
+        min-height: 40px;
+        min-width: 44px;
         background: var(--brand-blue);
         color: white;
-        font-size: 0.75rem !important;
-        border-radius: 4px;
-        gap: 8px;
+        font-size: 0.82rem !important;
+        font-weight: 700;
+        border-radius: 6px;
+        gap: 6px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     
     .nav-links {
@@ -214,11 +218,71 @@ html, body {
     .social-links {
         justify-content: center;
     }
-    .footer-bottom .container {
-        flex-direction: column;
-        gap: 10px;
+    /* Department Pages Mobile Layout */
+    .dept-details-wrapper {
+        flex-direction: column !important;
+        padding: 0 14px !important;
+        gap: 20px !important;
+        margin: 20px auto !important;
     }
-    .footer-bottom p { font-size: 0.65rem !important; }
+    .dept-sidebar {
+        flex: none !important;
+        width: 100% !important;
+        position: static !important;
+        max-height: none !important;
+        padding: 12px 14px !important;
+        border-radius: 10px !important;
+        background: #003030 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    }
+    .dept-sidebar-menu {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px !important;
+        padding: 4px 2px 8px !important;
+    }
+    .dept-sidebar-menu::-webkit-scrollbar {
+        height: 4px;
+    }
+    .dept-sidebar-menu::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 4px;
+    }
+    .dept-sidebar-menu li {
+        flex: 0 0 auto !important;
+        border-bottom: none !important;
+    }
+    .dept-sidebar-menu a {
+        padding: 8px 14px !important;
+        font-size: 0.78rem !important;
+        white-space: nowrap !important;
+        border-radius: 20px !important;
+        background: rgba(255, 255, 255, 0.12) !important;
+        gap: 6px !important;
+        display: inline-flex !important;
+    }
+    .dept-sidebar-menu a:hover,
+    .dept-sidebar-menu a.active {
+        background: var(--brand-yellow) !important;
+        color: var(--brand-blue) !important;
+        border-left: none !important;
+        padding-left: 14px !important;
+        font-weight: 700 !important;
+    }
+    .dept-main-slider img {
+        height: 220px !important;
+    }
+    .dept-title-red {
+        font-size: 1.25rem !important;
+        margin-bottom: 20px !important;
+    }
+    iframe[title*="PDF"],
+    iframe[src*=".pdf"] {
+        height: 480px !important;
+        max-height: 70vh !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -403,9 +467,9 @@ html, body {
    IMAGE OVERFLOW PREVENTION ON MOBILE
    ========================================================================== */
 @media (max-width: 768px) {
-    img {
+    img:not(.testi-clg-logo):not(.testi-comp-logo):not(.testi-photo-wrap img):not(.acc-ov-icon img):not(.hero-card-logo-box img):not(.accred-logos img) {
         max-width: 100% !important;
-        height: auto !important;
+        height: auto;
     }
     .hero-slide-card {
         padding: 20px !important;
@@ -434,13 +498,87 @@ html, body {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px !important;
     }
+    #testimonials-slider .swiper-wrapper {
+        display: flex !important;
+        align-items: stretch !important;
+    }
+    #testimonials-slider .swiper-slide {
+        height: auto !important;
+        display: flex !important;
+    }
     .testi-card {
-        min-height: auto;
-        padding: 20px;
+        min-height: 420px !important;
+        height: 100% !important;
+        width: 100% !important;
+        padding: 22px 18px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    .testi-logos-row {
+        width: 100% !important;
+        height: 52px !important;
+        min-height: 52px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 14px !important;
+        padding: 6px 12px !important;
+        flex-shrink: 0 !important;
+    }
+    .testi-clg-logo {
+        width: 48px !important;
+        height: 48px !important;
+        max-width: 48px !important;
+        max-height: 48px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
+    .testi-comp-logo {
+        max-width: 100px !important;
+        max-height: 42px !important;
+        height: 42px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
     }
     .testi-photo-wrap {
-        width: 80px;
-        height: 80px;
+        width: 88px !important;
+        height: 88px !important;
+        min-width: 88px !important;
+        min-height: 88px !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        margin: 0 auto 12px !important;
+        flex-shrink: 0 !important;
+    }
+    .testi-photo-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+    .testi-name {
+        font-size: 0.95rem !important;
+        margin-bottom: 3px !important;
+        flex-shrink: 0 !important;
+    }
+    .testi-meta {
+        font-size: 0.74rem !important;
+        margin-bottom: 10px !important;
+        flex-shrink: 0 !important;
+    }
+    .testi-quote {
+        font-size: 0.82rem !important;
+        line-height: 1.55 !important;
+        flex: 1 1 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding-top: 4px !important;
     }
 }
 
@@ -1243,4 +1381,174 @@ html, body {
     .hero-card-title { font-size: 0.94rem !important; }
     .hero-card-logo-box { min-height: 56px !important; }
     .hero-slide-autonomous-img { height: 180px !important; max-height: 180px !important; }
+}
+
+/* ==========================================================================
+   UNIVERSAL MOBILE RESPONSIVE ENGINE (100% Mobile Coverage Across All Pages)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Universal Table Containment & Smooth Touch Scroll */
+    table,
+    .table-responsive table,
+    .eligibility-table,
+    .research-table,
+    .dept-table,
+    .fee-table {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        box-sizing: border-box !important;
+        margin-bottom: 24px !important;
+    }
+
+    .eligibility-table,
+    .research-table {
+        min-width: 100% !important;
+    }
+
+    .eligibility-table th,
+    .eligibility-table td,
+    .research-table th,
+    .research-table td {
+        padding: 10px 14px !important;
+        font-size: 0.84rem !important;
+        white-space: normal !important;
+    }
+
+    /* 2. Grid Collapsing (Single Column for All Multi-Column Grids on Mobile) */
+    .rules-grid,
+    .salient-grid,
+    .pub-grid,
+    .research-hub-grid,
+    .faculty-grid,
+    .achievements-grid,
+    .events-grid,
+    .news-grid,
+    .gallery-grid,
+    .stats-grid,
+    .dept-contact-grid,
+    .contact-grid,
+    .placement-highlights-grid,
+    .testimonial-grid,
+    .hero-card-grid,
+    .cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .rule-card,
+    .pub-card,
+    .research-card,
+    .explore-card {
+        padding: 20px 16px !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Horizontal Touch Scroll for All Tab Bars & Filter Buttons */
+    .research-tabs,
+    .nav-tabs,
+    .tab-buttons,
+    .filter-buttons,
+    .category-filter {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 8px !important;
+        padding: 4px 2px 8px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        scrollbar-width: thin;
+    }
+
+    .research-tab,
+    .tab-btn,
+    .filter-btn {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        padding: 8px 16px !important;
+        font-size: 0.82rem !important;
+        border-radius: 20px !important;
+    }
+
+    /* 4. Containers & Section Padding Guardrails */
+    .container,
+    .contact-container,
+    .dept-details-wrapper,
+    .admission-main,
+    .academics-container,
+    .rules-section,
+    .research-section,
+    .patents-section,
+    .research-hub-section {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        max-width: 100% !important;
+        overflow-x: clip !important;
+        box-sizing: border-box !important;
+    }
+
+    .rules-section,
+    .research-section,
+    .patents-section,
+    .research-hub-section {
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
+    }
+
+    .research-intro {
+        max-width: 100% !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+    }
+
+    /* 5. Maps, Videos, and Iframes Full-Width */
+    iframe,
+    embed,
+    object,
+    video,
+    canvas {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .map-section {
+        height: 300px !important;
+        border-radius: 12px !important;
+    }
+
+    /* 6. Typography Scaling & Word Wrap */
+    h1, .hero-title {
+        font-size: 1.7rem !important;
+        line-height: 1.25 !important;
+        word-break: break-word !important;
+    }
+
+    h2, .section-title {
+        font-size: 1.35rem !important;
+        line-height: 1.3 !important;
+        word-break: break-word !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .salient-content h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .salient-content h2 {
+        font-size: 1.35rem !important;
+    }
+    .salient-underline {
+        width: 120px !important;
+        margin-bottom: 24px !important;
+    }
 }

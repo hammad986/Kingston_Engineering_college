@@ -5,9 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accreditations & Certifications – Kingston Engineering College</title>
+    <meta name="description" content="Kingston Engineering College holds premier accreditations including NAAC 'A' Grade, NBA, UGC, AISHE, Anna University, and ISO 9001:2015 certifications, reflecting our commitment to academic excellence.">
     <link rel="canonical" href="https://engineering.kingston.ac.in/about/about_accreditation.html">
-    <meta name="description"
-        content="Kingston Engineering College holds premier accreditations including NAAC 'A' Grade, NBA, UGC, AISHE, Anna University, and ISO 9001:2015 certifications, reflecting our commitment to academic excellence.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Accreditations & Certifications – Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/about/about_accreditation.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Kingston Engineering College holds premier accreditations including NAAC 'A' Grade, NBA, UGC, AISHE, Anna University, and ISO 9001:2015 certifications, reflecting our commitment to academic excellence.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Accreditations & Certifications – Kingston Engineering College">
+    <meta name="twitter:description" content="Kingston Engineering College holds premier accreditations including NAAC 'A' Grade, NBA, UGC, AISHE, Anna University, and ISO 9001:2015 certifications, reflecting our commitment to academic excellence.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -621,14 +635,26 @@
         }
 
         .acc-ov-icon {
-            width: 52px;
-            height: 52px;
+            width: 56px;
+            height: 56px;
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 16px;
+            background: #fff;
+            border: 1.5px solid rgba(0, 51, 102, 0.12);
+            padding: 7px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            box-sizing: border-box;
+        }
+
+        .acc-ov-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
         .acc-ov-name {
@@ -915,17 +941,17 @@
             <div class="acc-panel active" id="panel-all">
                 <div class="acc-overview-grid" data-aos="fade-up">
                     <div class="acc-ov-card" style="--card-color:#003366;">
-                        <div class="acc-ov-icon" style="background:linear-gradient(135deg,#003366,#004a99);">🏅</div>
+                        <div class="acc-ov-icon">
+                            <img src="../assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade">
+                        </div>
                         <div class="acc-ov-name">NAAC</div>
                         <div class="acc-ov-desc">National Assessment &amp; Accreditation Council — Awarded prestigious
                             'A' Grade for academic quality.</div>
                         <span class="acc-ov-count">Certificate</span>
                     </div>
                     <div class="acc-ov-card" style="--card-color:#13819b;">
-                        <div class="acc-ov-icon"
-                            style="width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid #13819b;padding:6px;box-shadow:0 6px 18px rgba(19,129,155,0.25);">
-                            <img src="../assets/images/unknown/nba-logo.png" alt="NBA"
-                                style="width:100%;height:100%;object-fit:contain;">
+                        <div class="acc-ov-icon">
+                            <img src="../assets/images/icons/nba-logo.png" alt="NBA">
                         </div>
                         <div class="acc-ov-name">NBA</div>
                         <div class="acc-ov-desc">National Board of Accreditation — Program-level accreditation for
@@ -933,28 +959,36 @@
                         <span class="acc-ov-count">Certificate</span>
                     </div>
                     <div class="acc-ov-card" style="--card-color:#059669;">
-                        <div class="acc-ov-icon" style="background:linear-gradient(135deg,#059669,#047857);">🎓</div>
+                        <div class="acc-ov-icon">
+                            <img src="../assets/images/icons/002-UGC_India_Logo.png" alt="UGC">
+                        </div>
                         <div class="acc-ov-name">UGC</div>
                         <div class="acc-ov-desc">University Grants Commission — Recognized under sections 2(f) and 12(B)
                             for grants eligibility.</div>
                         <span class="acc-ov-count">Certificate</span>
                     </div>
                     <div class="acc-ov-card" style="--card-color:#e5a800;">
-                        <div class="acc-ov-icon" style="background:linear-gradient(135deg,#e5a800,#d97706);">📋</div>
+                        <div class="acc-ov-icon">
+                            <i class="fa-solid fa-graduation-cap" style="color:#e5a800;font-size:1.6rem;"></i>
+                        </div>
                         <div class="acc-ov-name">AISHE</div>
                         <div class="acc-ov-desc">All India Survey on Higher Education — Registered for national higher
                             education data reporting.</div>
                         <span class="acc-ov-count">Certificate</span>
                     </div>
                     <div class="acc-ov-card" style="--card-color:#8b1a2b;">
-                        <div class="acc-ov-icon" style="background:linear-gradient(135deg,#8b1a2b,#6b0f1f);">🏛️</div>
+                        <div class="acc-ov-icon">
+                            <img src="../assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University">
+                        </div>
                         <div class="acc-ov-name">Anna University</div>
                         <div class="acc-ov-desc">Affiliated to Anna University, Chennai — Premier technical university
                             of Tamil Nadu.</div>
                         <span class="acc-ov-count">Certificate</span>
                     </div>
                     <div class="acc-ov-card" style="--card-color:#0ea5e9;">
-                        <div class="acc-ov-icon" style="background:linear-gradient(135deg,#0ea5e9,#0284c7);">✅</div>
+                        <div class="acc-ov-icon">
+                            <i class="fa-solid fa-certificate" style="color:#0ea5e9;font-size:1.6rem;"></i>
+                        </div>
                         <div class="acc-ov-name">ISO Audit</div>
                         <div class="acc-ov-desc">ISO 9001:2015 Quality Management System certification for systematic
                             process excellence.</div>
@@ -1113,10 +1147,10 @@
                 </div>
                 <div class="acc-cert-grid">
                     <div class="acc-cert-card" style="--card-accent:#e5a800;" data-aos="fade-up" data-aos-delay="0"
-                        data-lb-img="../assets/images/accreditation/aishe/WhatsApp Image 2026-03-16 at 10.52.30 AM.jpeg"
+                        data-lb-img="../assets/images/accreditation/aishe/aishe.jpeg"
                         data-lb-title="AISHE Registration Certificate">
                         <div class="acc-cert-img-wrap">
-                            <img src="../assets/images/accreditation/aishe/WhatsApp Image 2026-03-16 at 10.52.30 AM.jpeg"
+                            <img src="../assets/images/accreditation/aishe/aishe.jpeg"
                                 alt="AISHE Certificate"
                                 onerror="this.src='../assets/images/icons/001-web_logo_banner_2026.png'">
                             <div class="acc-cert-overlay">

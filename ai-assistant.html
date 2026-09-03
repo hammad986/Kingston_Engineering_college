@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant - Kingston Engineering College</title>
     <link rel="canonical" href="https://engineering.kingston.ac.in/ai-assistant.html">
-    <meta name="description" content="AI Assistant at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Open Graph -->
+
+    <!-- Twitter Card -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -414,7 +418,10 @@
            The enhancement is fully graceful: if /api/chat is unreachable, returns
            an error, or returns no text, the assistant still shows the grounded
            RAG answer (retrieved from the local vector DB) — nothing breaks. */
-        window.KEC_RAG_DATA_BASE = 'https://your-r2-public-url/data';
+        // R2 placeholder was active but pointed to a non-existent bucket, which
+        // broke RAG retrieval. Reverted to same-origin /data/ (fallback).
+        // AFTER uploading vectors.bin + chunks.json to R2, uncomment and set:
+        // window.KEC_RAG_DATA_BASE = 'https://<your-r2-public-url>/data';
         window.KEC_ENABLE_LLM = true;
     </script>
 

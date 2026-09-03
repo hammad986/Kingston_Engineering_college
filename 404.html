@@ -2,120 +2,730 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Kingston Engineering College</title>
+    <title>404 - Page Not Found | Kingston Engineering College (Autonomous)</title>
+    <meta name="description" content="The page you are looking for is not available. Search or browse Kingston Engineering College programmes, admissions, departments, placements and campus facilities.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/404.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="404 - Page Not Found | Kingston Engineering College (Autonomous)">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/404.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="The page you are looking for is not available. Search or browse Kingston Engineering College programmes, admissions, departments, placements and campus facilities.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 - Page Not Found | Kingston Engineering College (Autonomous)">
+    <meta name="twitter:description" content="The page you are looking for is not available. Search or browse Kingston Engineering College programmes, admissions, departments, placements and campus facilities.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand-navy: #0b223c;
+            --brand-navy-light: #16365c;
+            --brand-gold: #f5c518;
+            --brand-gold-hover: #e5b60e;
+            --brand-red: #8b182b;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0b223c 0%, #1a5490 100%);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        /* Top Header Bar */
+        .header-top {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header-logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--brand-navy);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .logo-text-sub {
+            font-size: 0.75rem;
+            color: var(--brand-red);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .tnea-badge {
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-light));
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(245, 197, 24, 0.4);
+        }
+
+        .tnea-badge strong {
+            color: var(--brand-gold);
+            font-size: 0.95rem;
+        }
+
+        /* Main 404 Content */
+        .main-container {
+            flex: 1;
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 24, 43, 0.08);
+            color: var(--brand-red);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(139, 24, 43, 0.15);
+        }
+
+        .error-code {
+            font-family: 'Poppins', sans-serif;
+            font-size: 7.5rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-red) 50%, var(--brand-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            letter-spacing: -0.04em;
+        }
+
+        .error-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--brand-navy);
+            margin-bottom: 12px;
+        }
+
+        .error-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+
+        /* Search Box */
+        .search-box-wrap {
+            width: 100%;
+            max-width: 580px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .search-input-group {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 6px 8px 6px 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            transition: all 0.25s ease;
+        }
+
+        .search-input-group:focus-within {
+            border-color: var(--brand-navy);
+            box-shadow: 0 8px 30px rgba(11, 34, 60, 0.12);
+        }
+
+        .search-icon {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-right: 12px;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-dark);
+            background: transparent;
+        }
+
+        .search-btn {
+            background: var(--brand-navy);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .search-btn:hover {
+            background: var(--brand-navy-light);
+        }
+
+        .search-dropdown {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            max-height: 280px;
+            overflow-y: auto;
+            display: none;
+            z-index: 50;
+            text-align: left;
+        }
+
+        .search-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.15s ease;
+        }
+
+        .search-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-item:hover {
+            background: #f8fafc;
+            color: var(--brand-navy);
+        }
+
+        .search-item i {
+            color: var(--brand-red);
+            font-size: 0.95rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Action Grid */
+        .section-heading {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--brand-navy);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        .quick-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .quick-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-navy);
+            box-shadow: 0 12px 24px rgba(11, 34, 60, 0.08);
+        }
+
+        .quick-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(11, 34, 60, 0.06);
+            color: var(--brand-navy);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
-            overflow: hidden;
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+            transition: background 0.2s ease, color 0.2s ease;
         }
-        .container {
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 600px;
+
+        .quick-card:hover .quick-card-icon {
+            background: var(--brand-navy);
+            color: var(--brand-gold);
         }
-        .error-code {
-            font-size: 8rem;
-            font-weight: 900;
-            font-family: 'Poppins', sans-serif;
-            color: rgba(255, 255, 255, 0.1);
-            line-height: 1;
-            margin-bottom: -20px;
-        }
-        h1 {
-            font-size: 2rem;
+
+        .quick-card-title {
+            font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 16px;
-            font-family: 'Poppins', sans-serif;
+            color: var(--brand-navy);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 36px;
-            line-height: 1.6;
+
+        .quick-card-title i {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            transition: transform 0.2s ease, color 0.2s ease;
         }
-        .btn-home {
+
+        .quick-card:hover .quick-card-title i {
+            transform: translateX(3px);
+            color: var(--brand-red);
+        }
+
+        .quick-card-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* Home Button & Contact */
+        .cta-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: #f5c518;
-            color: #0b223c;
-            padding: 14px 36px;
+            background: var(--brand-navy);
+            color: #ffffff;
+            padding: 13px 28px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(11, 34, 60, 0.2);
         }
-        .btn-home:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(245, 197, 24, 0.3);
+
+        .btn-primary:hover {
+            background: var(--brand-navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 34, 60, 0.3);
         }
-        .contact-info {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .contact-info p {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-        }
-        .contact-info a {
-            color: #f5c518;
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            color: var(--brand-navy);
+            border: 1px solid var(--border-color);
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
             text-decoration: none;
+            transition: all 0.25s ease;
         }
-        .contact-info a:hover { text-decoration: underline; }
-        .icon-404 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: rgba(245, 197, 24, 0.3);
+
+        .btn-secondary:hover {
+            border-color: var(--brand-navy);
+            background: #f8fafc;
+            transform: translateY(-2px);
         }
-        @media (max-width: 768px) {
-            .error-code { font-size: 5rem; }
-            h1 { font-size: 1.5rem; }
+
+        /* Help Bar */
+        .help-box {
+            width: 100%;
+            background: #ffffff;
+            border: 1px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .help-box strong {
+            color: var(--brand-navy);
+        }
+
+        .help-contacts {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .help-link {
+            color: var(--brand-navy);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .help-link:hover {
+            color: var(--brand-red);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer-mini {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 18px 24px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-top {
+                padding: 10px 16px;
+            }
+            .header-logo img {
+                height: 38px;
+            }
+            .logo-text-title {
+                font-size: 0.95rem;
+            }
+            .logo-text-sub {
+                font-size: 0.65rem;
+            }
+            .tnea-badge {
+                padding: 4px 10px;
+                font-size: 0.72rem;
+            }
+            .error-code {
+                font-size: 5rem;
+            }
+            .error-title {
+                font-size: 1.4rem;
+            }
+            .error-desc {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            .quick-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .help-box {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .help-contacts {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
-    <!-- Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <!-- Responsive/media rules — required so the shared header/footer partials
-         render correctly on mobile. Desktop is unaffected. -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <div id="include-header"></div>
-
-    <div class="container">
-        <div class="icon-404"><i class="fa-solid fa-map-signs"></i></div>
-        <div class="error-code">404</div>
-        <h1>Page Not Found</h1>
-        <p>The page you're looking for doesn't exist or has been moved.<br>Let us help you find your way back.</p>
-        <a href="index.html" class="btn-home">
-            <i class="fa-solid fa-house"></i> Back to Home
+    <!-- Header Bar -->
+    <header class="header-top">
+        <a href="/index.html" class="header-logo" aria-label="Kingston Engineering College Home">
+            <img src="/assets/images/icons/logo.png" alt="Kingston Logo" onerror="this.src='/favicon-32x32.png'">
+            <div>
+                <div class="logo-text-title">KINGSTON</div>
+                <div class="logo-text-sub">ENGINEERING COLLEGE &bull; AUTONOMOUS</div>
+            </div>
         </a>
-        <div class="contact-info">
-            <p><i class="fa-solid fa-phone"></i> +91-9788029999</p>
-            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@kingston.ac.in">info@kingston.ac.in</a></p>
-            <p style="margin-top:12px;font-size:0.8rem;">Kingston Engineering College — Vellore, Tamil Nadu</p>
+        <div class="tnea-badge">
+            <span>TNEA CODE:</span> <strong>1520</strong>
         </div>
-    </div>    <div id="include-footer"></div>
+    </header>
 
-    <script src="assets/js/include-components.js"></script>
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="hero-badge">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Error 404 &bull; Page Not Found</span>
+        </div>
+
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oops! You've reached an uncharted page</h1>
+        <p class="error-desc">
+            The page you're searching for doesn't exist, has been moved, or the URL was entered incorrectly. Let's get you right back on track.
+        </p>
+
+        <!-- Instant Search Box -->
+        <div class="search-box-wrap">
+            <div class="search-input-group">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="quick-search-input" class="search-input" placeholder="Search departments, admissions, placements, fees, hostel..." autocomplete="off">
+                <button type="button" class="search-btn" id="quick-search-btn">Search</button>
+            </div>
+            <div id="quick-search-dropdown" class="search-dropdown"></div>
+        </div>
+
+        <!-- Quick Navigation Cards -->
+        <div class="section-heading">
+            <i class="fa-solid fa-compass" style="color: var(--brand-gold);"></i>
+            <span>Popular Destinations</span>
+        </div>
+
+        <div class="quick-grid">
+            <a href="/index.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-house"></i></div>
+                <div class="quick-card-title">
+                    <span>Home Page</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">Return to the Kingston Engineering College main portal and homepage.</p>
+            </a>
+
+            <a href="/admission.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="quick-card-title">
+                    <span>Admissions 2026</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">B.E., B.Tech, M.B.A eligibility criteria, fee details and online enquiry.</p>
+            </a>
+
+            <a href="/departments.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <div class="quick-card-title">
+                    <span>Departments</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">Explore AI&DS, CSE, IT, ECE, Mech, MBA and S&H faculties and curricula.</p>
+            </a>
+
+            <a href="/placements/placement_report.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="quick-card-title">
+                    <span>Placements</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">Review placement statistics, top recruiting partners, and salary packages.</p>
+            </a>
+
+            <a href="/facilities.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="quick-card-title">
+                    <span>Campus & Facilities</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">Smart libraries, hostels, bus transport, modern laboratories & sports.</p>
+            </a>
+
+            <a href="/ai-assistant.html" class="quick-card">
+                <div class="quick-card-icon"><i class="fa-solid fa-robot"></i></div>
+                <div class="quick-card-title">
+                    <span>AI Assistant</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <p class="quick-card-desc">Ask our official AI chatbot any question about courses, admissions, or campus.</p>
+            </a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="cta-actions">
+            <a href="/index.html" class="btn-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Homepage</span>
+            </a>
+            <a href="/contact.html" class="btn-secondary">
+                <i class="fa-solid fa-headset"></i>
+                <span>Contact Helpdesk</span>
+            </a>
+        </div>
+
+        <!-- Direct Helpline Footer Info -->
+        <div class="help-box">
+            <div>
+                <strong>Need immediate assistance?</strong> Our admission & academic helpline is active.
+            </div>
+            <div class="help-contacts">
+                <a href="tel:+919788029999" class="help-link">
+                    <i class="fa-solid fa-phone"></i> +91-9788029999
+                </a>
+                <a href="mailto:info@kingston.ac.in" class="help-link">
+                    <i class="fa-solid fa-envelope"></i> info@kingston.ac.in
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mini Footer -->
+    <footer class="footer-mini">
+        <p>&copy; 2026 Kingston Engineering College (Autonomous), Vellore - 632 059, Tamil Nadu, India. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Interactive Search Script -->
+    <script>
+        (function() {
+            var searchData = [
+                { title: 'Admissions 2026-27', url: '/admission.html', icon: 'fa-user-graduate', category: 'Admissions' },
+                { title: 'B.E. Computer Science & Engineering (CSE)', url: '/dept_cse.html', icon: 'fa-laptop-code', category: 'Department' },
+                { title: 'B.Tech Artificial Intelligence & Data Science (AI&DS)', url: '/dept_aids.html', icon: 'fa-brain', category: 'Department' },
+                { title: 'B.E. Electronics & Communication Engineering (ECE)', url: '/dept_ece.html', icon: 'fa-microchip', category: 'Department' },
+                { title: 'B.Tech Information Technology (IT)', url: '/dept_IT.html', icon: 'fa-server', category: 'Department' },
+                { title: 'B.E. Mechanical Engineering', url: '/dept_mech.html', icon: 'fa-gears', category: 'Department' },
+                { title: 'Master of Business Administration (MBA)', url: '/dept_MBA.html', icon: 'fa-chart-pie', category: 'Management' },
+                { title: 'Campus Placements & Top Recruiters', url: '/placements/placement_report.html', icon: 'fa-briefcase', category: 'Placements' },
+                { title: 'Hostel Facilities (Boys & Girls)', url: '/facilities/facilities_hostel.html', icon: 'fa-bed', category: 'Facility' },
+                { title: 'Transport & Bus Routes', url: '/facilities/facilities_transport.html', icon: 'fa-bus', category: 'Facility' },
+                { title: 'Central Smart Library', url: '/facilities/facilities_library.html', icon: 'fa-book-open', category: 'Facility' },
+                { title: 'Sports & Gymnasium', url: '/facilities/facilities_sports.html', icon: 'fa-person-running', category: 'Facility' },
+                { title: 'Contact Us & Campus Location', url: '/contact.html', icon: 'fa-location-dot', category: 'Contact' },
+                { title: 'Fee Structure & Scholarships', url: '/faq.html', icon: 'fa-hand-holding-dollar', category: 'FAQ' },
+                { title: 'Kingston AI Chatbot', url: '/ai-assistant.html', icon: 'fa-robot', category: 'AI Assistant' }
+            ];
+
+            var input = document.getElementById('quick-search-input');
+            var dropdown = document.getElementById('quick-search-dropdown');
+            var btn = document.getElementById('quick-search-btn');
+
+            function filterResults(q) {
+                if (!q || q.trim().length === 0) {
+                    dropdown.style.display = 'none';
+                    return;
+                }
+                var query = q.toLowerCase().trim();
+                var matches = searchData.filter(function(item) {
+                    return item.title.toLowerCase().indexOf(query) !== -1 ||
+                           item.category.toLowerCase().indexOf(query) !== -1;
+                });
+
+                if (matches.length === 0) {
+                    dropdown.innerHTML = '<div style="padding:14px;color:#64748b;font-size:0.85rem;text-align:center;">No direct match found. Try typing another keyword.</div>';
+                    dropdown.style.display = 'block';
+                    return;
+                }
+
+                dropdown.innerHTML = matches.map(function(item) {
+                    return '<a href="' + item.url + '" class="search-item">' +
+                           '<i class="fa-solid ' + item.icon + '"></i>' +
+                           '<div>' +
+                           '<div style="font-weight:600;font-size:0.9rem;">' + item.title + '</div>' +
+                           '<div style="font-size:0.75rem;color:#64748b;">' + item.category + '</div>' +
+                           '</div>' +
+                           '</a>';
+                }).join('');
+                dropdown.style.display = 'block';
+            }
+
+            input.addEventListener('input', function() {
+                filterResults(this.value);
+            });
+
+            btn.addEventListener('click', function() {
+                filterResults(input.value);
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!input.contains(e.target) && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    var firstLink = dropdown.querySelector('a.search-item');
+                    if (firstLink) {
+                        window.location.href = firstLink.getAttribute('href');
+                    }
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

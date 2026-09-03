@@ -1,245 +1,194 @@
 /* ==========================================================================
-   NAVIGATION STYLES — PSD Mega Menu, Missing Classes, Mobile Fixes
+   NAVIGATION STYLES — PSD Hierarchical Submenu, Dropdowns, Mobile Fixes
    ========================================================================== */
 
-/* ── PSD Mega Menu — Two-Panel Architecture ──
-     Panel A (Categories / .psd-mega-left):   Right side — fixed width, never moves.
-     Panel B (Child / .psd-child-panel):       Left side — built dynamically on hover.
-     Right edge of .psd-mega-menu is anchored to the PSD <li> so categories
-     stay closest to the nav item. Child panel extends outward to the left.
-     STRONG INSTITUTIONAL DARK-RED TREATMENT per visual reference.
-   ── */
-.psd-mega-menu {
+/* ── PSD Dropdown Menu — Hierarchical Flyout Architecture ──
+   Main categories drop down from 'PUBLIC SELF DISCLOSURE'.
+   Styled in the clean institutional white theme matching NAAC, UGC MC, IQAC.
+   Hovering any category opens its .psd-sub-flyout row-aligned to the left!
+── */
+.nav-links > li.psd-nav-item {
+    position: relative;
+}
+
+/* Category menu container (Matches standard .dropdown: white with brand-red top border) */
+.nav-links > li.psd-nav-item > .psd-dropdown-menu {
     position: absolute;
     top: 100%;
     right: 0;
     left: auto;
-    z-index: 1000;
-    /* PART 14-15: dynamic sizing — menu grows from content; capped at 82vh
-       so a very long child list (e.g. Information Corner, 8 items) scrolls
-       inside the panel rather than overflowing the viewport. */
-    background: #fff;
-    border: 1px solid #e2e6ee;
-    border-top: 3px solid var(--brand-red);
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(164, 16, 30, 0.15);
+    width: 230px !important;
+    background: var(--white, #ffffff) !important;
+    padding: 6px 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    border-radius: 0 0 8px 8px !important;
+    border-top: 3px solid var(--brand-red, #8b1a2b) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    z-index: 1000 !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
     display: none;
-    /* PART 14-15 (re-fixed): CONTENT-DRIVEN sizing. When this becomes a flex
-       row (display:flex on hover, see below), the default align-items:stretch
-       stretched the slim .psd-child-panel to the tall 8-item category column,
-       leaving a giant blank area for 1–2 item children. align-items:flex-start
-       makes every panel size to its own content; the child panel additionally
-       caps itself via its own max-height (see .psd-child-panel). Verified in a
-       real browser: 1-link Alumni child shrinks 344px → ~37px. */
-    align-items: flex-start;
     opacity: 0;
-    transform: translateY(10px);
-    max-height: 82vh;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    /* PART 6 — PSD smoothness on desktop: visibility+pointer-events so the
-       opacity/transform transition actually animates (display:none snaps).
-       On touch/mobile we still rely on display:none + .open (see below). */
-    transition: opacity 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Desktop (hover-capable, ≥1025px): smooth fade/slide using visibility. */
-@media (min-width: 1025px) and (hover: hover) {
-    .psd-mega-menu {
-        display: flex;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    transform 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    visibility 0s linear 0.22s;
-        will-change: opacity, transform;
-    }
-    .nav-links > li.flyout-trigger:hover > .psd-mega-menu,
-    .nav-links > li.flyout-trigger:focus-within > .psd-mega-menu {
-        visibility: visible;
-        pointer-events: auto;
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    transform 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    visibility 0s;
-    }
-}
-
-/* Desktop: invisible 12px bridge keeps the submenu open while the pointer
-   travels the small gap between the nav item and the panel — no flicker,
-   no visual change (the pseudo-element has no visible surface). */
 @media (min-width: 1025px) {
-    .nav-links > li.flyout-trigger::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: -40px;
-        right: -40px;
-        height: 14px;
-        background: transparent;
-        pointer-events: auto;
-        z-index: 1;
+    .nav-links > li.psd-nav-item:hover > .psd-dropdown-menu,
+    .nav-links > li.psd-nav-item:focus-within > .psd-dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
     }
 }
 
-.nav-links > li.flyout-trigger:hover > .psd-mega-menu,
-.nav-links > li.flyout-trigger.keyboard-focus > .psd-mega-menu,
-.nav-links > li.flyout-trigger:focus-within > .psd-mega-menu {
-    visibility: visible;
-    pointer-events: auto;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                visibility 0s;
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
 }
 
-/* Mobile (≤1024px): PSD menu should be accordion-style — restore display:none
-   so it doesn't take layout space. Toggled by .open class via JS. */
+/* Category links (Matches standard .dropdown li a) */
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li > a {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 20px !important;
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+    color: var(--text-color, #1e293b) !important;
+    text-decoration: none !important;
+    border-left: 3px solid transparent !important;
+    border-bottom: 1px solid var(--border-color, #f1f5f9) !important;
+    background: transparent !important;
+    transition: all 0.15s ease !important;
+    line-height: 1.4 !important;
+}
+
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li:last-child > a {
+    border-bottom: none !important;
+}
+
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li > a .psd-arrow {
+    font-size: 0.65rem !important;
+    color: #64748b !important;
+    opacity: 0.8 !important;
+    transition: transform 0.15s ease, color 0.15s ease !important;
+}
+
+/* Hover / Active state on Category item: Light brand tinted background with brand red text */
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li:hover > a,
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li.active > a {
+    background: var(--brand-light, #fdf2f4) !important;
+    color: var(--brand-red, #8b1a2b) !important;
+    font-weight: 700 !important;
+    border-left-color: var(--brand-red, #8b1a2b) !important;
+    padding-left: 23px !important;
+}
+
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li:hover > a .psd-arrow,
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li.active > a .psd-arrow {
+    color: var(--brand-red, #8b1a2b) !important;
+    opacity: 1 !important;
+    transform: translateX(-3px) !important;
+}
+
+/* Submenu flyout — Aligned vertically with the hovered row, white card theme */
+.nav-links > li.psd-nav-item .psd-sub-flyout {
+    position: absolute !important;
+    top: 0 !important; /* Exactly at the top of the hovered item */
+    right: 100% !important; /* Opens to the left */
+    width: 275px !important;
+    background: var(--white, #ffffff) !important;
+    padding: 6px 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    box-shadow: -8px 10px 30px rgba(0, 0, 0, 0.14) !important;
+    border: 1px solid var(--border-color, #e2e8f0) !important;
+    border-top: 3px solid var(--brand-red, #8b1a2b) !important;
+    z-index: 1005 !important;
+    display: none;
+}
+
+/* Bottom alignment for lower items (e.g. Information Corner) to prevent screen overflow */
+.nav-links > li.psd-nav-item > .psd-dropdown-menu > li.psd-has-sub:nth-last-child(-n+4) > .psd-sub-flyout {
+    top: auto !important;
+    bottom: 0 !important;
+}
+
+@media (min-width: 1025px) {
+    .nav-links > li.psd-nav-item > .psd-dropdown-menu > li.psd-has-sub:hover > .psd-sub-flyout,
+    .nav-links > li.psd-nav-item > .psd-dropdown-menu > li.psd-has-sub.active > .psd-sub-flyout {
+        display: block !important;
+    }
+}
+
+.nav-links > li.psd-nav-item .psd-sub-flyout > li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Submenu links */
+.nav-links > li.psd-nav-item .psd-sub-flyout > li > a {
+    display: block !important;
+    padding: 9px 20px !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    color: var(--text-color, #334155) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--border-color, #f1f5f9) !important;
+    background: transparent !important;
+    transition: all 0.12s ease !important;
+    line-height: 1.45 !important;
+}
+
+.nav-links > li.psd-nav-item .psd-sub-flyout > li:last-child > a {
+    border-bottom: none !important;
+}
+
+/* Hover on submenu link */
+.nav-links > li.psd-nav-item .psd-sub-flyout > li > a:hover {
+    background: var(--brand-light, #fdf2f4) !important;
+    color: var(--brand-red, #8b1a2b) !important;
+    font-weight: 600 !important;
+    padding-left: 25px !important;
+}
+
 @media (max-width: 1024px) {
-    .psd-mega-menu {
-        display: none;
-        visibility: visible;
-        pointer-events: auto;
-        opacity: 1;
-        transform: none;
-        transition: none;
-        position: static;
-        min-height: 0;
-        box-shadow: none;
-        border: none;
+    .nav-links > li.psd-nav-item > .psd-dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-left: 3px solid var(--brand-red) !important;
+        margin: 4px 0 4px 12px !important;
+        border-radius: 0 !important;
+        transform: none !important;
+        display: none !important;
+        background: transparent !important;
     }
-}
-
-/* ── PSD Category Panel (Left) — INSTITUTIONAL DARK-RED TREATMENT ── */
-.psd-mega-left {
-    flex: 0 0 220px;
-    background: var(--brand-red);
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 0 0 8px 0;
-    padding: 8px 0;
-    position: relative;
-}
-
-.psd-mega-left::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--brand-red) 0%, #c4202e 100%);
-    opacity: 0.8;
-}
-
-.psd-mega-left ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.psd-mega-left li {
-    margin: 0;
-    padding: 0;
-}
-
-.psd-mega-left li a {
-    display: block;
-    padding: 12px 20px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    border-left: 3px solid transparent;
-    transition: all 0.15s ease;
-    position: relative;
-    z-index: 1;
-    line-height: 1.4;
-}
-
-.psd-mega-left li a:hover,
-.psd-mega-left li.active a {
-    background: rgba(255, 255, 255, 0.12);
-    color: #fff;
-    border-left-color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Active category indicator — subtle red accent bar on hover/active */
-.psd-mega-left li.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 60%;
-    background: #fff;
-    border-radius: 0 3px 3px 0;
-    opacity: 0.9;
-}
-
-/* ── PSD Dynamic Child Panel (Right) — BUILT BY JS ON HOVER ──
-     order: -1  → renders to the LEFT of the category panel.
-     border-left → visually separates from categories.
-     transform: translateX(-6px) → slides in from the left.
-   ── */
-.psd-child-panel {
-    background: #fff;
-    padding: 12px 0;
-    min-width: 260px;
-    border-left: 1px solid #e2e6ee;
-    border-radius: 0 0 0 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    /* PART 14-15 (re-fixed): size to the child list, not the category column.
-       align-self:flex-start is belt-and-suspenders alongside the parent's
-       align-items:flex-start; the max-height keeps a very long child list
-       scrolling inside the panel instead of stretching past the viewport. */
-    align-self: flex-start;
-    max-height: min(82vh, 560px);
-    flex: 0 0 auto;
-    opacity: 0;
-    order: -1;
-    transform: translateX(-6px);
-    transition: opacity 0.15s ease, transform 0.15s ease;
-    overflow-y: auto;
-    box-shadow: inset 2px 0 8px -2px rgba(0, 0, 0, 0.04);
-}
-
-.psd-child-panel.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.psd-child-panel a {
-    display: block;
-    padding: 10px 24px;
-    font-size: 0.81rem;
-    font-weight: 500;
-    color: #333;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.13s ease;
-    border-left: 3px solid transparent;
-    line-height: 1.45;
-}
-
-.psd-child-panel a:hover {
-    background: #f8f9fb;
-    color: var(--brand-red);
-    border-left-color: var(--brand-red);
-    padding-left: 30px;
-}
-@media (min-width: 1025px) {
-    .psd-child-panel a {
-        transition: padding-left 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    .nav-links > li.psd-nav-item.open > .psd-dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
     }
-    .psd-child-panel a:hover {
-        transition: all 0.15s ease;
+    .nav-links > li.psd-nav-item .psd-sub-flyout {
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: #f8fafc !important;
+        border-left: 2px solid var(--brand-red) !important;
+        margin: 4px 0 4px 12px !important;
+        border-radius: 0 !important;
+        display: none !important;
+    }
+    .nav-links > li.psd-nav-item .psd-has-sub.open > .psd-sub-flyout {
+        display: block !important;
     }
 }
 
@@ -347,11 +296,18 @@
 }
 
 /* ── Mobile: Show dropdown when .open class toggled ── */
-.has-dropdown.open > .dropdown,
-.has-dropdown.open > .psd-mega-menu {
-    display: block !important;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+@media (max-width: 1024px) {
+    .has-dropdown.open > .dropdown {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    .has-dropdown.open > .psd-mega-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
 }
 
 /* ── PSD mega menu responsive (mobile: single column) ──
@@ -1373,14 +1329,26 @@ body.menu-open {
     border-radius: 8px;
     overflow: hidden;
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+#news-slider .swiper-slide {
+    height: auto !important;
+    display: flex;
 }
 .news-card-img {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 .news-card-body {
     padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .news-card-title {
     font-size: 1rem;
@@ -1412,7 +1380,8 @@ body.menu-open {
     font-size: 0.83rem;
     color: #666;
     line-height: 1.55;
-    margin: 4px 0 10px;
+    margin: 4px 0 14px;
+    flex: 1;
 }
 .news-read-more {
     color: var(--brand-blue);
@@ -1422,6 +1391,7 @@ body.menu-open {
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    margin-top: auto;
     transition: color 0.18s;
 }
 .news-read-more:hover { color: var(--brand-red, #c0392b); }
@@ -1529,6 +1499,11 @@ body.menu-open {
     padding: 20px 0 40px !important;
 }
 
+#testimonials-slider .swiper-slide {
+    height: auto !important;
+    display: flex;
+}
+
 /* ── Testimonial Card (Single Unified Design) ── */
 .testi-card {
     background: var(--white);
@@ -1543,7 +1518,10 @@ body.menu-open {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
     min-height: 420px;
+    box-sizing: border-box;
 }
 @media (prefers-reduced-motion: no-preference) {
     .testi-card:hover {
@@ -1621,6 +1599,11 @@ body.menu-open {
     font-style: italic;
     position: relative;
     padding-top: 6px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .testi-quote::before {
     content: '\201C';

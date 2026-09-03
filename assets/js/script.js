@@ -3,15 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================
        1. INITIALIZE AOS (Animate On Scroll)
        ========================================== */
-    AOS.init({
-        once: true,
-        offset: 100,
-        duration: 800,
-        easing: 'ease-out-cubic',
-        // Mobile: slide/fade entrance transforms briefly push content past the
-        // viewport (create horizontal scroll + layout shift). Disable at ≤1024px.
-        disable: function() { return window.innerWidth < 1024; }
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            // Mobile: slide/fade entrance transforms briefly push content past the
+            // viewport (create horizontal scroll + layout shift). Disable at ≤1024px.
+            disable: function() { return window.innerWidth < 1024; }
+        });
+    }
 
     /* ==========================================
        2. POPULATE NAVIGATION DROPDOWNS
@@ -75,22 +77,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 testWrapper.innerHTML = data.map(buildTestiCard).join('');
 
                 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                new Swiper('#testimonials-slider', {
-                    slidesPerView: 1,
-                    spaceBetween: 24,
-                    loop: true,
-                    pauseOnMouseEnter: true,
-                    autoplay: {
-                        delay: prefersReducedMotion ? 0 : 3500,
-                        disableOnInteraction: false,
+                if (typeof Swiper !== 'undefined') {
+                    new Swiper('#testimonials-slider', {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                        loop: true,
+                        autoHeight: false,
                         pauseOnMouseEnter: true,
-                    },
-                    speed: prefersReducedMotion ? 0 : 600,
-                    breakpoints: {
-                        640:  { slidesPerView: 2 },
-                        1024: { slidesPerView: 4 }
-                    }
-                });
+                        autoplay: {
+                            delay: prefersReducedMotion ? 0 : 3500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        speed: prefersReducedMotion ? 0 : 600,
+                        breakpoints: {
+                            640:  { slidesPerView: 2 },
+                            1024: { slidesPerView: 4 }
+                        }
+                    });
+                }
             })
             .catch(function(e) {
                 console.warn('testimonials: fetch failed', e);
@@ -261,311 +266,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
 
     /* ==========================================
-       7. PSD MEGA MENU — DYNAMIC CHILD PANEL (CLEAN REBUILD)
-       ==========================================
-       Flow:
-         Hover PSD       → Category panel only (compact width)
-         Hover category  → Child panel appears beside it (built dynamically)
-         Leave category  → Child panel disappears
-         Leave PSD       → Entire menu closes
-
-       The child panel is created and destroyed by JS — no empty containers.
+       7. PSD HIERARCHICAL FLYOUT & MOBILE ACCORDION
        ========================================== */
-    (function initPsdMegaMenu() {
-        var psdMenu = document.querySelector('.psd-mega-menu');
-        var psdLeft = document.querySelector('.psd-mega-left');
-        if (!psdLeft) return;
-
-        var categories = psdLeft.querySelectorAll('li[data-panel]');
-        var hideTimer = null;
-        var currentChild = null;  // the DOM element for the child panel (or null)
-
-        // ── Child link data (moved from HTML to JS — no hidden containers) ──
-        var childData = [
-            [ // 0 — About HEI
-                { text: 'About Us', url: '/ugc/ugc_ps_aboutus.html' },
-                { text: 'Mission and Vision', url: '/ugc/ugc_ps_mission_vision.html' },
-                { text: 'Act and Statutes', url: '/ugc/ugc_ps_act_statutes.html' },
-                { text: 'Institutional Development Plan', url: '/ugc/ugc_ps_idp.html' },
-                { text: 'Affiliating University', url: '/ugc/ugc_ps_affiliating.html' },
-                { text: 'Accreditation / Ranking Status', url: '/ugc/ugc_ps_accreditation.html' },
-                { text: 'Recognition / Approvals', url: '/ugc/ugc_ps_recognition.html' },
-                { text: 'Annual Reports', url: '/ugc/ugc_ps_annual_reports.html' },
-                { text: 'Annual Accounts & Audit Reports', url: '/ugc/ugc_ps_annual_accounts.html' },
-                { text: 'Sponsoring Body Details', url: '/ugc/ugc_ps_sponsoring_body.html' }
-            ],
-            [ // 1 — Administration
-                { text: 'Finance Officer', url: '/ugc/ugc_ps_finance.html' },
-                { text: 'Controller of Examination', url: '/ugc/ugc_ps_coe.html' },
-                { text: 'Chief Vigilance Officer', url: '/ugc/ugc_ps_cvo.html' },
-                { text: 'Ombudsperson', url: '/ugc/ugc_ps_ombudsperson.html' },
-                { text: 'Executive Council', url: '/ugc/ugc_ps_bos.html' },
-                { text: 'Academic Leadership (HoDs)', url: '/ugc/ugc_ps_academic_leadership.html' }
-            ],
-            [ // 2 — Academic
-                { text: 'Academic Programs', url: '/ugc/ugc_ps_academic_programs.html' },
-                { text: 'Academic Calendars', url: '/ugc/ugc_ps_academic_calendar.html' },
-                { text: 'Examinations', url: '/ugc/ugc_ps_examinations.html' },
-                { text: 'Department', url: '/departments.html' },
-                { text: 'Department Wise Faculty Details', url: '/ugc/ugc_ps_staff.html' },
-                { text: 'Internal Quality Assurance Cell', url: '/iqac/iqac_about.html' },
-                { text: 'Library', url: '/facilities/facilities_library.html' },
-                { text: 'Academic Collaborations', url: '/ugc/ugc_ps_mou.html' }
-            ],
-            [ // 3 — Admissions
-                { text: 'Prospectus', url: '/ugc/ugc_ps_prospectus.html' },
-                { text: 'Fee Refund Policy', url: '/ugc/ugc_ps_feerefund.html' },
-                { text: 'Admission Process and Guidelines', url: '/ugc/ugc_ps_admission_policy.html' }
-            ],
-            [ // 4 — Research
-                { text: 'Research and Development Cell', url: '/ugc/ugc_ps_rnd.html' },
-                { text: 'Incubation Centre / Start-Ups / IIC', url: '/ugc/ugc_ps_incubation.html' },
-                { text: 'Central Facilities', url: '/facilities.html' }
-            ],
-            [ // 5 — Student Life
-                { text: 'Sports Facilities', url: '/ugc/ugc_ps_sports.html' },
-                { text: 'NSS', url: '/ugc/ugc_ps_nss.html' },
-                { text: 'Hostel Details', url: '/ugc/ugc_ps_hostel.html' },
-                { text: 'Placement Cell & Activities', url: '/placements/placement_pat.html' },
-                { text: 'SGRC and Ombudsperson', url: '/ugc/ugc_ps_sl_sgrc.html' },
-                { text: 'Health Facilities', url: '/ugc/ugc_ps_health.html' },
-                { text: 'Internal Complaints Committee', url: '/ugc/ugc_ps_sl_icc.html' },
-                { text: 'Anti Ragging Cell', url: '/ugc/ugc_ps_sl_antiragging.html' },
-                { text: 'Equal Opportunity Cell', url: '/ugc/ugc_ps_sl_equalopportunity.html' },
-                { text: 'SEDG', url: '/ugc/ugc_ps_sl_sedg.html' },
-                { text: 'Facilities for Differently Abled', url: '/ugc/ugc_ps_differentlyabled.html' }
-            ],
-            [ // 6 — Alumni Association
-                { text: 'Alumni Association', url: '/ugc/ugc_ps_alumni.html' }
-            ],
-            [ // 7 — Information Corner
-                { text: 'RTI', url: '/ugc/ugc_ps_rti.html' },
-                { text: 'Circulars and Notices', url: '/ugc/ugc_ps_circulars.html' },
-                { text: 'Announcements', url: '/ugc/ugc_ps_announcements.html' },
-                { text: 'Newsletters', url: '/ugc/ugc_ps_newsletters.html' },
-                { text: 'News, Recent Events & Achievements', url: '/ugc/ugc_ps_facilities/facilities_event_gallery.html' },
-                { text: 'Job Openings', url: '/careers.html' },
-                { text: 'Admission for International Students', url: '/ugc/ugc_ps_studyinindia.html' },
-                { text: 'Details and Location Map', url: '/contact.html' }
-            ]
-        ];
-
-        /* ── Helpers ── */
-        function buildChildPanel(index) {
-            var panel = document.createElement('div');
-            panel.className = 'psd-child-panel visible';
-            var items = childData[index];
-            if (!items) return panel;
-            for (var i = 0; i < items.length; i++) {
-                var a = document.createElement('a');
-                a.href = items[i].url;
-                a.textContent = items[i].text;
-                panel.appendChild(a);
-            }
-            return panel;
-        }
-
-        function showChild(index, catLi) {
-            // Remove old child panel if exists
-            removeChild();
-
-            // Build and append new child panel
-            var panel = buildChildPanel(index);
-            if (psdMenu) {
-                psdMenu.appendChild(panel);
-                currentChild = panel;
-
-                // Cancel hide timer when cursor enters the child panel
-                // (mouseleave on the category fires before mouseenter reaches the panel)
-                panel.addEventListener('mouseenter', function() {
-                    if (hideTimer) {
-                        clearTimeout(hideTimer);
-                        hideTimer = null;
-                    }
-                });
-
-                // Start hide timer when cursor leaves the child panel
-                panel.addEventListener('mouseleave', function() {
-                    if (hideTimer) clearTimeout(hideTimer);
-                    hideTimer = setTimeout(function() {
-                        // Only remove if cursor isn't over any category
-                        var overCat = false;
-                        for (var i = 0; i < categories.length; i++) {
-                            if (categories[i].matches(':hover')) {
-                                overCat = true;
-                                break;
-                            }
-                        }
-                        if (!overCat) removeChild();
-                    }, 100);
-                });
-            }
-
-            // Mark category active
-            categories.forEach(function(li) { li.classList.remove('active'); });
-            if (catLi) catLi.classList.add('active');
-        }
-
-        function removeChild() {
-            if (currentChild && currentChild.parentNode) {
-                currentChild.parentNode.removeChild(currentChild);
-            }
-            currentChild = null;
-            categories.forEach(function(li) { li.classList.remove('active'); });
-        }
-
-        function getActiveIndex() {
-            for (var i = 0; i < categories.length; i++) {
-                if (categories[i].classList.contains('active')) return i;
-            }
-            return -1;
-        }
-
-        /* ── Desktop: hover in → show child; hover out → start hide timer ── */
-        categories.forEach(function(li) {
-            li.addEventListener('mouseenter', function() {
-                if (hideTimer) {
-                    clearTimeout(hideTimer);
-                    hideTimer = null;
-                }
-                var idx = parseInt(li.getAttribute('data-panel'), 10);
-                if (!isNaN(idx)) {
-                    showChild(idx, li);
-                }
-            });
-
-            li.addEventListener('mouseleave', function() {
-                // Don't hide immediately — a 200ms buffer lets the pointer land
-                // on the child panel even if it briefly skips the li gap.
-                if (hideTimer) clearTimeout(hideTimer);
-                hideTimer = setTimeout(function() {
-                    removeChild();
-                }, 200);
-            });
-        });
-
-        // If cursor enters child panel, cancel hide
-        if (psdMenu) {
-            psdMenu.addEventListener('mouseenter', function() {
-                if (hideTimer) {
-                    clearTimeout(hideTimer);
-                    hideTimer = null;
-                }
-            });
-
-            psdMenu.addEventListener('mouseleave', function() {
-                if (hideTimer) {
-                    clearTimeout(hideTimer);
-                    hideTimer = null;
-                }
-                removeChild();
-            });
-        }
-
-        /* ── Keyboard focus: show mega menu on focus ── */
-        var psdTrigger = document.querySelector('.flyout-trigger > a[href*="public_self_disclosure"]');
-        if (psdTrigger) {
-            var parentLi = psdTrigger.parentElement;
-            psdTrigger.addEventListener('focus', function() {
-                parentLi.classList.add('keyboard-focus');
-            });
-            psdTrigger.addEventListener('blur', function() {
-                parentLi.classList.remove('keyboard-focus');
-            });
-        }
-
-        /* ── Mobile: click toggles inline child links ── */
-        categories.forEach(function(li) {
-            li.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
+    (function initPsdMenu() {
+        var psdSubs = document.querySelectorAll('.psd-dropdown-menu .psd-has-sub > a');
+        psdSubs.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 1024) {
                     e.preventDefault();
-                    var idx = parseInt(li.getAttribute('data-panel'), 10);
-                    if (isNaN(idx)) return;
+                    e.stopPropagation();
+                    var parentLi = link.parentElement;
+                    var wasOpen = parentLi.classList.contains('open');
 
-                    // Check if this category already has an open inline child
-                    var existing = li.querySelector('.psd-child-inline');
-                    if (existing) {
-                        existing.remove();
-                        li.classList.remove('active');
-                        return;
+                    // Close sibling submenus
+                    var siblings = parentLi.parentElement.querySelectorAll('.psd-has-sub');
+                    siblings.forEach(function(s) { s.classList.remove('open'); });
+
+                    if (!wasOpen) {
+                        parentLi.classList.add('open');
                     }
-
-                    // Remove any other open inline children
-                    categories.forEach(function(c) {
-                        var child = c.querySelector('.psd-child-inline');
-                        if (child) child.remove();
-                        c.classList.remove('active');
-                    });
-
-                    // Build and append inline child
-                    var items = childData[idx];
-                    if (!items || items.length === 0) return;
-                    var div = document.createElement('div');
-                    div.className = 'psd-child-inline';
-                    for (var i = 0; i < items.length; i++) {
-                        var a = document.createElement('a');
-                        a.href = items[i].url;
-                        a.textContent = items[i].text;
-                        div.appendChild(a);
-                    }
-                    li.appendChild(div);
-                    li.classList.add('active');
                 }
             });
         });
-
-        /* ── Keyboard Navigation ── */
-        if (psdMenu) {
-            psdMenu.addEventListener('keydown', function(e) {
-                var activeIdx = getActiveIndex();
-
-                switch (e.key) {
-                    case 'Escape':
-                        removeChild();
-                        if (psdTrigger) psdTrigger.focus();
-                        break;
-
-                    case 'ArrowDown':
-                        e.preventDefault();
-                        if (activeIdx < categories.length - 1) {
-                            var nextIdx = activeIdx + 1;
-                            categories[nextIdx].querySelector('a').focus();
-                            showChild(nextIdx, categories[nextIdx]);
-                        }
-                        break;
-
-                    case 'ArrowUp':
-                        e.preventDefault();
-                        if (activeIdx > 0) {
-                            var prevIdx = activeIdx - 1;
-                            categories[prevIdx].querySelector('a').focus();
-                            showChild(prevIdx, categories[prevIdx]);
-                        } else if (activeIdx === -1) {
-                            var last = categories.length - 1;
-                            categories[last].querySelector('a').focus();
-                            showChild(last, categories[last]);
-                        }
-                        break;
-
-                    case 'ArrowRight':
-                        e.preventDefault();
-                        if (activeIdx >= 0 && currentChild) {
-                            var firstLink = currentChild.querySelector('a');
-                            if (firstLink) firstLink.focus();
-                        }
-                        break;
-
-                    case 'ArrowLeft':
-                        e.preventDefault();
-                        if (activeIdx >= 0 && categories[activeIdx]) {
-                            categories[activeIdx].querySelector('a').focus();
-                        }
-                        break;
-                }
-            });
-        }
-
-        // No panel is pre-activated — the user sees only categories at first
     })();
 
     // --- Achievements Marquee Setup ---

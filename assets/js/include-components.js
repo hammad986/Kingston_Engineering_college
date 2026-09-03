@@ -125,6 +125,20 @@
         { id: 'include-footer', file: 'footer.html' }
     ];
 
+    var CACHE_KEY_PREFIX = 'kec_comp_v3_';
+    function getCached(file) {
+        try {
+            return window.sessionStorage ? sessionStorage.getItem(CACHE_KEY_PREFIX + file) : null;
+        } catch (e) {
+            return null;
+        }
+    }
+    function setCached(file, html) {
+        try {
+            if (window.sessionStorage && html) sessionStorage.setItem(CACHE_KEY_PREFIX + file, html);
+        } catch (e) {}
+    }
+
     var loaded = 0;
     var totalToLoad = 0;
 
@@ -141,26 +155,33 @@
         return; // Nothing to do
     }
 
-    // --- SYNCHRONOUS LOADING (preferred) ---
+    // --- SYNCHRONOUS LOADING (with sessionStorage cache fast-path) ---
     function loadSync() {
         try {
             components.forEach(function(c) {
                 var placeholder = document.getElementById(c.id);
                 if (!placeholder) return;
 
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', COMPONENT_BASE + c.file, false); // false = synchronous
-                xhr.send(null);
+                var rawHtml = getCached(c.file);
+                if (!rawHtml) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', COMPONENT_BASE + c.file, false); // false = synchronous
+                    xhr.send(null);
 
-                if (xhr.status === 200 || xhr.status === 0) {
-                    var componentHtml = rewriteAssetPaths(xhr.responseText);
-                    placeholder.outerHTML = componentHtml;
-                    loaded++;
-                } else {
-                    console.warn('Kingston Components: Failed to load ' + c.file + ' (status ' + xhr.status + ')');
-                    placeholder.outerHTML = '<!-- ' + c.file + ' failed to load -->';
-                    loaded++;
+                    if (xhr.status === 200 || xhr.status === 0) {
+                        rawHtml = xhr.responseText;
+                        setCached(c.file, rawHtml);
+                    } else {
+                        console.warn('Kingston Components: Failed to load ' + c.file + ' (status ' + xhr.status + ')');
+                        placeholder.outerHTML = '<!-- ' + c.file + ' failed to load -->';
+                        loaded++;
+                        return;
+                    }
                 }
+
+                var componentHtml = rewriteAssetPaths(rawHtml);
+                placeholder.outerHTML = componentHtml;
+                loaded++;
             });
 
             window.__componentsReady = true;
@@ -191,12 +212,20 @@
                 return;
             }
 
+            var cached = getCached(c.file);
+            if (cached) {
+                placeholder.outerHTML = rewriteAssetPaths(cached);
+                onComponentDone();
+                return;
+            }
+
             fetch(COMPONENT_BASE + c.file)
                 .then(function(response) {
                     if (!response.ok) throw new Error('Status ' + response.status);
                     return response.text();
                 })
                 .then(function(html) {
+                    setCached(c.file, html);
                     var rewrittenHtml = rewriteAssetPaths(html);
                     placeholder.outerHTML = rewrittenHtml;
                     onComponentDone();
