@@ -1,12 +1,12 @@
 # Cloudflare Pages Redirects — Kingston Engineering College
 # ==========================================================
 # Syntax:  from  to  [status]
-#
+
+# Block direct access to internal Python scripts / tooling
+/scripts/* /404.html 404
+/scripts /404.html 404
+
 # Routing is otherwise handled automatically by Cloudflare Pages:
 #   • Static files are served directly.
 #   • Pages Functions in /functions mount at their path (e.g. /api/chat).
 #   • 404.html is rendered automatically for any unmatched path.
-#
-# We deliberately do NOT add a SPA-style catch-all (/* -> /index.html 200)
-# because this is a multi-page site; a catch-all would break real 404s and
-# shadow the Pages Functions routes.

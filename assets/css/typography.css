@@ -59,6 +59,9 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 0.95rem;
     line-height: 1.8;
     letter-spacing: 0.008em;
     word-spacing: 0.03em;
@@ -82,6 +85,8 @@
     padding-left: 22px;
 }
 
+.v-list-body li,
+.why-features-list li,
 .dept-section ul li,
 .rule-card ul li,
 .dept-main-content ul:not(.nav-links):not(.dropdown) li,
@@ -93,6 +98,9 @@
 .ugc-content ul li {
     margin-bottom: 10px;
     line-height: 1.8;
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 /* ── Content Headings (font only — colors remain as per page CSS) ── */

@@ -1839,12 +1839,10 @@ body.menu-open {
     position: relative;
     padding-top: 50px;
 }
-.why-img-middle {
+.why-main-img {
     width: 100%;
     border-radius: 8px;
-    height: 480px;
-    object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 .white-overlap-box {
     position: absolute;
@@ -1858,7 +1856,7 @@ body.menu-open {
     z-index: 5;
 }
 .white-overlap-box h2 { font-size: 1.5rem; font-weight: 800; color: #111; margin-bottom: 10px; line-height: 1.2;}
-.white-overlap-box p { font-size: 0.85rem; color: #666; }
+.white-overlap-box p { font-size: 0.95rem; color: #1e293b; font-weight: 500; line-height: 1.7; }
 
 .why-col-right {
     padding-left: 30px;
@@ -1873,10 +1871,10 @@ body.menu-open {
 }
 .why-title {
     font-size: 2.5rem;
-    font-weight: 800;
-    color: #111;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark);
     margin-bottom: 25px;
-    line-height: 1.2;
 }
 .highlight-underline {
     position: relative;
@@ -1886,8 +1884,9 @@ body.menu-open {
 }
 .why-desc {
     font-size: 0.95rem;
-    color: #444;
-    line-height: 1.7;
+    color: #1e293b;
+    font-weight: 500;
+    line-height: 1.75;
     margin-bottom: 30px;
 }
 .why-features-list {
@@ -1895,8 +1894,9 @@ body.menu-open {
     margin-bottom: 40px;
 }
 .why-features-list li {
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 500;
     margin-bottom: 15px;
     display: flex;
     align-items: flex-start;
@@ -1953,12 +1953,23 @@ body.menu-open {
 .v-title-cyan { color: #00acc1; font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; }
 
 .v-text-body, .v-list-body {
-    font-size: 0.85rem;
-    color: #555;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 500;
+    line-height: 1.75;
 }
-.v-list-body { padding-left: 20px; list-style-type: disc; }
-.v-list-body li { margin-bottom: 10px; }
+.v-list-body { padding-left: 20px; list-style-type: disc; color: #1e293b; }
+.v-list-body li {
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+.v-list-body li strong {
+    color: #0f172a;
+    font-weight: 700;
+}
 
 /* Achievements Marquee Custom */
 .achievements-section {

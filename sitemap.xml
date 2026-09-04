@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://engineering.kingston.ac.in/404.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://engineering.kingston.ac.in/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1926,11 +1921,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://engineering.kingston.ac.in/event-detail.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://engineering.kingston.ac.in/events.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1964,11 +1954,6 @@
     <loc>https://engineering.kingston.ac.in/facilities/facilities_welfare.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://engineering.kingston.ac.in/faculty-profile.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://engineering.kingston.ac.in/faq.html</loc>
@@ -2091,11 +2076,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://engineering.kingston.ac.in/news-detail.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://engineering.kingston.ac.in/news.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2157,16 +2137,6 @@
   </url>
   <url>
     <loc>https://engineering.kingston.ac.in/rag-monitor.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://engineering.kingston.ac.in/staff-login.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://engineering.kingston.ac.in/student-login.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
