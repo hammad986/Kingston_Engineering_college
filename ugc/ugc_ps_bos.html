@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -177,6 +177,316 @@
             .hero-premium-subtitle { font-size: 1rem; }
             .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
         }
+
+        /* ========================================================
+           BOS & MINUTES OF MEETING (MOM) SUBPAGE STYLES
+           ======================================================== */
+        .bos-subpage-nav-container {
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+        }
+        .bos-subpage-pills {
+            display: inline-flex;
+            background: #ffffff;
+            padding: 6px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.08);
+            border: 1px solid #e2e8f0;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .bos-pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 40px;
+            border: none;
+            background: transparent;
+            color: #475569;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .bos-pill-btn i {
+            font-size: 1rem;
+            color: #64748b;
+            transition: color 0.3s ease;
+        }
+        .bos-pill-btn:hover {
+            color: #8b1a2b;
+            background: #f8fafc;
+        }
+        .bos-pill-btn:hover i {
+            color: #8b1a2b;
+        }
+        .bos-pill-btn.active {
+            background: linear-gradient(135deg, #003366 0%, #002244 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(0, 51, 102, 0.25);
+        }
+        .bos-pill-btn.active i {
+            color: #f5c518;
+        }
+        .bos-pill-badge {
+            background: #f5c518;
+            color: #002244;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Subpage Panes */
+        .bos-subpage-pane {
+            animation: bosFadeIn 0.35s ease-in-out;
+        }
+        @keyframes bosFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MOM Header */
+        .mom-header-card {
+            background: #ffffff;
+            padding: 28px 30px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 25px;
+        }
+        .mom-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0f4ff;
+            color: #003366;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .mom-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #003366;
+            margin: 0 0 6px 0;
+            line-height: 1.3;
+        }
+        .mom-subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* MOM PDF Viewer Box */
+        .mom-viewer-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 24px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+        }
+        .mom-viewer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .mom-viewer-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-mom-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn-mom-action.outline {
+            color: #8b1a2b;
+            background: #fff5f6;
+            border: 1px solid rgba(139, 26, 43, 0.2);
+        }
+        .btn-mom-action.outline:hover {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+        .btn-mom-action.primary {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+        .btn-mom-action.primary:hover {
+            background: #6f1220;
+            transform: translateY(-1px);
+        }
+
+        /* MOM Department Cards Grid */
+        .mom-dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .mom-dept-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 22px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        .mom-dept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #003366;
+            transition: all 0.3s ease;
+        }
+        .mom-dept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 51, 102, 0.1);
+            border-color: #8b1a2b;
+        }
+        .mom-dept-card:hover::before {
+            background: #8b1a2b;
+            width: 6px;
+        }
+        .mom-dept-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #003366;
+            background: #f0f4ff;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+        .mom-dept-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+            line-height: 1.4;
+        }
+        .mom-dept-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+        .mom-card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .btn-card-pdf {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex: 1;
+            padding: 9px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-card-pdf.view {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+        }
+        .btn-card-pdf.view:hover {
+            background: #003366;
+            color: #ffffff;
+            border-color: #003366;
+        }
+        .btn-card-pdf.download {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+        .btn-card-pdf.download:hover {
+            background: #6f1220;
+            color: #ffffff;
+        }
+
+        /* Quick Switch Card in Sidebar */
+        .bos-switch-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .bos-switch-card h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #003366;
+            margin: 0 0 8px 0;
+        }
+        .bos-switch-card p {
+            font-size: 0.82rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0 0 14px 0;
+        }
+        .btn-switch-trigger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: #003366;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-switch-trigger:hover {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+
     </style>
 </head>
 
@@ -334,7 +644,13 @@
                         <li><a href="/dept_S&H.html">Science and Humanities</a></li>
                     </ul>
                 </li>
-                <li><a href="/academics.html">Academics</a></li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/academics.html">Academic Overview</a></li>
+                        <li><a href="/regulations.html">Regulations</a></li>
+                    </ul>
+                </li>
                 <li class="has-dropdown">
                     <a href="/facilities.html">Facilities</a>
                     <ul class="dropdown js-exclude-dropdown">
@@ -524,75 +840,406 @@
 
     
 
-    <section class="page-section" style="padding: 100px 0; background:linear-gradient(to bottom, #ffffff, #f4fbf4);">
-        <div class="container" style="max-width: 1300px;">
-            <div style="display:grid; grid-template-columns: 1fr 350px; gap:40px; align-items: start;">
-                <!-- Main Viewer Column -->
-                <div data-aos="fade-right">
-                    <div
-                        style="background:#fff; padding:25px; border-radius:30px; box-shadow:0 15px 45px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.06);">
-                        <div
-                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-                            <h3
-                                style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:#1a1a1a;">
-                                Institutional Disclosure</h3>
-                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/bos.pdf"
-                                target="_blank"
-                                style="color:#8b1a2b; font-weight:700; font-size:0.9rem; text-decoration:none;"><i
-                                    class="fas fa-external-link-alt"></i> OPEN FULLSCREEN</a>
-                        </div>
-                        <iframe
-                            src="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/bos.pdf"
-                            width="100%" height="900px"
-                            style="border:none; border-radius:15px; background:#fdfdfd;"></iframe>
-                    </div>
+    
+    <!-- Premium Hero for Executive Council / BOS -->
+    <section class="page-hero-premium">
+        <div class="hero-premium-bg">
+            <div class="hero-gradient-layer"></div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
             </div>
-
-            <!-- Sidebar Metadata -->
-            <div data-aos="fade-left">
-                <div
-                    style="background:#fff; padding:30px; border-radius:24px; box-shadow:0 15px 45px rgba(0,0,0,0.05); border:1px solid #eee; position:sticky; top:40px;">
-                    <div
-                        style="width:50px; height:50px; background:#fdf8f9; color:#8b1a2b; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:20px;">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
-                    <h4 style="font-size:1.2rem; font-weight:800; color:#1a1a1a; margin-bottom:15px;">Official
-                        Profile</h4>
-                    <p style="color:#666; font-size:0.9rem; line-height:1.6; margin-bottom:25px;">Official record of
-                        the Executive Council and Board of Studies under Autonomous governance.</p>
-
-                    <div style="margin-bottom:25px;">
-                        <div
-                            style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
-                            <span style="font-size:0.85rem; color:#888; font-weight:600;">Body</span>
-                            <span style="font-size:0.85rem; color:#111; font-weight:700;">EC / BOS</span>
-                        </div>
-                        <div
-                            style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
-                            <span style="font-size:0.85rem; color:#888; font-weight:600;">Governance</span>
-                            <span style="font-size:0.85rem; color:#111; font-weight:700;">Autonomous</span>
-                        </div>
-                        <div style="display:flex; justify-content:space-between;">
-                            <span style="font-size:0.85rem; color:#888; font-weight:600;">Status</span>
-                            <span
-                                style="font-size:0.85rem; color:green; font-weight:800; display:flex; align-items:center; gap:5px;"><i
-                                    class="fas fa-check-circle"></i> VERIFIED</span>
-                        </div>
-                    </div>
-
-                    <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/bos.pdf"
-                        download
-                        style="display:flex; align-items:center; justify-content:center; gap:10px; padding:15px; background:#8b1a2b; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.9rem; transition:0.3s; box-shadow:0 8px 20px rgba(139,26,43,0.15);">
-                        <i class="fas fa-file-download"></i> DOWNLOAD PDF
-                    </a>
-                    <p style="text-align:center; font-size:0.75rem; color:#aaa; margin-top:15px;">Ref:
-                        KEC/UGC/ADM/BOS/2026</p>
-                </div>
-            </div>
+            <div class="hero-accent-circle"></div>
+            <div class="hero-accent-circle hero-accent-circle-2"></div>
         </div>
+        <div class="container hero-premium-content" data-aos="fade-up">
+            <div class="hero-premium-badge" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-shield-halved"></i> Statutory Academic Body
+            </div>
+            <h1 class="hero-premium-title" data-aos="fade-up" data-aos-delay="300" id="bosHeroTitle">Executive Council / BOS</h1>
+            <p class="hero-premium-subtitle" data-aos="fade-up" data-aos-delay="400" id="bosHeroSubtitle">Institutional governing authority, Board of Studies composition, and official Minutes of Meeting records.</p>
+            <nav class="hero-premium-breadcrumb" data-aos="fade-up" data-aos-delay="500">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../public_self_disclosure.html">Public Self Disclosure</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="bosBreadcrumbCurrent">Executive Council / BOS</span>
+            </nav>
+        </div>
+        <div class="hero-wave-divider">
+            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30C240 60 480 0 720 30C960 60 1200 0 1440 30V60H0V30Z" fill="var(--bg-light, #f8f9fa)"/>
+            </svg>
         </div>
     </section>
-    <!-- Footer section-->
+
+    <!-- Main Content Section with Subpage Switcher -->
+    <section class="page-section" style="padding: 60px 0 90px; background:linear-gradient(to bottom, #ffffff, #f4fbf4);">
+        <div class="container" style="max-width: 1300px;">
+
+            <!-- Subpage Navigation Pills -->
+            <div class="bos-subpage-nav-container" data-aos="fade-down">
+                <div class="bos-subpage-pills" role="tablist">
+                    <button class="bos-pill-btn active" id="pillBtnConstitution" onclick="switchBosSubpage('constitution')" role="tab" aria-selected="true">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Executive Council / BOS Constitution</span>
+                    </button>
+                    <button class="bos-pill-btn" id="pillBtnMom" onclick="switchBosSubpage('mom')" role="tab" aria-selected="false">
+                        <i class="fa-solid fa-file-signature"></i>
+                        <span>Board of Studies (BOS) &ndash; Minutes of Meeting</span>
+                        <span class="bos-pill-badge">New</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==================== SUBPAGE 1: CONSTITUTION & GOVERNING DETAILS ==================== -->
+            <div class="bos-subpage-pane" id="subpage-constitution">
+                <div style="display:grid; grid-template-columns: 1fr 350px; gap:40px; align-items: start;">
+                    <!-- Main Viewer Column -->
+                    <div data-aos="fade-right">
+                        <div style="background:#fff; padding:25px; border-radius:30px; box-shadow:0 15px 45px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.06);">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                                <h3 style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:#1a1a1a;">
+                                    Institutional Disclosure &ndash; Executive Council / BOS</h3>
+                                <a href="../assets/pdfs/bos_protected.pdf"
+                                    target="_blank" rel="noopener noreferrer"
+                                    style="color:#8b1a2b; font-weight:700; font-size:0.9rem; text-decoration:none;"><i
+                                        class="fas fa-external-link-alt"></i> OPEN FULLSCREEN</a>
+                            </div>
+                            <iframe
+                                src="../assets/pdfs/bos_protected.pdf"
+                                width="100%" height="900px"
+                                style="border:none; border-radius:15px; background:#fdfdfd;"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Metadata -->
+                    <div data-aos="fade-left">
+                        <div style="background:#fff; padding:30px; border-radius:24px; box-shadow:0 15px 45px rgba(0,0,0,0.05); border:1px solid #eee; position:sticky; top:40px;">
+                            <div style="width:50px; height:50px; background:#fdf8f9; color:#8b1a2b; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:20px;">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <h4 style="font-size:1.2rem; font-weight:800; color:#1a1a1a; margin-bottom:15px;">Official Profile</h4>
+                            <p style="color:#666; font-size:0.9rem; line-height:1.6; margin-bottom:25px;">Official record of the Executive Council and Board of Studies under Autonomous governance.</p>
+
+                            <div style="margin-bottom:25px;">
+                                <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Body</span>
+                                    <span style="font-size:0.85rem; color:#111; font-weight:700;">EC / BOS</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Governance</span>
+                                    <span style="font-size:0.85rem; color:#111; font-weight:700;">Autonomous</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Status</span>
+                                    <span style="font-size:0.85rem; color:green; font-weight:800; display:flex; align-items:center; gap:5px;"><i
+                                            class="fas fa-check-circle"></i> VERIFIED</span>
+                                </div>
+                            </div>
+
+                            <a href="../assets/pdfs/bos_protected.pdf"
+                                download="BOS-Constitution.pdf"
+                                target="_blank"
+                                style="display:flex; align-items:center; justify-content:center; gap:10px; padding:15px; background:#8b1a2b; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.9rem; transition:0.3s; box-shadow:0 8px 20px rgba(139,26,43,0.15);">
+                                <i class="fas fa-file-download"></i> DOWNLOAD PDF
+                            </a>
+                            <p style="text-align:center; font-size:0.75rem; color:#aaa; margin-top:15px;">Ref: KEC/UGC/ADM/BOS/2026</p>
+
+                            <!-- Quick Subpage Jump to MOM -->
+                            <div class="bos-switch-card">
+                                <h5><i class="fa-solid fa-file-signature" style="color:#8b1a2b;"></i> Minutes of Meeting</h5>
+                                <p>Access official departmental Board of Studies meeting records & curriculum resolutions.</p>
+                                <button type="button" class="btn-switch-trigger" onclick="switchBosSubpage('mom')">
+                                    <span>View BOS MOM</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== SUBPAGE 2: BOARD OF STUDIES MINUTES OF MEETING (MOM) ==================== -->
+            <div class="bos-subpage-pane" id="subpage-mom" style="display: none;">
+                <div style="display:grid; grid-template-columns: 1fr 350px; gap:40px; align-items: start;">
+                    <!-- Main MOM Content Column -->
+                    <div data-aos="fade-right">
+                        <!-- MOM Header Banner -->
+                        <div class="mom-header-card">
+                            <span class="mom-badge"><i class="fa-solid fa-scroll"></i> Autonomous Curriculum Approvals</span>
+                            <h2 class="mom-title">Board of Studies (BOS) &ndash; Minutes of Meeting</h2>
+                            <p class="mom-subtitle">Official records, resolutions, course additions, and curriculum approvals passed during Board of Studies meetings by internal and external academic experts.</p>
+                        </div>
+
+                        <!-- Featured Active MOM Viewer Box -->
+                        <!-- USER: Add your main BOS MOM PDF link in the href and src below -->
+                        <div class="mom-viewer-box">
+                            <div class="mom-viewer-top">
+                                <div>
+                                    <h3 id="momViewerHeading" style="font-family:'Poppins',sans-serif; font-size:1.25rem; font-weight:800; color:#003366; margin:0 0 4px 0;">
+                                        <i class="fa-solid fa-file-pdf" style="color:#8b1a2b; margin-right:6px;"></i> Latest Board of Studies Proceedings
+                                    </h3>
+                                    <small style="color:#64748b;">Academic Year 2025&ndash;2026 &bull; Autonomous Regulations</small>
+                                </div>
+                                <div class="mom-viewer-actions">
+                                    <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" id="momViewerFullscreen" target="_blank" rel="noopener noreferrer" class="btn-mom-action outline" title="Open PDF in Fullscreen">
+                                        <i class="fas fa-external-link-alt"></i> OPEN FULLSCREEN
+                                    </a>
+                                    <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" id="momViewerDownload" download class="btn-mom-action primary" title="Download PDF Document">
+                                        <i class="fas fa-file-download"></i> DOWNLOAD PDF
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe
+                                id="bosMomIframe"
+                                src="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf"
+                                width="100%" height="750px"
+                                style="border:none; border-radius:15px; background:#fdfdfd;"
+                                title="Board of Studies Minutes of Meeting Document Viewer"></iframe>
+                        </div>
+
+                        <!-- Department-wise & Meeting-wise BOS MOM Cards -->
+                        <div style="margin-top: 30px;">
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="font-family:'Poppins',sans-serif; font-size:1.3rem; font-weight:800; color:#003366; margin:0 0 6px 0;">
+                                    <i class="fa-solid fa-layer-group" style="color:#8b1a2b; margin-right:8px;"></i> Department-wise BOS Minutes of Meeting
+                                </h3>
+                                <p style="color:#64748b; font-size:0.9rem; margin:0;">Download or view individual department Board of Studies meeting records and syllabus approval resolutions.</p>
+                            </div>
+
+                            <div class="mom-dept-grid">
+                                <!-- CSE -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.E. CSE</span>
+                                    <h4>Computer Science and Engineering</h4>
+                                    <p>Minutes of Meeting approving Autonomous R-2025 & R-2026 curriculum, AI/ML electives, and industry-oriented courses.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Computer Science and Engineering'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download CSE BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- AI & DS -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.Tech. AI&amp;DS</span>
+                                    <h4>Artificial Intelligence and Data Science</h4>
+                                    <p>Board of Studies proceedings on data science frameworks, deep learning practicals, and generative AI syllabus integration.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Artificial Intelligence and Data Science'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download AI&DS BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- ECE -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.E. ECE</span>
+                                    <h4>Electronics and Communication Engineering</h4>
+                                    <p>Deliberations on VLSI design, advanced communication technologies, embedded IoT systems, and lab modernization.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Electronics and Communication Engineering'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download ECE BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- IT -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.Tech. IT</span>
+                                    <h4>Information Technology</h4>
+                                    <p>Meeting resolutions on full-stack web development, cloud computing, cybersecurity, and DevOps internship credits.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Information Technology'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download IT BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- CSBS -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.Tech. CSBS</span>
+                                    <h4>Computer Science and Business Systems</h4>
+                                    <p>BOS minutes on TCS-powered industry-aligned curriculum, business analytics, financial tech, and enterprise systems.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Computer Science and Business Systems'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download CSBS BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- MECH -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">B.E. MECH</span>
+                                    <h4>Mechanical Engineering</h4>
+                                    <p>Proceedings covering smart manufacturing, robotics, electric vehicle technologies, and 3D printing laboratory courses.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Mechanical Engineering'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download MECH BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- MBA -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">Management (MBA)</span>
+                                    <h4>Master of Business Administration</h4>
+                                    <p>Board of Studies deliberations on dual specialization, digital marketing, corporate finance, and business case study tracks.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Master of Business Administration'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download MBA BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- S&H -->
+                                <div class="mom-dept-card">
+                                    <span class="mom-dept-badge">First Year</span>
+                                    <h4>Science and Humanities</h4>
+                                    <p>Minutes of Meeting approving engineering mathematics, technical physics, applied chemistry, and professional communication.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Science and Humanities'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download S&H BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+
+                                <!-- Consolidated Academic Council -->
+                                <div class="mom-dept-card" style="border-color:#003366; background:#f8fafc;">
+                                    <span class="mom-dept-badge" style="background:#003366; color:#fff;">Joint Council</span>
+                                    <h4>Consolidated BOS Minutes of Meeting</h4>
+                                    <p>Comprehensive compilation of all departmental BOS resolutions ratified by the Academic Council of Kingston Engineering College.</p>
+                                    <div class="mom-card-actions">
+                                        <a href="#" class="btn-card-pdf view" onclick="loadMomDoc('../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf', 'Consolidated BOS Minutes'); return false;"><i class="fa-solid fa-eye"></i> View</a>
+                                        <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf" class="btn-card-pdf download" title="Download Consolidated BOS MOM (Add your PDF link)"><i class="fa-solid fa-download"></i> PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Metadata for MOM -->
+                    <div data-aos="fade-left">
+                        <div style="background:#fff; padding:30px; border-radius:24px; box-shadow:0 15px 45px rgba(0,0,0,0.05); border:1px solid #eee; position:sticky; top:40px;">
+                            <div style="width:50px; height:50px; background:#fdf8f9; color:#8b1a2b; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:20px;">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h4 style="font-size:1.2rem; font-weight:800; color:#1a1a1a; margin-bottom:15px;">BOS MOM Details</h4>
+                            <p style="color:#666; font-size:0.9rem; line-height:1.6; margin-bottom:25px;">Statutory records of academic deliberations, subject syllabus revisions, and BOS resolutions.</p>
+
+                            <div style="margin-bottom:25px;">
+                                <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Office</span>
+                                    <span style="font-size:0.85rem; color:#111; font-weight:700;">Academic Council</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Document</span>
+                                    <span style="font-size:0.85rem; color:#111; font-weight:700;">Minutes of Meeting</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #f9f9f9; padding-bottom:10px;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Cycle</span>
+                                    <span style="font-size:0.85rem; color:#111; font-weight:700;">2025 &ndash; 2026</span>
+                                </div>
+                                <div style="display:flex; justify-content:space-between;">
+                                    <span style="font-size:0.85rem; color:#888; font-weight:600;">Status</span>
+                                    <span style="font-size:0.85rem; color:green; font-weight:800; display:flex; align-items:center; gap:5px;"><i
+                                            class="fas fa-check-circle"></i> RATIFIED</span>
+                                </div>
+                            </div>
+
+                            <a href="../assets/pdfs/BOS-MOM-Front%20Sheet_protected.pdf"
+                                download="BOS-MOM-Front-Sheet.pdf"
+                                target="_blank"
+                                id="sidebarMomDownloadBtn"
+                                style="display:flex; align-items:center; justify-content:center; gap:10px; padding:15px; background:#8b1a2b; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.9rem; transition:0.3s; box-shadow:0 8px 20px rgba(139,26,43,0.15);">
+                                <i class="fas fa-file-download"></i> DOWNLOAD MOM PDF
+                            </a>
+                            <p style="text-align:center; font-size:0.75rem; color:#aaa; margin-top:15px;">Ref: KEC/UGC/ADM/BOS-MOM/2026</p>
+
+                            <!-- Quick Subpage Jump back to Constitution -->
+                            <div class="bos-switch-card">
+                                <h5><i class="fa-solid fa-building-columns" style="color:#003366;"></i> Constitution Details</h5>
+                                <p>View Executive Council statutory composition, member lists, and institutional governance statutes.</p>
+                                <button type="button" class="btn-switch-trigger" onclick="switchBosSubpage('constitution')" style="background:#8b1a2b;">
+                                    <span>View Constitution</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Subpage Navigation & MOM Viewer Script -->
+    <script>
+        function switchBosSubpage(subpage) {
+            const isMom = (subpage === 'mom');
+            const constitutionPane = document.getElementById('subpage-constitution');
+            const momPane = document.getElementById('subpage-mom');
+            const btnConstitution = document.getElementById('pillBtnConstitution');
+            const btnMom = document.getElementById('pillBtnMom');
+            const heroTitle = document.getElementById('bosHeroTitle');
+            const heroSubtitle = document.getElementById('bosHeroSubtitle');
+            const breadcrumbCurrent = document.getElementById('bosBreadcrumbCurrent');
+
+            if (isMom) {
+                constitutionPane.style.display = 'none';
+                momPane.style.display = 'block';
+                btnConstitution.classList.remove('active');
+                btnConstitution.setAttribute('aria-selected', 'false');
+                btnMom.classList.add('active');
+                btnMom.setAttribute('aria-selected', 'true');
+
+                if (heroTitle) heroTitle.textContent = 'BOS Minutes of Meeting';
+                if (heroSubtitle) heroSubtitle.textContent = 'Official records of Board of Studies meetings, curriculum revisions, and academic resolutions.';
+                if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'BOS Minutes of Meeting';
+
+                if (history.replaceState) {
+                    history.replaceState(null, null, '#mom');
+                } else {
+                    location.hash = 'mom';
+                }
+            } else {
+                constitutionPane.style.display = 'block';
+                momPane.style.display = 'none';
+                btnConstitution.classList.add('active');
+                btnConstitution.setAttribute('aria-selected', 'true');
+                btnMom.classList.remove('active');
+                btnMom.setAttribute('aria-selected', 'false');
+
+                if (heroTitle) heroTitle.textContent = 'Executive Council / BOS';
+                if (heroSubtitle) heroSubtitle.textContent = 'Institutional governing authority, Board of Studies composition, and official Minutes of Meeting records.';
+                if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'Executive Council / BOS';
+
+                if (history.replaceState) {
+                    history.replaceState(null, null, '#constitution');
+                } else {
+                    location.hash = 'constitution';
+                }
+            }
+        }
+
+        function loadMomDoc(pdfUrl, title) {
+            if (pdfUrl && pdfUrl !== '#') {
+                const iframe = document.getElementById('bosMomIframe');
+                const fsBtn = document.getElementById('momViewerFullscreen');
+                const dlBtn = document.getElementById('momViewerDownload');
+                const titleHeading = document.getElementById('momViewerHeading');
+                if (iframe) iframe.src = pdfUrl;
+                if (fsBtn) fsBtn.href = pdfUrl;
+                if (dlBtn) dlBtn.href = pdfUrl;
+                if (titleHeading && title) {
+                    titleHeading.innerHTML = '<i class="fa-solid fa-file-pdf" style="color:#8b1a2b; margin-right:6px;"></i> ' + title + ' &ndash; BOS Minutes';
+                }
+                if (iframe) {
+                    iframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash === '#mom') {
+                switchBosSubpage('mom');
+            }
+        });
+    </script>
+<!-- Footer section-->
     <!-- ================================ -->
 <!-- FOOTER COMPONENT - components/footer.html -->
 <!-- Single Source of Truth for Footer -->
@@ -619,6 +1266,7 @@
                 <li><a href="/admission.html">Admissions</a></li>
                 <li><a href="/departments.html">Departments</a></li>
                 <li><a href="/academics.html">Academics</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
                 <li><a href="/placements/placement_pat.html">Placements</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>

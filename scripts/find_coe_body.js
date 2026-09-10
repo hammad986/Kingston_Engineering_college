@@ -1,0 +1,10 @@
+const fs = require('fs');
+const content = fs.readFileSync('C:/Users/KE0529-CSE/.gemini/antigravity/brain/26c9c636-c97d-456c-819a-c1122133d139/.system_generated/steps/296/content.md', 'utf8');
+
+// Find Dr. V. Srinivasan or Quicklinks
+const idx = content.indexOf('Dr. V. Srinivasan');
+if (idx !== -1) {
+    console.log(content.substring(Math.max(0, idx - 1000), idx + 4000));
+} else {
+    console.log('Dr. V. Srinivasan not found');
+}

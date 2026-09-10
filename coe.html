@@ -158,7 +158,6 @@
             left: 0;
             width: 100%;
             line-height: 0;
-            pointer-events: none;
         }
         .hero-wave-divider svg {
             width: 100%;
@@ -170,6 +169,796 @@
             .hero-premium-title { font-size: 2rem; }
             .hero-premium-subtitle { font-size: 1rem; }
             .hero-accent-circle { width: 300px; height: 300px; top: -80px; right: -80px; }
+        }
+
+        /* ========================================================
+           COE PORTAL & RMKEC-STYLE 2-COLUMN LAYOUT & TABS
+           ======================================================== */
+        .coe-page-container {
+            padding: 50px 0 80px;
+            background: #fbfcfd;
+        }
+        .coe-layout-grid {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+        @media (max-width: 991px) {
+            .coe-layout-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Sidebar & Quicklinks */
+        .coe-sidebar-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.08);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+        }
+        .coe-sidebar-header {
+            background: linear-gradient(135deg, #003366 0%, #001f42 100%);
+            color: #ffffff;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 3px solid #f5c518;
+        }
+        .coe-sidebar-header i {
+            color: #f5c518;
+            font-size: 1.1rem;
+        }
+        .coe-sidebar-header h3 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+        .coe-nav-tabs {
+            list-style: none;
+            padding: 8px 0;
+            margin: 0;
+        }
+        .coe-nav-item {
+            margin: 0;
+        }
+        .coe-nav-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 20px;
+            border: none;
+            background: transparent;
+            color: #334155;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            border-left: 4px solid transparent;
+            transition: all 0.25s ease;
+        }
+        .coe-nav-btn i {
+            font-size: 1rem;
+            color: #64748b;
+            width: 20px;
+            text-align: center;
+            transition: color 0.25s ease;
+        }
+        .coe-nav-btn:hover {
+            background: #f8fafc;
+            color: #8b1a2b;
+            border-left-color: #f5c518;
+            padding-left: 24px;
+        }
+        .coe-nav-btn:hover i {
+            color: #8b1a2b;
+        }
+        .coe-nav-btn.active {
+            background: #f0f4ff;
+            color: #003366;
+            border-left-color: #8b1a2b;
+            font-weight: 700;
+        }
+        .coe-nav-btn.active i {
+            color: #003366;
+        }
+
+        /* Sidebar Portal CTA Box */
+        .coe-sidebar-portals {
+            padding: 16px 20px 20px;
+            border-top: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+        .coe-sidebar-portals h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+        .btn-portal-au, .btn-portal-kec {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 11px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: all 0.25s ease;
+        }
+        .btn-portal-au {
+            background: #003366;
+            color: #ffffff;
+        }
+        .btn-portal-au:hover {
+            background: #002244;
+            color: #f5c518;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.25);
+        }
+        .btn-portal-kec {
+            background: #8b1a2b;
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+        .btn-portal-kec:hover {
+            background: #6f1220;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 26, 43, 0.25);
+        }
+
+        /* Main Content Panes */
+        .coe-tab-pane {
+            display: none;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 36px 40px;
+        }
+        .coe-tab-pane.active {
+            display: block;
+            animation: coeFadeIn 0.35s ease-in-out;
+        }
+        @keyframes coeFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .coe-tab-pane {
+                padding: 24px 18px;
+            }
+        }
+
+        /* Titles & Badges */
+        .coe-pane-header {
+            margin-bottom: 28px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 16px;
+        }
+        .coe-pane-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0f4ff;
+            color: #003366;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .coe-pane-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #003366;
+            margin: 0 0 6px 0;
+            line-height: 1.3;
+        }
+        .coe-pane-subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Overview 2-Column Content */
+        .coe-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 310px;
+            gap: 32px;
+            align-items: start;
+        }
+        @media (max-width: 1080px) {
+            .coe-overview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Lead Intro Box */
+        .coe-lead-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f4ff 100%);
+            border-left: 4px solid #003366;
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+        }
+        .coe-lead-box p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        /* Phase Cards */
+        .coe-phases-container {
+            margin-bottom: 32px;
+        }
+        .coe-phase-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin-bottom: 20px;
+            transition: all 0.25s ease;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .coe-phase-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 51, 102, 0.08);
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+        }
+        .coe-phase-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .coe-phase-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .coe-phase-icon.pre { background: #e0f2fe; color: #0284c7; }
+        .coe-phase-icon.during { background: #fef3c7; color: #d97706; }
+        .coe-phase-icon.post { background: #dcfce7; color: #16a34a; }
+
+        .coe-phase-title-group h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 2px 0;
+        }
+        .coe-phase-title-group span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+        .coe-phase-body p {
+            font-size: 0.94rem;
+            line-height: 1.75;
+            color: #334155;
+            margin: 0;
+        }
+
+        /* Automation & Valuation Boxes */
+        .coe-feature-block {
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .coe-feature-block.blue-accent {
+            border-top: 3px solid #003366;
+        }
+        .coe-feature-block.maroon-accent {
+            border-top: 3px solid #8b1a2b;
+        }
+        .coe-feature-block h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #003366;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .coe-feature-block p {
+            font-size: 0.93rem;
+            line-height: 1.75;
+            color: #475569;
+            margin: 0;
+        }
+
+        /* Officer Profile Card */
+        .coe-officer-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            text-align: center;
+        }
+        .coe-officer-card-header {
+            background: linear-gradient(135deg, #003366 0%, #002244 100%);
+            padding: 30px 20px 24px;
+            color: #ffffff;
+        }
+        .coe-officer-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            border: 3px solid #f5c518;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: #ffffff;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .coe-officer-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin: 0 0 4px 0;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .coe-officer-designation {
+            font-size: 0.88rem;
+            color: #f5c518;
+            font-weight: 600;
+            margin: 0 0 2px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .coe-officer-inst {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        .coe-officer-body {
+            padding: 24px 20px;
+            text-align: left;
+            background: #ffffff;
+        }
+        .coe-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 0.88rem;
+            color: #334155;
+            line-height: 1.5;
+        }
+        .coe-contact-item i {
+            color: #8b1a2b;
+            font-size: 0.95rem;
+            margin-top: 3px;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .coe-contact-item a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-word;
+        }
+        .coe-contact-item a:hover {
+            color: #8b1a2b;
+            text-decoration: underline;
+        }
+
+        .coe-officer-actions {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+        }
+        .btn-officer-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+        .btn-officer-action.primary {
+            background: #003366;
+            color: #fff;
+        }
+        .btn-officer-action.primary:hover {
+            background: #001f42;
+            color: #f5c518;
+        }
+        .btn-officer-action.secondary {
+            background: #8b1a2b;
+            color: #fff;
+        }
+        .btn-officer-action.secondary:hover {
+            background: #6f1220;
+        }
+        .btn-officer-action.outline {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+        }
+        .btn-officer-action.outline:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        /* Notifications & Circulars Table */
+        .coe-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        .coe-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .coe-table th {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 14px 16px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #cbd5e1;
+        }
+        .coe-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+            vertical-align: middle;
+        }
+        .coe-table tr:hover {
+            background: #f8fafc;
+        }
+        .badge-notice {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-notice.exam { background: #e0f2fe; color: #0369a1; }
+        .badge-notice.result { background: #dcfce7; color: #15803d; }
+        .badge-notice.fee { background: #fef3c7; color: #b45309; }
+
+        .btn-download-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 13px;
+            background: #8b1a2b;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .btn-download-pdf:hover {
+            background: #6f1220;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* Forms Grid */
+        .coe-forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .coe-form-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 22px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .coe-form-card:hover {
+            border-color: #8b1a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .coe-form-card-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        .coe-form-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: #fdf2f4;
+            color: #8b1a2b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .coe-form-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+            line-height: 1.4;
+        }
+        .coe-form-card p {
+            font-size: 0.83rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .coe-form-card .btn-download-pdf {
+            width: 100%;
+            justify-content: center;
+            padding: 9px 12px;
+            margin-top: 14px;
+        }
+
+        /* Timetable Year Cards */
+        .coe-timetable-section {
+            margin-top: 20px;
+        }
+        .coe-year-accordion {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .coe-year-title-bar {
+            background: linear-gradient(135deg, #003366 0%, #002244 100%);
+            color: #ffffff;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .coe-year-title-bar h4 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+        }
+        .coe-year-title-bar h4 i {
+            color: #f5c518;
+        }
+        .coe-year-badge {
+            background: rgba(245, 197, 24, 0.2);
+            color: #f5c518;
+            border: 1px solid rgba(245, 197, 24, 0.4);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .coe-sem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 22px;
+            background: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .coe-sem-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .coe-sem-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .coe-sem-card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #8b1a2b;
+            margin: 0 0 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .coe-tt-item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .coe-tt-item-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.9rem;
+            color: #334155;
+            font-weight: 500;
+        }
+        .coe-tt-item-list li:last-child {
+            border-bottom: none;
+        }
+        .coe-tt-item-list .btn-download-pdf {
+            padding: 5px 12px;
+            font-size: 0.78rem;
+        }
+
+        /* Results Portal Section */
+        .coe-results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+        @media (max-width: 768px) {
+            .coe-results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .coe-portal-card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .coe-portal-card.au-portal {
+            border-color: #003366;
+            background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+        }
+        .coe-portal-card.kec-portal {
+            border-color: #8b1a2b;
+            background: linear-gradient(to bottom, #ffffff, #fff5f6);
+        }
+        .coe-portal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .coe-portal-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 16px;
+        }
+        .coe-portal-card.au-portal .coe-portal-icon {
+            background: #003366;
+            color: #f5c518;
+        }
+        .coe-portal-card.kec-portal .coe-portal-icon {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+        .coe-portal-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            color: #0f172a;
+        }
+        .coe-portal-card p {
+            font-size: 0.88rem;
+            color: #475569;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+        .coe-portal-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .coe-portal-card.au-portal .coe-portal-btn {
+            background: #003366;
+            color: #ffffff;
+        }
+        .coe-portal-card.au-portal .coe-portal-btn:hover {
+            background: #001f42;
+            color: #f5c518;
+        }
+        .coe-portal-card.kec-portal .coe-portal-btn {
+            background: #8b1a2b;
+            color: #ffffff;
+        }
+        .coe-portal-card.kec-portal .coe-portal-btn:hover {
+            background: #6f1220;
+            color: #ffffff;
+        }
+
+        .coe-grade-key-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+        .coe-grade-key-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
@@ -327,7 +1116,13 @@
                         <li><a href="/dept_S&H.html">Science and Humanities</a></li>
                     </ul>
                 </li>
-                <li><a href="/academics.html">Academics</a></li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/academics.html">Academic Overview</a></li>
+                        <li><a href="/regulations.html">Regulations</a></li>
+                    </ul>
+                </li>
                 <li class="has-dropdown">
                     <a href="/facilities.html">Facilities</a>
                     <ul class="dropdown js-exclude-dropdown">
@@ -545,92 +1340,817 @@
         </div>
     </section>
 
-    <section class="page-section" style="padding: 70px 0;">
+        <!-- Main COE Section with RMKEC-style 2-Column Grid and Quicklinks Tabs -->
+    <section class="coe-page-container">
         <div class="container">
-            <div style="max-width:900px;margin:0 auto;" data-aos="fade-up">
-                <h1
-                    style="font-family:'Poppins',sans-serif;font-size:2.4rem;font-weight:800;color:#8b1a2b;margin-bottom:10px;">
-                    Controller of Examinations</h1>
-                <div style="width:200px;height:3px;background:#8b1a2b;margin-bottom:28px;"></div>
+            <div class="coe-layout-grid">
+                <!-- ==================== LEFT COLUMN: QUICKLINKS SIDEBAR ==================== -->
+                <aside class="coe-sidebar" data-aos="fade-right">
+                    <div class="coe-sidebar-card">
+                        <div class="coe-sidebar-header">
+                            <i class="fa-solid fa-list-check"></i>
+                            <h3>Quicklinks</h3>
+                        </div>
+                        <ul class="coe-nav-tabs" id="coeNavTabs" role="tablist">
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn active" data-tab="overview" role="tab" aria-selected="true">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <span>Controller of Examinations</span>
+                                </button>
+                            </li>
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn" data-tab="notifications" role="tab" aria-selected="false">
+                                    <i class="fa-solid fa-bell"></i>
+                                    <span>Notification</span>
+                                </button>
+                            </li>
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn" data-tab="forms" role="tab" aria-selected="false">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                    <span>Forms</span>
+                                </button>
+                            </li>
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn" data-tab="cat-timetable" role="tab" aria-selected="false">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    <span>Common Assessment Test Timetable</span>
+                                </button>
+                            </li>
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn" data-tab="endsem-timetable" role="tab" aria-selected="false">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>End Semester / Arrear Timetable</span>
+                                </button>
+                            </li>
+                            <li class="coe-nav-item">
+                                <button class="coe-nav-btn" data-tab="results" role="tab" aria-selected="false">
+                                    <i class="fa-solid fa-square-poll-vertical"></i>
+                                    <span>Results</span>
+                                </button>
+                            </li>
+                        </ul>
 
-                <div
-                    style="background:#f0f4ff;border-radius:12px;padding:40px;margin-bottom:30px;border-left:4px solid #003366;">
-                    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
-                        <i class="fa-solid fa-building-columns" style="font-size:2.5rem;color:#003366;"></i>
-                        <div>
-                            <h3 style="font-size:1.2rem;font-weight:700;color:#003366;margin:0;">Office of the
-                                Controller of Examinations</h3>
-                            <p style="font-size:0.9rem;color:#666;margin:0;">Kingston Engineering College (Autonomous)
-                            </p>
+                        <!-- Direct Result Portals Box -->
+                        <div class="coe-sidebar-portals">
+                            <h4>Result Portals</h4>
+                            <a href="https://coe.annauniv.edu/home/index.php" target="_blank" rel="noopener noreferrer" class="btn-portal-au" title="Anna University Official Result Portal">
+                                <span><i class="fa-solid fa-university"></i> Anna Univ Result</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="#" class="btn-portal-kec" title="Kingston Result Portal (Add your link)">
+                                <span><i class="fa-solid fa-graduation-cap"></i> Kingston Result Portal</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <p style="font-size:0.97rem;line-height:1.85;color:#333;">The Controller of Examinations (COE)
-                        office is responsible for the planning, organization, and management of all examinations
-                        conducted by Kingston Engineering College. As an autonomous institution, the college conducts
-                        its own examinations under the guidelines of Anna University, Chennai.</p>
-                </div>
+                </aside>
 
-                <h3 style="font-size:1.3rem;font-weight:700;color:#003366;margin-bottom:16px;">Key Responsibilities</h3>
-                <ul style="list-style:none;padding:0;margin-bottom:30px;">
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Planning and
-                        scheduling of all semester examinations (internal and end-semester)
-                    </li>
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Setting and
-                        moderation of question papers in coordination with Board of Studies
-                    </li>
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Conducting
-                        examinations with integrity, transparency, and fairness
-                    </li>
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Timely evaluation
-                        and publication of results
-                    </li>
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Issue of grade
-                        sheets, consolidated mark statements, and provisional certificates
-                    </li>
-                    <li
-                        style="padding:12px 0;border-bottom:1px solid #eee;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Managing
-                        revaluation, photocopy requests, and grievance redressal
-                    </li>
-                    <li
-                        style="padding:12px 0;font-size:0.95rem;color:#333;display:flex;align-items:flex-start;gap:10px;">
-                        <i class="fa-solid fa-check-circle" style="color:#4caf50;margin-top:3px;"></i> Maintaining
-                        examination records and compliance with regulatory norms
-                    </li>
-                </ul>
+                <!-- ==================== RIGHT COLUMN: TABBED CONTENT ==================== -->
+                <main class="coe-main-panes" data-aos="fade-left">
 
-                <h3 style="font-size:1.3rem;font-weight:700;color:#003366;margin-bottom:16px;">Contact the COE Office
-                </h3>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-                    <div
-                        style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:24px;text-align:center;">
-                        <i class="fa-solid fa-phone" style="font-size:1.5rem;color:#003366;margin-bottom:10px;"></i>
-                        <p style="font-size:0.9rem;color:#333;font-weight:600;">+91-416-2244777</p>
+                    <!-- TAB 1: CONTROLLER OF EXAMINATIONS (OVERVIEW) -->
+                    <div class="coe-tab-pane active" id="tab-overview" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-shield-halved"></i> Autonomous Examination Wing</span>
+                            <h2 class="coe-pane-title">Controller of Examinations</h2>
+                            <p class="coe-pane-subtitle">Planning, organization, valuation, and certification management for Kingston Engineering College (Autonomous)</p>
+                        </div>
+
+                        <div class="coe-overview-grid">
+                            <!-- Left: Narrative & 3 Examination Phases -->
+                            <div class="coe-narrative-col">
+                                <div class="coe-lead-box">
+                                    <p>The Controller of Examinations (COE) office at <strong>Kingston Engineering College (Autonomous)</strong> plays a pivotal role in managing the entire examination lifecycle. The activities are systematically organized into three well-defined phases &ndash; <strong>Pre-Examination</strong>, <strong>During-Examination</strong>, and <strong>Post-Examination</strong> &ndash; ensuring that the conduct of all internal assessments and autonomous end-semester examinations remains smooth, transparent, highly secure, and compliant with Anna University regulations.</p>
+                                </div>
+
+                                <div class="coe-phases-container">
+                                    <h3 style="font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700;color:#003366;margin-bottom:18px;">
+                                        <i class="fa-solid fa-diagram-project" style="color:#8b1a2b;margin-right:8px;"></i> Examination Process Lifecycle
+                                    </h3>
+
+                                    <!-- Phase 1 -->
+                                    <div class="coe-phase-card">
+                                        <div class="coe-phase-header">
+                                            <div class="coe-phase-icon pre"><i class="fa-solid fa-clipboard-list"></i></div>
+                                            <div class="coe-phase-title-group">
+                                                <h4>Pre-Examination Phase</h4>
+                                                <span>Planning &bull; Question Paper Setting &bull; Enrolment</span>
+                                            </div>
+                                        </div>
+                                        <div class="coe-phase-body">
+                                            <p>This phase focuses on meticulous planning and preparation. Activities include student enrolment, course registration, scheduling of Common Assessment Tests (CAT), and examination fee collection for end-semester examinations. The autonomous examination timetable is prepared and approved well in advance. Comprehensive arrangements are made for both theory and laboratory practical examinations. Key tasks include procuring examination stationery, printing barcoded answer booklets, appointing Board of Examiners (BoE), question paper setting, scrutinizing by external experts, and ultra-secure printing and sealing of question papers.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phase 2 -->
+                                    <div class="coe-phase-card">
+                                        <div class="coe-phase-header">
+                                            <div class="coe-phase-icon during"><i class="fa-solid fa-pen-ruler"></i></div>
+                                            <div class="coe-phase-title-group">
+                                                <h4>During-Examination Phase</h4>
+                                                <span>Conduct &bull; Invigilation &bull; University Coordination</span>
+                                            </div>
+                                        </div>
+                                        <div class="coe-phase-body">
+                                            <p>This stage ensures systematic, disciplined, and fair conduct of examinations. It involves generating hall tickets with student biometric/photo verification, generating seating attendance sheets, appointing examiner panels, and coordinating with external examiners from Anna University and premier autonomous institutions. For theory examinations, Anna University Representative (AUR) is coordinated with, Chief Superintendents and Hall Invigilators are appointed by the COE, seating arrangements are published, and CCTV-monitored examination halls are prepared. After each session, answer scripts are securely collected, barcoded, bundled, and handed over to the confidential custody of the Deputy COE. Strict discipline is maintained, and any malpractice cases are promptly referred to the Malpractice Inquiry Committee.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phase 3 -->
+                                    <div class="coe-phase-card">
+                                        <div class="coe-phase-header">
+                                            <div class="coe-phase-icon post"><i class="fa-solid fa-award"></i></div>
+                                            <div class="coe-phase-title-group">
+                                                <h4>Post-Examination Phase</h4>
+                                                <span>Evaluation &bull; Results &bull; Grade Sheets &bull; Graduation</span>
+                                            </div>
+                                        </div>
+                                        <div class="coe-phase-body">
+                                            <p>The final phase focuses on rigorous evaluation, result processing, and certification. Dummy numbers are allotted to answer booklets to maintain absolute anonymity. Marks are entered securely into the autonomous examination database. Consolidated grades are reviewed during the <strong>Result Passing Board (RPB)</strong> meeting in the presence of the Principal, COE, and Anna University nominee prior to official result publication. Post-examination services include result declaration, processing applications for photocopy of answer scripts, transparent revaluation, issuing semester grade sheets and consolidated mark statements, forwarding degree award recommendations to Anna University, and conferring degrees on Graduation Day.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Autonomous Valuation System -->
+                                <div class="coe-feature-block maroon-accent">
+                                    <h4><i class="fa-solid fa-scale-balanced" style="color:#8b1a2b;"></i> Central Valuation & Double Blind Evaluation</h4>
+                                    <p>To uphold the highest benchmarks of academic integrity and grading consistency, answer scripts undergo a double-blind valuation system. Both internal faculty and external examiners from reputed academic institutions evaluate the scripts independently. If a variance exceeding 15 marks is observed between valuations, a third evaluation is conducted by an independent senior subject expert. Transparent photocopy and review processes ensure total fairness for every candidate.</p>
+                                </div>
+
+                                <!-- Automation System -->
+                                <div class="coe-feature-block blue-accent">
+                                    <h4><i class="fa-solid fa-microchip" style="color:#003366;"></i> Autonomous Examination Automation System</h4>
+                                    <p>Kingston Engineering College leverages a comprehensive digitized examination management system that integrates the complete student lifecycle: faculty course allocation, biometric and attendance tracking, Continuous Internal Evaluation (CIE) calculation, automated hall ticket generation, barcoded answer sheet tracking, result compilation in ISO-compliant formats, and rapid generation of semester grade cards and official transcripts.</p>
+                                </div>
+                            </div>
+
+                            <!-- Right: Officer Profile & Contact Card -->
+                            <div class="coe-profile-col">
+                                <div class="coe-officer-card">
+                                    <div class="coe-officer-card-header">
+                                        <div class="coe-officer-avatar">
+                                            <i class="fa-solid fa-user-tie"></i>
+                                        </div>
+                                        <h3 class="coe-officer-name">XYZ</h3>
+                                        <p class="coe-officer-designation">Controller of Examinations</p>
+                                        <p class="coe-officer-inst">Kingston Engineering College (Autonomous)</p>
+                                    </div>
+                                    <div class="coe-officer-body">
+                                        <div class="coe-contact-item">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <div>
+                                                <strong>Office:</strong><br>
+                                                COE Office, Administrative Block,<br>
+                                                Kingston Engineering College,<br>
+                                                Christianpet, Katpadi, Vellore,<br>
+                                                Tamil Nadu &ndash; 632 059
+                                            </div>
+                                        </div>
+                                        <div class="coe-contact-item">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <div>
+                                                <strong>Phone:</strong><br>
+                                                <a href="tel:+919788029999">+91 9788029999</a><br>
+                                                <a href="tel:04162298300">0416-2298300</a>
+                                            </div>
+                                        </div>
+                                        <div class="coe-contact-item">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <div>
+                                                <strong>Email:</strong><br>
+                                                <a href="mailto:coe@kingston.ac.in">coe@kingston.ac.in</a>
+                                            </div>
+                                        </div>
+                                        <div class="coe-contact-item">
+                                            <i class="fa-solid fa-clock"></i>
+                                            <div>
+                                                <strong>Working Hours:</strong><br>
+                                                Mon &ndash; Sat: 8:30 AM &ndash; 5:00 PM
+                                            </div>
+                                        </div>
+
+                                        <div class="coe-officer-actions">
+                                            <a href="https://coe.annauniv.edu/home/index.php" target="_blank" rel="noopener noreferrer" class="btn-officer-action primary">
+                                                <i class="fa-solid fa-university"></i> Anna Univ Result Portal
+                                            </a>
+                                            <a href="#" class="btn-officer-action secondary" title="Kingston Result Portal">
+                                                <i class="fa-solid fa-graduation-cap"></i> Kingston Result Portal
+                                            </a>
+                                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/coe.pdf" target="_blank" rel="noopener noreferrer" class="btn-officer-action outline">
+                                                <i class="fa-solid fa-file-pdf"></i> Official Appointment PDF
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:24px;text-align:center;">
-                        <i class="fa-solid fa-envelope" style="font-size:1.5rem;color:#003366;margin-bottom:10px;"></i>
-                        <p style="font-size:0.9rem;color:#333;font-weight:600;">coe@kingston.ac.in</p>
+
+                    <!-- TAB 2: NOTIFICATIONS & CIRCULARS -->
+                    <div class="coe-tab-pane" id="tab-notifications" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-bullhorn"></i> Official Announcements</span>
+                            <h2 class="coe-pane-title">Examination Notifications & Circulars</h2>
+                            <p class="coe-pane-subtitle">Official circulars, schedules, guidelines, and fee notifications from the Office of COE</p>
+                        </div>
+
+                        <div class="coe-table-wrapper">
+                            <table class="coe-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:130px;">Date</th>
+                                        <th style="width:150px;">Category</th>
+                                        <th>Notification / Circular Title</th>
+                                        <th style="width:130px; text-align:center;">Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>15-Feb-2026</strong></td>
+                                        <td><span class="badge-notice exam">Autonomous CAT</span></td>
+                                        <td><strong>Common Assessment Test (CAT - II) Schedule for B.E. / B.Tech (II, III & IV Year)</strong><br><small style="color:#64748b;">Ref: KEC/COE/CAT-II/2026/04</small></td>
+                                        <td style="text-align:center;"><a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>02-Feb-2026</strong></td>
+                                        <td><span class="badge-notice result">Revaluation</span></td>
+                                        <td><strong>Procedure and Schedule for Applying for Photocopy and Revaluation of Answer Scripts &ndash; End Semester Examinations</strong><br><small style="color:#64748b;">Ref: KEC/COE/REV/2026/02</small></td>
+                                        <td style="text-align:center;"><a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>18-Jan-2026</strong></td>
+                                        <td><span class="badge-notice fee">Fee Notice</span></td>
+                                        <td><strong>Autonomous End Semester Examination Fee Payment Circular &ndash; Even Semester 2025-26</strong><br><small style="color:#64748b;">Ref: KEC/COE/FEES/2026/01</small></td>
+                                        <td style="text-align:center;"><a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>05-Jan-2026</strong></td>
+                                        <td><span class="badge-notice exam">Autonomous CAT</span></td>
+                                        <td><strong>Common Assessment Test (CAT - I) Circular & Instructions for Candidates</strong><br><small style="color:#64748b;">Ref: KEC/COE/CAT-I/2026/01</small></td>
+                                        <td style="text-align:center;"><a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>12-Dec-2025</strong></td>
+                                        <td><span class="badge-notice result">Graduation</span></td>
+                                        <td><strong>Submission of Documents for Anna University Degree & Provisional Certificates Processing</strong><br><small style="color:#64748b;">Ref: KEC/COE/GRAD/2025/11</small></td>
+                                        <td style="text-align:center;"><a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>20-Nov-2025</strong></td>
+                                        <td><span class="badge-notice exam">Regulations</span></td>
+                                        <td><strong>Autonomous Academic Regulations & Statutes &ndash; Code of Conduct for Candidates</strong><br><small style="color:#64748b;">Ref: KEC/COE/STATUTES/2025</small></td>
+                                        <td style="text-align:center;"><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/examination/statutes.pdf" target="_blank" rel="noopener noreferrer" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div
-                        style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:24px;text-align:center;">
-                        <i class="fa-solid fa-clock" style="font-size:1.5rem;color:#003366;margin-bottom:10px;"></i>
-                        <p style="font-size:0.9rem;color:#333;font-weight:600;">Mon – Sat: 9:00 AM – 5:00 PM</p>
+
+                    <!-- TAB 3: FORMS -->
+                    <div class="coe-tab-pane" id="tab-forms" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-folder-open"></i> Student & Faculty Downloads</span>
+                            <h2 class="coe-pane-title">Examination Forms</h2>
+                            <p class="coe-pane-subtitle">Download official examination applications, revaluation requests, and certificate forms</p>
+                        </div>
+
+                        <div class="coe-forms-grid">
+                            <!-- Form 1 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-copy"></i></div>
+                                    <div>
+                                        <h4>Application for Photocopy of Answer Scripts</h4>
+                                        <p>Form to request evaluated theory answer scripts copy within the stipulated deadline.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+
+                            <!-- Form 2 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                                    <div>
+                                        <h4>Application for Revaluation of Answer Scripts</h4>
+                                        <p>Form for candidates seeking independent third revaluation of theory examination papers.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+
+                            <!-- Form 3 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-id-card"></i></div>
+                                    <div>
+                                        <h4>Application for Duplicate Hall Ticket</h4>
+                                        <p>Form for students requiring a duplicate hall ticket due to loss or damage of the original.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+
+                            <!-- Form 4 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-file-signature"></i></div>
+                                    <div>
+                                        <h4>Name / DOB Correction in Grade Sheet</h4>
+                                        <p>Application for correction of candidate name, date of birth, or course titles in grade cards.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+
+                            <!-- Form 5 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-certificate"></i></div>
+                                    <div>
+                                        <h4>Application for Official Transcripts</h4>
+                                        <p>Form for applying for sealed official academic transcripts for higher studies and WES evaluation.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+
+                            <!-- Form 6 -->
+                            <div class="coe-form-card">
+                                <div class="coe-form-card-top">
+                                    <div class="coe-form-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                    <div>
+                                        <h4>Grievance Redressal / Malpractice Appeal</h4>
+                                        <p>Official form to submit examination-related representations to the Grievance Inquiry Committee.</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-file-pdf"></i> Download Form (PDF)</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <!-- TAB 4: COMMON ASSESSMENT TEST TIMETABLE (CAT) -->
+                    <div class="coe-tab-pane" id="tab-cat-timetable" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-calendar-check"></i> Internal Continuous Evaluation</span>
+                            <h2 class="coe-pane-title">Common Assessment Test Timetable (CAT)</h2>
+                            <p class="coe-pane-subtitle">Time schedules for Common Assessment Tests (CAT - I, CAT - II, Model Exam) for B.E. / B.Tech programmes</p>
+                        </div>
+
+                        <div class="coe-timetable-section">
+                            <!-- 2nd Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-user-graduate"></i> Second Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters III & IV</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <!-- Odd Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Odd Semester (Semester III)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Even Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Even Semester (Semester IV)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-user-graduate"></i> Third Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters V & VI</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <!-- Odd Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Odd Semester (Semester V)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Even Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Even Semester (Semester VI)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4th Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-user-graduate"></i> Fourth Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters VII & VIII</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <!-- Odd Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Odd Semester (Semester VII)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Even Semester -->
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-week"></i> Even Semester (Semester VIII)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>Common Assessment Test - I (CAT-1)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Common Assessment Test - II (CAT-2)</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Model Examination Schedule</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 5: END SEMESTER / SUPPLEMENTARY ARREAR TIMETABLE -->
+                    <div class="coe-tab-pane" id="tab-endsem-timetable" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-clock"></i> Autonomous End Semester</span>
+                            <h2 class="coe-pane-title">End Semester & Supplementary Arrear Timetable</h2>
+                            <p class="coe-pane-subtitle">Autonomous Theory & Practical Examination Timetables for Regular & Arrear candidates</p>
+                        </div>
+
+                        <div class="coe-timetable-section">
+                            <!-- 2nd Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-book-open-reader"></i> Second Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters III & IV</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Odd Semester (Semester III)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>End Semester Practical Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Even Semester (Semester IV)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>End Semester Practical Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3rd Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-book-open-reader"></i> Third Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters V & VI</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Odd Semester (Semester V)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>End Semester Practical Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Even Semester (Semester VI)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>End Semester Practical Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4th Year -->
+                            <div class="coe-year-accordion">
+                                <div class="coe-year-title-bar">
+                                    <h4><i class="fa-solid fa-book-open-reader"></i> Fourth Year &ndash; B.E. / B.Tech</h4>
+                                    <span class="coe-year-badge">Semesters VII & VIII</span>
+                                </div>
+                                <div class="coe-sem-grid">
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Odd Semester (Semester VII)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>End Semester Practical Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="coe-sem-card">
+                                        <h5 class="coe-sem-card-title"><i class="fa-solid fa-calendar-days"></i> Even Semester (Semester VIII)</h5>
+                                        <ul class="coe-tt-item-list">
+                                            <li>
+                                                <span>End Semester Theory Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Project Work Viva-Voce Examinations</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                            <li>
+                                                <span>Supplementary / Arrear Timetable</span>
+                                                <a href="#" class="btn-download-pdf"><i class="fa-solid fa-download"></i> PDF</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 6: RESULTS -->
+                    <div class="coe-tab-pane" id="tab-results" role="tabpanel">
+                        <div class="coe-pane-header">
+                            <span class="coe-pane-tag"><i class="fa-solid fa-chart-simple"></i> Evaluation & Publication</span>
+                            <h2 class="coe-pane-title">Examination Results</h2>
+                            <p class="coe-pane-subtitle">Direct access to official examination result portals, grade rubrics, and revaluation procedures</p>
+                        </div>
+
+                        <!-- 2 Result Portals -->
+                        <div class="coe-results-grid">
+                            <!-- Anna Univ Result Portal -->
+                            <div class="coe-portal-card au-portal">
+                                <div>
+                                    <div class="coe-portal-icon">
+                                        <i class="fa-solid fa-university"></i>
+                                    </div>
+                                    <h3>Anna University Result Portal</h3>
+                                    <p>Access official Anna University examination results, marks statements, and student grade profiles via the central COE Anna University portal.</p>
+                                </div>
+                                <a href="https://coe.annauniv.edu/home/index.php" target="_blank" rel="noopener noreferrer" class="coe-portal-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Go to Anna Univ Result Portal
+                                </a>
+                            </div>
+
+                            <!-- Kingston Result Portal -->
+                            <div class="coe-portal-card kec-portal">
+                                <div>
+                                    <div class="coe-portal-icon">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <h3>Kingston Result Portal</h3>
+                                    <p>Online autonomous examination marks publication, Continuous Assessment Test (CAT) scores, and semester grade sheets for Kingston Engineering College students.</p>
+                                </div>
+                                <a href="#" class="coe-portal-btn" title="Kingston Result Portal (Ready for your link)">
+                                    <i class="fa-solid fa-laptop-code"></i> Access Kingston Result Portal
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Instructions to Check Results -->
+                        <div class="coe-lead-box" style="margin-bottom:24px;">
+                            <h4 style="font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:#003366;margin:0 0 10px 0;">
+                                <i class="fa-solid fa-circle-info" style="color:#003366;margin-right:6px;"></i> Instructions for Students Checking Results
+                            </h4>
+                            <ol style="margin:0;padding-left:20px;font-size:0.92rem;color:#334155;line-height:1.75;">
+                                <li>Select the appropriate result portal above (Anna University or Kingston Autonomous Portal).</li>
+                                <li>Enter your official 12-digit <strong>Register Number</strong> and your <strong>Date of Birth (DD/MM/YYYY)</strong>.</li>
+                                <li>Verify the captcha code and click <strong>Submit</strong> to view your semester statement of marks.</li>
+                                <li>Print or save the provisional mark statement for your academic records.</li>
+                                <li>Students seeking answer script photocopy or revaluation must apply through the COE office within 7 days of result declaration.</li>
+                            </ol>
+                        </div>
+
+                        <!-- Grade Key Scale -->
+                        <div class="coe-grade-key-card">
+                            <h4><i class="fa-solid fa-table-list" style="color:#003366;"></i> Autonomous Choice Based Credit System (CBCS) Grading Scale</h4>
+                            <div class="coe-table-wrapper" style="margin-top:0;">
+                                <table class="coe-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Letter Grade</th>
+                                            <th>Grade Point</th>
+                                            <th>Performance Level</th>
+                                            <th>Marks Range (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong style="color:#16a34a;">O</strong></td>
+                                            <td><strong>10</strong></td>
+                                            <td>Outstanding</td>
+                                            <td>91 &ndash; 100</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#0284c7;">A+</strong></td>
+                                            <td><strong>9</strong></td>
+                                            <td>Excellent</td>
+                                            <td>81 &ndash; 90</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#0284c7;">A</strong></td>
+                                            <td><strong>8</strong></td>
+                                            <td>Very Good</td>
+                                            <td>71 &ndash; 80</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#d97706;">B+</strong></td>
+                                            <td><strong>7</strong></td>
+                                            <td>Good</td>
+                                            <td>61 &ndash; 70</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#d97706;">B</strong></td>
+                                            <td><strong>6</strong></td>
+                                            <td>Average</td>
+                                            <td>50 &ndash; 60</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#dc2626;">RA</strong></td>
+                                            <td><strong>0</strong></td>
+                                            <td>Re-appearance (Arrear)</td>
+                                            <td>&lt; 50</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#dc2626;">SA</strong></td>
+                                            <td><strong>0</strong></td>
+                                            <td>Shortage of Attendance</td>
+                                            <td>&mdash;</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong style="color:#64748b;">W</strong></td>
+                                            <td><strong>0</strong></td>
+                                            <td>Withdrawal</td>
+                                            <td>&mdash;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
             </div>
         </div>
     </section>
+
+    <!-- Interactive Tab Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.coe-nav-btn');
+            const tabPanes = document.querySelectorAll('.coe-tab-pane');
+
+            function activateTab(tabId) {
+                // Update active tab buttons
+                navButtons.forEach(function(btn) {
+                    const isTarget = (btn.getAttribute('data-tab') === tabId);
+                    btn.classList.toggle('active', isTarget);
+                    btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+                });
+
+                // Update active tab panes
+                tabPanes.forEach(function(pane) {
+                    const isTarget = (pane.id === 'tab-' + tabId);
+                    pane.classList.toggle('active', isTarget);
+                });
+            }
+
+            // Click listener on all sidebar tab buttons
+            navButtons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    activateTab(tabId);
+                    // Update URL hash without jumping
+                    if (history.replaceState) {
+                        history.replaceState(null, null, '#' + tabId);
+                    } else {
+                        location.hash = tabId;
+                    }
+                });
+            });
+
+            // Handle direct deep-links from URL hash (e.g., coe.html#results)
+            const initialHash = window.location.hash.replace('#', '');
+            if (initialHash && document.getElementById('tab-' + initialHash)) {
+                activateTab(initialHash);
+            }
+        });
+    </script>
+
 
 
     <!-- Footer -->
@@ -661,6 +2181,7 @@
                 <li><a href="/admission.html">Admissions</a></li>
                 <li><a href="/departments.html">Departments</a></li>
                 <li><a href="/academics.html">Academics</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
                 <li><a href="/placements/placement_pat.html">Placements</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>
