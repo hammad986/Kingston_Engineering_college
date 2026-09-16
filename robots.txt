@@ -7,3 +7,5 @@ Disallow: /tmp/
 Disallow: /logs/
 Disallow: /docs/
 Disallow: /college-detail/
+Disallow: /scripts/
+Disallow: /components/
