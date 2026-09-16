@@ -2,9 +2,10 @@
 # ==========================================================
 # Syntax:  from  to  [status]
 
-# Block direct access to internal Python scripts / tooling
+# Block direct access to internal scripts / tooling
 /scripts/* /404.html 404
 /scripts /404.html 404
+/server.js /404.html 404
 
 # Routing is otherwise handled automatically by Cloudflare Pages:
 #   • Static files are served directly.

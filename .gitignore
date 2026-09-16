@@ -5,6 +5,7 @@ chrome-devtools-mcp/
 # Wrangler local dev state & build cache (Cloudflare Pages dev) — never deploy.
 # (SEC-001: contains telemetry + miniflare sqlite traces; not runtime code.)
 .wrangler/
+_worker.bundle
 
 # Environment files (never commit secrets)
 .env

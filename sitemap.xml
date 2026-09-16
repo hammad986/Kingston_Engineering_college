@@ -2136,6 +2136,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://engineering.kingston.ac.in/regulations.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://engineering.kingston.ac.in/rag-monitor.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
