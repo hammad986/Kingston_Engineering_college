@@ -562,15 +562,5 @@
 <script src="../../assets/js/ai-assistant.js" defer></script>
 <script>
     AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 80 });
-</script>
-<style></style>
-<button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <i class="fa-solid fa-chevron-up"></i>
-</button>
-<script>
-    const bttBtn = document.getElementById('backToTopBtn');
-    window.addEventListener('scroll', () => {
-        bttBtn.classList.toggle('show', window.scrollY > 400);
-    }, { passive: true });
 </script></body>
 </html>

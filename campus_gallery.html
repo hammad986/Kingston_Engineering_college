@@ -1374,19 +1374,6 @@
             });
         }
     </script>
-
-    <button id="backToTopBtn" class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
-
-    <script>
-        const bttBtn = document.getElementById('backToTopBtn');
-        if (bttBtn) {
-            window.addEventListener('scroll', function() {
-                bttBtn.classList.toggle('show', window.scrollY > 400);
-            }, { passive: true });
-        }
-    </script>
 </body>
 
 </html>
