@@ -63,6 +63,7 @@ EXCLUDE_FILE_PATTERNS = (
 
 # URL schemes we should never try to resolve as files.
 SKIP_SCHEMES = {"http", "https", "mailto", "tel", "javascript", "data", "ftp"}
+IGNORED_SAME_PAGE_ANCHORS = {"main-content"}
 
 # HTML void / no-close tags our tiny parser can ignore safely.
 VOID_TAGS = {
@@ -313,6 +314,8 @@ def main() -> int:
 
             if kind_r == "anchor":
                 # Same-page anchor only.
+                if anchor and anchor.lower() in IGNORED_SAME_PAGE_ANCHORS:
+                    continue
                 if anchor and anchor not in parser.ids and anchor not in parser.named_anchors:
                     report.add(path, "anchor", url, line,
                                f"anchor '#{anchor}' not present on this page")
