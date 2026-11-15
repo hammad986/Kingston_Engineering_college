@@ -9,3 +9,5 @@ Disallow: /docs/
 Disallow: /college-detail/
 Disallow: /scripts/
 Disallow: /components/
+Disallow: /backups/
+Disallow: /ugc/

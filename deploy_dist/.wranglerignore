@@ -1,0 +1,36 @@
+# Cloudflare Pages Ignore Configuration
+# ========================================
+# Files and directories ignored during Wrangler CLI deployments
+
+# Version control & IDE
+.git/
+.github/
+.vscode/
+
+# Environment and secrets (Never deploy)
+.env
+.env.*
+*.env
+
+# Local development caches & logs
+.wrangler/
+.playwright-mcp/
+__pycache__/
+*.pyc
+serve.log
+server.log
+nul
+
+# Internal scripts, local servers & documentation
+scripts/
+server.js
+reports/
+CLEANUP_CONFIRMATION.md
+R2_SETUP.md
+
+# Large backups and archives (exceed 25MB Cloudflare Pages asset limit)
+backups/
+_archive/
+data/vector-index.json
+data/vectors.bin
+data/search-index.json.pre-rebase-backup

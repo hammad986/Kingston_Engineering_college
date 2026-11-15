@@ -1,0 +1,29 @@
+# Cloudflare Pages Redirects — Kingston Engineering College
+# ==========================================================
+# Syntax:  from  to  [status]
+
+# Block direct access to internal scripts / tooling
+/scripts/* /404.html 404
+/scripts /404.html 404
+/server.js /404.html 404
+/backups/* /404.html 404
+/backups /404.html 404
+/ugc/* /404.html 404
+/ugc /404.html 404
+
+# Redirect legacy disclosure page to home
+/public_self_disclosure.html / 301
+
+# Clean URL and legacy path redirects
+/salient-features /salient_features.html 301
+/rules-and-regulation /rules_and_regulations.html 301
+/research /research.html 301
+/facilities/facilities.html /facilities.html 301
+/facilities/index.html /facilities.html 301
+/facilities/ /facilities.html 301
+/facilities /facilities.html 301
+
+# Routing is otherwise handled automatically by Cloudflare Pages:
+#   • Static files are served directly.
+#   • Pages Functions in /functions mount at their path (e.g. /api/chat).
+#   • 404.html is rendered automatically for any unmatched path.

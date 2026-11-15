@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Schedule &amp; Calendar - Kingston Engineering College</title>
+    <meta name="description" content="Institutional academic schedules, continuous internal assessment dates, instructional periods, and academic calendars for First Year and Higher Semester programmes at Kingston Engineering College.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/academic_calendar.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Academic Schedule &amp; Calendar - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/academic_calendar.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Institutional academic schedules and calendars for Academic Year 2026–2027 at Kingston Engineering College.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Academic Schedule &amp; Calendar - Kingston Engineering College">
+    <meta name="twitter:description" content="Institutional academic schedules and calendars for Academic Year 2026–2027 at Kingston Engineering College.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+
+    <style>
+        :root {
+            --cal-navy: #002b5b;
+            --cal-blue: #005d99;
+            --cal-yellow: #f5a623;
+            --cal-border: #e2e8f0;
+            --cal-bg-subtle: #f8fafc;
+        }
+
+        .cal-hero {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004b87 100%);
+            color: #ffffff;
+            padding: 70px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cal-hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cal-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ffde59;
+            border: 1px solid rgba(255, 222, 89, 0.3);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cal-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .cal-hero p {
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            max-width: 780px;
+            line-height: 1.6;
+        }
+
+        .cal-breadcrumb-bar {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 0;
+            font-size: 0.88rem;
+        }
+
+        .cal-breadcrumb-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .cal-breadcrumb-list a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .cal-breadcrumb-list a:hover {
+            color: #8b1a2b;
+        }
+
+        .cal-breadcrumb-list .current {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cal-layout-section {
+            padding: 60px 0 90px;
+            background: #f8fafc;
+        }
+
+        .cal-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Tabs Switcher */
+        .cal-tabs-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+        }
+
+        .cal-tab-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 12px 26px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cal-tab-btn.active {
+            background: #8b1a2b;
+            border-color: #8b1a2b;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(139, 26, 43, 0.2);
+        }
+
+        .cal-tab-btn:hover:not(.active) {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        /* Schedule / Calendar Cards */
+        .cal-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .cal-card:hover {
+            border-color: #8b1a2b;
+            box-shadow: 0 8px 30px rgba(139, 26, 43, 0.1);
+        }
+
+        .cal-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .cal-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+        }
+
+        .cal-card-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cal-badge {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cal-badge.sem {
+            background: #fef3c7;
+            color: #92400e;
+            border-color: #fde68a;
+        }
+
+        .cal-card-desc {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .cal-image-preview {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 20px;
+            background: #f8fafc;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cal-image-preview img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .cal-image-preview:hover img {
+            transform: scale(1.02);
+        }
+
+        .cal-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            color: #ffffff;
+            font-weight: 700;
+            gap: 8px;
+        }
+
+        .cal-image-preview:hover .cal-image-overlay {
+            opacity: 1;
+        }
+
+        .cal-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-cal-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #8b1a2b;
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-cal-primary:hover {
+            background: #002b5b;
+            color: #ffffff;
+        }
+
+        .btn-cal-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-cal-secondary:hover {
+            background: #f1f5f9;
+            color: #8b1a2b;
+            border-color: #8b1a2b;
+        }
+
+        /* Sidebar styles */
+        .cal-sidebar {
+            position: sticky;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .sidebar-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-links a:hover {
+            background: #f1f5f9;
+            color: #8b1a2b;
+            padding-left: 16px;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #8b1a2b 0%, #5e111d 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 26px;
+            text-align: center;
+        }
+
+        .cta-box h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .cta-box p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .btn-cta {
+            background: #f5a623;
+            color: #000000;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-cta:hover {
+            background: #ffffff;
+            color: #8b1a2b;
+        }
+
+        /* Modal lightbox */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-modal.show {
+            display: flex;
+        }
+
+        .image-modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-modal-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            display: block;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        @media (max-width: 992px) {
+            .cal-layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .cal-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================================ -->
+<!-- HEADER COMPONENT - components/header.html -->
+<!-- Single Source of Truth for Header -->
+<!-- ================================ -->
+
+<!-- Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<!-- Floating Buttons -->
+<div class="floating-side-buttons">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-side bg-brand-yellow text-black rotate-text">Admission Enquiry</a>
+</div>
+
+<div class="floating-circle-buttons">
+    <a href="/ai-assistant.html" class="circle-btn bg-brand-blue ai-widget-toggle" title="AI Assistant"><i class="fa-solid fa-robot"></i></a>
+    <a href="https://wa.me/9788029999" class="circle-btn bg-green" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- AI Assistant Widget (Hidden by default) -->
+<div id="ai-widget-container">
+    <div class="ai-widget-box">
+        <div class="ai-widget-header">
+            <div class="ai-header-left">
+                <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="ai-header-info">
+                    <span class="ai-header-name">Kingston AI Assistant</span>
+                    <span class="ai-header-status">
+                        <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                    </span>
+                </div>
+            </div>
+            <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+        </div>
+        <div class="ai-widget-content">
+            <div id="ai-messages" class="ai-messages"></div>
+            <div class="ai-chips-bar">
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓 Admissions</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰 Fees</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊 Placements</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚 Courses</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠 Hostel</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆 Scholarships</button>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                <button id="ai-send-btn" class="ai-send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-sticky-cta">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-enquiry">Admission Enquiry</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>For Admission</span>
+                <a href="tel:+919788029999"><i class="fa-solid fa-phone"></i> +91 9788029999</a>
+                <a href="mailto:admission@kingston.ac.in"><i class="fa-solid fa-envelope"></i> admission@kingston.ac.in</a>
+            </div>
+            <div class="top-bar-middle hidden-mobile">
+                <a href="/coe.html">COE</a>
+                <a href="/alumni.html">Alumni</a>
+                <a href="/grievance_helpdesk.html">Grievance & Help Desk</a>
+                <a href="/admission.html">Admission</a>
+                <a href="/" title="Student Login">Student-Log In</a>
+                <a href="/" title="Staff Login">Staff-Log In</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/careers.html" class="btn-careers">Careers <i class="fa-solid fa-briefcase"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Logo Bar -->
+    <div class="logo-bar">
+        <div class="container logo-bar-inner">
+            <div class="logo-area">
+                <img src="/assets/images/icons/001-web_logo_banner_2026.png" width="450" height="150" alt="Kingston Engineering College Logo"
+                    class="main-logo" onerror="this.src='/assets/images/icons/001-web_logo_banner_2026.png'">
+            </div>
+            <div class="accreditations-area">
+                <div class="accred-logos">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" fetchpriority="high">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo">
+                    <img src="/assets/images/icons/008-blue-horizontal.png" alt="StartupTN Logo">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo" class="mobile-only-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <div class="notice-label">Register Here</div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content notice-marquee">
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (merged from navbar.html) -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/about.html">About Us</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/about/about_chairman.html">Chairman</a></li>
+                        <li><a href="/about/about_principal.html">Principal</a></li>
+                        <li><a href="/about/about_mou.html">MOU</a></li>
+                        <li><a href="/about/about_awards.html">Awards and Achievements</a></li>
+                        <li><a href="/about/about_organogram.html">Organogram</a></li>
+                        <li><a href="/about/about_governing.html">Governing Council</a></li>
+                        <li><a href="/about/about_accreditation.html">Accreditation</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/departments.html">Departments</a>
+                    <ul class="dropdown dropdown-columns js-exclude-dropdown">
+                        <li><a href="/dept_cse.html">Computer Science and Engineering</a></li>
+                        <li><a href="/dept_aids.html">Artificial Intelligence and Data Science</a></li>
+                        <li><a href="/dept_AI&ML.html">Computer Science Engineering with AI & ML</a></li>
+                        <li><a href="/dept_IT.html">Information Technology</a></li>
+                        <li><a href="/dept_ece.html">Electronics and Communication Engineering</a></li>
+                        <li><a href="/dept_csbs.html">Computer Science and Business Systems</a></li>
+                        <li><a href="/dept_mech.html">Mechanical Engineering</a></li>
+                        <li><a href="/dept_BA.html">Bachelor of Architecture</a></li>
+                        <li><a href="/dept_MBA.html">Masters in Business Administration</a></li>
+                        <li><a href="/dept_S&H.html">Science and Humanities</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                        <li><a href="/salient_features.html">Salient Features</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/regulations.html">Regulation</a></li>
+                        <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                        <li><a href="/academic_calendar.html">Academic Schedule &amp; Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/facilities.html">Facilities</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/facilities/facilities_infrastructure.html">Infrastructure</a></li>
+                        <li><a href="/facilities.html">Facilities</a></li>
+                        <li><a href="/facilities/facilities_event_gallery.html">Event Gallery</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/facilities/facilities_it.html">IT Infrastructure</a></li>
+                        <li><a href="/facilities/facilities_library.html">Library</a></li>
+                        <li><a href="/facilities/facilities_welfare.html">Welfare Measures</a></li>
+                        <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/campus_gallery.html">Campus Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="/policies.html">Policies</a></li>
+                <li class="has-dropdown">
+                    <a href="/placements/placement_pat.html">Placements</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/placements/placement_pat.html">Placement & Training Cell</a></li>
+                        <li><a href="/placements/placement_vision_mission.html">Vision & Mission, Objectives</a></li>
+                        <li><a href="/placements/placement_recruiters.html">Corporate Recruiters</a></li>
+                        <li><a href="/placements/placement_report.html">Placement Report</a></li>
+                        <li><a href="/placements/placement_industry_connect.html">Industry Connect</a></li>
+                        <li><a href="/placements/placement_campus_hiring.html">Campus Hiring</a></li>
+                        <li><a href="/placements/placement_value_added.html">Value added Courses Training</a></li>
+                        <li><a href="/placements/placement_capacity_dev.html">Capacity Dev and Skill Dev</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/iqac/iqac.html">IQAC</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/iqac/iqac_about.html">IQAC</a></li>
+                        <li><a href="/iqac/iqac_mom.html">Minutes of Meeting</a></li>
+                        <li><a href="/iqac/iqac_quality_initiatives.html">IQAC Quality Initiatives</a></li>
+                        <li><a href="/iqac/iqac_annual_reports.html">Annual Reports</a></li>
+                        <li><a href="/iqac/iqac_academic_audit.html">Academic Audit</a></li>
+                        <li><a href="/iqac/iqac_feedback.html">Feedback</a></li>
+                        <li><a href="/iqac/iqac_strategic_plan.html">Strategic Plan 2024</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/naac/naac.html">NAAC</a>
+                    <ul class="dropdown naac-scrollable js-exclude-dropdown">
+                        <li><a href="/naac/naac_iiqa.html">IIQA</a></li>
+                        <li><a href="/naac/naac_ssr.html">SSR</a></li>
+                        <li><a href="/naac/naac_dvv.html">DVV Clarification</a></li>
+                        <li><a href="/naac/naac_rti.html">RTI</a></li>
+                        <li><a href="/naac/naac_extended_profile.html">Extended Profile</a></li>
+                        <li><a href="/naac/naac_curricular_aspects.html">Curricular Aspects</a></li>
+                        <li><a href="/naac/naac_teaching_learning.html">Teaching Learning and Evaluation</a></li>
+                        <li><a href="/naac/naac_research_innovation.html">Research Innovation and Extension</a></li>
+                        <li><a href="/naac/naac_infrastructure.html">Infrastructure and Learning Resource</a></li>
+                        <li><a href="/naac/naac_student_support.html">Student Support Progression</a></li>
+                        <li><a href="/naac/naac_governance.html">Governance, Leadership and Management</a></li>
+                        <li><a href="/naac/naac_institutional_values.html">Institution Values and Best Practices</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC MANDATORY</span><span class="nav-l2">COMMITTEE</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/icc.pdf" target="_blank" rel="noopener">Internal Complaint Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sgrc.pdf" target="_blank" rel="noopener">Students Grievance Redressal Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/posh.pdf" target="_blank" rel="noopener">POSH Cell</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sedg.pdf" target="_blank" rel="noopener">Socio-Economically Disadvantaged Group</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/arc.pdf" target="_blank" rel="noopener">Anti Ragging Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/eqc.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC UNDERTAKING</span><span class="nav-l2">BY HOI</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_I.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - I</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_II.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - II</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown psd-nav-item">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">PUBLIC SELF</span><span class="nav-l2">DISCLOSURE</span></span></a>
+                    <ul class="dropdown psd-dropdown-menu">
+                        <li class="psd-has-sub">
+                            <a href="#"><span>About HEI</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/aboutus.pdf" target="_blank" rel="noopener">About Us</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/act_statutes/act_statutes.pdf" target="_blank" rel="noopener">Act and Statutes</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/institutional_development_plan.pdf" target="_blank" rel="noopener">Institutional Development Plan</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/affiliating_university.pdf" target="_blank" rel="noopener">Affiliating University</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accrediation_ranking/accrediation_ranking.pdf" target="_blank" rel="noopener">Accreditation / Ranking Status</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/recognition_approvals/recognition_approvals.pdf" target="_blank" rel="noopener">Recognition / Approvals</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/annual_reports/annual_reports.pdf" target="_blank" rel="noopener">Annual Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accounts_report/accounts_report.pdf" target="_blank" rel="noopener">Annual Accounts &amp; Audit Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/sponsoring_body/sponsoring_body.pdf" target="_blank" rel="noopener">Sponsoring Body Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Administration</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/finance_officer.pdf" target="_blank" rel="noopener">Finance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/coe.pdf" target="_blank" rel="noopener">Controller of Examination</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/cvo.pdf" target="_blank" rel="noopener">Chief Vigilance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/ombudsperson.pdf" target="_blank" rel="noopener">Ombudsperson</a></li>
+                                <li><a href="/assets/pdfs/bos_protected.pdf" target="_blank" rel="noopener">Executive Council / BOS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/academic_leadership.pdf" target="_blank" rel="noopener">Academic Leadership (HoDs)</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Academic</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_programs.pdf" target="_blank" rel="noopener">Academic Programs</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_calendar.pdf" target="_blank" rel="noopener">Academic Calendars</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/examination/statutes.pdf" target="_blank" rel="noopener">Examinations</a></li>
+                                <li><a href="/departments.html">Department</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/staff/staff.pdf" target="_blank" rel="noopener">Department Wise Faculty Details</a></li>
+                                <li><a href="/iqac/iqac_about.html">Internal Quality Assurance Cell</a></li>
+                                <li><a href="/facilities/facilities_library.html">Library</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/mou/mou.pdf" target="_blank" rel="noopener">Academic Collaborations</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Admissions</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/prospectus.pdf" target="_blank" rel="noopener">Prospectus</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/autonomous/Fee_Refund_Policy.pdf" target="_blank" rel="noopener">Fee Refund Policy</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/admission_policy.pdf" target="_blank" rel="noopener">Admission Process and Guidelines</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Research</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/research_development.pdf" target="_blank" rel="noopener">Research and Development Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/incubation.pdf" target="_blank" rel="noopener">Incubation Centre / Start-Ups / IIC</a></li>
+                                <li><a href="/facilities.html">Central Facilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Student Life</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sports.pdf" target="_blank" rel="noopener">Sports Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/nss/nss.pdf" target="_blank" rel="noopener">NSS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/hostel.pdf" target="_blank" rel="noopener">Hostel Details</a></li>
+                                <li><a href="/placements/placement_pat.html">Placement Cell &amp; Activities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sgrc.pdf" target="_blank" rel="noopener">SGRC and Ombudsperson</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/health.pdf" target="_blank" rel="noopener">Health Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/icc.pdf" target="_blank" rel="noopener">Internal Complaints Committee</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/antiragging.pdf" target="_blank" rel="noopener">Anti Ragging Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/equalopportunity.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sedg.pdf" target="_blank" rel="noopener">SEDG</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/facilityfordifferentlyabled.pdf" target="_blank" rel="noopener">Facilities for Differently Abled</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/alumni/alumni.pdf" target="_blank" rel="noopener"><span>Alumni Association</span></a>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Information Corner</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/naac/rti.pdf" target="_blank" rel="noopener">RTI</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/circular_0001.pdf" target="_blank" rel="noopener">Circulars and Notices</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/announcements.pdf" target="_blank" rel="noopener">Announcements</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/newsletters.pdf" target="_blank" rel="noopener">Newsletters</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/news_events.pdf" target="_blank" rel="noopener">News, Recent Events &amp; Achievements</a></li>
+                                <li><a href="/careers.html">Job Openings</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/studyinindia.pdf" target="_blank" rel="noopener">Admission for International Students</a></li>
+                                <li><a href="https://www.google.com/maps/dir//Chittur,+East+Main+Road,+Christianpet,+Vellore,+632059/@13.0126531,79.0495176,12z" target="_blank" rel="noopener">Details and Location Map</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/facilities/facilities_event_gallery.html"><span>Picture Gallery</span></a></li>
+                        <li><a href="/contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-label">
+                    <span class="menu-label-open">Menu</span>
+                    <span class="menu-label-close">Close</span>
+                </span>
+            </button>
+            <button class="ks-search-trigger" id="ks-search-trigger" title="Search (Ctrl+K)"><i class="fa-solid fa-search"></i><span> Search</span></button>
+        </div>
+    </nav>
+
+</header>
+
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="cal-hero" data-aos="fade-down">
+            <div class="container">
+                <span class="cal-hero-badge"><i class="fa-solid fa-calendar-days"></i> Academic Year 2026 – 2027 &bull; ODD Semester</span>
+                <h1>Academic Schedule &amp; Calendar</h1>
+                <p>Institutional instructional timelines, continuous internal assessments (CIA), examination windows, and comprehensive academic calendars for First Year and Higher Semester programmes.</p>
+            </div>
+        </section>
+
+        <!-- Breadcrumb Bar -->
+        <div class="cal-breadcrumb-bar">
+            <div class="container">
+                <ul class="cal-breadcrumb-list">
+                    <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="/academics.html">Academics</a></li>
+                    <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
+                    <li class="current">Academic Schedule &amp; Calendar</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Layout Section -->
+        <section class="cal-layout-section">
+            <div class="container">
+                <div class="cal-layout-grid">
+                    
+                    <!-- Left Column: Content -->
+                    <div class="cal-main-content">
+                        
+                        <!-- Tabs -->
+                        <div class="cal-tabs-container">
+                            <button type="button" class="cal-tab-btn active" onclick="switchCalTab('schedules', this)">
+                                <i class="fa-solid fa-clock"></i> Academic Schedules (2026–27)
+                            </button>
+                            <button type="button" class="cal-tab-btn" onclick="switchCalTab('calendars', this)">
+                                <i class="fa-solid fa-calendar-check"></i> Institutional Calendars (PDF)
+                            </button>
+                            <button type="button" class="cal-tab-btn" onclick="switchCalTab('archive', this)">
+                                <i class="fa-solid fa-box-archive"></i> Previous Sessions
+                            </button>
+                        </div>
+
+                        <!-- TAB PANE 1: SCHEDULES -->
+                        <div id="tab-schedules" class="tab-pane active" data-aos="fade-up">
+
+                            <!-- Schedule 1: First Year -->
+                            <div class="cal-card">
+                                <div class="cal-card-header">
+                                    <div>
+                                        <h3 class="cal-card-title">Academic Schedule – First Year (ODD Semester 2026–2027)</h3>
+                                        <div class="cal-card-tags">
+                                            <span class="cal-badge">First Year (I Year)</span>
+                                            <span class="cal-badge sem">ODD Semester 2026–27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="cal-card-desc">Official commencement schedule, instructional periods, continuous internal assessments (CIA), and semester examination dates for newly admitted first-year undergraduate engineering students.</p>
+
+                                <div class="cal-image-preview" onclick="openLightbox('/assets/Academic Calendar/Academic Schedule-I Year-2026-2027-ODD Semester.JPEG')">
+                                    <img src="/assets/Academic Calendar/Academic Schedule-I Year-2026-2027-ODD Semester.JPEG" alt="First Year Academic Schedule 2026-27" loading="lazy" decoding="async">
+                                    <div class="cal-image-overlay">
+                                        <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Zoom Fullscreen
+                                    </div>
+                                </div>
+
+                                <div class="cal-actions">
+                                    <a href="/assets/Academic Calendar/Academic Schedule-I Year-2026-2027-ODD Semester.JPEG" target="_blank" class="btn-cal-primary">
+                                        <i class="fa-solid fa-expand"></i> View Full Image
+                                    </a>
+                                    <a href="/assets/Academic Calendar/Academic Schedule-I Year-2026-2027-ODD Semester.JPEG" download="Academic_Schedule_I_Year_2026_27.jpeg" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-download"></i> Download Schedule
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Schedule 2: Higher Semesters -->
+                            <div class="cal-card">
+                                <div class="cal-card-header">
+                                    <div>
+                                        <h3 class="cal-card-title">Academic Schedule – Higher Semesters (ODD Semester 2026–2027)</h3>
+                                        <div class="cal-card-tags">
+                                            <span class="cal-badge">Higher Semesters (III, V, VII)</span>
+                                            <span class="cal-badge sem">ODD Semester 2026–27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="cal-card-desc">Detailed instructional timeline, class commencement, internal assessment cycle, practical exams, and end-semester theory exam schedules for higher semester engineering students.</p>
+
+                                <div class="cal-image-preview" onclick="openLightbox('/assets/Academic Calendar/Academic Schedule-Higher Semester-2026-2027-ODD Semester-Higher Sem.jpeg')">
+                                    <img src="/assets/Academic Calendar/Academic Schedule-Higher Semester-2026-2027-ODD Semester-Higher Sem.jpeg" alt="Higher Semesters Academic Schedule 2026-27" loading="lazy" decoding="async">
+                                    <div class="cal-image-overlay">
+                                        <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Zoom Fullscreen
+                                    </div>
+                                </div>
+
+                                <div class="cal-actions">
+                                    <a href="/assets/Academic Calendar/Academic Schedule-Higher Semester-2026-2027-ODD Semester-Higher Sem.jpeg" target="_blank" class="btn-cal-primary">
+                                        <i class="fa-solid fa-expand"></i> View Full Image
+                                    </a>
+                                    <a href="/assets/Academic Calendar/Academic Schedule-Higher Semester-2026-2027-ODD Semester-Higher Sem.jpeg" download="Academic_Schedule_Higher_Sem_2026_27.jpeg" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-download"></i> Download Schedule
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- TAB PANE 2: CALENDARS -->
+                        <div id="tab-calendars" class="tab-pane">
+
+                            <!-- Calendar 1: First Year PDF -->
+                            <div class="cal-card">
+                                <div class="cal-card-header">
+                                    <div>
+                                        <h3 class="cal-card-title">KNEC Academic Calendar 2026–27 – ODD Semester (First Year)</h3>
+                                        <div class="cal-card-tags">
+                                            <span class="cal-badge">First Year (I Year)</span>
+                                            <span class="cal-badge sem">PDF Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="cal-card-desc">Comprehensive official institutional calendar outlining day-by-day instructional periods, government and institutional holidays, continuous assessment windows, and milestone academic events for First Year engineering.</p>
+
+                                <div class="cal-actions">
+                                    <a href="/assets/Academic Calendar/KNEC-Academic Calender 2026-27 - ODD Semester-I Year-1-9-2026.pdf" target="_blank" class="btn-cal-primary">
+                                        <i class="fa-solid fa-file-pdf"></i> View Calendar PDF
+                                    </a>
+                                    <a href="/assets/Academic Calendar/KNEC-Academic Calender 2026-27 - ODD Semester-I Year-1-9-2026.pdf" download="KNEC_Academic_Calendar_2026_27_First_Year.pdf" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-download"></i> Download PDF
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Calendar 2: Higher Semesters PDF -->
+                            <div class="cal-card">
+                                <div class="cal-card-header">
+                                    <div>
+                                        <h3 class="cal-card-title">KNEC Academic Calendar 2026–27 – ODD Semester (Higher Semesters)</h3>
+                                        <div class="cal-card-tags">
+                                            <span class="cal-badge">Higher Semesters (III, V, VII)</span>
+                                            <span class="cal-badge sem">PDF Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="cal-card-desc">Detailed day-order calendar schedule for continuing higher semester students containing total instructional days, internal CIA assessment cycles, laboratory completion dates, and end-term examinations.</p>
+
+                                <div class="cal-actions">
+                                    <a href="/assets/Academic Calendar/KNEC-Academic Calender 2026-27-ODD Semester-Higher Sem.pdf" target="_blank" class="btn-cal-primary">
+                                        <i class="fa-solid fa-file-pdf"></i> View Calendar PDF
+                                    </a>
+                                    <a href="/assets/Academic Calendar/KNEC-Academic Calender 2026-27-ODD Semester-Higher Sem.pdf" download="KNEC_Academic_Calendar_2026_27_Higher_Sem.pdf" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-download"></i> Download PDF
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- TAB PANE 3: ARCHIVE -->
+                        <div id="tab-archive" class="tab-pane">
+
+                            <div class="cal-card">
+                                <h3 class="cal-card-title">Academic Session 2024–25 Reference Archives</h3>
+                                <p class="cal-card-desc">Previous session academic calendars preserved for verification and transcript tracking purposes:</p>
+                                
+                                <div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+                                    <a href="/assets/Academic Calendar/1. Academic calendar - 2024_Odd semester_Higher SEM.pdf.jpg" target="_blank" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-image"></i> Academic Calendar 2024 – Odd Semester Higher Sem (View JPG)
+                                    </a>
+                                    <a href="/assets/Academic Calendar/2. Academic calendar - 2024_Odd semester - I UGPG.jpg" target="_blank" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-image"></i> Academic Calendar 2024 – Odd Semester I UG/PG (View JPG)
+                                    </a>
+                                    <a href="/assets/Academic Calendar/3. Academic calendar - 2024_Even semester.jpg" target="_blank" class="btn-cal-secondary">
+                                        <i class="fa-solid fa-image"></i> Academic Calendar 2024 – Even Semester (View JPG)
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Sidebar -->
+                    <aside class="cal-sidebar">
+                        <div class="sidebar-card">
+                            <h4><i class="fa-solid fa-compass"></i> Academic Quick Links</h4>
+                            <ul class="sidebar-links">
+                                <li><a href="/academics.html">Academic Overview <i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi <i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a href="/regulations.html">Autonomous Regulations <i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a href="/rules_and_regulations.html">Rules &amp; Code of Conduct <i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a href="/salient_features.html">Salient Features <i class="fa-solid fa-chevron-right"></i></a></li>
+                                <li><a href="/departments.html">Departments Directory <i class="fa-solid fa-chevron-right"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4><i class="fa-solid fa-bullhorn"></i> Important Exam Dates</h4>
+                            <p style="font-size:0.85rem; color:#64748b; line-height:1.5; margin-bottom:12px;">Continuous Internal Assessment (CIA) cycle marks and attendance compliance cut-offs are published by the Controller of Examinations.</p>
+                            <a href="/coe.html" class="btn-cal-secondary" style="width:100%; justify-content:center;">
+                                <i class="fa-solid fa-school"></i> Visit COE Office
+                            </a>
+                        </div>
+
+                        <div class="cta-box">
+                            <h4>Admissions 2026–27</h4>
+                            <p>Enquire today for admissions to B.E./B.Tech. and M.E./MBA programmes.</p>
+                            <a href="https://forms.gle/jU8oocUaJGgYxc459" target="_blank" class="btn-cta">Apply Now &bull; Enquiry</a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeLightbox()">
+        <span class="image-modal-close">&times;</span>
+        <div class="image-modal-content" onclick="event.stopPropagation()">
+            <img id="modalImg" src="" alt="Fullscreen preview">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- ================================ -->
+<!-- ================================ -->
+<!-- ================================ -->
+<!-- FOOTER COMPONENT - components/footer.html -->
+<!-- Single Source of Truth for Footer -->
+<!-- All href paths are root-relative (start with /) for compatibility
+     across pages at any directory depth -->
+<!-- ================================ -->
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col about-col">
+            <h3 class="footer-college-name">KINGSTON ENGINEERING COLLEGE</h3>
+            <p>Approved by AICTE, Affiliated to Anna University, NAAC 'A' Grade. Committed to excellence in technical education since 2008.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Vellore – Katpadi Road, Vellore, Tamil Nadu – 632 059</li>
+                <li><i class="fa-solid fa-phone"></i> +91-9788029999 / 0416-2298300</li>
+                <li><i class="fa-solid fa-envelope"></i> info@kingston.ac.in</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/admission.html">Admissions</a></li>
+                <li><a href="/departments.html">Departments</a></li>
+                <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                <li><a href="/salient_features.html">Salient Features</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
+                <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                <li><a href="/academic_calendar.html">Academic Calendar</a></li>
+                <li><a href="/facilities.html">Facilities</a></li>
+                <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                <li><a href="/placements/placement_pat.html">Placements</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="https://kingston.ac.in/engineering-resources/mandatory_disclosure.html" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMMES</h4>
+            <ul class="footer-links">
+                <li><a href="/dept_cse.html">B.E. Computer Science</a></li>
+                <li><a href="/dept_ece.html">B.E. Electronics & Comm.</a></li>
+                <li><a href="/dept_mech.html">B.E. Mechanical</a></li>
+                <li><a href="/dept_IT.html">B.Tech. Information Technology</a></li>
+                <li><a href="/dept_MBA.html">MBA</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>ACCREDITATIONS</h4>
+            <div class="accred-badges">
+                <span class="badge red">AICTE Approved</span>
+                <span class="badge red">NAAC 'A' Grade</span>
+                <span class="badge red">ISO 9001:2015 &amp; 21001:2018</span>
+                <span class="badge red">Anna University</span>
+                <span class="badge red">UGC 2(f) & 12(B)</span>
+            </div>
+
+            <h4 class="mt-6">FOLLOW US</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/kingstonvlr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kingstonengineeringcollege" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kingston-engineering-college" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flex justify-between align-center">
+            <p>&copy; 2026-27 Kingston Engineering College. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        function switchCalTab(tabId, btn) {
+            document.querySelectorAll('.cal-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            var target = document.getElementById('tab-' + tabId);
+            if (target) target.classList.add('active');
+        }
+
+        function openLightbox(src) {
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImg');
+            modalImg.src = src;
+            modal.classList.add('show');
+        }
+
+        function closeLightbox() {
+            var modal = document.getElementById('imageModal');
+            modal.classList.remove('show');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+# Wrangler Configuration — Kingston Engineering College
+# =====================================================
+# Cloudflare Pages with Functions for the OpenRouter API proxy
+#
+# Usage:
+#   1. Install Wrangler: npm install -g wrangler
+#   2. Login: wrangler login
+#   3. Deploy: wrangler pages deploy . --project-name=kingston-engineering-college
+#
+# Environment variables (set in Cloudflare Pages Dashboard):
+#   OPENROUTER_API_KEY  — Your OpenRouter API key (secret)
+#   OPENROUTER_MODEL    — Model name (default: deepseek/deepseek-v3)
+#
+# NOTES
+# -----
+# • The Pages Functions under /functions (e.g. functions/api/chat.js) are
+#   auto-mounted at their corresponding URL path (e.g. /api/chat) — no
+#   routes or [[redirects]] configuration is required, and Pages does not
+#   support those Workers-style keys here. See _redirects at repo root.
+# • Build settings (build command / output dir) are configured in the
+#   Cloudflare Pages dashboard, not in this file.
+
+name = "kingston-engineering-college"
+# Pin the correct Pages entry-point. Required so Wrangler treats this as a
+# Pages project (not a Worker) and discovers /functions automatically.
+pages_build_output_dir = "."

@@ -30,6 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* ── 2b. Set Active State on Current Nav Link ── */
+    try {
+        var currentPath = window.location.pathname.replace(/\/$/, '') || '/index.html';
+        if (!currentPath.endsWith('.html') && currentPath !== '') currentPath += '/index.html';
+        var currentPage = currentPath.split('/').pop().toLowerCase();
+        document.querySelectorAll('#nav-links a').forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (!href || href === '#' || href.startsWith('javascript:')) return;
+            var linkPage = href.split('?')[0].split('#')[0].split('/').pop().toLowerCase();
+            if (linkPage && linkPage === currentPage) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+                var parentDropdown = link.closest('.has-dropdown');
+                if (parentDropdown) {
+                    var topLink = parentDropdown.querySelector(':scope > a');
+                    if (topLink) topLink.classList.add('active');
+                }
+            }
+        });
+    } catch (e) {
+        console.error('Active nav error:', e);
+    }
+
     // --- Hero Side Box Slider (Removed) ---
 
     /* ==========================================

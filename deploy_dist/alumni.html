@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Association - Kingston Engineering College</title>
+    <meta name="description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/alumni.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Alumni Association - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/alumni.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alumni Association - Kingston Engineering College">
+    <meta name="twitter:description" content="Alumni Association at Kingston Engineering College, Vellore. AICTE approved, Anna University affiliated, NAAC A grade autonomous institution in Vellore.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            --accent-blue: #003366;
+            --accent-red: #a4101e;
+        }
+
+        /* Hero Section Styling */
+        .alumni-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(164, 16, 30, 0.8)), url('assets/images/alumni_hero_premium_bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .alumni-hero-content {
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--brand-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Floating Background Circles (Glassmorphism Effect) */
+        .glass-bg-circles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.3;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: #003366;
+            top: -100px;
+            left: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: #a4101e;
+            bottom: -50px;
+            right: -50px;
+        }
+
+        /* Dashboard Tabs Styling */
+        .alumni-tabs-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .alumni-nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-blue);
+            color: #fff;
+            border-color: var(--accent-blue);
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
+        }
+
+        .tab-content-container {
+            position: relative;
+            min-height: 600px;
+        }
+
+        .tab-pane {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .tab-pane.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Content Card Styling */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .section-heading-main {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading-main::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        /* Tables Styling */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .styled-table thead tr {
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            text-align: left;
+            font-weight: Bold;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 15px 20px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        /* List Items */
+        .award-list,
+        .objective-list,
+        .event-list {
+            list-style: none;
+        }
+
+        .award-list li,
+        .objective-list li,
+        .event-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 1rem;
+            color: #444;
+            transition: transform 0.2s;
+        }
+
+        .award-list li:hover,
+        .objective-list li:hover,
+        .event-list li:hover {
+            transform: translateX(10px);
+            color: var(--accent-blue);
+        }
+
+        .list-icon {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        /* Links Section */
+        .btn-link-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-modern {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-blue {
+            background: var(--accent-blue);
+            color: #fff;
+        }
+
+        .btn-red {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* PDF Viewer Container */
+        .pdf-viewer-wrap {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .tab-btn {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+
+            .styled-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- ================================ -->
+<!-- HEADER COMPONENT - components/header.html -->
+<!-- Single Source of Truth for Header -->
+<!-- ================================ -->
+
+<!-- Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<!-- Floating Buttons -->
+<div class="floating-side-buttons">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-side bg-brand-yellow text-black rotate-text">Admission Enquiry</a>
+</div>
+
+<div class="floating-circle-buttons">
+    <a href="/ai-assistant.html" class="circle-btn bg-brand-blue ai-widget-toggle" title="AI Assistant"><i class="fa-solid fa-robot"></i></a>
+    <a href="https://wa.me/9788029999" class="circle-btn bg-green" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- AI Assistant Widget (Hidden by default) -->
+<div id="ai-widget-container">
+    <div class="ai-widget-box">
+        <div class="ai-widget-header">
+            <div class="ai-header-left">
+                <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="ai-header-info">
+                    <span class="ai-header-name">Kingston AI Assistant</span>
+                    <span class="ai-header-status">
+                        <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                    </span>
+                </div>
+            </div>
+            <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+        </div>
+        <div class="ai-widget-content">
+            <div id="ai-messages" class="ai-messages"></div>
+            <div class="ai-chips-bar">
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓 Admissions</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰 Fees</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊 Placements</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚 Courses</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠 Hostel</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆 Scholarships</button>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                <button id="ai-send-btn" class="ai-send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-sticky-cta">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-enquiry">Admission Enquiry</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>For Admission</span>
+                <a href="tel:+919788029999"><i class="fa-solid fa-phone"></i> +91 9788029999</a>
+                <a href="mailto:admission@kingston.ac.in"><i class="fa-solid fa-envelope"></i> admission@kingston.ac.in</a>
+            </div>
+            <div class="top-bar-middle hidden-mobile">
+                <a href="/coe.html">COE</a>
+                <a href="/alumni.html">Alumni</a>
+                <a href="/grievance_helpdesk.html">Grievance & Help Desk</a>
+                <a href="/admission.html">Admission</a>
+                <a href="/" title="Student Login">Student-Log In</a>
+                <a href="/" title="Staff Login">Staff-Log In</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/careers.html" class="btn-careers">Careers <i class="fa-solid fa-briefcase"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Logo Bar -->
+    <div class="logo-bar">
+        <div class="container logo-bar-inner">
+            <div class="logo-area">
+                <img src="/assets/images/icons/001-web_logo_banner_2026.png" width="450" height="150" alt="Kingston Engineering College Logo"
+                    class="main-logo" onerror="this.src='/assets/images/icons/001-web_logo_banner_2026.png'">
+            </div>
+            <div class="accreditations-area">
+                <div class="accred-logos">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" fetchpriority="high">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo">
+                    <img src="/assets/images/icons/008-blue-horizontal.png" alt="StartupTN Logo">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo" class="mobile-only-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <div class="notice-label">Register Here</div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content notice-marquee">
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (merged from navbar.html) -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/about.html">About Us</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/about/about_chairman.html">Chairman</a></li>
+                        <li><a href="/about/about_principal.html">Principal</a></li>
+                        <li><a href="/about/about_mou.html">MOU</a></li>
+                        <li><a href="/about/about_awards.html">Awards and Achievements</a></li>
+                        <li><a href="/about/about_organogram.html">Organogram</a></li>
+                        <li><a href="/about/about_governing.html">Governing Council</a></li>
+                        <li><a href="/about/about_accreditation.html">Accreditation</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/departments.html">Departments</a>
+                    <ul class="dropdown dropdown-columns js-exclude-dropdown">
+                        <li><a href="/dept_cse.html">Computer Science and Engineering</a></li>
+                        <li><a href="/dept_aids.html">Artificial Intelligence and Data Science</a></li>
+                        <li><a href="/dept_AI&ML.html">Computer Science Engineering with AI & ML</a></li>
+                        <li><a href="/dept_IT.html">Information Technology</a></li>
+                        <li><a href="/dept_ece.html">Electronics and Communication Engineering</a></li>
+                        <li><a href="/dept_csbs.html">Computer Science and Business Systems</a></li>
+                        <li><a href="/dept_mech.html">Mechanical Engineering</a></li>
+                        <li><a href="/dept_BA.html">Bachelor of Architecture</a></li>
+                        <li><a href="/dept_MBA.html">Masters in Business Administration</a></li>
+                        <li><a href="/dept_S&H.html">Science and Humanities</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                        <li><a href="/salient_features.html">Salient Features</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/regulations.html">Regulation</a></li>
+                        <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                        <li><a href="/academic_calendar.html">Academic Schedule &amp; Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/facilities.html">Facilities</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/facilities/facilities_infrastructure.html">Infrastructure</a></li>
+                        <li><a href="/facilities.html">Facilities</a></li>
+                        <li><a href="/facilities/facilities_event_gallery.html">Event Gallery</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/facilities/facilities_it.html">IT Infrastructure</a></li>
+                        <li><a href="/facilities/facilities_library.html">Library</a></li>
+                        <li><a href="/facilities/facilities_welfare.html">Welfare Measures</a></li>
+                        <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/campus_gallery.html">Campus Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="/policies.html">Policies</a></li>
+                <li class="has-dropdown">
+                    <a href="/placements/placement_pat.html">Placements</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/placements/placement_pat.html">Placement & Training Cell</a></li>
+                        <li><a href="/placements/placement_vision_mission.html">Vision & Mission, Objectives</a></li>
+                        <li><a href="/placements/placement_recruiters.html">Corporate Recruiters</a></li>
+                        <li><a href="/placements/placement_report.html">Placement Report</a></li>
+                        <li><a href="/placements/placement_industry_connect.html">Industry Connect</a></li>
+                        <li><a href="/placements/placement_campus_hiring.html">Campus Hiring</a></li>
+                        <li><a href="/placements/placement_value_added.html">Value added Courses Training</a></li>
+                        <li><a href="/placements/placement_capacity_dev.html">Capacity Dev and Skill Dev</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/iqac/iqac.html">IQAC</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/iqac/iqac_about.html">IQAC</a></li>
+                        <li><a href="/iqac/iqac_mom.html">Minutes of Meeting</a></li>
+                        <li><a href="/iqac/iqac_quality_initiatives.html">IQAC Quality Initiatives</a></li>
+                        <li><a href="/iqac/iqac_annual_reports.html">Annual Reports</a></li>
+                        <li><a href="/iqac/iqac_academic_audit.html">Academic Audit</a></li>
+                        <li><a href="/iqac/iqac_feedback.html">Feedback</a></li>
+                        <li><a href="/iqac/iqac_strategic_plan.html">Strategic Plan 2024</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/naac/naac.html">NAAC</a>
+                    <ul class="dropdown naac-scrollable js-exclude-dropdown">
+                        <li><a href="/naac/naac_iiqa.html">IIQA</a></li>
+                        <li><a href="/naac/naac_ssr.html">SSR</a></li>
+                        <li><a href="/naac/naac_dvv.html">DVV Clarification</a></li>
+                        <li><a href="/naac/naac_rti.html">RTI</a></li>
+                        <li><a href="/naac/naac_extended_profile.html">Extended Profile</a></li>
+                        <li><a href="/naac/naac_curricular_aspects.html">Curricular Aspects</a></li>
+                        <li><a href="/naac/naac_teaching_learning.html">Teaching Learning and Evaluation</a></li>
+                        <li><a href="/naac/naac_research_innovation.html">Research Innovation and Extension</a></li>
+                        <li><a href="/naac/naac_infrastructure.html">Infrastructure and Learning Resource</a></li>
+                        <li><a href="/naac/naac_student_support.html">Student Support Progression</a></li>
+                        <li><a href="/naac/naac_governance.html">Governance, Leadership and Management</a></li>
+                        <li><a href="/naac/naac_institutional_values.html">Institution Values and Best Practices</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC MANDATORY</span><span class="nav-l2">COMMITTEE</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/icc.pdf" target="_blank" rel="noopener">Internal Complaint Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sgrc.pdf" target="_blank" rel="noopener">Students Grievance Redressal Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/posh.pdf" target="_blank" rel="noopener">POSH Cell</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sedg.pdf" target="_blank" rel="noopener">Socio-Economically Disadvantaged Group</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/arc.pdf" target="_blank" rel="noopener">Anti Ragging Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/eqc.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC UNDERTAKING</span><span class="nav-l2">BY HOI</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_I.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - I</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_II.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - II</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown psd-nav-item">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">PUBLIC SELF</span><span class="nav-l2">DISCLOSURE</span></span></a>
+                    <ul class="dropdown psd-dropdown-menu">
+                        <li class="psd-has-sub">
+                            <a href="#"><span>About HEI</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/aboutus.pdf" target="_blank" rel="noopener">About Us</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/act_statutes/act_statutes.pdf" target="_blank" rel="noopener">Act and Statutes</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/institutional_development_plan.pdf" target="_blank" rel="noopener">Institutional Development Plan</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/affiliating_university.pdf" target="_blank" rel="noopener">Affiliating University</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accrediation_ranking/accrediation_ranking.pdf" target="_blank" rel="noopener">Accreditation / Ranking Status</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/recognition_approvals/recognition_approvals.pdf" target="_blank" rel="noopener">Recognition / Approvals</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/annual_reports/annual_reports.pdf" target="_blank" rel="noopener">Annual Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accounts_report/accounts_report.pdf" target="_blank" rel="noopener">Annual Accounts &amp; Audit Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/sponsoring_body/sponsoring_body.pdf" target="_blank" rel="noopener">Sponsoring Body Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Administration</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/finance_officer.pdf" target="_blank" rel="noopener">Finance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/coe.pdf" target="_blank" rel="noopener">Controller of Examination</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/cvo.pdf" target="_blank" rel="noopener">Chief Vigilance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/ombudsperson.pdf" target="_blank" rel="noopener">Ombudsperson</a></li>
+                                <li><a href="/assets/pdfs/bos_protected.pdf" target="_blank" rel="noopener">Executive Council / BOS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/academic_leadership.pdf" target="_blank" rel="noopener">Academic Leadership (HoDs)</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Academic</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_programs.pdf" target="_blank" rel="noopener">Academic Programs</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_calendar.pdf" target="_blank" rel="noopener">Academic Calendars</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/examination/statutes.pdf" target="_blank" rel="noopener">Examinations</a></li>
+                                <li><a href="/departments.html">Department</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/staff/staff.pdf" target="_blank" rel="noopener">Department Wise Faculty Details</a></li>
+                                <li><a href="/iqac/iqac_about.html">Internal Quality Assurance Cell</a></li>
+                                <li><a href="/facilities/facilities_library.html">Library</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/mou/mou.pdf" target="_blank" rel="noopener">Academic Collaborations</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Admissions</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/prospectus.pdf" target="_blank" rel="noopener">Prospectus</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/autonomous/Fee_Refund_Policy.pdf" target="_blank" rel="noopener">Fee Refund Policy</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/admission_policy.pdf" target="_blank" rel="noopener">Admission Process and Guidelines</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Research</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/research_development.pdf" target="_blank" rel="noopener">Research and Development Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/incubation.pdf" target="_blank" rel="noopener">Incubation Centre / Start-Ups / IIC</a></li>
+                                <li><a href="/facilities.html">Central Facilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Student Life</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sports.pdf" target="_blank" rel="noopener">Sports Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/nss/nss.pdf" target="_blank" rel="noopener">NSS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/hostel.pdf" target="_blank" rel="noopener">Hostel Details</a></li>
+                                <li><a href="/placements/placement_pat.html">Placement Cell &amp; Activities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sgrc.pdf" target="_blank" rel="noopener">SGRC and Ombudsperson</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/health.pdf" target="_blank" rel="noopener">Health Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/icc.pdf" target="_blank" rel="noopener">Internal Complaints Committee</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/antiragging.pdf" target="_blank" rel="noopener">Anti Ragging Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/equalopportunity.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sedg.pdf" target="_blank" rel="noopener">SEDG</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/facilityfordifferentlyabled.pdf" target="_blank" rel="noopener">Facilities for Differently Abled</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/alumni/alumni.pdf" target="_blank" rel="noopener"><span>Alumni Association</span></a>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Information Corner</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/naac/rti.pdf" target="_blank" rel="noopener">RTI</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/circular_0001.pdf" target="_blank" rel="noopener">Circulars and Notices</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/announcements.pdf" target="_blank" rel="noopener">Announcements</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/newsletters.pdf" target="_blank" rel="noopener">Newsletters</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/news_events.pdf" target="_blank" rel="noopener">News, Recent Events &amp; Achievements</a></li>
+                                <li><a href="/careers.html">Job Openings</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/studyinindia.pdf" target="_blank" rel="noopener">Admission for International Students</a></li>
+                                <li><a href="https://www.google.com/maps/dir//Chittur,+East+Main+Road,+Christianpet,+Vellore,+632059/@13.0126531,79.0495176,12z" target="_blank" rel="noopener">Details and Location Map</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/facilities/facilities_event_gallery.html"><span>Picture Gallery</span></a></li>
+                        <li><a href="/contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-label">
+                    <span class="menu-label-open">Menu</span>
+                    <span class="menu-label-close">Close</span>
+                </span>
+            </button>
+            <button class="ks-search-trigger" id="ks-search-trigger" title="Search (Ctrl+K)"><i class="fa-solid fa-search"></i><span> Search</span></button>
+        </div>
+    </nav>
+
+</header>
+
+
+
+        <!-- Hero Section -->
+    <section class="alumni-hero">
+        <div class="glass-bg-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+        <div class="container alumni-hero-content">
+            <h5 data-aos="fade-down">Since 2008</h5>
+            <h1 class="hero-title" data-aos="zoom-in">Alumni Association</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Reconnecting & Growing Together</p>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard Section -->
+    <section class="alumni-tabs-section">
+        <div class="container">
+            <!-- Tabs Navigation -->
+            <div class="alumni-nav-tabs" data-aos="fade-up">
+                <button class="tab-btn active" onclick="showTab('about')">About HEI</button>
+                <button class="tab-btn" onclick="showTab('members')">Member Chambers</button>
+                <button class="tab-btn" onclick="showTab('registration')">Registration Certificate</button>
+                <button class="tab-btn" onclick="showTab('events')">Alumni Events</button>
+                <button class="tab-btn" onclick="showTab('links')">Alumni Links</button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="tab-content-container">
+                <!-- Tab 1: About -->
+                <div id="about" class="tab-pane active glass-card">
+                    <h2 class="section-heading-main">About</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 30px;">
+                        To bring all the Alumnis of Kingston Engineering College under one vibrant forum for the
+                        exchange of experience and knowledge and develop a strong network among themselves for bonding
+                        and fellowship and their career advancement.
+                    </p>
+
+                    <h3 style="color: var(--accent-red); font-weight: 800; margin-bottom: 15px;">Distinguish Alumni Award</h3>
+                    <p style="margin-bottom: 15px; font-weight: 600;">A distinguished Alumni award is given to the Alumni in the following categories for their excellence:</p>
+                    <ul class="award-list">
+                        <li><i class="fas fa-microscope list-icon"></i> Eminent Scientist</li>
+                        <li><i class="fas fa-user-tie list-icon"></i> Prominent Industrialist/Entrepreneur/Administrator</li>
+                        <li><i class="fas fa-hand-holding-heart list-icon"></i> Philanthropists/Personnel who have rendered noteworthy social service</li>
+                        <li><i class="fas fa-medal list-icon"></i> Young Alumnus Award in the field of Research/Entrepreneur/Sports/Arts/</li>
+                        <li><i class="fas fa-gavel list-icon"></i> Administrator</li>
+                        <li><i class="fas fa-music list-icon"></i> Eminent personnel in Sports/Arts/Music</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-blue); font-weight: 800; margin-top: 40px; margin-bottom: 15px;">Objectives of the Society</h3>
+                    <ul class="objective-list">
+                        <li><i class="fas fa-check-circle list-icon"></i> To conduct/sponsor Career Guidance Programme for students to succeed in interviews through training in core competence employability skills and soft skills training</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To create new avenues for interaction of students, faculty with industry to encourage the development of employability skills through industrial visits and to identify industry-specific projects and prototype development</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To assist disabled students with necessary gadgets, aids, counselling and special sessions</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To conduct seminars, conference, meeting of professionals from all disciplines for the purpose of exchange and promotion of knowledge, among students, faculty and members of the Association</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> To provide a forum for the alumni for exchange ideas of academic, cultural and social issues of the day by organizing and coordinating reunion activities of the Alumni</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This is always abide by Rules and Regulations</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This Society is to renew for every year with product of the statement</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This is non-consideration</li>
+                        <li><i class="fas fa-check-circle list-icon"></i> This Society is free of Political Occurrence and also non profitable</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 2: Members -->
+                <div id="members" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Cell Faculty Members</h2>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name of the Members</th>
+                                <th>Designation</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1.</td><td>Dr. U. V. Arivazhagu</td><td>Principal</td><td>Chief Patron</td></tr>
+                            <tr><td>2.</td><td>Mr. S. Mahendiran</td><td>HOD/ MECH</td><td>Co-ordinator</td></tr>
+                            <tr><td>3.</td><td>Mrs. M. Menaka</td><td>HOD/ IT</td><td>Member</td></tr>
+                            <tr><td>4.</td><td>Mrs. M. Rathika</td><td>HOD/ ECE</td><td>Member</td></tr>
+                            <tr><td>5.</td><td>Mrs. M. Gayathri</td><td>HOD/ MBA</td><td>Member</td></tr>
+                            <tr><td>6.</td><td>Dr. E. Kumaresan</td><td>HOD/ S&H</td><td>Member</td></tr>
+                            <tr><td>7.</td><td>Mr. N. Keerthivarman</td><td>AP/ MECH</td><td>Member</td></tr>
+                            <tr><td>8.</td><td>Mrs. S. Sarah</td><td>AP/ IT</td><td>Member</td></tr>
+                            <tr><td>9.</td><td>Ms. M. Anitha</td><td>AP/ CSE</td><td>Member</td></tr>
+                            <tr><td>10.</td><td>Mr. J. Paul Richardson Gnanraj</td><td>AP/ ECE</td><td>Member</td></tr>
+                            <tr><td>11.</td><td>Mrs. B. Thulasi Brinda</td><td>AP/ EEE</td><td>Member</td></tr>
+                            <tr><td>12.</td><td>Ms. M. Devika</td><td>AP/ MBA</td><td>Member</td></tr>
+                            <tr><td>13.</td><td>Mrs. Aswathy C Nair</td><td>AP/ CIVIL</td><td>Member</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="section-heading-main" style="margin-top: 50px;">Executive Members</h2>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Sl.No</th>
+                                <th>Name of the Student</th>
+                                <th>Department</th>
+                                <th>Batch</th>
+                                <th>Designation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1.</td><td>Raja Prakash V P</td><td>MECH</td><td>2012-2016</td><td>President</td></tr>
+                            <tr><td>2.</td><td>Muthusaravanan S</td><td>CSE</td><td>2013-2017</td><td>Vice President</td></tr>
+                            <tr><td>3.</td><td>Aravind V</td><td>ECE</td><td>2018-2022</td><td>Secretary</td></tr>
+                            <tr><td>4.</td><td>Parkavi S</td><td>CSE</td><td>2012-2016</td><td>Treasurer</td></tr>
+                            <tr><td>5.</td><td>Anand S</td><td>IT</td><td>2009-2013</td><td>Executive member</td></tr>
+                            <tr><td>6.</td><td>Pavithra M</td><td>IT</td><td>2010-2014</td><td>Executive member</td></tr>
+                            <tr><td>7.</td><td>Arunkumar P</td><td>MBA</td><td>2018-2020</td><td>Executive member</td></tr>
+                            <tr><td>8.</td><td>Agilan K</td><td>EEE</td><td>2014-2018</td><td>Executive member</td></tr>
+                            <tr><td>9.</td><td>Kishore PG</td><td>ECE</td><td>2017-2021</td><td>Executive member</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tab 3: Registration -->
+                <div id="registration" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Association Registration</h2>
+                    <p style="margin-bottom: 20px;">Verification and Certificate of Registration of the Alumni Society.</p>
+                    <div class="pdf-viewer-wrap">
+                        <iframe src="assets/pdfs/alumni/படவம_எண_2.pdf" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Events -->
+                <div id="events" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Events</h2>
+                    <ul class="event-list">
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Lecture Series on 'IIC - National Technology Day Celebration 2023, Kalpana Chawla's Memorial lectures' by Mrs Mukundha Shree, Lead Business Analyst, MSC Technology Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> Two Days workshp on 'Game development using Unity engine' by Mr G Aswin Raj, Technical Lead, Rythmos India Pvt. Ltd., Coimbatore</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> Webinar on 'Placement, Career Planning and Career Advancement' by Ms.Lingapoorani, Supply Chain Analyst and Consultant, Tata Consultancy Services</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Handson training on 'Industry 4.0 - Additive Manufacturing' by Mr.G.Agiesh Ashok, Managing Director, Inzaneone Technology Pvt. Ltd. Vellore</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Workshop on 'Hands on training on Embedded systems' Mr.K.Agilan, RTL Design Engineer, FLDEC systems, Chennai.</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Roadmap from Academic to Corporate Skills' Ms A K Yuvashree, Senior Analyst, Accenture, Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Career Guidance for Industry Requirements' Mr.K.Agilan, RTL Design Engineer, FLDEC systems, Chennai</li>
+                        <li><i class="fas fa-calendar-star list-icon"></i> A Webinar on 'Multiple views of Career Development', Ms.Hemashri, Programmer Analyst, Cognizant Technology Solution, Chennai</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 5: Links -->
+                <div id="links" class="tab-pane glass-card">
+                    <h2 class="section-heading-main">Alumni Links</h2>
+                    <p>Stay connected and provide your valuable feedback through the official forms below.</p>
+                    <div class="btn-link-group">
+                        <a href="https://forms.gle/2x5eeKPgngivoLUr9" target="_blank" class="btn-modern btn-blue"><i class="fas fa-comment-dots"></i> Alumni Feedback Link</a>
+                        <a href="https://forms.gle/TWF1jBYhyKJPDtAW9" target="_blank" class="btn-modern btn-red"><i class="fas fa-user-plus"></i> Alumni Registration Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================ -->
+<!-- ================================ -->
+<!-- ================================ -->
+<!-- FOOTER COMPONENT - components/footer.html -->
+<!-- Single Source of Truth for Footer -->
+<!-- All href paths are root-relative (start with /) for compatibility
+     across pages at any directory depth -->
+<!-- ================================ -->
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col about-col">
+            <h3 class="footer-college-name">KINGSTON ENGINEERING COLLEGE</h3>
+            <p>Approved by AICTE, Affiliated to Anna University, NAAC 'A' Grade. Committed to excellence in technical education since 2008.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Vellore – Katpadi Road, Vellore, Tamil Nadu – 632 059</li>
+                <li><i class="fa-solid fa-phone"></i> +91-9788029999 / 0416-2298300</li>
+                <li><i class="fa-solid fa-envelope"></i> info@kingston.ac.in</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/admission.html">Admissions</a></li>
+                <li><a href="/departments.html">Departments</a></li>
+                <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                <li><a href="/salient_features.html">Salient Features</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
+                <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                <li><a href="/academic_calendar.html">Academic Calendar</a></li>
+                <li><a href="/facilities.html">Facilities</a></li>
+                <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                <li><a href="/placements/placement_pat.html">Placements</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="https://kingston.ac.in/engineering-resources/mandatory_disclosure.html" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMMES</h4>
+            <ul class="footer-links">
+                <li><a href="/dept_cse.html">B.E. Computer Science</a></li>
+                <li><a href="/dept_ece.html">B.E. Electronics & Comm.</a></li>
+                <li><a href="/dept_mech.html">B.E. Mechanical</a></li>
+                <li><a href="/dept_IT.html">B.Tech. Information Technology</a></li>
+                <li><a href="/dept_MBA.html">MBA</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>ACCREDITATIONS</h4>
+            <div class="accred-badges">
+                <span class="badge red">AICTE Approved</span>
+                <span class="badge red">NAAC 'A' Grade</span>
+                <span class="badge red">ISO 9001:2015 &amp; 21001:2018</span>
+                <span class="badge red">Anna University</span>
+                <span class="badge red">UGC 2(f) & 12(B)</span>
+            </div>
+
+            <h4 class="mt-6">FOLLOW US</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/kingstonvlr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kingstonengineeringcollege" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kingston-engineering-college" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flex justify-between align-center">
+            <p>&copy; 2026-27 Kingston Engineering College. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true });
+
+        // Tab switching with smooth CSS transitions (no GSAP dependency)
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick').includes(tabId)) btn.classList.add('active');
+            });
+            var activePane = document.querySelector('.tab-pane.active');
+            var targetPane = document.getElementById(tabId);
+            if (activePane === targetPane || !targetPane) return;
+            // Fade out current
+            activePane.style.opacity = '0';
+            activePane.style.transform = 'translateY(20px)';
+            setTimeout(function() {
+                activePane.classList.remove('active');
+                targetPane.classList.add('active');
+                targetPane.style.opacity = '0';
+                targetPane.style.transform = 'translateY(30px)';
+                // Force reflow then animate in
+                void targetPane.offsetWidth;
+                targetPane.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                targetPane.style.opacity = '1';
+                targetPane.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+        // Parallax scroll effect for background circles
+        window.addEventListener('scroll', function() {
+            var circles = document.querySelectorAll('.circle');
+            var scrollY = window.scrollY;
+            for (var i = 0; i < circles.length; i++) {
+                circles[i].style.transform = 'translateY(' + (scrollY * ((i + 1) * 0.1)) + 'px)';
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>

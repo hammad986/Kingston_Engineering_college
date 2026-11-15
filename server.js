@@ -42,10 +42,14 @@ function serveFile(res, filePath, statusCode = 200) {
             res.end('500 Internal Server Error');
             return;
         }
+        const cacheControl = ext === '.html'
+            ? 'no-cache, must-revalidate'
+            : 'public, max-age=86400, stale-while-revalidate=604800';
+
         res.writeHead(statusCode, {
             'Content-Type': contentType,
             'Access-Control-Allow-Origin': '*',
-            'Cache-Control': 'no-cache, no-store, must-revalidate'
+            'Cache-Control': cacheControl
         });
         res.end(data);
     });

@@ -108,9 +108,14 @@ class AIAssistant {
                consult it from `renderSearchFallback()` when the curated
                knowledge base produces no intent match. The RAG pipeline
                is unchanged (same worker, same scoring, same data files);
-               only the orchestration is new.
-               Loads deferred / low-priority so the chat opens instantly. */
-            this._initRAGDeferred();
+               only the orchestration is new. */
+            // Only initialize heavy RAG weights (98MB) automatically on the dedicated AI page.
+            // On regular pages, RAG is lazy-loaded on-demand when the user opens the widget.
+            const isFullPageAI = document.getElementById('fullpage-chat-container') || 
+                                 (typeof window !== 'undefined' && window.location.pathname.includes('ai-assistant.html'));
+            if (isFullPageAI) {
+                this._initRAGDeferred();
+            }
         } catch (e) {
             console.error('[KingstonAI] Init error:', e);
         }
@@ -378,6 +383,10 @@ class AIAssistant {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
+                    // On-demand RAG warmup only when user opens the widget
+                    if (!this._ragWorker && !this._ragPipelinePromise) {
+                        this._initRAGDeferred();
+                    }
                     console.log('[KingstonAI] Button clicked!');
                     const widget = document.getElementById('ai-widget-container');
                     if (widget) {

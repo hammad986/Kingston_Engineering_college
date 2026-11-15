@@ -57,7 +57,7 @@ const KEC_NEWS = (() => {
                 <div class="news-card">
                     <div class="news-card-img-wrap" style="position:relative;overflow:hidden;height:180px;">
                         <img src="${imgSrc(item)}"
-                             class="news-card-img" alt="${item.title}"
+                             class="news-card-img" alt="${item.title}" loading="lazy" decoding="async"
                              style="width:100%;height:100%;object-fit:cover;">
                         <span class="news-cat-badge" style="background:${catColor(item.category)}">${item.category}</span>
                     </div>

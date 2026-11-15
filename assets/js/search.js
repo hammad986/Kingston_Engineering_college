@@ -9,7 +9,7 @@
 
     /* ── Depth-aware asset prefix ───────────────────────────────
        search.js is loaded by the shared header on pages at any depth
-       (root, /about/, /departments/, /naac/, /iqac/, /ugc/, …).
+       (root, /about/, /departments/, /naac/, /iqac/, …).
        Use a root-absolute base derived from the page path so the index,
        the stylesheet and every result link resolve identically from the
        root page AND from any nested page — fixing the broken-nested-page bug.

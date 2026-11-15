@@ -104,7 +104,7 @@ const KEC_EVENTS = (() => {
                 <div class="news-card event-card" style="${isNearest_style}transition:all 0.3s;">
                     <div class="news-card-img-wrap" style="position:relative;overflow:hidden;height:180px;">
                         <img src="${imgSrc(item)}"
-                             alt="${item.title}"
+                             alt="${item.title}" loading="lazy" decoding="async"
                              style="width:100%;height:100%;object-fit:cover;">
                         <span class="news-cat-badge" style="background:${catColor(item.category)}">${item.category}</span>
                         ${isNearest ? '<span style="position:absolute;top:10px;right:10px;background:#ff9800;color:#fff;font-size:0.68rem;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:0.4px;text-transform:uppercase;z-index:2;">Next Event</span>' : ''}

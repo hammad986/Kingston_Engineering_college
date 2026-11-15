@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research &amp; Development - Kingston Engineering College</title>
+    <meta name="description" content="Explore research and development at Kingston Engineering College: Anna University Recognized Research Centre, doctoral faculty, research supervisors, patents, journals, and conference publications.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/research.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="Research &amp; Development - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/research.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="Anna University recognized research centre, doctoral faculty, supervisors, patents, and scholarly publications at Kingston Engineering College.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research &amp; Development - Kingston Engineering College">
+    <meta name="twitter:description" content="Anna University recognized research centre, doctoral faculty, supervisors, patents, and scholarly publications at Kingston Engineering College.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/ai-assistant.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+
+    <style>
+        :root {
+            --res-navy: #002b5b;
+            --res-blue: #005d99;
+            --res-red: #8b1a2b;
+            --res-gold: #f5a623;
+            --res-border: #e2e8f0;
+            --res-bg-light: #f8fafc;
+        }
+
+        .research-hero {
+            background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004b87 100%);
+            color: #ffffff;
+            padding: 70px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.16) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .research-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ffde59;
+            border: 1px solid rgba(255, 222, 89, 0.3);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .research-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .research-hero p {
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            max-width: 780px;
+            line-height: 1.6;
+        }
+
+        /* Breadcrumb */
+        .res-breadcrumb-bar {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 0;
+            font-size: 0.88rem;
+        }
+
+        .res-breadcrumb-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .res-breadcrumb-list a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .res-breadcrumb-list a:hover {
+            color: var(--res-red);
+        }
+
+        .res-breadcrumb-list .current {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* Sticky Subnav Bar */
+        .research-subnav {
+            background: #ffffff;
+            border-bottom: 2px solid #e2e8f0;
+            position: sticky;
+            top: 75px;
+            z-index: 99;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .subnav-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            scrollbar-width: none;
+        }
+
+        .subnav-pills::-webkit-scrollbar {
+            display: none;
+        }
+
+        .subnav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #475569;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            background: transparent;
+            border: 1px solid transparent;
+        }
+
+        .subnav-pill:hover {
+            background: #f1f5f9;
+            color: var(--res-red);
+        }
+
+        .subnav-pill.active {
+            background: var(--res-red);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(139, 26, 43, 0.2);
+        }
+
+        /* Section Layout */
+        .res-section {
+            padding: 70px 0;
+        }
+
+        .res-section:nth-of-type(even) {
+            background: #f8fafc;
+        }
+
+        .res-section:nth-of-type(odd) {
+            background: #ffffff;
+        }
+
+        .res-sec-header {
+            margin-bottom: 40px;
+        }
+
+        .res-sec-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--res-red);
+            background: rgba(139, 26, 43, 0.08);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .res-sec-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .res-sec-desc {
+            font-size: 1.05rem;
+            color: #475569;
+            max-width: 850px;
+            line-height: 1.7;
+        }
+
+        /* Overview Card */
+        .res-overview-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
+        }
+
+        .res-text-body p {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .res-text-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Stats Grid */
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .res-stat-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .res-stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--res-red);
+            box-shadow: 0 10px 25px rgba(139, 26, 43, 0.08);
+            background: #ffffff;
+        }
+
+        .res-stat-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(139, 26, 43, 0.1);
+            color: var(--res-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 16px;
+        }
+
+        .res-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--res-navy);
+            margin-bottom: 6px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .res-stat-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        /* Modern Tables */
+        .res-table-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+        }
+
+        .res-table-responsive {
+            overflow-x: auto;
+        }
+
+        .res-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .res-table th {
+            background: #002b5b;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 16px 20px;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            letter-spacing: 0.6px;
+            border: none;
+        }
+
+        .res-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+            vertical-align: middle;
+        }
+
+        .res-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .res-table tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .res-table .sno-col {
+            width: 70px;
+            text-align: center;
+            font-weight: 700;
+            color: #64748b;
+        }
+
+        .res-table .faculty-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .res-table .dept-badge {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
+        .res-table .desig-badge {
+            display: inline-block;
+            background: rgba(0, 43, 91, 0.08);
+            color: var(--res-navy);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        /* Search Filter for Tables */
+        .table-filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .table-search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 30px;
+            width: 320px;
+            max-width: 100%;
+        }
+
+        .table-search-box input {
+            border: none;
+            background: transparent;
+            font-size: 0.9rem;
+            outline: none;
+            width: 100%;
+            color: #1e293b;
+        }
+
+        .table-count-badge {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* Publications & Patents Grid */
+        .pub-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .pub-tab-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pub-tab-btn:hover:not(.active) {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .pub-tab-btn.active {
+            background: var(--res-red);
+            border-color: var(--res-red);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(139, 26, 43, 0.2);
+        }
+
+        .pub-pane {
+            display: none;
+        }
+
+        .pub-pane.active {
+            display: block;
+        }
+
+        .pub-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .pub-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 26px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--res-navy);
+            box-shadow: 0 10px 25px rgba(0, 43, 91, 0.09);
+        }
+
+        .pub-card-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .pub-icon-wrap {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(139, 26, 43, 0.08);
+            color: var(--res-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .pub-card-info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+            line-height: 1.4;
+        }
+
+        .pub-card-category {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+
+        .pub-card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .btn-pub-view {
+            flex: 1;
+            text-align: center;
+            background: #002b5b;
+            color: #ffffff;
+            padding: 9px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-pub-view:hover {
+            background: #004b87;
+            color: #ffffff;
+        }
+
+        .btn-pub-download {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-pub-download:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        @media (max-width: 768px) {
+            .research-hero h1 {
+                font-size: 2.1rem;
+            }
+            .res-sec-title {
+                font-size: 1.7rem;
+            }
+            .res-overview-card {
+                padding: 24px;
+            }
+            .pub-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================================ -->
+<!-- HEADER COMPONENT - components/header.html -->
+<!-- Single Source of Truth for Header -->
+<!-- ================================ -->
+
+<!-- Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<!-- Floating Buttons -->
+<div class="floating-side-buttons">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-side bg-brand-yellow text-black rotate-text">Admission Enquiry</a>
+</div>
+
+<div class="floating-circle-buttons">
+    <a href="/ai-assistant.html" class="circle-btn bg-brand-blue ai-widget-toggle" title="AI Assistant"><i class="fa-solid fa-robot"></i></a>
+    <a href="https://wa.me/9788029999" class="circle-btn bg-green" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- AI Assistant Widget (Hidden by default) -->
+<div id="ai-widget-container">
+    <div class="ai-widget-box">
+        <div class="ai-widget-header">
+            <div class="ai-header-left">
+                <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="ai-header-info">
+                    <span class="ai-header-name">Kingston AI Assistant</span>
+                    <span class="ai-header-status">
+                        <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                    </span>
+                </div>
+            </div>
+            <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+        </div>
+        <div class="ai-widget-content">
+            <div id="ai-messages" class="ai-messages"></div>
+            <div class="ai-chips-bar">
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓 Admissions</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰 Fees</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊 Placements</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚 Courses</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠 Hostel</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆 Scholarships</button>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                <button id="ai-send-btn" class="ai-send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-sticky-cta">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-enquiry">Admission Enquiry</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>For Admission</span>
+                <a href="tel:+919788029999"><i class="fa-solid fa-phone"></i> +91 9788029999</a>
+                <a href="mailto:admission@kingston.ac.in"><i class="fa-solid fa-envelope"></i> admission@kingston.ac.in</a>
+            </div>
+            <div class="top-bar-middle hidden-mobile">
+                <a href="/coe.html">COE</a>
+                <a href="/alumni.html">Alumni</a>
+                <a href="/grievance_helpdesk.html">Grievance & Help Desk</a>
+                <a href="/admission.html">Admission</a>
+                <a href="/" title="Student Login">Student-Log In</a>
+                <a href="/" title="Staff Login">Staff-Log In</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/careers.html" class="btn-careers">Careers <i class="fa-solid fa-briefcase"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Logo Bar -->
+    <div class="logo-bar">
+        <div class="container logo-bar-inner">
+            <div class="logo-area">
+                <img src="/assets/images/icons/001-web_logo_banner_2026.png" width="450" height="150" alt="Kingston Engineering College Logo"
+                    class="main-logo" onerror="this.src='/assets/images/icons/001-web_logo_banner_2026.png'">
+            </div>
+            <div class="accreditations-area">
+                <div class="accred-logos">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" fetchpriority="high">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo">
+                    <img src="/assets/images/icons/008-blue-horizontal.png" alt="StartupTN Logo">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo" class="mobile-only-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <div class="notice-label">Register Here</div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content notice-marquee">
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (merged from navbar.html) -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/about.html">About Us</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/about/about_chairman.html">Chairman</a></li>
+                        <li><a href="/about/about_principal.html">Principal</a></li>
+                        <li><a href="/about/about_mou.html">MOU</a></li>
+                        <li><a href="/about/about_awards.html">Awards and Achievements</a></li>
+                        <li><a href="/about/about_organogram.html">Organogram</a></li>
+                        <li><a href="/about/about_governing.html">Governing Council</a></li>
+                        <li><a href="/about/about_accreditation.html">Accreditation</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/departments.html">Departments</a>
+                    <ul class="dropdown dropdown-columns js-exclude-dropdown">
+                        <li><a href="/dept_cse.html">Computer Science and Engineering</a></li>
+                        <li><a href="/dept_aids.html">Artificial Intelligence and Data Science</a></li>
+                        <li><a href="/dept_AI&ML.html">Computer Science Engineering with AI & ML</a></li>
+                        <li><a href="/dept_IT.html">Information Technology</a></li>
+                        <li><a href="/dept_ece.html">Electronics and Communication Engineering</a></li>
+                        <li><a href="/dept_csbs.html">Computer Science and Business Systems</a></li>
+                        <li><a href="/dept_mech.html">Mechanical Engineering</a></li>
+                        <li><a href="/dept_BA.html">Bachelor of Architecture</a></li>
+                        <li><a href="/dept_MBA.html">Masters in Business Administration</a></li>
+                        <li><a href="/dept_S&H.html">Science and Humanities</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                        <li><a href="/salient_features.html">Salient Features</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/regulations.html">Regulation</a></li>
+                        <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                        <li><a href="/academic_calendar.html">Academic Schedule &amp; Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/facilities.html">Facilities</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/facilities/facilities_infrastructure.html">Infrastructure</a></li>
+                        <li><a href="/facilities.html">Facilities</a></li>
+                        <li><a href="/facilities/facilities_event_gallery.html">Event Gallery</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/facilities/facilities_it.html">IT Infrastructure</a></li>
+                        <li><a href="/facilities/facilities_library.html">Library</a></li>
+                        <li><a href="/facilities/facilities_welfare.html">Welfare Measures</a></li>
+                        <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/campus_gallery.html">Campus Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="/policies.html">Policies</a></li>
+                <li class="has-dropdown">
+                    <a href="/placements/placement_pat.html">Placements</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/placements/placement_pat.html">Placement & Training Cell</a></li>
+                        <li><a href="/placements/placement_vision_mission.html">Vision & Mission, Objectives</a></li>
+                        <li><a href="/placements/placement_recruiters.html">Corporate Recruiters</a></li>
+                        <li><a href="/placements/placement_report.html">Placement Report</a></li>
+                        <li><a href="/placements/placement_industry_connect.html">Industry Connect</a></li>
+                        <li><a href="/placements/placement_campus_hiring.html">Campus Hiring</a></li>
+                        <li><a href="/placements/placement_value_added.html">Value added Courses Training</a></li>
+                        <li><a href="/placements/placement_capacity_dev.html">Capacity Dev and Skill Dev</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/iqac/iqac.html">IQAC</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/iqac/iqac_about.html">IQAC</a></li>
+                        <li><a href="/iqac/iqac_mom.html">Minutes of Meeting</a></li>
+                        <li><a href="/iqac/iqac_quality_initiatives.html">IQAC Quality Initiatives</a></li>
+                        <li><a href="/iqac/iqac_annual_reports.html">Annual Reports</a></li>
+                        <li><a href="/iqac/iqac_academic_audit.html">Academic Audit</a></li>
+                        <li><a href="/iqac/iqac_feedback.html">Feedback</a></li>
+                        <li><a href="/iqac/iqac_strategic_plan.html">Strategic Plan 2024</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/naac/naac.html">NAAC</a>
+                    <ul class="dropdown naac-scrollable js-exclude-dropdown">
+                        <li><a href="/naac/naac_iiqa.html">IIQA</a></li>
+                        <li><a href="/naac/naac_ssr.html">SSR</a></li>
+                        <li><a href="/naac/naac_dvv.html">DVV Clarification</a></li>
+                        <li><a href="/naac/naac_rti.html">RTI</a></li>
+                        <li><a href="/naac/naac_extended_profile.html">Extended Profile</a></li>
+                        <li><a href="/naac/naac_curricular_aspects.html">Curricular Aspects</a></li>
+                        <li><a href="/naac/naac_teaching_learning.html">Teaching Learning and Evaluation</a></li>
+                        <li><a href="/naac/naac_research_innovation.html">Research Innovation and Extension</a></li>
+                        <li><a href="/naac/naac_infrastructure.html">Infrastructure and Learning Resource</a></li>
+                        <li><a href="/naac/naac_student_support.html">Student Support Progression</a></li>
+                        <li><a href="/naac/naac_governance.html">Governance, Leadership and Management</a></li>
+                        <li><a href="/naac/naac_institutional_values.html">Institution Values and Best Practices</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC MANDATORY</span><span class="nav-l2">COMMITTEE</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/icc.pdf" target="_blank" rel="noopener">Internal Complaint Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sgrc.pdf" target="_blank" rel="noopener">Students Grievance Redressal Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/posh.pdf" target="_blank" rel="noopener">POSH Cell</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sedg.pdf" target="_blank" rel="noopener">Socio-Economically Disadvantaged Group</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/arc.pdf" target="_blank" rel="noopener">Anti Ragging Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/eqc.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC UNDERTAKING</span><span class="nav-l2">BY HOI</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_I.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - I</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_II.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - II</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown psd-nav-item">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">PUBLIC SELF</span><span class="nav-l2">DISCLOSURE</span></span></a>
+                    <ul class="dropdown psd-dropdown-menu">
+                        <li class="psd-has-sub">
+                            <a href="#"><span>About HEI</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/aboutus.pdf" target="_blank" rel="noopener">About Us</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/act_statutes/act_statutes.pdf" target="_blank" rel="noopener">Act and Statutes</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/institutional_development_plan.pdf" target="_blank" rel="noopener">Institutional Development Plan</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/affiliating_university.pdf" target="_blank" rel="noopener">Affiliating University</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accrediation_ranking/accrediation_ranking.pdf" target="_blank" rel="noopener">Accreditation / Ranking Status</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/recognition_approvals/recognition_approvals.pdf" target="_blank" rel="noopener">Recognition / Approvals</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/annual_reports/annual_reports.pdf" target="_blank" rel="noopener">Annual Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accounts_report/accounts_report.pdf" target="_blank" rel="noopener">Annual Accounts &amp; Audit Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/sponsoring_body/sponsoring_body.pdf" target="_blank" rel="noopener">Sponsoring Body Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Administration</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/finance_officer.pdf" target="_blank" rel="noopener">Finance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/coe.pdf" target="_blank" rel="noopener">Controller of Examination</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/cvo.pdf" target="_blank" rel="noopener">Chief Vigilance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/ombudsperson.pdf" target="_blank" rel="noopener">Ombudsperson</a></li>
+                                <li><a href="/assets/pdfs/bos_protected.pdf" target="_blank" rel="noopener">Executive Council / BOS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/academic_leadership.pdf" target="_blank" rel="noopener">Academic Leadership (HoDs)</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Academic</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_programs.pdf" target="_blank" rel="noopener">Academic Programs</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_calendar.pdf" target="_blank" rel="noopener">Academic Calendars</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/examination/statutes.pdf" target="_blank" rel="noopener">Examinations</a></li>
+                                <li><a href="/departments.html">Department</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/staff/staff.pdf" target="_blank" rel="noopener">Department Wise Faculty Details</a></li>
+                                <li><a href="/iqac/iqac_about.html">Internal Quality Assurance Cell</a></li>
+                                <li><a href="/facilities/facilities_library.html">Library</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/mou/mou.pdf" target="_blank" rel="noopener">Academic Collaborations</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Admissions</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/prospectus.pdf" target="_blank" rel="noopener">Prospectus</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/autonomous/Fee_Refund_Policy.pdf" target="_blank" rel="noopener">Fee Refund Policy</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/admission_policy.pdf" target="_blank" rel="noopener">Admission Process and Guidelines</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Research</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/research_development.pdf" target="_blank" rel="noopener">Research and Development Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/incubation.pdf" target="_blank" rel="noopener">Incubation Centre / Start-Ups / IIC</a></li>
+                                <li><a href="/facilities.html">Central Facilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Student Life</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sports.pdf" target="_blank" rel="noopener">Sports Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/nss/nss.pdf" target="_blank" rel="noopener">NSS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/hostel.pdf" target="_blank" rel="noopener">Hostel Details</a></li>
+                                <li><a href="/placements/placement_pat.html">Placement Cell &amp; Activities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sgrc.pdf" target="_blank" rel="noopener">SGRC and Ombudsperson</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/health.pdf" target="_blank" rel="noopener">Health Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/icc.pdf" target="_blank" rel="noopener">Internal Complaints Committee</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/antiragging.pdf" target="_blank" rel="noopener">Anti Ragging Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/equalopportunity.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sedg.pdf" target="_blank" rel="noopener">SEDG</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/facilityfordifferentlyabled.pdf" target="_blank" rel="noopener">Facilities for Differently Abled</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/alumni/alumni.pdf" target="_blank" rel="noopener"><span>Alumni Association</span></a>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Information Corner</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/naac/rti.pdf" target="_blank" rel="noopener">RTI</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/circular_0001.pdf" target="_blank" rel="noopener">Circulars and Notices</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/announcements.pdf" target="_blank" rel="noopener">Announcements</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/newsletters.pdf" target="_blank" rel="noopener">Newsletters</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/news_events.pdf" target="_blank" rel="noopener">News, Recent Events &amp; Achievements</a></li>
+                                <li><a href="/careers.html">Job Openings</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/studyinindia.pdf" target="_blank" rel="noopener">Admission for International Students</a></li>
+                                <li><a href="https://www.google.com/maps/dir//Chittur,+East+Main+Road,+Christianpet,+Vellore,+632059/@13.0126531,79.0495176,12z" target="_blank" rel="noopener">Details and Location Map</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/facilities/facilities_event_gallery.html"><span>Picture Gallery</span></a></li>
+                        <li><a href="/contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-label">
+                    <span class="menu-label-open">Menu</span>
+                    <span class="menu-label-close">Close</span>
+                </span>
+            </button>
+            <button class="ks-search-trigger" id="ks-search-trigger" title="Search (Ctrl+K)"><i class="fa-solid fa-search"></i><span> Search</span></button>
+        </div>
+    </nav>
+
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="research-hero">
+        <div class="container" data-aos="fade-up">
+            <span class="research-hero-badge"><i class="fa-solid fa-atom"></i> Anna University Recognized Research Centre</span>
+            <h1>Research &amp; Development</h1>
+            <p>Empowering innovation, high-impact scholarly discoveries, and interdisciplinary research driven by esteemed faculty and state-of-the-art facilities.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="res-breadcrumb-bar">
+        <div class="container">
+            <ul class="res-breadcrumb-list">
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+                <li><a href="/academics.html">Academics</a></li>
+                <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+                <li class="current">Research</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sticky Subnav Bar -->
+    <nav class="research-subnav" id="researchSubnav">
+        <div class="container">
+            <div class="subnav-pills">
+                <a href="#research-centre" class="subnav-pill active"><i class="fa-solid fa-building-columns"></i> Research Centre</a>
+                <a href="#doctorates" class="subnav-pill"><i class="fa-solid fa-user-graduate"></i> List of Doctorates</a>
+                <a href="#supervisors" class="subnav-pill"><i class="fa-solid fa-chalkboard-user"></i> Recognized Supervisors</a>
+                <a href="#faculty-phd" class="subnav-pill"><i class="fa-solid fa-book-open-reader"></i> Faculty Pursuing Ph.D</a>
+                <a href="#patents-publications" class="subnav-pill"><i class="fa-solid fa-award"></i> Patents &amp; Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- ==========================================
+             SECTION 1: RESEARCH CENTRE
+             ========================================== -->
+        <section class="res-section" id="research-centre">
+            <div class="container" data-aos="fade-up">
+                <div class="res-sec-header">
+                    <span class="res-sec-badge"><i class="fa-solid fa-landmark"></i> Institutional Research Facility</span>
+                    <h2 class="res-sec-title">Anna University Recognized Research Centre</h2>
+                    <p class="res-sec-desc">A structured ecosystem dedicated to advancing academic rigor, fostering innovative technologies, and supporting student and faculty development.</p>
+                </div>
+
+                <div class="res-overview-card">
+                    <div class="res-text-body">
+                        <p>
+                            The Institute has an R&amp;D unit whose objective is to support and stimulate research and development activities that serve society as a whole, particularly academic improvement. A committee of members, including the head of the institution, the coordinator, and doctoral and senior faculty members from each department, comprise the R&amp;D cell. The research cell's objectives include improving theoretical understanding and creating innovative technologies to address current problems. The cell encourages student and faculty development.
+                        </p>
+                        <p>
+                            The Department of Mechanical and Electrical Engineering has received research recognition from Anna University and has promoted research activities since 2017. Faculty members who received supervisor recognition from Anna University in the respective departments are working as recognised guides in the research centre. Faculty members from several institutions, including Kingston Engineering College, have been pursuing research in the R&amp;D departments. The candidate admitted to research programmes in the department of the institution recognised by Anna University will be observed and assessed by the Research and Development Cell.
+                        </p>
+                        <p>
+                            TNSCST has sanctioned project funding for two student’s projects. The R&amp;D cell's focus is to raise student awareness of research and development opportunities and to encourage faculty members and students to publish research papers in reputable national and international conferences and journals. The management sponsors the most promising projects for prototyping. Guest lectures by renowned researchers, professors, and industrialists are scheduled to promote student and teacher awareness and interest in research. Information about various funding agencies, methods of applying for projects, etc. has been provided through these programmes.
+                        </p>
+                    </div>
+
+                    <div class="res-stats-grid">
+                        <div class="res-stat-card">
+                            <div class="res-stat-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="res-stat-number">2017</div>
+                            <div class="res-stat-label">Anna University Recognition</div>
+                        </div>
+                        <div class="res-stat-card">
+                            <div class="res-stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                            <div class="res-stat-number">21</div>
+                            <div class="res-stat-label">Doctorate Faculty Members</div>
+                        </div>
+                        <div class="res-stat-card">
+                            <div class="res-stat-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <div class="res-stat-number">2</div>
+                            <div class="res-stat-label">Recognized Ph.D Supervisors</div>
+                        </div>
+                        <div class="res-stat-card">
+                            <div class="res-stat-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="res-stat-number">17</div>
+                            <div class="res-stat-label">Faculty Pursuing Ph.D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 2: LIST OF DOCTORATES
+             ========================================== -->
+        <section class="res-section" id="doctorates">
+            <div class="container" data-aos="fade-up">
+                <div class="res-sec-header">
+                    <span class="res-sec-badge"><i class="fa-solid fa-graduation-cap"></i> Doctoral Faculty</span>
+                    <h2 class="res-sec-title">List Of Doctorates</h2>
+                    <p class="res-sec-desc">Distinguished faculty holding Ph.D degrees leading research initiatives, patents, and academic mentorship across various engineering and sciences departments.</p>
+                </div>
+
+                <div class="res-table-card">
+                    <div class="table-filter-bar">
+                        <div class="table-search-box">
+                            <i class="fa-solid fa-search text-gray-400"></i>
+                            <input type="text" id="doctorateSearch" placeholder="Search by name, department...">
+                        </div>
+                        <div class="table-count-badge">Total Doctorates: <strong>21</strong></div>
+                    </div>
+
+                    <div class="res-table-responsive">
+                        <table class="res-table" id="doctorateTable">
+                            <thead>
+                                <tr>
+                                    <th class="sno-col">S.No</th>
+                                    <th>Name of the Faculty</th>
+                                    <th>Department</th>
+                                    <th>Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sno-col">1</td>
+                                    <td class="faculty-name">Dr. Priya S</td>
+                                    <td><span class="dept-badge">Artificial Intelligence and Data Science</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">2</td>
+                                    <td class="faculty-name">Dr. Kannammal N</td>
+                                    <td><span class="dept-badge">Artificial Intelligence and Data Science</span></td>
+                                    <td><span class="desig-badge">Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">3</td>
+                                    <td class="faculty-name">Dr. Dhivya E</td>
+                                    <td><span class="dept-badge">Computer Science and Business Systems</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">4</td>
+                                    <td class="faculty-name">Dr. Arivazhagu U V</td>
+                                    <td><span class="dept-badge">Computer Science and Engineering</span></td>
+                                    <td><span class="desig-badge">Professor / Principal</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">5</td>
+                                    <td class="faculty-name">Dr. Priya T</td>
+                                    <td><span class="dept-badge">Computer Science and Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">6</td>
+                                    <td class="faculty-name">Dr. Balaji S</td>
+                                    <td><span class="dept-badge">Computer Science and Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">7</td>
+                                    <td class="faculty-name">Dr. Venkatesan A</td>
+                                    <td><span class="dept-badge">Electronics and Communication Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">8</td>
+                                    <td class="faculty-name">Dr. Surem Samuel S R</td>
+                                    <td><span class="dept-badge">Electronics and Communication Engineering</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">9</td>
+                                    <td class="faculty-name">Dr. Deepa S</td>
+                                    <td><span class="dept-badge">Electrical and Electronics Engineering</span></td>
+                                    <td><span class="desig-badge">Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">10</td>
+                                    <td class="faculty-name">Dr. Vasumathy M</td>
+                                    <td><span class="dept-badge">Information Technology</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">11</td>
+                                    <td class="faculty-name">Dr. Aswinipriya S</td>
+                                    <td><span class="dept-badge">Master of Business Administration</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">12</td>
+                                    <td class="faculty-name">Dr. Mahendiran S</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">13</td>
+                                    <td class="faculty-name">Dr. Shankar Ganesh N</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">14</td>
+                                    <td class="faculty-name">Dr. Archana S</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">15</td>
+                                    <td class="faculty-name">Dr. Elakkiya V</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">16</td>
+                                    <td class="faculty-name">Dr. Naveenkumar G</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">17</td>
+                                    <td class="faculty-name">Dr. Sheeba W T</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">18</td>
+                                    <td class="faculty-name">Dr. Touseef Ahmed A</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">19</td>
+                                    <td class="faculty-name">Dr. Latha R</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">20</td>
+                                    <td class="faculty-name">Dr. Kumaresan E</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">21</td>
+                                    <td class="faculty-name">Dr. Sivakumar D</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Associate Professor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 3: RECOGNIZED RESEARCH SUPERVISORS
+             ========================================== -->
+        <section class="res-section" id="supervisors">
+            <div class="container" data-aos="fade-up">
+                <div class="res-sec-header">
+                    <span class="res-sec-badge"><i class="fa-solid fa-stamp"></i> Anna University Approved</span>
+                    <h2 class="res-sec-title">Recognized Research Supervisors</h2>
+                    <p class="res-sec-desc">Faculty members recognized by Anna University to guide doctoral candidates in conducting advanced engineering research.</p>
+                </div>
+
+                <div class="res-table-card">
+                    <div class="res-table-responsive">
+                        <table class="res-table">
+                            <thead>
+                                <tr>
+                                    <th class="sno-col">S.No</th>
+                                    <th>Name of the Faculty</th>
+                                    <th>Department</th>
+                                    <th>Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sno-col">1</td>
+                                    <td class="faculty-name">Dr. S. Deepa</td>
+                                    <td><span class="dept-badge">Electrical and Electronics Engineering (EEE)</span></td>
+                                    <td><span class="desig-badge">Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">2</td>
+                                    <td class="faculty-name">Dr. N. Shankarganesh</td>
+                                    <td><span class="dept-badge">Mechanical Engineering (MECH)</span></td>
+                                    <td><span class="desig-badge">Professor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 4: FACULTY PURSUING PH.D
+             ========================================== -->
+        <section class="res-section" id="faculty-phd">
+            <div class="container" data-aos="fade-up">
+                <div class="res-sec-header">
+                    <span class="res-sec-badge"><i class="fa-solid fa-microscope"></i> Scholarly Growth</span>
+                    <h2 class="res-sec-title">Faculty Pursuing Ph.D</h2>
+                    <p class="res-sec-desc">Faculty members actively engaged in doctoral research programs, expanding knowledge in key multidisciplinary technology domains.</p>
+                </div>
+
+                <div class="res-table-card">
+                    <div class="table-filter-bar">
+                        <div class="table-search-box">
+                            <i class="fa-solid fa-search text-gray-400"></i>
+                            <input type="text" id="pursuingSearch" placeholder="Search by name, department...">
+                        </div>
+                        <div class="table-count-badge">Total Pursuing: <strong>17</strong></div>
+                    </div>
+
+                    <div class="res-table-responsive">
+                        <table class="res-table" id="pursuingTable">
+                            <thead>
+                                <tr>
+                                    <th class="sno-col">S.No</th>
+                                    <th>Name of the Faculty</th>
+                                    <th>Department</th>
+                                    <th>Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sno-col">1</td>
+                                    <td class="faculty-name">Mrs. Geetha N</td>
+                                    <td><span class="dept-badge">Artificial Intelligence and Data Science</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">2</td>
+                                    <td class="faculty-name">Ms. Anitha M</td>
+                                    <td><span class="dept-badge">Computer Science and Business Systems</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">3</td>
+                                    <td class="faculty-name">Mrs. Thulasi Bruntha B</td>
+                                    <td><span class="dept-badge">Electronics and Communication Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">4</td>
+                                    <td class="faculty-name">Mrs. Radhika M</td>
+                                    <td><span class="dept-badge">Electronics and Communication Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">5</td>
+                                    <td class="faculty-name">Mrs. Vanitha N</td>
+                                    <td><span class="dept-badge">Electronics and Communication Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">6</td>
+                                    <td class="faculty-name">Mrs. Sowmya N G</td>
+                                    <td><span class="dept-badge">Electrical and Electronics Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">7</td>
+                                    <td class="faculty-name">Mrs. Menaka M</td>
+                                    <td><span class="dept-badge">Information Technology</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">8</td>
+                                    <td class="faculty-name">Mrs. Sarah S</td>
+                                    <td><span class="dept-badge">Information Technology</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">9</td>
+                                    <td class="faculty-name">Mr. Gajendiran K S</td>
+                                    <td><span class="dept-badge">Information Technology</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">10</td>
+                                    <td class="faculty-name">Ms. Nathiya S</td>
+                                    <td><span class="dept-badge">Information Technology</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">11</td>
+                                    <td class="faculty-name">Mr. Keerthi Varman N</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">12</td>
+                                    <td class="faculty-name">Mr. Charunnath S V</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">13</td>
+                                    <td class="faculty-name">Mr. Vigneshwaran R</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">14</td>
+                                    <td class="faculty-name">Mr. Rudramoorthy S</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">15</td>
+                                    <td class="faculty-name">Mr. Dineshkumar H</td>
+                                    <td><span class="dept-badge">Mechanical Engineering</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">16</td>
+                                    <td class="faculty-name">Mr. Selvakumar K</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="sno-col">17</td>
+                                    <td class="faculty-name">Mrs. Punithavathi L</td>
+                                    <td><span class="dept-badge">Science and Humanities</span></td>
+                                    <td><span class="desig-badge">Assistant Professor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 5: PATENTS & PUBLICATIONS
+             ========================================== -->
+        <section class="res-section" id="patents-publications">
+            <div class="container" data-aos="fade-up">
+                <div class="res-sec-header">
+                    <span class="res-sec-badge"><i class="fa-solid fa-newspaper"></i> Scholarly Output</span>
+                    <h2 class="res-sec-title">Patents &amp; Publications</h2>
+                    <p class="res-sec-desc">Comprehensive compilation of research papers, conference proceedings, peer-reviewed journals, and published intellectual property.</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="pub-tabs">
+                    <button class="pub-tab-btn active" data-tab="conferences"><i class="fa-solid fa-users-rectangle"></i> Conferences (4)</button>
+                    <button class="pub-tab-btn" data-tab="journals"><i class="fa-solid fa-book-bookmark"></i> Journals (2)</button>
+                    <button class="pub-tab-btn" data-tab="patents"><i class="fa-solid fa-lightbulb"></i> Patents (7)</button>
+                </div>
+
+                <!-- Pane 1: Conferences -->
+                <div class="pub-pane active" id="pane-conferences">
+                    <div class="pub-cards-grid">
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-book"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Conference Proceedings</span>
+                                    <h4>Conferences Books &amp; Chapters</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/conference/conferences-books&chapters.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/conference/conferences-books&chapters.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-book-open"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Conference Proceedings</span>
+                                    <h4>Conferences Books</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/conference/conferences-books.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/conference/conferences-books.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Conference Proceedings</span>
+                                    <h4>Conferences Papers</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/conference/conferences-papers.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/conference/conferences-papers.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-table-list"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Conference Proceedings</span>
+                                    <h4>Conferences Sheet 1</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/conference/conferences-sheet1.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/conference/conferences-sheet1.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 2: Journals -->
+                <div class="pub-pane" id="pane-journals">
+                    <div class="pub-cards-grid">
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-newspaper"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Peer-Reviewed Journals</span>
+                                    <h4>Journal Sheet 1</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/journal/Journal-sheet1.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/journal/Journal-sheet1.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-newspaper"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Peer-Reviewed Journals</span>
+                                    <h4>Journal Publications 2021–2022</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/journal/Journal-2021-2022.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/journal/Journal-2021-2022.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: Patents -->
+                <div class="pub-pane" id="pane-patents">
+                    <div class="pub-cards-grid">
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Intellectual Property</span>
+                                    <h4>Patents Record</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/patents/Patents.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/patents/Patents.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 01/2018 (05/01/2018)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_012018_dated_05012018.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_012018_dated_05012018.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 24/2019 (14/06/2019)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_242019_dated_14062019.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_242019_dated_14062019.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 38/2019 (20/09/2019)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_382019_dated_20092019.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_382019_dated_20092019.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 42/2019 (18/10/2019)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_422019_dated_18_10201.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_422019_dated_18_10201.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 08/2020 (21/02/2020)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_082020_dated_21022020.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_082020_dated_21022020.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="pub-card">
+                            <div class="pub-card-top">
+                                <div class="pub-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="pub-card-info">
+                                    <span class="pub-card-category">Patent Office Journal</span>
+                                    <h4>The Patent Office Journal No. 06/2022 (11/02/2022)</h4>
+                                </div>
+                            </div>
+                            <div class="pub-card-actions">
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_062022_dated_11022022.pdf" target="_blank" rel="noopener" class="btn-pub-view"><i class="fa-solid fa-eye"></i> View Document</a>
+                                <a href="/assets/pdfs/research/the_patent_office_journal_no_062022_dated_11022022.pdf" download class="btn-pub-download" title="Download"><i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+<!-- ================================ -->
+<!-- ================================ -->
+<!-- ================================ -->
+<!-- FOOTER COMPONENT - components/footer.html -->
+<!-- Single Source of Truth for Footer -->
+<!-- All href paths are root-relative (start with /) for compatibility
+     across pages at any directory depth -->
+<!-- ================================ -->
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col about-col">
+            <h3 class="footer-college-name">KINGSTON ENGINEERING COLLEGE</h3>
+            <p>Approved by AICTE, Affiliated to Anna University, NAAC 'A' Grade. Committed to excellence in technical education since 2008.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Vellore – Katpadi Road, Vellore, Tamil Nadu – 632 059</li>
+                <li><i class="fa-solid fa-phone"></i> +91-9788029999 / 0416-2298300</li>
+                <li><i class="fa-solid fa-envelope"></i> info@kingston.ac.in</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/admission.html">Admissions</a></li>
+                <li><a href="/departments.html">Departments</a></li>
+                <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                <li><a href="/salient_features.html">Salient Features</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
+                <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                <li><a href="/academic_calendar.html">Academic Calendar</a></li>
+                <li><a href="/facilities.html">Facilities</a></li>
+                <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                <li><a href="/placements/placement_pat.html">Placements</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="https://kingston.ac.in/engineering-resources/mandatory_disclosure.html" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMMES</h4>
+            <ul class="footer-links">
+                <li><a href="/dept_cse.html">B.E. Computer Science</a></li>
+                <li><a href="/dept_ece.html">B.E. Electronics & Comm.</a></li>
+                <li><a href="/dept_mech.html">B.E. Mechanical</a></li>
+                <li><a href="/dept_IT.html">B.Tech. Information Technology</a></li>
+                <li><a href="/dept_MBA.html">MBA</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>ACCREDITATIONS</h4>
+            <div class="accred-badges">
+                <span class="badge red">AICTE Approved</span>
+                <span class="badge red">NAAC 'A' Grade</span>
+                <span class="badge red">ISO 9001:2015 &amp; 21001:2018</span>
+                <span class="badge red">Anna University</span>
+                <span class="badge red">UGC 2(f) & 12(B)</span>
+            </div>
+
+            <h4 class="mt-6">FOLLOW US</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/kingstonvlr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kingstonengineeringcollege" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kingston-engineering-college" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flex justify-between align-center">
+            <p>&copy; 2026-27 Kingston Engineering College. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-assistant.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Publications Tab Switcher
+        document.querySelectorAll('.pub-tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.pub-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.pub-pane').forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                const targetId = 'pane-' + btn.getAttribute('data-tab');
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) targetPane.classList.add('active');
+            });
+        });
+
+        // Search Filter for Doctorate Table
+        const docSearch = document.getElementById('doctorateSearch');
+        if (docSearch) {
+            docSearch.addEventListener('keyup', function() {
+                const val = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#doctorateTable tbody tr');
+                rows.forEach(r => {
+                    const text = r.textContent.toLowerCase();
+                    r.style.display = text.includes(val) ? '' : 'none';
+                });
+            });
+        }
+
+        // Search Filter for Pursuing Ph.D Table
+        const purSearch = document.getElementById('pursuingSearch');
+        if (purSearch) {
+            purSearch.addEventListener('keyup', function() {
+                const val = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#pursuingTable tbody tr');
+                rows.forEach(r => {
+                    const text = r.textContent.toLowerCase();
+                    r.style.display = text.includes(val) ? '' : 'none';
+                });
+            });
+        }
+
+        // Highlight Active Subnav Pill on Scroll
+        const sections = document.querySelectorAll('.res-section');
+        const navPills = document.querySelectorAll('.subnav-pill');
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 140;
+                if (window.pageYOffset >= top) {
+                    current = sec.getAttribute('id');
+                }
+            });
+            navPills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.getAttribute('href') === '#' + current) {
+                    pill.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

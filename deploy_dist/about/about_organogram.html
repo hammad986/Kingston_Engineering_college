@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kingston Engineering College</title>
+    <meta name="description" content="About Us at Kingston Engineering College (Autonomous), Vellore. AICTE approved, Anna University affiliated, NAAC A grade institution.">
+    <link rel="canonical" href="https://engineering.kingston.ac.in/about/about_organogram.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kingston Engineering College">
+    <meta property="og:title" content="About Us - Kingston Engineering College">
+    <meta property="og:url" content="https://engineering.kingston.ac.in/about/about_organogram.html">
+    <meta property="og:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+    <meta property="og:description" content="About Us at Kingston Engineering College (Autonomous), Vellore. AICTE approved, Anna University affiliated, NAAC A grade institution.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Kingston Engineering College">
+    <meta name="twitter:description" content="About Us at Kingston Engineering College (Autonomous), Vellore. AICTE approved, Anna University affiliated, NAAC A grade institution.">
+    <meta name="twitter:image" content="https://engineering.kingston.ac.in/assets/images/og-cover.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" / integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/ai-assistant.css">
+    <!-- Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/typography.css">
+</head>
+
+<body>
+
+<!-- ================================ -->
+<!-- HEADER COMPONENT - components/header.html -->
+<!-- Single Source of Truth for Header -->
+<!-- ================================ -->
+
+<!-- Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<!-- Floating Buttons -->
+<div class="floating-side-buttons">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-side bg-brand-yellow text-black rotate-text">Admission Enquiry</a>
+</div>
+
+<div class="floating-circle-buttons">
+    <a href="/ai-assistant.html" class="circle-btn bg-brand-blue ai-widget-toggle" title="AI Assistant"><i class="fa-solid fa-robot"></i></a>
+    <a href="https://wa.me/9788029999" class="circle-btn bg-green" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- AI Assistant Widget (Hidden by default) -->
+<div id="ai-widget-container">
+    <div class="ai-widget-box">
+        <div class="ai-widget-header">
+            <div class="ai-header-left">
+                <div class="ai-header-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="ai-header-info">
+                    <span class="ai-header-name">Kingston AI Assistant</span>
+                    <span class="ai-header-status">
+                        <span class="ai-status-dot"></span> Online &bull; Ask me anything
+                    </span>
+                </div>
+            </div>
+            <button class="ai-widget-close" id="ai-widget-close" title="Close">&times;</button>
+        </div>
+        <div class="ai-widget-content">
+            <div id="ai-messages" class="ai-messages"></div>
+            <div class="ai-chips-bar">
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about admissions'); window.KingstonAI?.handleSendMessage('widget');">🎓 Admissions</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What is the fee structure?'); window.KingstonAI?.handleSendMessage('widget');">💰 Fees</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about placements'); window.KingstonAI?.handleSendMessage('widget');">📊 Placements</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('What courses are offered?'); window.KingstonAI?.handleSendMessage('widget');">📚 Courses</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about hostel facilities'); window.KingstonAI?.handleSendMessage('widget');">🏠 Hostel</button>
+                <button class="ai-chip-btn" onclick="window.KingstonAI?.setInput('Tell me about scholarships'); window.KingstonAI?.handleSendMessage('widget');">🏆 Scholarships</button>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="ai-input" class="ai-input" placeholder="Type your question...">
+                <button id="ai-send-btn" class="ai-send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-sticky-cta">
+    <a href="https://forms.gle/jU8oocUaJGgYxc459" class="btn-enquiry">Admission Enquiry</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>For Admission</span>
+                <a href="tel:+919788029999"><i class="fa-solid fa-phone"></i> +91 9788029999</a>
+                <a href="mailto:admission@kingston.ac.in"><i class="fa-solid fa-envelope"></i> admission@kingston.ac.in</a>
+            </div>
+            <div class="top-bar-middle hidden-mobile">
+                <a href="/coe.html">COE</a>
+                <a href="/alumni.html">Alumni</a>
+                <a href="/grievance_helpdesk.html">Grievance & Help Desk</a>
+                <a href="/admission.html">Admission</a>
+                <a href="/" title="Student Login">Student-Log In</a>
+                <a href="/" title="Staff Login">Staff-Log In</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/careers.html" class="btn-careers">Careers <i class="fa-solid fa-briefcase"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Logo Bar -->
+    <div class="logo-bar">
+        <div class="container logo-bar-inner">
+            <div class="logo-area">
+                <img src="/assets/images/icons/001-web_logo_banner_2026.png" width="450" height="150" alt="Kingston Engineering College Logo"
+                    class="main-logo" onerror="this.src='/assets/images/icons/001-web_logo_banner_2026.png'">
+            </div>
+            <div class="accreditations-area">
+                <div class="accred-logos">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" fetchpriority="high">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo">
+                    <img src="/assets/images/icons/008-blue-horizontal.png" alt="StartupTN Logo">
+                    <img src="/assets/images/icons/002-UGC_India_Logo.png" alt="University Grants Commission India Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/003-All_India_Council_for_Technical_Education_logo.png" alt="All India Council for Technical Education Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/004-coa.png" alt="Council of Architecture Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/005-Anna_University_Logo.svg.png" alt="Anna University Chennai Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/006-naaclogo-a.png" alt="NAAC A Grade Accreditation Logo" class="mobile-only-logo">
+                    <img src="/assets/images/icons/007-IIC_logo-e1671727022354.png" alt="Institution Innovation Council Logo" class="mobile-only-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Bar -->
+    <div class="notice-bar">
+        <div class="notice-label">Register Here</div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content notice-marquee">
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+                <span style="color: white;">Tamil Nadu Govt's En kanavu En Ethirkaalam - <a href="/facilities/facilities_event_gallery.html" style="color: #ffc107; text-decoration: underline;">Click Here</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar (merged from navbar.html) -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+                <li><a href="/index.html" id="nav-home">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/about.html">About Us</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/about/about_chairman.html">Chairman</a></li>
+                        <li><a href="/about/about_principal.html">Principal</a></li>
+                        <li><a href="/about/about_mou.html">MOU</a></li>
+                        <li><a href="/about/about_awards.html">Awards and Achievements</a></li>
+                        <li><a href="/about/about_organogram.html">Organogram</a></li>
+                        <li><a href="/about/about_governing.html">Governing Council</a></li>
+                        <li><a href="/about/about_accreditation.html">Accreditation</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/departments.html">Departments</a>
+                    <ul class="dropdown dropdown-columns js-exclude-dropdown">
+                        <li><a href="/dept_cse.html">Computer Science and Engineering</a></li>
+                        <li><a href="/dept_aids.html">Artificial Intelligence and Data Science</a></li>
+                        <li><a href="/dept_AI&ML.html">Computer Science Engineering with AI & ML</a></li>
+                        <li><a href="/dept_IT.html">Information Technology</a></li>
+                        <li><a href="/dept_ece.html">Electronics and Communication Engineering</a></li>
+                        <li><a href="/dept_csbs.html">Computer Science and Business Systems</a></li>
+                        <li><a href="/dept_mech.html">Mechanical Engineering</a></li>
+                        <li><a href="/dept_BA.html">Bachelor of Architecture</a></li>
+                        <li><a href="/dept_MBA.html">Masters in Business Administration</a></li>
+                        <li><a href="/dept_S&H.html">Science and Humanities</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/academics.html">Academics</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                        <li><a href="/salient_features.html">Salient Features</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/regulations.html">Regulation</a></li>
+                        <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                        <li><a href="/academic_calendar.html">Academic Schedule &amp; Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/facilities.html">Facilities</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/facilities/facilities_infrastructure.html">Infrastructure</a></li>
+                        <li><a href="/facilities.html">Facilities</a></li>
+                        <li><a href="/facilities/facilities_event_gallery.html">Event Gallery</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/facilities/facilities_it.html">IT Infrastructure</a></li>
+                        <li><a href="/facilities/facilities_library.html">Library</a></li>
+                        <li><a href="/facilities/facilities_welfare.html">Welfare Measures</a></li>
+                        <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/campus_gallery.html">Campus Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="/policies.html">Policies</a></li>
+                <li class="has-dropdown">
+                    <a href="/placements/placement_pat.html">Placements</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/placements/placement_pat.html">Placement & Training Cell</a></li>
+                        <li><a href="/placements/placement_vision_mission.html">Vision & Mission, Objectives</a></li>
+                        <li><a href="/placements/placement_recruiters.html">Corporate Recruiters</a></li>
+                        <li><a href="/placements/placement_report.html">Placement Report</a></li>
+                        <li><a href="/placements/placement_industry_connect.html">Industry Connect</a></li>
+                        <li><a href="/placements/placement_campus_hiring.html">Campus Hiring</a></li>
+                        <li><a href="/placements/placement_value_added.html">Value added Courses Training</a></li>
+                        <li><a href="/placements/placement_capacity_dev.html">Capacity Dev and Skill Dev</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/iqac/iqac.html">IQAC</a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="/iqac/iqac_about.html">IQAC</a></li>
+                        <li><a href="/iqac/iqac_mom.html">Minutes of Meeting</a></li>
+                        <li><a href="/iqac/iqac_quality_initiatives.html">IQAC Quality Initiatives</a></li>
+                        <li><a href="/iqac/iqac_annual_reports.html">Annual Reports</a></li>
+                        <li><a href="/iqac/iqac_academic_audit.html">Academic Audit</a></li>
+                        <li><a href="/iqac/iqac_feedback.html">Feedback</a></li>
+                        <li><a href="/iqac/iqac_strategic_plan.html">Strategic Plan 2024</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/naac/naac.html">NAAC</a>
+                    <ul class="dropdown naac-scrollable js-exclude-dropdown">
+                        <li><a href="/naac/naac_iiqa.html">IIQA</a></li>
+                        <li><a href="/naac/naac_ssr.html">SSR</a></li>
+                        <li><a href="/naac/naac_dvv.html">DVV Clarification</a></li>
+                        <li><a href="/naac/naac_rti.html">RTI</a></li>
+                        <li><a href="/naac/naac_extended_profile.html">Extended Profile</a></li>
+                        <li><a href="/naac/naac_curricular_aspects.html">Curricular Aspects</a></li>
+                        <li><a href="/naac/naac_teaching_learning.html">Teaching Learning and Evaluation</a></li>
+                        <li><a href="/naac/naac_research_innovation.html">Research Innovation and Extension</a></li>
+                        <li><a href="/naac/naac_infrastructure.html">Infrastructure and Learning Resource</a></li>
+                        <li><a href="/naac/naac_student_support.html">Student Support Progression</a></li>
+                        <li><a href="/naac/naac_governance.html">Governance, Leadership and Management</a></li>
+                        <li><a href="/naac/naac_institutional_values.html">Institution Values and Best Practices</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC MANDATORY</span><span class="nav-l2">COMMITTEE</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/icc.pdf" target="_blank" rel="noopener">Internal Complaint Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sgrc.pdf" target="_blank" rel="noopener">Students Grievance Redressal Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/posh.pdf" target="_blank" rel="noopener">POSH Cell</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/sedg.pdf" target="_blank" rel="noopener">Socio-Economically Disadvantaged Group</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/arc.pdf" target="_blank" rel="noopener">Anti Ragging Committee</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Mandatory_Committee/eqc.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">UGC UNDERTAKING</span><span class="nav-l2">BY HOI</span></span></a>
+                    <ul class="dropdown js-exclude-dropdown">
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_I.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - I</a></li>
+                        <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/UGC_Undertaking_Letter_by_HOI/UGC_HOI_II.pdf" target="_blank" rel="noopener">UGC Undertaking Letter by HOI - II</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown psd-nav-item">
+                    <a href="#"><span class="nav-two-line"><span class="nav-l1">PUBLIC SELF</span><span class="nav-l2">DISCLOSURE</span></span></a>
+                    <ul class="dropdown psd-dropdown-menu">
+                        <li class="psd-has-sub">
+                            <a href="#"><span>About HEI</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/aboutus.pdf" target="_blank" rel="noopener">About Us</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/act_statutes/act_statutes.pdf" target="_blank" rel="noopener">Act and Statutes</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/institutional_development_plan.pdf" target="_blank" rel="noopener">Institutional Development Plan</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/affiliating_university.pdf" target="_blank" rel="noopener">Affiliating University</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accrediation_ranking/accrediation_ranking.pdf" target="_blank" rel="noopener">Accreditation / Ranking Status</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/recognition_approvals/recognition_approvals.pdf" target="_blank" rel="noopener">Recognition / Approvals</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/annual_reports/annual_reports.pdf" target="_blank" rel="noopener">Annual Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/accounts_report/accounts_report.pdf" target="_blank" rel="noopener">Annual Accounts &amp; Audit Reports</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/about_hei/sponsoring_body/sponsoring_body.pdf" target="_blank" rel="noopener">Sponsoring Body Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Administration</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/finance_officer.pdf" target="_blank" rel="noopener">Finance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/coe.pdf" target="_blank" rel="noopener">Controller of Examination</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/cvo.pdf" target="_blank" rel="noopener">Chief Vigilance Officer</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/ombudsperson.pdf" target="_blank" rel="noopener">Ombudsperson</a></li>
+                                <li><a href="/assets/pdfs/bos_protected.pdf" target="_blank" rel="noopener">Executive Council / BOS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/administration/academic_leadership.pdf" target="_blank" rel="noopener">Academic Leadership (HoDs)</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Academic</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_programs.pdf" target="_blank" rel="noopener">Academic Programs</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/academic_calendar.pdf" target="_blank" rel="noopener">Academic Calendars</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/examination/statutes.pdf" target="_blank" rel="noopener">Examinations</a></li>
+                                <li><a href="/departments.html">Department</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/staff/staff.pdf" target="_blank" rel="noopener">Department Wise Faculty Details</a></li>
+                                <li><a href="/iqac/iqac_about.html">Internal Quality Assurance Cell</a></li>
+                                <li><a href="/facilities/facilities_library.html">Library</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/academic/mou/mou.pdf" target="_blank" rel="noopener">Academic Collaborations</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Admissions</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/prospectus.pdf" target="_blank" rel="noopener">Prospectus</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/autonomous/Fee_Refund_Policy.pdf" target="_blank" rel="noopener">Fee Refund Policy</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/admission/admission_policy.pdf" target="_blank" rel="noopener">Admission Process and Guidelines</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Research</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/research_development.pdf" target="_blank" rel="noopener">Research and Development Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/research/incubation.pdf" target="_blank" rel="noopener">Incubation Centre / Start-Ups / IIC</a></li>
+                                <li><a href="/facilities.html">Central Facilities</a></li>
+                            </ul>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Student Life</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sports.pdf" target="_blank" rel="noopener">Sports Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/nss/nss.pdf" target="_blank" rel="noopener">NSS</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/hostel.pdf" target="_blank" rel="noopener">Hostel Details</a></li>
+                                <li><a href="/placements/placement_pat.html">Placement Cell &amp; Activities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sgrc.pdf" target="_blank" rel="noopener">SGRC and Ombudsperson</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/health.pdf" target="_blank" rel="noopener">Health Facilities</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/icc.pdf" target="_blank" rel="noopener">Internal Complaints Committee</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/antiragging.pdf" target="_blank" rel="noopener">Anti Ragging Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/equalopportunity.pdf" target="_blank" rel="noopener">Equal Opportunity Cell</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/sedg.pdf" target="_blank" rel="noopener">SEDG</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/student_life/facilityfordifferentlyabled.pdf" target="_blank" rel="noopener">Facilities for Differently Abled</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/alumni/alumni.pdf" target="_blank" rel="noopener"><span>Alumni Association</span></a>
+                        </li>
+                        <li class="psd-has-sub">
+                            <a href="#"><span>Information Corner</span><i class="fa-solid fa-chevron-left psd-arrow"></i></a>
+                            <ul class="psd-sub-flyout">
+                                <li><a href="https://kingston.ac.in/engineering-resources/naac/rti.pdf" target="_blank" rel="noopener">RTI</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/circular_0001.pdf" target="_blank" rel="noopener">Circulars and Notices</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/announcements.pdf" target="_blank" rel="noopener">Announcements</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/newsletters.pdf" target="_blank" rel="noopener">Newsletters</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/news_events.pdf" target="_blank" rel="noopener">News, Recent Events &amp; Achievements</a></li>
+                                <li><a href="/careers.html">Job Openings</a></li>
+                                <li><a href="https://kingston.ac.in/engineering-resources/ugc_mandatory_disclosure/information_corner/studyinindia.pdf" target="_blank" rel="noopener">Admission for International Students</a></li>
+                                <li><a href="https://www.google.com/maps/dir//Chittur,+East+Main+Road,+Christianpet,+Vellore,+632059/@13.0126531,79.0495176,12z" target="_blank" rel="noopener">Details and Location Map</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/facilities/facilities_event_gallery.html"><span>Picture Gallery</span></a></li>
+                        <li><a href="/contact.html"><span>Contact Us</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="menu-label">
+                    <span class="menu-label-open">Menu</span>
+                    <span class="menu-label-close">Close</span>
+                </span>
+            </button>
+            <button class="ks-search-trigger" id="ks-search-trigger" title="Search (Ctrl+K)"><i class="fa-solid fa-search"></i><span> Search</span></button>
+        </div>
+    </nav>
+
+</header>
+
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         ORGANOGRAM — Premium Animated Interactive Showcase
+         ════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ── Page Wrapper ── */
+        .org-page {
+            background: #f8f4f0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ── Hero Banner ── */
+        .org-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, #8b1a2b 0%, #a01f34 30%, #c0392b 60%, #6d1220 100%);
+            padding: 72px 0 80px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Animated diagonal stripes */
+        .org-hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-55deg,
+                    rgba(255, 255, 255, 0.04) 0px,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px,
+                    transparent 40px);
+            animation: stripeMove 20s linear infinite;
+        }
+
+        @keyframes stripeMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 200px 200px;
+            }
+        }
+
+        /* Floating circles */
+        .org-hero-banner::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 80px solid rgba(255, 255, 255, 0.05);
+            top: -180px;
+            right: -120px;
+            animation: rotateSlow 25s linear infinite;
+        }
+
+        @keyframes rotateSlow {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .org-banner-inner {
+            position: relative;
+            z-index: 5;
+        }
+
+        .org-banner-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #ffd080;
+            margin-bottom: 16px;
+            animation: orgFadeUp 0.7s 0.2s both;
+        }
+
+        .org-banner-eyebrow::before,
+        .org-banner-eyebrow::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #ffd080;
+        }
+
+        .org-banner-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: orgFadeUp 0.7s 0.35s both;
+        }
+
+        .org-banner-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 540px;
+            margin: 0 auto 28px;
+            animation: orgFadeUp 0.7s 0.5s both;
+        }
+
+        .org-banner-pills {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            animation: orgFadeUp 0.7s 0.65s both;
+        }
+
+        .org-banner-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            cursor: default;
+        }
+
+        .org-banner-pill:hover {
+            background: rgba(255, 255, 255, 0.26);
+            transform: translateY(-2px);
+        }
+
+        @keyframes orgFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Wavy Divider ── */
+        .org-wave-divider {
+            line-height: 0;
+            background: #8b1a2b;
+        }
+
+        .org-wave-divider svg {
+            display: block;
+        }
+
+        /* ── Image Section ── */
+        .org-img-section {
+            background: #f8f4f0;
+            padding: 70px 0 80px;
+            position: relative;
+        }
+
+        /* Floating geometric shapes (no glass) */
+        .org-geo {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .org-geo-1 {
+            width: 180px;
+            height: 180px;
+            border: 3px solid rgba(139, 26, 43, 0.12);
+            border-radius: 0;
+            top: 40px;
+            left: -60px;
+            transform: rotate(30deg);
+            animation: geoSpin1 18s linear infinite;
+        }
+
+        .org-geo-2 {
+            width: 120px;
+            height: 120px;
+            border: 3px solid rgba(245, 197, 24, 0.2);
+            border-radius: 50%;
+            bottom: 60px;
+            right: -40px;
+            animation: geoSpin2 14s linear infinite;
+        }
+
+        .org-geo-3 {
+            width: 80px;
+            height: 80px;
+            background: rgba(139, 26, 43, 0.06);
+            border-radius: 8px;
+            top: 30%;
+            right: 60px;
+            transform: rotate(20deg);
+            animation: geoFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes geoSpin1 {
+            to {
+                transform: rotate(390deg);
+            }
+        }
+
+        @keyframes geoSpin2 {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes geoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(20deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(30deg);
+            }
+        }
+
+        /* ── Image Frame Wrapper ── */
+        .org-img-frame-wrap {
+            position: relative;
+            z-index: 5;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Corner accent decorations */
+        .org-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: #8b1a2b;
+            border-style: solid;
+            z-index: 10;
+        }
+
+        .org-corner-tl {
+            top: -8px;
+            left: -8px;
+            border-width: 3px 0 0 3px;
+        }
+
+        .org-corner-tr {
+            top: -8px;
+            right: -8px;
+            border-width: 3px 3px 0 0;
+        }
+
+        .org-corner-bl {
+            bottom: -8px;
+            left: -8px;
+            border-width: 0 0 3px 3px;
+        }
+
+        .org-corner-br {
+            bottom: -8px;
+            right: -8px;
+            border-width: 0 3px 3px 0;
+        }
+
+        /* Pulsing glow border */
+        .org-img-border-glow {
+            position: absolute;
+            inset: -3px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #8b1a2b, #f5c518, #8b1a2b, #003366, #8b1a2b);
+            background-size: 400% 400%;
+            animation: borderGradient 6s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes borderGradient {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* ── Image Container with Zoom/Pan ── */
+        .org-img-container {
+            position: relative;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.18), 0 4px 20px rgba(139, 26, 43, 0.1);
+            cursor: grab;
+            user-select: none;
+            line-height: 0;
+        }
+
+        .org-img-container:active {
+            cursor: grabbing;
+        }
+
+        .org-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform-origin: center center;
+            transition: transform 0.12s ease;
+            pointer-events: none;
+        }
+
+        /* ── Toolbar ── */
+        .org-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 22px auto 0;
+            padding: 0 4px;
+            z-index: 5;
+            position: relative;
+        }
+
+        .org-toolbar-left {
+            display: flex;
+            gap: 10px;
+        }
+
+        .org-tool-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.83rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .org-tool-btn.primary {
+            background: linear-gradient(135deg, #8b1a2b, #c0392b);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(139, 26, 43, 0.3);
+        }
+
+        .org-tool-btn.primary:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(139, 26, 43, 0.45);
+        }
+
+        .org-tool-btn.secondary {
+            background: #fff;
+            color: #8b1a2b;
+            border: 2px solid #8b1a2b;
+        }
+
+        .org-tool-btn.secondary:hover {
+            background: #8b1a2b;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .org-tool-btn.gold {
+            background: linear-gradient(135deg, #f5c518, #e5a800);
+            color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(245, 197, 24, 0.35);
+        }
+
+        .org-tool-btn.gold:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(245, 197, 24, 0.5);
+        }
+
+        .org-zoom-display {
+            background: #fff;
+            border: 2px solid rgba(139, 26, 43, 0.25);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #8b1a2b;
+            min-width: 64px;
+            text-align: center;
+        }
+
+        /* ── Instruction hint ── */
+        .org-hint {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.78rem;
+            color: #999;
+            animation: orgFadeUp 0.8s 1.2s both;
+        }
+
+        .org-hint i {
+            color: #8b1a2b;
+            margin-right: 4px;
+        }
+
+        /* ── Stats Row ── */
+        .org-stats-row {
+            max-width: 1100px;
+            margin: 56px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 20px;
+            padding: 0 4px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .org-stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            border-left: 4px solid transparent;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .org-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--card-accent, #8b1a2b);
+        }
+
+        .org-stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+        }
+
+        .org-stat-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 14px;
+        }
+
+        .org-stat-count {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #111;
+            line-height: 1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .org-stat-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 6px;
+        }
+
+        /* ── Canvas particles ── */
+        #orgCanvas {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* ── Entrance animations ── */
+        [data-org-animate] {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        [data-org-animate].is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Hero Banner -->
+    <div class="org-hero-banner">
+        <div class="org-banner-inner">
+            <div class="org-banner-eyebrow"><span>Institutional Structure</span></div>
+            <h1 class="org-banner-title">Organogram</h1>
+            <p class="org-banner-sub">A clear view of Kingston Engineering College's organizational hierarchy and
+                reporting structure</p>
+            <div class="org-banner-pills">
+                <span class="org-banner-pill"><i class="fa-solid fa-sitemap"></i> Hierarchical Chart</span>
+                <span class="org-banner-pill"><i class="fa-solid fa-users"></i> Administrative Structure</span>
+                <span class="org-banner-pill"><i class="fa-solid fa-university"></i> NAAC 'A' Grade</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wavy SVG divider -->
+    <div class="org-wave-divider">
+        <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="width:100%;height:54px;">
+            <path d="M0,0 C240,54 480,0 720,42 C960,84 1200,14 1440,40 L1440,0 Z" fill="#f8f4f0" />
+        </svg>
+    </div>
+
+    <!-- Image Section -->
+    <div class="org-img-section" id="orgImgSection">
+        <canvas id="orgCanvas"></canvas>
+
+        <!-- Floating geometric shapes -->
+        <div class="org-geo org-geo-1"></div>
+        <div class="org-geo org-geo-2"></div>
+        <div class="org-geo org-geo-3"></div>
+
+        <div class="container" style="position:relative; z-index:5;">
+
+            <!-- Image Frame -->
+            <div class="org-img-frame-wrap" data-org-animate>
+                <div class="org-img-border-glow"></div>
+                <div class="org-corner org-corner-tl"></div>
+                <div class="org-corner org-corner-tr"></div>
+                <div class="org-corner org-corner-bl"></div>
+                <div class="org-corner org-corner-br"></div>
+
+                <div class="org-img-container" id="orgImgContainer">
+                    <img src="../assets/images/organogram/Organogram.jpeg"
+                        onerror="this.src='https://via.placeholder.com/1200x800?text=Organogram+Image+Missing'"
+                        alt="Kingston Engineering College Organogram" id="orgImg">
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="org-toolbar" data-org-animate style="transition-delay:0.15s;">
+                <div class="org-toolbar-left">
+                    <button class="org-tool-btn primary" onclick="orgZoom(1.25)" id="btnZoomIn">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom In
+                    </button>
+                    <button class="org-tool-btn secondary" onclick="orgZoom(0.8)" id="btnZoomOut">
+                        <i class="fa-solid fa-magnifying-glass-minus"></i> Zoom Out
+                    </button>
+                    <button class="org-tool-btn secondary" onclick="orgReset()" id="btnReset">
+                        <i class="fa-solid fa-arrows-rotate"></i> Reset
+                    </button>
+                    <div class="org-zoom-display" id="orgZoomDisplay">100%</div>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="org-tool-btn gold" onclick="orgFullscreen()" id="btnFullscreen">
+                        <i class="fa-solid fa-expand"></i> Fullscreen
+                    </button>
+                    <a class="org-tool-btn primary" href="../assets/images/organogram/Organogram.jpeg"
+                        download="KEC_Organogram.jpeg">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hint -->
+            <p class="org-hint">
+                <i class="fa-solid fa-circle-info"></i>
+                <strong>Tip:</strong> Drag the image to pan &nbsp;·&nbsp; Use zoom buttons or scroll to zoom
+                &nbsp;·&nbsp; Click Fullscreen for best view
+            </p>
+
+            <!-- Stats Row -->
+            <div class="org-stats-row">
+                <div class="org-stat-card" style="--card-accent:#8b1a2b;" data-org-animate
+                    style="transition-delay:0.1s;">
+                    <div class="org-stat-icon" style="background:#fdf0f2;">
+                        <i class="fa-solid fa-graduation-cap" style="color:#8b1a2b;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="3000">0</div>
+                    <div class="org-stat-label">Students enrolled</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#2563eb;" data-org-animate
+                    style="transition-delay:0.2s;">
+                    <div class="org-stat-icon" style="background:#eff6ff;">
+                        <i class="fa-solid fa-chalkboard-user" style="color:#2563eb;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="200">0</div>
+                    <div class="org-stat-label">Faculty members</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#059669;" data-org-animate
+                    style="transition-delay:0.3s;">
+                    <div class="org-stat-icon" style="background:#ecfdf5;">
+                        <i class="fa-solid fa-building-columns" style="color:#059669;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="10">0</div>
+                    <div class="org-stat-label">Departments</div>
+                </div>
+                <div class="org-stat-card" style="--card-accent:#f5c518;" data-org-animate
+                    style="transition-delay:0.4s;">
+                    <div class="org-stat-icon" style="background:#fffde7;">
+                        <i class="fa-solid fa-award" style="color:#e5a800;"></i>
+                    </div>
+                    <div class="org-stat-count" data-count="25">0</div>
+                    <div class="org-stat-label">Years of excellence</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Interactive JS -->
+    <script>
+        (function () {
+            /* ── Zoom / Pan ── */
+            let scale = 1, isDragging = false, startX, startY, tx = 0, ty = 0;
+            const img = document.getElementById('orgImg');
+            const wrap = document.getElementById('orgImgContainer');
+            const display = document.getElementById('orgZoomDisplay');
+
+            function applyTransform() {
+                img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+                display.textContent = Math.round(scale * 100) + '%';
+            }
+
+            window.orgZoom = function (factor) {
+                scale = Math.min(Math.max(scale * factor, 0.5), 4);
+                applyTransform();
+            };
+            window.orgReset = function () {
+                scale = 1; tx = 0; ty = 0;
+                img.style.transition = 'transform 0.4s cubic-bezier(0.34,1.56,0.64,1)';
+                applyTransform();
+                setTimeout(() => img.style.transition = 'transform 0.12s ease', 450);
+            };
+            window.orgFullscreen = function () {
+                const el = wrap;
+                if (el.requestFullscreen) el.requestFullscreen();
+                else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+            };
+
+            /* Drag to pan */
+            wrap.addEventListener('mousedown', e => {
+                isDragging = true;
+                startX = e.clientX - tx;
+                startY = e.clientY - ty;
+            });
+            document.addEventListener('mousemove', e => {
+                if (!isDragging) return;
+                tx = e.clientX - startX;
+                ty = e.clientY - startY;
+                img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+            });
+            document.addEventListener('mouseup', () => { isDragging = false; });
+
+            /* Scroll to zoom */
+            wrap.addEventListener('wheel', e => {
+                e.preventDefault();
+                const factor = e.deltaY < 0 ? 1.1 : 0.9;
+                scale = Math.min(Math.max(scale * factor, 0.5), 4);
+                applyTransform();
+            }, { passive: false });
+
+            /* Touch pinch-zoom (mobile) */
+            let lastDist = 0;
+            wrap.addEventListener('touchstart', e => {
+                if (e.touches.length === 2) {
+                    lastDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                }
+            });
+            wrap.addEventListener('touchmove', e => {
+                if (e.touches.length === 2) {
+                    const dist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    scale = Math.min(Math.max(scale * (dist / lastDist), 0.5), 4);
+                    lastDist = dist;
+                    applyTransform();
+                }
+            });
+
+            /* ── Scroll-triggered entrance ── */
+            const orgAnimEls = document.querySelectorAll('[data-org-animate]');
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+            }, { threshold: 0.15 });
+            orgAnimEls.forEach(el => io.observe(el));
+
+            /* ── Counter animation ── */
+            function animateCount(el, target) {
+                let current = 0;
+                const step = Math.ceil(target / 60);
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, target);
+                    el.textContent = current.toLocaleString() + (target >= 1000 ? '+' : '+');
+                    if (current >= target) clearInterval(timer);
+                }, 25);
+            }
+            const countEls = document.querySelectorAll('.org-stat-count[data-count]');
+            const countIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        animateCount(e.target, parseInt(e.target.dataset.count));
+                        countIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            countEls.forEach(el => countIO.observe(el));
+
+            /* ── Canvas particles ── */
+            const canvas = document.getElementById('orgCanvas');
+            const ctx = canvas.getContext('2d');
+            let W, H, pts = [], animId2;
+            function resizeC() {
+                const sec = document.getElementById('orgImgSection');
+                W = canvas.width = sec.offsetWidth;
+                H = canvas.height = sec.offsetHeight;
+            }
+            function mkPt() {
+                return {
+                    x: Math.random() * W, y: H + 5,
+                    r: Math.random() * 2 + 0.5,
+                    dx: (Math.random() - 0.5) * 0.4,
+                    dy: -(Math.random() * 0.7 + 0.3),
+                    alpha: Math.random() * 0.45 + 0.1,
+                    color: Math.random() > 0.5 ? '#8b1a2b' : Math.random() > 0.5 ? '#f5c518' : '#003366'
+                };
+            }
+            function initC() {
+                resizeC();
+                pts = Array.from({ length: 55 }, mkPt);
+                window.addEventListener('resize', resizeC);
+            }
+            function drawC() {
+                ctx.clearRect(0, 0, W, H);
+                pts.forEach((p, i) => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.alpha;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                    p.x += p.dx; p.y += p.dy;
+                    if (p.y < -10 || p.x < -10 || p.x > W + 10) pts[i] = mkPt();
+                });
+                animId2 = requestAnimationFrame(drawC);
+            }
+            const sectionIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { initC(); drawC(); }
+                    else { cancelAnimationFrame(animId2); }
+                });
+            }, { threshold: 0.1 });
+            sectionIO.observe(document.getElementById('orgImgSection'));
+        })();
+    </script>
+
+    <!-- Footer -->
+    <!-- ================================ -->
+<!-- ================================ -->
+<!-- ================================ -->
+<!-- FOOTER COMPONENT - components/footer.html -->
+<!-- Single Source of Truth for Footer -->
+<!-- All href paths are root-relative (start with /) for compatibility
+     across pages at any directory depth -->
+<!-- ================================ -->
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col about-col">
+            <h3 class="footer-college-name">KINGSTON ENGINEERING COLLEGE</h3>
+            <p>Approved by AICTE, Affiliated to Anna University, NAAC 'A' Grade. Committed to excellence in technical education since 2008.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Vellore – Katpadi Road, Vellore, Tamil Nadu – 632 059</li>
+                <li><i class="fa-solid fa-phone"></i> +91-9788029999 / 0416-2298300</li>
+                <li><i class="fa-solid fa-envelope"></i> info@kingston.ac.in</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/admission.html">Admissions</a></li>
+                <li><a href="/departments.html">Departments</a></li>
+                <li><a href="/rules_and_regulations.html">Rules and Regulation</a></li>
+                <li><a href="/salient_features.html">Salient Features</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/regulations.html">Regulations</a></li>
+                <li><a href="/curriculum_and_syllabi.html">Curriculum &amp; Syllabi</a></li>
+                <li><a href="/academic_calendar.html">Academic Calendar</a></li>
+                <li><a href="/facilities.html">Facilities</a></li>
+                <li><a href="/clubs_and_committees.html">Clubs &amp; Committees</a></li>
+                <li><a href="/placements/placement_pat.html">Placements</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="https://kingston.ac.in/engineering-resources/mandatory_disclosure.html" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMMES</h4>
+            <ul class="footer-links">
+                <li><a href="/dept_cse.html">B.E. Computer Science</a></li>
+                <li><a href="/dept_ece.html">B.E. Electronics & Comm.</a></li>
+                <li><a href="/dept_mech.html">B.E. Mechanical</a></li>
+                <li><a href="/dept_IT.html">B.Tech. Information Technology</a></li>
+                <li><a href="/dept_MBA.html">MBA</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>ACCREDITATIONS</h4>
+            <div class="accred-badges">
+                <span class="badge red">AICTE Approved</span>
+                <span class="badge red">NAAC 'A' Grade</span>
+                <span class="badge red">ISO 9001:2015 &amp; 21001:2018</span>
+                <span class="badge red">Anna University</span>
+                <span class="badge red">UGC 2(f) & 12(B)</span>
+            </div>
+
+            <h4 class="mt-6">FOLLOW US</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/kingstonvlr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/kingstonengineeringcollege" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kingston-engineering-college" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/kingstonengineering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flex justify-between align-center">
+            <p>&copy; 2026-27 Kingston Engineering College. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- Scripts -->
+    <script src="../assets/js/include-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="../assets/js/news.js" defer></script>
+    <script src="../assets/js/events.js" defer></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ai-assistant.js" defer></script>
+
+</body>
+
+</html>
